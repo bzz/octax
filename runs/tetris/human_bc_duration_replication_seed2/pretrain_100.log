@@ -1,0 +1,110 @@
+/Users/alexander.bezzubov/Documents/Codex/2026-11-23/files-pasted-by-the-user-experiment/outputs/octax/.venv/lib/python3.11/site-packages/jax/_src/ops/scatter.py:105: FutureWarning: scatter inputs have incompatible types: cannot safely cast value from dtype=uint16 to dtype=uint8 with jax_numpy_dtype_promotion=standard. In future JAX releases this will result in an error.
+  warnings.warn(
+/Users/alexander.bezzubov/Documents/Codex/2026-11-23/files-pasted-by-the-user-experiment/outputs/octax/.venv/lib/python3.11/site-packages/jax/_src/ops/scatter.py:105: FutureWarning: scatter inputs have incompatible types: cannot safely cast value from dtype=int32 to dtype=uint8 with jax_numpy_dtype_promotion=standard. In future JAX releases this will result in an error.
+  warnings.warn(
+/Users/alexander.bezzubov/Documents/Codex/2026-11-23/files-pasted-by-the-user-experiment/outputs/octax/.venv/lib/python3.11/site-packages/jax/_src/ops/scatter.py:105: FutureWarning: scatter inputs have incompatible types: cannot safely cast value from dtype=int32 to dtype=bool with jax_numpy_dtype_promotion=standard. In future JAX releases this will result in an error.
+  warnings.warn(
+/Users/alexander.bezzubov/Documents/Codex/2026-11-23/files-pasted-by-the-user-experiment/outputs/octax/.venv/lib/python3.11/site-packages/jax/_src/ops/scatter.py:105: FutureWarning: scatter inputs have incompatible types: cannot safely cast value from dtype=int32 to dtype=bool with jax_numpy_dtype_promotion=standard. In future JAX releases this will result in an error.
+  warnings.warn(
+PRETRAIN {'epoch': 1, 'loss_during_epoch': 0.9902617335319519, 'entropy_during_epoch': 0.9822304844856262, 'examples_seen': 2240, 'optimizer_updates': 18, 'seconds': 4.005629791994579}
+PRETRAIN {'epoch': 2, 'loss_during_epoch': 0.8458335995674133, 'entropy_during_epoch': 0.8063926100730896, 'examples_seen': 4480, 'optimizer_updates': 36, 'seconds': 3.729783667018637}
+PRETRAIN {'epoch': 3, 'loss_during_epoch': 0.8230409622192383, 'entropy_during_epoch': 0.8380056023597717, 'examples_seen': 6720, 'optimizer_updates': 54, 'seconds': 3.7066294589894824}
+PRETRAIN {'epoch': 4, 'loss_during_epoch': 0.787147045135498, 'entropy_during_epoch': 0.8157708644866943, 'examples_seen': 8960, 'optimizer_updates': 72, 'seconds': 3.790769832994556}
+PRETRAIN {'epoch': 5, 'loss_during_epoch': 0.7338806390762329, 'entropy_during_epoch': 0.7947462797164917, 'examples_seen': 11200, 'optimizer_updates': 90, 'seconds': 3.83674883301137}
+PRETRAIN {'epoch': 6, 'loss_during_epoch': 0.6977503895759583, 'entropy_during_epoch': 0.7428973317146301, 'examples_seen': 13440, 'optimizer_updates': 108, 'seconds': 3.9124190420261584}
+PRETRAIN {'epoch': 7, 'loss_during_epoch': 0.6557150483131409, 'entropy_during_epoch': 0.6769182085990906, 'examples_seen': 15680, 'optimizer_updates': 126, 'seconds': 3.85100758401677}
+PRETRAIN {'epoch': 8, 'loss_during_epoch': 0.6265601515769958, 'entropy_during_epoch': 0.6669512391090393, 'examples_seen': 17920, 'optimizer_updates': 144, 'seconds': 4.14228779199766}
+PRETRAIN {'epoch': 9, 'loss_during_epoch': 0.6050305366516113, 'entropy_during_epoch': 0.6449418067932129, 'examples_seen': 20160, 'optimizer_updates': 162, 'seconds': 4.074755959009053}
+PRETRAIN {'epoch': 10, 'loss_during_epoch': 0.5830363631248474, 'entropy_during_epoch': 0.6266707181930542, 'examples_seen': 22400, 'optimizer_updates': 180, 'seconds': 3.756118667020928}
+PRETRAIN {'epoch': 11, 'loss_during_epoch': 0.5644664168357849, 'entropy_during_epoch': 0.59796541929245, 'examples_seen': 24640, 'optimizer_updates': 198, 'seconds': 4.028226999973413}
+PRETRAIN {'epoch': 12, 'loss_during_epoch': 0.5560786724090576, 'entropy_during_epoch': 0.584551990032196, 'examples_seen': 26880, 'optimizer_updates': 216, 'seconds': 3.9490237909776624}
+PRETRAIN {'epoch': 13, 'loss_during_epoch': 0.5426279306411743, 'entropy_during_epoch': 0.5914042592048645, 'examples_seen': 29120, 'optimizer_updates': 234, 'seconds': 3.7854053750052117}
+PRETRAIN {'epoch': 14, 'loss_during_epoch': 0.5318171381950378, 'entropy_during_epoch': 0.5847675800323486, 'examples_seen': 31360, 'optimizer_updates': 252, 'seconds': 3.860228332981933}
+PRETRAIN {'epoch': 15, 'loss_during_epoch': 0.5030038356781006, 'entropy_during_epoch': 0.5677061676979065, 'examples_seen': 33600, 'optimizer_updates': 270, 'seconds': 3.79300916599459}
+PRETRAIN {'epoch': 16, 'loss_during_epoch': 0.4858945608139038, 'entropy_during_epoch': 0.5241678953170776, 'examples_seen': 35840, 'optimizer_updates': 288, 'seconds': 3.745886042015627}
+PRETRAIN {'epoch': 17, 'loss_during_epoch': 0.469840943813324, 'entropy_during_epoch': 0.5302026271820068, 'examples_seen': 38080, 'optimizer_updates': 306, 'seconds': 3.8434762500110082}
+PRETRAIN {'epoch': 18, 'loss_during_epoch': 0.46812209486961365, 'entropy_during_epoch': 0.5068814158439636, 'examples_seen': 40320, 'optimizer_updates': 324, 'seconds': 3.9835117500042543}
+PRETRAIN {'epoch': 19, 'loss_during_epoch': 0.46273449063301086, 'entropy_during_epoch': 0.49890977144241333, 'examples_seen': 42560, 'optimizer_updates': 342, 'seconds': 3.8134565000073053}
+PRETRAIN {'epoch': 20, 'loss_during_epoch': 0.44159066677093506, 'entropy_during_epoch': 0.5014398694038391, 'examples_seen': 44800, 'optimizer_updates': 360, 'seconds': 3.8019497499917634}
+MATCHED 20-EPOCH FULL STATE EXACT
+PRETRAIN {'epoch': 21, 'loss_during_epoch': 0.4263749122619629, 'entropy_during_epoch': 0.5018825531005859, 'examples_seen': 47040, 'optimizer_updates': 378, 'seconds': 3.781965041998774}
+PRETRAIN {'epoch': 22, 'loss_during_epoch': 0.42027217149734497, 'entropy_during_epoch': 0.4779204726219177, 'examples_seen': 49280, 'optimizer_updates': 396, 'seconds': 4.0511216659797356}
+PRETRAIN {'epoch': 23, 'loss_during_epoch': 0.40242496132850647, 'entropy_during_epoch': 0.4648171067237854, 'examples_seen': 51520, 'optimizer_updates': 414, 'seconds': 3.7449232079961803}
+PRETRAIN {'epoch': 24, 'loss_during_epoch': 0.38625720143318176, 'entropy_during_epoch': 0.43261590600013733, 'examples_seen': 53760, 'optimizer_updates': 432, 'seconds': 3.817287292011315}
+PRETRAIN {'epoch': 25, 'loss_during_epoch': 0.37758320569992065, 'entropy_during_epoch': 0.4184119999408722, 'examples_seen': 56000, 'optimizer_updates': 450, 'seconds': 3.840312458021799}
+PRETRAIN {'epoch': 26, 'loss_during_epoch': 0.37151920795440674, 'entropy_during_epoch': 0.4474624693393707, 'examples_seen': 58240, 'optimizer_updates': 468, 'seconds': 4.027358208026271}
+PRETRAIN {'epoch': 27, 'loss_during_epoch': 0.361397385597229, 'entropy_during_epoch': 0.4106889069080353, 'examples_seen': 60480, 'optimizer_updates': 486, 'seconds': 3.9290064580272883}
+PRETRAIN {'epoch': 28, 'loss_during_epoch': 0.3572288155555725, 'entropy_during_epoch': 0.40905481576919556, 'examples_seen': 62720, 'optimizer_updates': 504, 'seconds': 3.7857895829947665}
+PRETRAIN {'epoch': 29, 'loss_during_epoch': 0.3439721465110779, 'entropy_during_epoch': 0.409890353679657, 'examples_seen': 64960, 'optimizer_updates': 522, 'seconds': 3.913951916998485}
+PRETRAIN {'epoch': 30, 'loss_during_epoch': 0.33376345038414, 'entropy_during_epoch': 0.3951547145843506, 'examples_seen': 67200, 'optimizer_updates': 540, 'seconds': 3.95507858399651}
+PRETRAIN {'epoch': 31, 'loss_during_epoch': 0.33080559968948364, 'entropy_during_epoch': 0.3900144398212433, 'examples_seen': 69440, 'optimizer_updates': 558, 'seconds': 3.8228835409972817}
+PRETRAIN {'epoch': 32, 'loss_during_epoch': 0.31258201599121094, 'entropy_during_epoch': 0.3768099546432495, 'examples_seen': 71680, 'optimizer_updates': 576, 'seconds': 3.824966125015635}
+PRETRAIN {'epoch': 33, 'loss_during_epoch': 0.3091104030609131, 'entropy_during_epoch': 0.3555876612663269, 'examples_seen': 73920, 'optimizer_updates': 594, 'seconds': 4.052066584001295}
+PRETRAIN {'epoch': 34, 'loss_during_epoch': 0.3101128041744232, 'entropy_during_epoch': 0.3645364046096802, 'examples_seen': 76160, 'optimizer_updates': 612, 'seconds': 3.825555457995506}
+PRETRAIN {'epoch': 35, 'loss_during_epoch': 0.2955319285392761, 'entropy_during_epoch': 0.36147621273994446, 'examples_seen': 78400, 'optimizer_updates': 630, 'seconds': 3.9388176659995224}
+PRETRAIN {'epoch': 36, 'loss_during_epoch': 0.2920168340206146, 'entropy_during_epoch': 0.3513520359992981, 'examples_seen': 80640, 'optimizer_updates': 648, 'seconds': 3.792368666996481}
+PRETRAIN {'epoch': 37, 'loss_during_epoch': 0.28156179189682007, 'entropy_during_epoch': 0.3435411751270294, 'examples_seen': 82880, 'optimizer_updates': 666, 'seconds': 3.911917374993209}
+PRETRAIN {'epoch': 38, 'loss_during_epoch': 0.27422767877578735, 'entropy_during_epoch': 0.334634006023407, 'examples_seen': 85120, 'optimizer_updates': 684, 'seconds': 3.8337875829893164}
+PRETRAIN {'epoch': 39, 'loss_during_epoch': 0.27517950534820557, 'entropy_during_epoch': 0.32584676146507263, 'examples_seen': 87360, 'optimizer_updates': 702, 'seconds': 3.8302898750116583}
+PRETRAIN {'epoch': 40, 'loss_during_epoch': 0.2720639109611511, 'entropy_during_epoch': 0.3217625319957733, 'examples_seen': 89600, 'optimizer_updates': 720, 'seconds': 3.9715490420057904}
+PRETRAIN {'epoch': 41, 'loss_during_epoch': 0.2615267038345337, 'entropy_during_epoch': 0.31780558824539185, 'examples_seen': 91840, 'optimizer_updates': 738, 'seconds': 3.8730301249888726}
+PRETRAIN {'epoch': 42, 'loss_during_epoch': 0.27272123098373413, 'entropy_during_epoch': 0.3210047781467438, 'examples_seen': 94080, 'optimizer_updates': 756, 'seconds': 4.070026667002821}
+PRETRAIN {'epoch': 43, 'loss_during_epoch': 0.25132834911346436, 'entropy_during_epoch': 0.3051607608795166, 'examples_seen': 96320, 'optimizer_updates': 774, 'seconds': 3.8330320839886554}
+PRETRAIN {'epoch': 44, 'loss_during_epoch': 0.25345659255981445, 'entropy_during_epoch': 0.3043898344039917, 'examples_seen': 98560, 'optimizer_updates': 792, 'seconds': 3.909306290996028}
+PRETRAIN {'epoch': 45, 'loss_during_epoch': 0.2521381974220276, 'entropy_during_epoch': 0.28980904817581177, 'examples_seen': 100800, 'optimizer_updates': 810, 'seconds': 3.8022217079997063}
+PRETRAIN {'epoch': 46, 'loss_during_epoch': 0.25044092535972595, 'entropy_during_epoch': 0.29164400696754456, 'examples_seen': 103040, 'optimizer_updates': 828, 'seconds': 4.000566333997995}
+PRETRAIN {'epoch': 47, 'loss_during_epoch': 0.24283815920352936, 'entropy_during_epoch': 0.27765020728111267, 'examples_seen': 105280, 'optimizer_updates': 846, 'seconds': 3.87639845898957}
+PRETRAIN {'epoch': 48, 'loss_during_epoch': 0.24251818656921387, 'entropy_during_epoch': 0.2697119116783142, 'examples_seen': 107520, 'optimizer_updates': 864, 'seconds': 3.9015020839869976}
+PRETRAIN {'epoch': 49, 'loss_during_epoch': 0.23367342352867126, 'entropy_during_epoch': 0.2807212471961975, 'examples_seen': 109760, 'optimizer_updates': 882, 'seconds': 3.955192249995889}
+PRETRAIN {'epoch': 50, 'loss_during_epoch': 0.23623044788837433, 'entropy_during_epoch': 0.2681175172328949, 'examples_seen': 112000, 'optimizer_updates': 900, 'seconds': 3.9046981660067104}
+PRETRAIN {'epoch': 51, 'loss_during_epoch': 0.24301618337631226, 'entropy_during_epoch': 0.2684452533721924, 'examples_seen': 114240, 'optimizer_updates': 918, 'seconds': 3.9432081659906544}
+PRETRAIN {'epoch': 52, 'loss_during_epoch': 0.23205187916755676, 'entropy_during_epoch': 0.263946533203125, 'examples_seen': 116480, 'optimizer_updates': 936, 'seconds': 3.8076772499771323}
+PRETRAIN {'epoch': 53, 'loss_during_epoch': 0.22594454884529114, 'entropy_during_epoch': 0.2722000479698181, 'examples_seen': 118720, 'optimizer_updates': 954, 'seconds': 3.8927262499928474}
+PRETRAIN {'epoch': 54, 'loss_during_epoch': 0.22253890335559845, 'entropy_during_epoch': 0.253274142742157, 'examples_seen': 120960, 'optimizer_updates': 972, 'seconds': 3.8754427089879755}
+PRETRAIN {'epoch': 55, 'loss_during_epoch': 0.21549421548843384, 'entropy_during_epoch': 0.2535655200481415, 'examples_seen': 123200, 'optimizer_updates': 990, 'seconds': 3.919895083992742}
+PRETRAIN {'epoch': 56, 'loss_during_epoch': 0.2200900763273239, 'entropy_during_epoch': 0.24561773240566254, 'examples_seen': 125440, 'optimizer_updates': 1008, 'seconds': 3.8419119589962065}
+PRETRAIN {'epoch': 57, 'loss_during_epoch': 0.2093932032585144, 'entropy_during_epoch': 0.24893733859062195, 'examples_seen': 127680, 'optimizer_updates': 1026, 'seconds': 3.883219959010603}
+PRETRAIN {'epoch': 58, 'loss_during_epoch': 0.21316172182559967, 'entropy_during_epoch': 0.24101053178310394, 'examples_seen': 129920, 'optimizer_updates': 1044, 'seconds': 3.936601665976923}
+PRETRAIN {'epoch': 59, 'loss_during_epoch': 0.21212810277938843, 'entropy_during_epoch': 0.24985092878341675, 'examples_seen': 132160, 'optimizer_updates': 1062, 'seconds': 3.8226814170193393}
+PRETRAIN {'epoch': 60, 'loss_during_epoch': 0.20844271779060364, 'entropy_during_epoch': 0.23551145195960999, 'examples_seen': 134400, 'optimizer_updates': 1080, 'seconds': 3.9118943749926984}
+PRETRAIN {'epoch': 61, 'loss_during_epoch': 0.2118833214044571, 'entropy_during_epoch': 0.2301003634929657, 'examples_seen': 136640, 'optimizer_updates': 1098, 'seconds': 3.9680574999947567}
+PRETRAIN {'epoch': 62, 'loss_during_epoch': 0.20790061354637146, 'entropy_during_epoch': 0.2478138506412506, 'examples_seen': 138880, 'optimizer_updates': 1116, 'seconds': 4.131141500023659}
+PRETRAIN {'epoch': 63, 'loss_during_epoch': 0.20782625675201416, 'entropy_during_epoch': 0.22774653136730194, 'examples_seen': 141120, 'optimizer_updates': 1134, 'seconds': 3.8621801669942215}
+PRETRAIN {'epoch': 64, 'loss_during_epoch': 0.20471063256263733, 'entropy_during_epoch': 0.2256215661764145, 'examples_seen': 143360, 'optimizer_updates': 1152, 'seconds': 3.844150749995606}
+PRETRAIN {'epoch': 65, 'loss_during_epoch': 0.19785906374454498, 'entropy_during_epoch': 0.23044417798519135, 'examples_seen': 145600, 'optimizer_updates': 1170, 'seconds': 3.808590583008481}
+PRETRAIN {'epoch': 66, 'loss_during_epoch': 0.2042928785085678, 'entropy_during_epoch': 0.21191638708114624, 'examples_seen': 147840, 'optimizer_updates': 1188, 'seconds': 3.9418329169857316}
+PRETRAIN {'epoch': 67, 'loss_during_epoch': 0.21240964531898499, 'entropy_during_epoch': 0.21573658287525177, 'examples_seen': 150080, 'optimizer_updates': 1206, 'seconds': 3.8175507910200395}
+PRETRAIN {'epoch': 68, 'loss_during_epoch': 0.22071877121925354, 'entropy_during_epoch': 0.231292724609375, 'examples_seen': 152320, 'optimizer_updates': 1224, 'seconds': 3.863767624978209}
+PRETRAIN {'epoch': 69, 'loss_during_epoch': 0.19509923458099365, 'entropy_during_epoch': 0.2225230485200882, 'examples_seen': 154560, 'optimizer_updates': 1242, 'seconds': 4.154835499997716}
+PRETRAIN {'epoch': 70, 'loss_during_epoch': 0.20587384700775146, 'entropy_during_epoch': 0.22535598278045654, 'examples_seen': 156800, 'optimizer_updates': 1260, 'seconds': 3.982674416998634}
+PRETRAIN {'epoch': 71, 'loss_during_epoch': 0.21552914381027222, 'entropy_during_epoch': 0.22976763546466827, 'examples_seen': 159040, 'optimizer_updates': 1278, 'seconds': 3.876620582974283}
+PRETRAIN {'epoch': 72, 'loss_during_epoch': 0.19682618975639343, 'entropy_during_epoch': 0.20960073173046112, 'examples_seen': 161280, 'optimizer_updates': 1296, 'seconds': 3.8679650840058457}
+PRETRAIN {'epoch': 73, 'loss_during_epoch': 0.19757069647312164, 'entropy_during_epoch': 0.2215583622455597, 'examples_seen': 163520, 'optimizer_updates': 1314, 'seconds': 3.9039332079992164}
+PRETRAIN {'epoch': 74, 'loss_during_epoch': 0.1931271106004715, 'entropy_during_epoch': 0.21255497634410858, 'examples_seen': 165760, 'optimizer_updates': 1332, 'seconds': 3.803764082986163}
+PRETRAIN {'epoch': 75, 'loss_during_epoch': 0.20266543328762054, 'entropy_during_epoch': 0.2162560373544693, 'examples_seen': 168000, 'optimizer_updates': 1350, 'seconds': 3.8586639580025803}
+PRETRAIN {'epoch': 76, 'loss_during_epoch': 0.1905725598335266, 'entropy_during_epoch': 0.20799387991428375, 'examples_seen': 170240, 'optimizer_updates': 1368, 'seconds': 3.826099417026853}
+PRETRAIN {'epoch': 77, 'loss_during_epoch': 0.19295893609523773, 'entropy_during_epoch': 0.20508770644664764, 'examples_seen': 172480, 'optimizer_updates': 1386, 'seconds': 3.9546362080145627}
+PRETRAIN {'epoch': 78, 'loss_during_epoch': 0.19426032900810242, 'entropy_during_epoch': 0.20743855834007263, 'examples_seen': 174720, 'optimizer_updates': 1404, 'seconds': 3.769654542003991}
+PRETRAIN {'epoch': 79, 'loss_during_epoch': 0.19903865456581116, 'entropy_during_epoch': 0.19724644720554352, 'examples_seen': 176960, 'optimizer_updates': 1422, 'seconds': 3.811011417012196}
+PRETRAIN {'epoch': 80, 'loss_during_epoch': 0.19251081347465515, 'entropy_during_epoch': 0.20327350497245789, 'examples_seen': 179200, 'optimizer_updates': 1440, 'seconds': 4.005775875004474}
+PRETRAIN {'epoch': 81, 'loss_during_epoch': 0.1957228034734726, 'entropy_during_epoch': 0.1913580447435379, 'examples_seen': 181440, 'optimizer_updates': 1458, 'seconds': 3.8791964999982156}
+PRETRAIN {'epoch': 82, 'loss_during_epoch': 0.19375289976596832, 'entropy_during_epoch': 0.20496612787246704, 'examples_seen': 183680, 'optimizer_updates': 1476, 'seconds': 3.8027070419921074}
+PRETRAIN {'epoch': 83, 'loss_during_epoch': 0.19440990686416626, 'entropy_during_epoch': 0.21099665760993958, 'examples_seen': 185920, 'optimizer_updates': 1494, 'seconds': 3.7944561670010444}
+PRETRAIN {'epoch': 84, 'loss_during_epoch': 0.19377799332141876, 'entropy_during_epoch': 0.1963542401790619, 'examples_seen': 188160, 'optimizer_updates': 1512, 'seconds': 3.890286792011466}
+PRETRAIN {'epoch': 85, 'loss_during_epoch': 0.2034110128879547, 'entropy_during_epoch': 0.22096577286720276, 'examples_seen': 190400, 'optimizer_updates': 1530, 'seconds': 3.7944767090084497}
+PRETRAIN {'epoch': 86, 'loss_during_epoch': 0.19173948466777802, 'entropy_during_epoch': 0.19766885042190552, 'examples_seen': 192640, 'optimizer_updates': 1548, 'seconds': 3.93785458401544}
+PRETRAIN {'epoch': 87, 'loss_during_epoch': 0.18573631346225739, 'entropy_during_epoch': 0.19724060595035553, 'examples_seen': 194880, 'optimizer_updates': 1566, 'seconds': 3.8582715000084136}
+PRETRAIN {'epoch': 88, 'loss_during_epoch': 0.19611555337905884, 'entropy_during_epoch': 0.18644830584526062, 'examples_seen': 197120, 'optimizer_updates': 1584, 'seconds': 3.858313457982149}
+PRETRAIN {'epoch': 89, 'loss_during_epoch': 0.19628272950649261, 'entropy_during_epoch': 0.20376840233802795, 'examples_seen': 199360, 'optimizer_updates': 1602, 'seconds': 3.794908707990544}
+PRETRAIN {'epoch': 90, 'loss_during_epoch': 0.1810123175382614, 'entropy_during_epoch': 0.19187073409557343, 'examples_seen': 201600, 'optimizer_updates': 1620, 'seconds': 3.7757749159936793}
+PRETRAIN {'epoch': 91, 'loss_during_epoch': 0.1859605461359024, 'entropy_during_epoch': 0.19236543774604797, 'examples_seen': 203840, 'optimizer_updates': 1638, 'seconds': 3.8348922500154004}
+PRETRAIN {'epoch': 92, 'loss_during_epoch': 0.17720243334770203, 'entropy_during_epoch': 0.19361089169979095, 'examples_seen': 206080, 'optimizer_updates': 1656, 'seconds': 3.7873175000131596}
+PRETRAIN {'epoch': 93, 'loss_during_epoch': 0.1849985122680664, 'entropy_during_epoch': 0.187503382563591, 'examples_seen': 208320, 'optimizer_updates': 1674, 'seconds': 3.8466036669851746}
+PRETRAIN {'epoch': 94, 'loss_during_epoch': 0.17668525874614716, 'entropy_during_epoch': 0.19069330394268036, 'examples_seen': 210560, 'optimizer_updates': 1692, 'seconds': 3.7347247500147205}
+PRETRAIN {'epoch': 95, 'loss_during_epoch': 0.18015921115875244, 'entropy_during_epoch': 0.18050125241279602, 'examples_seen': 212800, 'optimizer_updates': 1710, 'seconds': 3.9219266250147484}
+PRETRAIN {'epoch': 96, 'loss_during_epoch': 0.19565315544605255, 'entropy_during_epoch': 0.19994917511940002, 'examples_seen': 215040, 'optimizer_updates': 1728, 'seconds': 3.808216125005856}
+PRETRAIN {'epoch': 97, 'loss_during_epoch': 0.1931561678647995, 'entropy_during_epoch': 0.18947654962539673, 'examples_seen': 217280, 'optimizer_updates': 1746, 'seconds': 3.769941124977777}
+PRETRAIN {'epoch': 98, 'loss_during_epoch': 0.1799105703830719, 'entropy_during_epoch': 0.1873263418674469, 'examples_seen': 219520, 'optimizer_updates': 1764, 'seconds': 3.8450319159892388}
+PRETRAIN {'epoch': 99, 'loss_during_epoch': 0.2033780813217163, 'entropy_during_epoch': 0.18248917162418365, 'examples_seen': 221760, 'optimizer_updates': 1782, 'seconds': 3.951233040977968}
+PRETRAIN {'epoch': 100, 'loss_during_epoch': 0.1862564980983734, 'entropy_during_epoch': 0.18993422389030457, 'examples_seen': 224000, 'optimizer_updates': 1800, 'seconds': 3.7687764169822913}
+PRETRAINING COMPLETE {'seed': 2, 'epochs': 100, 'examples_seen': 224000, 'optimizer_updates': 1800, 'training_seconds': 387.7303698369942, 'initial_training_cross_entropy': 1.625973105430603, 'final_training_cross_entropy': 0.17126508057117462, 'constant_action_cross_entropy': 0.8451794354376385, 'training_fit_gate': True, 'full_cloning_checkpoint_roundtrip_exact': True, 'weights_roundtrip_exact': True, 'dataset_sha256': '7a5a60ca8632cd751a23a2553d21762254b8aa208a94f658d835f6abc3c05cec', 'dataset_collection_decisions': 2240, 'diagnostic_replay_transitions': 2241, 'evaluation_decisions': 13427, 'policy_weights_sha256': '7572a5d2634078cfd8b785db1a23f609d40f1607730aac9d8a0d110621893c93', 'initial_parameter_sha256': '7dff1a49f8d458d1ac3f97dbdb193ac540557fa44985772259fcc6f1d025d728', 'final_evaluation': {'mean_return': 0.0, 'scoring_fraction': 0.0, 'mean_length': 509.25, 'terminated': 8, 'truncated': 0, 'action_distribution': [0.0031909671084928816, 0.07216494845360824, 0.16863033873343153, 0.4430535100638193, 0.312960235640648], 'seconds': 3.6418290000001434}}

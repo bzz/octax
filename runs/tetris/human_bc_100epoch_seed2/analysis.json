@@ -1,0 +1,197 @@
+{
+  "conclusion": "Longer offline fitting does not pass the original-score screen; useful gameplay remains unestablished.",
+  "candidate_screen": false,
+  "scoring_games": {
+    "clone_100_epochs": 1,
+    "clone_20_epochs": 1,
+    "scratch_ppo_64k": 1,
+    "untrained_seed2": 0,
+    "random": 3,
+    "noop": 0
+  },
+  "training_seed": 2,
+  "episodes_per_policy": 128,
+  "seed_start": 50000,
+  "offline_summary": {
+    "seed": 2,
+    "epochs": 100,
+    "examples_seen": 224000,
+    "optimizer_updates": 1800,
+    "training_seconds": 387.7303698369942,
+    "initial_training_cross_entropy": 1.625973105430603,
+    "final_training_cross_entropy": 0.17126508057117462,
+    "constant_action_cross_entropy": 0.8451794354376385,
+    "training_fit_gate": true,
+    "full_cloning_checkpoint_roundtrip_exact": true,
+    "weights_roundtrip_exact": true,
+    "dataset_sha256": "7a5a60ca8632cd751a23a2553d21762254b8aa208a94f658d835f6abc3c05cec",
+    "dataset_collection_decisions": 2240,
+    "diagnostic_replay_transitions": 2241,
+    "evaluation_decisions": 13427,
+    "policy_weights_sha256": "7572a5d2634078cfd8b785db1a23f609d40f1607730aac9d8a0d110621893c93",
+    "initial_parameter_sha256": "7dff1a49f8d458d1ac3f97dbdb193ac540557fa44985772259fcc6f1d025d728",
+    "final_evaluation": {
+      "mean_return": 0.0,
+      "scoring_fraction": 0.0,
+      "mean_length": 509.25,
+      "terminated": 8,
+      "truncated": 0,
+      "action_distribution": [
+        0.0031909671084928816,
+        0.07216494845360824,
+        0.16863033873343153,
+        0.4430535100638193,
+        0.312960235640648
+      ],
+      "seconds": 3.6418290000001434
+    }
+  },
+  "fit_20_epochs": {
+    "cross_entropy": 0.4222218096256256,
+    "entropy": 0.4569414258003235,
+    "argmax_accuracy": 0.8553571428571428,
+    "per_action_recall": [
+      0.0,
+      0.31896551724137934,
+      0.6020942408376964,
+      0.543859649122807,
+      0.9743440233236151
+    ],
+    "confusion_true_rows_predicted_columns": [
+      [
+        0,
+        0,
+        1,
+        1,
+        45
+      ],
+      [
+        0,
+        37,
+        0,
+        1,
+        78
+      ],
+      [
+        0,
+        0,
+        115,
+        1,
+        75
+      ],
+      [
+        0,
+        0,
+        1,
+        93,
+        77
+      ],
+      [
+        0,
+        4,
+        25,
+        15,
+        1671
+      ]
+    ],
+    "mean_action_probabilities": [
+      0.017897335812449455,
+      0.02649526856839657,
+      0.09033525735139847,
+      0.08202975243330002,
+      0.783240795135498
+    ]
+  },
+  "fit_100_epochs": {
+    "cross_entropy": 0.17126508057117462,
+    "entropy": 0.18703553080558777,
+    "argmax_accuracy": 0.9205357142857142,
+    "per_action_recall": [
+      0.723404255319149,
+      0.8275862068965517,
+      0.6544502617801047,
+      0.8421052631578947,
+      0.9696793002915451
+    ],
+    "confusion_true_rows_predicted_columns": [
+      [
+        34,
+        0,
+        0,
+        0,
+        13
+      ],
+      [
+        0,
+        96,
+        0,
+        0,
+        20
+      ],
+      [
+        0,
+        0,
+        125,
+        0,
+        66
+      ],
+      [
+        0,
+        0,
+        0,
+        144,
+        27
+      ],
+      [
+        5,
+        30,
+        6,
+        11,
+        1663
+      ]
+    ],
+    "mean_action_probabilities": [
+      0.02121361345052719,
+      0.06068693473935127,
+      0.06244955584406853,
+      0.0742962509393692,
+      0.7813536524772644
+    ]
+  },
+  "matched_20_epoch_audit": {
+    "full_cloning_state_exact": true,
+    "reference_sha256": "7ac1c85ba6a2167711a0cad382875ef90dbb0ca7fd89643d896e5a3da8884791",
+    "epoch": 20,
+    "optimizer_updates": 360,
+    "examples_seen": 44800
+  },
+  "initialization": {
+    "sha256": "7572a5d2634078cfd8b785db1a23f609d40f1607730aac9d8a0d110621893c93",
+    "components": "encoder_actor",
+    "metadata": {
+      "actions": 5,
+      "architecture": "octax_cnn_v2",
+      "dataset_sha256": "7a5a60ca8632cd751a23a2553d21762254b8aa208a94f658d835f6abc3c05cec",
+      "epochs": 100,
+      "observation_shape": [
+        4,
+        32,
+        64
+      ],
+      "optimizer_updates": 1800,
+      "seed": 2
+    }
+  },
+  "source_snapshot_audits": true,
+  "original_controls_exact": true,
+  "diagnostic_optimization_updates": 0,
+  "diagnostic_environment_decisions": 0,
+  "ppo_decisions": 0,
+  "reserved_confirmation_bank_used": false,
+  "limitations": [
+    "One training seed and one human trajectory prefix.",
+    "All action-prediction metrics use training examples, not independent action validation.",
+    "The game bank is reused exploratory evidence, not an independent confirmation.",
+    "Raw human recording remains local; full offline reproduction requires separately supplied data."
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "full_cloning_state_exact": true,
+  "reference_sha256": "7ac1c85ba6a2167711a0cad382875ef90dbb0ca7fd89643d896e5a3da8884791",
+  "epoch": 20,
+  "optimizer_updates": 360,
+  "examples_seen": 44800
+}

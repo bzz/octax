@@ -37,3 +37,6 @@ See [EXPERIMENT.md](../EXPERIMENT.md) for commands and [FORK_CHANGELOG.md](../FO
 
 
 [Matched 100-epoch offline cloning, seed 1](tetris/human_bc_100epoch_seed1/RESULT.md): exact 20-epoch full-state match, final training CE 0.170, rotation recall 83%, and 7/128 scoring games versus random 3/128. This is an exploratory offline candidate, not confirmed on-policy learning. Includes weights, checkpoint, hashes, frozen sources, curves and actual-policy card; raw human data is excluded. Seed-2 replication is separately budgeted and not included while running.
+
+
+[Two-seed offline duration comparison](tetris/human_bc_duration_100epoch/RESULT.md): whole-state epoch-20 matches in both seeds; 100-epoch scoring [7,1]/128 versus 20-epoch [0,1]/128 and shared random 3/128. The offline lead fails replication. Includes seed-2 fixed fits/evaluations, launcher provenance and aggregate card; raw human archives are excluded. The separate fresh PPO pilot is live and excluded until complete.

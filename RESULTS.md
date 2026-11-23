@@ -135,3 +135,8 @@ A fixed human-prefix clone passes its offline fit gate but scores 0/128 versus r
 ## Longer offline cloning: exploratory candidate, seed 1
 
 Holding the data, CNN and optimizer fixed, 100 epochs improve training CE from 0.420 to 0.170 and training-prefix rotation recall from 0% to 83%. The entire state at epoch 20 exactly matches the prior run. Final stochastic play scores in 7/128 games versus 20-epoch cloning 0/128 and random 3/128. This passes the predeclared exploratory screen and triggers seed-2 replication; it is not confirmation or a gain from PPO. [Evidence, fit curve and actual-policy card](runs/tetris/human_bc_100epoch_seed1/RESULT.md).
+
+
+## Offline duration replication: inconsistent scoring
+
+Seed 2's 100-epoch clone fits actions substantially better but scores 1/128, identical to its 20-epoch clone and below random 3/128. The 100-epoch scores [7,1]/128 therefore do not replicate the first seed's lead. [Combined results/card](runs/tetris/human_bc_duration_100epoch/RESULT.md). A separately declared bounded two-seed fresh PPO pilot is now running; its results are pending and offline gains will not be credited to RL.

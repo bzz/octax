@@ -1,0 +1,9 @@
+/Users/alexander.bezzubov/Documents/Codex/2026-11-23/files-pasted-by-the-user-experiment/outputs/octax/.venv/lib/python3.11/site-packages/jax/_src/ops/scatter.py:105: FutureWarning: scatter inputs have incompatible types: cannot safely cast value from dtype=uint16 to dtype=uint8 with jax_numpy_dtype_promotion=standard. In future JAX releases this will result in an error.
+  warnings.warn(
+/Users/alexander.bezzubov/Documents/Codex/2026-11-23/files-pasted-by-the-user-experiment/outputs/octax/.venv/lib/python3.11/site-packages/jax/_src/ops/scatter.py:105: FutureWarning: scatter inputs have incompatible types: cannot safely cast value from dtype=int32 to dtype=uint8 with jax_numpy_dtype_promotion=standard. In future JAX releases this will result in an error.
+  warnings.warn(
+/Users/alexander.bezzubov/Documents/Codex/2026-11-23/files-pasted-by-the-user-experiment/outputs/octax/.venv/lib/python3.11/site-packages/jax/_src/ops/scatter.py:105: FutureWarning: scatter inputs have incompatible types: cannot safely cast value from dtype=int32 to dtype=bool with jax_numpy_dtype_promotion=standard. In future JAX releases this will result in an error.
+  warnings.warn(
+random {'mean_return': 0.0234375, 'scoring_fraction': 0.0234375, 'mean_length': 1273.875, 'terminated': 128, 'truncated': 0, 'action_distribution': [0.19958173878912766, 0.20087577274065352, 0.1990420469041311, 0.19992517907958002, 0.2005752624865077], 'seconds': 26.290149708016543}
+noop {'mean_return': 0.0, 'scoring_fraction': 0.0, 'mean_length': 777.703125, 'terminated': 128, 'truncated': 0, 'action_distribution': [0.0, 0.0, 0.0, 0.0, 1.0], 'seconds': 13.360574749996886}
+policy {'mean_return': 0.0078125, 'scoring_fraction': 0.0078125, 'mean_length': 603.40625, 'terminated': 128, 'truncated': 0, 'action_distribution': [0.0031591485835620694, 0.15350354756849138, 0.09885286653891967, 0.3491377078046507, 0.3953467295043762], 'seconds': 23.908884375006892}

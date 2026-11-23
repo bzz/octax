@@ -1,0 +1,15 @@
+{
+  "seed": 2,
+  "selected_after": "seed1 passed the declared 100-epoch exploratory screen",
+  "epochs": [
+    20,
+    100
+  ],
+  "total_offline_updates": 2160,
+  "total_example_presentations": 268800,
+  "dataset_decisions": 2240,
+  "dataset_shared_with_seed1": true,
+  "evaluation_seed_start": 50000,
+  "evaluation_games_each": 128,
+  "ppo_decisions": 0
+}
