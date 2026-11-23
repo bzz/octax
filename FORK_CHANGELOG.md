@@ -43,3 +43,7 @@ Current metadata records the fixed upstream base, current source commit and dirt
 The longer-credit investigation adds only experiment/reporting work after the original publication: a fresh matched-budget runner, paired comparison checks and a reusable compact gameplay card. The five-commit `upstream-fixes` branch remains unchanged.
 
 The three-seed replication adds fresh baseline/longer-credit seeds 1 and 2, exact untrained-network comparisons and an aggregate report that treats training seeds as replication units. [Results](runs/tetris/v2_replication_64k/RESULT.md) retain the limitations of reused game seeds and shared random controls. All additions are experiment-layer work; `upstream-fixes` remains unchanged.
+
+### Pixel-only self-imitation candidate
+
+`self_imitation.py`, `train_self_imitation.py` and `conf/self_imitation.yaml` add an experimental completed-episode replay objective after the negative three-seed comparison. This is experiment-only work, excluded from `upstream-fixes`. See `SELF_IMITATION.md` for rationale, constraints, validation and the matched-budget protocol.
