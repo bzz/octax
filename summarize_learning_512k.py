@@ -13,6 +13,7 @@ import seaborn as sns
 from omegaconf import OmegaConf
 
 from round_card import write_round_card
+from audit_replay_buffer import audit as audit_replay_buffer
 from run_learning_512k import ARMS, TARGET
 from self_imitation import EpisodeReplay
 from summarize_credit_ablation import compare
@@ -133,6 +134,7 @@ def main():
             assert len(episodes) == replay.completed_episodes
             assert sum(e['return_sum'] > 0 for e in episodes) == replay.positive_episodes
             training['completed_scoring_episodes'] = replay.positive_episodes
+            training['buffer_audit'] = audit_replay_buffer(run, SERIES/'replay_buffer_audit.jsonl')
         policy = final['policy']
         comparisons = {name: compare(policy, other) for name, other in
                        [('parent_64k', prior['policy']), ('untrained', initial['policy']), ('random', controls['random'])]}
@@ -185,6 +187,8 @@ The curves include both parent and continuation. Their eight-game development sc
 The audit checks every global rollout step across parent and continuation, avoiding gaps or double counting. Reward/optimizer counters are summed across segments; replay's completed-episode counter is cumulative. Source/ROM snapshots and parent hashes, exact resumed initial evaluation, checkpoint roundtrips, finite metrics, repeated controls and the replay/model checkpoint pair all passed. Initial and periodic evaluation decisions are excluded from the training budget.
 
 Final optimizer activity or increased survival alone does not meet the scoring objective. Replay is compared at equal environment experience, not equal compute. The illustrative card uses the preselected replay policy on gameplay seed 30016; it is not chosen for a high score.
+
+The replay arm completed {records['replay']['training']['completed_scoring_episodes']} scoring episodes cumulatively, but its final bounded FIFO buffer contains {records['replay']['training']['buffer_audit']['positive_return_transitions']} positive-return transitions. These are different quantities: old successes can be evicted. Saved-checkpoint retention audits are in `replay_buffer_audit.jsonl`, including the sampling probability mass assigned to positive-return targets. This diagnostic does not change training or sampling.
 
 See [protocol](../../../LEARNING_512K.md), [implementation log](../../../IMPLEMENTATION_LOG.md), and each arm's raw files and learning curves: [PPO](../v2_credit_horizon_512k_seed1/) and [replay](../v3_self_imitation_512k_seed1/).
 '''
