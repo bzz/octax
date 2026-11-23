@@ -1,0 +1,279 @@
+{
+  "random": {
+    "summary": {
+      "mean_return": 0.125,
+      "scoring_fraction": 0.125,
+      "mean_length": 2386.5,
+      "terminated": 8,
+      "truncated": 0,
+      "action_distribution": [
+        0.20186465535302744,
+        0.19777917452336058,
+        0.1970458830923947,
+        0.2024931908652839,
+        0.20081709616593338
+      ],
+      "seconds": 14.480608999991091
+    },
+    "episodes": {
+      "action_counts": [
+        [
+          368,
+          378,
+          406,
+          399,
+          398
+        ],
+        [
+          471,
+          467,
+          451,
+          503,
+          486
+        ],
+        [
+          645,
+          628,
+          630,
+          657,
+          638
+        ],
+        [
+          404,
+          345,
+          345,
+          379,
+          365
+        ],
+        [
+          546,
+          541,
+          471,
+          524,
+          531
+        ],
+        [
+          416,
+          382,
+          460,
+          396,
+          406
+        ],
+        [
+          379,
+          398,
+          375,
+          394,
+          362
+        ],
+        [
+          625,
+          637,
+          624,
+          614,
+          648
+        ]
+      ],
+      "final_score": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lengths": [
+        1949,
+        2378,
+        3198,
+        1838,
+        2613,
+        2060,
+        1908,
+        3148
+      ],
+      "returns": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "terminated": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "truncated": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    }
+  },
+  "noop": {
+    "summary": {
+      "mean_return": 0.0,
+      "scoring_fraction": 0.0,
+      "mean_length": 2863.625,
+      "terminated": 8,
+      "truncated": 0,
+      "action_distribution": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "seconds": 14.03539758300758
+    },
+    "episodes": {
+      "action_counts": [
+        [
+          0,
+          0,
+          0,
+          0,
+          2984
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2920
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2776
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          3032
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2705
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2945
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2458
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          3089
+        ]
+      ],
+      "final_score": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lengths": [
+        2984,
+        2920,
+        2776,
+        3032,
+        2705,
+        2945,
+        2458,
+        3089
+      ],
+      "returns": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "terminated": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "truncated": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    }
+  },
+  "checks": {
+    "raw_observation_shape": [
+      4,
+      64,
+      32
+    ],
+    "action_keys": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "reset_pixels_identical": true,
+    "action_pixels_differ_from_noop": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "reward_matches_score_difference": true,
+    "noop_first_120_steps_identical_across_seeds": true,
+    "noop_full_episode_lengths_vary": true
+  }
+}

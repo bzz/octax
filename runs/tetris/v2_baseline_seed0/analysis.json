@@ -1,0 +1,98 @@
+{
+  "training_steps": 65536,
+  "positive_training_events": 0,
+  "training_reward_sum": 0.0,
+  "completed_training_episodes": 44,
+  "reward_event_rollouts": [],
+  "random_equal_budget": {
+    "policy": "uniform_random",
+    "timer_mode": "frame",
+    "seed": 0,
+    "total_steps": 65536,
+    "positive_reward_events": 0,
+    "reward_sum": 0.0,
+    "completed_episodes": 42,
+    "positive_events": [],
+    "action_distribution": [
+      0.197662353515625,
+      0.1995697021484375,
+      0.201690673828125,
+      0.198028564453125,
+      0.2030487060546875
+    ],
+    "elapsed_seconds": 38.09400004099007,
+    "note": "Matched budget and initial reset states; no claim of identical action RNG or episode boundaries."
+  },
+  "evaluation_seed_start": 50000,
+  "policies": {
+    "policy": {
+      "episodes": 128,
+      "scoring_games": 1,
+      "mean_return": 0.0078125,
+      "scoring_rate_ci95_wilson": [
+        0.0013804318928742412,
+        0.04292625943886061
+      ],
+      "scoring_fraction": 0.0078125,
+      "mean_length": 1308.6953125,
+      "terminated": 128,
+      "truncated": 0,
+      "action_distribution": [
+        0.19976957012291582,
+        0.20010984222120073,
+        0.19948899488397914,
+        0.19988299415567748,
+        0.2007485986162268
+      ],
+      "seconds": 72.57132054198883
+    },
+    "random": {
+      "episodes": 128,
+      "scoring_games": 3,
+      "mean_return": 0.0234375,
+      "scoring_rate_ci95_wilson": [
+        0.008002416396755481,
+        0.06664374505143222
+      ],
+      "scoring_fraction": 0.0234375,
+      "mean_length": 1273.875,
+      "terminated": 128,
+      "truncated": 0,
+      "action_distribution": [
+        0.19958173878912766,
+        0.20087577274065352,
+        0.1990420469041311,
+        0.19992517907958002,
+        0.2005752624865077
+      ],
+      "seconds": 42.55080866700155
+    },
+    "noop": {
+      "episodes": 128,
+      "scoring_games": 0,
+      "mean_return": 0.0,
+      "scoring_rate_ci95_wilson": [
+        0.0,
+        0.029136956273508416
+      ],
+      "scoring_fraction": 0.0,
+      "mean_length": 777.703125,
+      "terminated": 128,
+      "truncated": 0,
+      "action_distribution": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "seconds": 20.51385079100146
+    }
+  },
+  "paired_scoring_comparison": {
+    "ppo_only": 1,
+    "random_only": 3,
+    "exact_mcnemar_p": 0.625
+  },
+  "limitation": "One training seed; paired test concerns scoring probability, not generalization across training seeds."
+}

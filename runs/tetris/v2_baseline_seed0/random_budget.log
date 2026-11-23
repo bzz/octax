@@ -1,0 +1,25 @@
+.venv/lib/python3.11/site-packages/jax/_src/ops/scatter.py:105: FutureWarning: scatter inputs have incompatible types: cannot safely cast value from dtype=uint16 to dtype=uint8 with jax_numpy_dtype_promotion=standard. In future JAX releases this will result in an error.
+  warnings.warn(
+.venv/lib/python3.11/site-packages/jax/_src/ops/scatter.py:105: FutureWarning: scatter inputs have incompatible types: cannot safely cast value from dtype=int32 to dtype=uint8 with jax_numpy_dtype_promotion=standard. In future JAX releases this will result in an error.
+  warnings.warn(
+.venv/lib/python3.11/site-packages/jax/_src/ops/scatter.py:105: FutureWarning: scatter inputs have incompatible types: cannot safely cast value from dtype=int32 to dtype=bool with jax_numpy_dtype_promotion=standard. In future JAX releases this will result in an error.
+  warnings.warn(
+{
+  "policy": "uniform_random",
+  "timer_mode": "frame",
+  "seed": 0,
+  "total_steps": 65536,
+  "positive_reward_events": 0,
+  "reward_sum": 0.0,
+  "completed_episodes": 42,
+  "positive_events": [],
+  "action_distribution": [
+    0.197662353515625,
+    0.1995697021484375,
+    0.201690673828125,
+    0.198028564453125,
+    0.2030487060546875
+  ],
+  "elapsed_seconds": 38.09400004099007,
+  "note": "Matched budget and initial reset states; no claim of identical action RNG or episode boundaries."
+}

@@ -1,0 +1,50 @@
+{
+  "reward_sum": 0.0,
+  "raw_advantage_std": 3.431136428844184e-05,
+  "raw_advantage_mean": 1.004186378850136e-05,
+  "value_mean": -3.600340278353542e-05,
+  "value_std": 3.980330075137317e-05,
+  "settings": {
+    "agent": "PPO",
+    "clip_eps": 0.2,
+    "encoder_checkpoint": null,
+    "ent_coef": 0.01,
+    "env": "tetris",
+    "eval_episodes": 8,
+    "eval_freq": 65536,
+    "eval_seed_start": 10000,
+    "gae_lambda": 0.95,
+    "gamma": 0.99,
+    "learning_rate": 0.0005,
+    "max_grad_norm": 0.5,
+    "num_envs": 16,
+    "num_epochs": 4,
+    "num_minibatches": 4,
+    "num_steps": 32,
+    "resume": "runs/tetris/ppo_seed0_smoke/checkpoint.msgpack",
+    "run_dir": "runs/tetris/continued_seed0",
+    "seed": 0,
+    "total_timesteps": 499712,
+    "vf_coef": 0.5
+  },
+  "gradients": [
+    {
+      "std_floor": 1e-08,
+      "policy_grad_norm": 0.3746679425239563,
+      "entropy_grad_norm": 0.008301403373479843,
+      "normalized_advantage_std": 1.0
+    },
+    {
+      "std_floor": 0.001,
+      "policy_grad_norm": 0.012855367735028267,
+      "entropy_grad_norm": 0.008301403373479843,
+      "normalized_advantage_std": 0.034311357885599136
+    },
+    {
+      "std_floor": 0.01,
+      "policy_grad_norm": 0.001285536796785891,
+      "entropy_grad_norm": 0.008301403373479843,
+      "normalized_advantage_std": 0.0034311360213905573
+    }
+  ]
+}

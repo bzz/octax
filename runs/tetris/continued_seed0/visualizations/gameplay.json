@@ -1,0 +1,12 @@
+{
+  "Random": {
+    "length": 2140,
+    "final_score": 0.0,
+    "seed": 30016
+  },
+  "PPO 499,712 steps": {
+    "length": 2532,
+    "final_score": 0.0,
+    "seed": 30016
+  }
+}

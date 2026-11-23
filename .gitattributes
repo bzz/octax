@@ -1,0 +1,4 @@
+# Preserve archived measurements, checkpoints and source snapshot hashes on checkout.
+runs/** -text
+# Python's CSV writer uses CRLF; retain those valid line endings.
+runs/**/metrics.csv whitespace=cr-at-eol

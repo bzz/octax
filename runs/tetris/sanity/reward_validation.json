@@ -1,0 +1,13 @@
+{
+  "seed": 10002,
+  "positive_reward_steps": [
+    2330
+  ],
+  "rewards": [
+    1.0
+  ],
+  "score_equals_V10": true,
+  "reward_equals_score_difference": true,
+  "final_score": 1.0,
+  "terminated": true
+}
