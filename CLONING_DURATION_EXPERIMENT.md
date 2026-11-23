@@ -50,3 +50,16 @@ weights file, with fresh critic/optimizer/environment state and fresh rollouts.
 Entropy-zero preserves the initialization in a reward-free smoke, but that is
 not proof it supplies sufficient exploration. Account for offline gains and
 subsequent RL gains separately. Future architecture experiments are allowed.
+
+## Seed-2 replication triggered
+
+Seed 1 completed with final fit CE 0.1703 and 7/128 scoring games versus the
+20-epoch clone 0/128 and random 3/128. This passes the exploratory screen, not a
+significance test. The fixed seed-2 replication uses the same data and settings.
+First generate its 20-epoch reference, then start a fresh 100-epoch process and
+require an exact epoch-20 full-state match. Evaluate both final policies on the
+same declared bank. The two fits cost 2,160 updates and 268,800 presentations;
+their duplicated first 20 epochs must not be hidden in budget accounting.
+This is an independent initialization, not an independent human demonstration
+or fresh confirmation bank. Run `run_cloning_duration_replication.py`; no PPO
+process is started by that launcher. The raw dataset remains local.
