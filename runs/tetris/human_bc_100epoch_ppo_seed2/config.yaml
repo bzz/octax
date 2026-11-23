@@ -1,0 +1,30 @@
+env: tetris
+experiment_version: 2
+env_kwargs:
+  timer_mode: frame
+agent: PPO
+seed: 2
+num_envs: 16
+num_steps: 128
+num_epochs: 4
+num_minibatches: 16
+learning_rate: 0.0005
+total_timesteps: 65536
+eval_freq: 65536
+eval_episodes: 8
+eval_seed_start: 10000
+gamma: 0.995
+gae_lambda: 0.98
+clip_eps: 0.2
+vf_coef: 0.5
+ent_coef: 0.0
+max_grad_norm: 0.5
+advantage_std_floor: 0.01
+grad_clip_mode: global_norm
+zero_init_value: true
+run_dir: runs/tetris/human_bc_100epoch_ppo_seed2
+resume: null
+encoder_checkpoint: null
+initialization: pretrained_policy_weights
+initialization_weights_sha256: 7572a5d2634078cfd8b785db1a23f609d40f1607730aac9d8a0d110621893c93
+purpose: curriculum_ppo

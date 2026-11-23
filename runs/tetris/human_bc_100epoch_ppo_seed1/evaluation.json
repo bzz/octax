@@ -1,0 +1,260 @@
+[
+  {
+    "summary": {
+      "mean_return": 0.0,
+      "scoring_fraction": 0.0,
+      "mean_length": 628.5,
+      "terminated": 8,
+      "truncated": 0,
+      "action_distribution": [
+        0.0001988862370723946,
+        0.12907716785998408,
+        0.09168655529037391,
+        0.2905727923627685,
+        0.4884645982498011
+      ],
+      "seconds": 4.580954624980222
+    },
+    "episodes": {
+      "action_counts": [
+        [
+          0,
+          340,
+          21,
+          216,
+          296
+        ],
+        [
+          0,
+          33,
+          90,
+          152,
+          81
+        ],
+        [
+          0,
+          30,
+          43,
+          238,
+          146
+        ],
+        [
+          0,
+          29,
+          40,
+          177,
+          317
+        ],
+        [
+          1,
+          98,
+          129,
+          221,
+          405
+        ],
+        [
+          0,
+          47,
+          8,
+          157,
+          370
+        ],
+        [
+          0,
+          21,
+          108,
+          146,
+          470
+        ],
+        [
+          0,
+          51,
+          22,
+          154,
+          371
+        ]
+      ],
+      "final_score": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lengths": [
+        873,
+        356,
+        457,
+        563,
+        854,
+        582,
+        745,
+        598
+      ],
+      "returns": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "terminated": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "truncated": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    "step": 0,
+    "checkpoint_roundtrip_exact": true
+  },
+  {
+    "summary": {
+      "mean_return": 0.0,
+      "scoring_fraction": 0.0,
+      "mean_length": 800.375,
+      "terminated": 8,
+      "truncated": 0,
+      "action_distribution": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "seconds": 4.996238249994349
+    },
+    "episodes": {
+      "action_counts": [
+        [
+          683,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          768,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          764,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          861,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          785,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1026,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          606,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          910,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "final_score": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lengths": [
+        683,
+        768,
+        764,
+        861,
+        785,
+        1026,
+        606,
+        910
+      ],
+      "returns": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "terminated": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "truncated": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    "step": 65536,
+    "checkpoint_roundtrip_exact": true
+  }
+]

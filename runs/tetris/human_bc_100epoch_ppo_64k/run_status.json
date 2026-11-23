@@ -1,0 +1,12 @@
+{
+  "phase": "complete",
+  "pid": 18847,
+  "completed": [
+    "runs/tetris/human_bc_100epoch_ppo_seed1",
+    "runs/tetris/human_bc_100epoch_ppo_seed2"
+  ],
+  "updated_at": "2026-11-23T19:47:58.452316+00:00",
+  "total_fresh_ppo_decisions": 131072,
+  "total_ppo_updates": 4096,
+  "offline_work_counted_separately": true
+}

@@ -40,3 +40,6 @@ See [EXPERIMENT.md](../EXPERIMENT.md) for commands and [FORK_CHANGELOG.md](../FO
 
 
 [Two-seed offline duration comparison](tetris/human_bc_duration_100epoch/RESULT.md): whole-state epoch-20 matches in both seeds; 100-epoch scoring [7,1]/128 versus 20-epoch [0,1]/128 and shared random 3/128. The offline lead fails replication. Includes seed-2 fixed fits/evaluations, launcher provenance and aggregate card; raw human archives are excluded. The separate fresh PPO pilot is live and excluded until complete.
+
+
+[Fresh on-policy PPO after cloning](tetris/human_bc_100epoch_ppo_64k/RESULT.md): both 64K seeds score 0/128 after offline 7/128 and 1/128. Full checkpoints, source/handoff audits, original-score controls and actual-policy card are included. [First-reward diagnostics](tetris/curriculum_first_reward_diagnostic/RESULT.md) and [smaller-step follow-up](tetris/curriculum_stability_diagnostic/RESULT.md) reproduce the recorded update and compare isolated counterfactuals; they export no policy candidates and do not add replay to PPO. Raw human recordings remain excluded.

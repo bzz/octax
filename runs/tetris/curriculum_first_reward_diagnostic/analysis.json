@@ -1,0 +1,206 @@
+{
+  "recorded_run": "runs/tetris/human_bc_100epoch_ppo_seed1",
+  "reproduced_reward_step": 28672,
+  "initial_checkpoint_sha256": "c9dd29b8f8fe8c6601c70b0bc83d20c3ad4d8b9b01e4521aa4c344f7db3f7224",
+  "prefix_audits": [
+    {
+      "step": 2048,
+      "metrics_match": true,
+      "parameters_unchanged": true
+    },
+    {
+      "step": 4096,
+      "metrics_match": true,
+      "parameters_unchanged": true
+    },
+    {
+      "step": 6144,
+      "metrics_match": true,
+      "parameters_unchanged": true
+    },
+    {
+      "step": 8192,
+      "metrics_match": true,
+      "parameters_unchanged": true
+    },
+    {
+      "step": 10240,
+      "metrics_match": true,
+      "parameters_unchanged": true
+    },
+    {
+      "step": 12288,
+      "metrics_match": true,
+      "parameters_unchanged": true
+    },
+    {
+      "step": 14336,
+      "metrics_match": true,
+      "parameters_unchanged": true
+    },
+    {
+      "step": 16384,
+      "metrics_match": true,
+      "parameters_unchanged": true
+    },
+    {
+      "step": 18432,
+      "metrics_match": true,
+      "parameters_unchanged": true
+    },
+    {
+      "step": 20480,
+      "metrics_match": true,
+      "parameters_unchanged": true
+    },
+    {
+      "step": 22528,
+      "metrics_match": true,
+      "parameters_unchanged": true
+    },
+    {
+      "step": 24576,
+      "metrics_match": true,
+      "parameters_unchanged": true
+    },
+    {
+      "step": 26624,
+      "metrics_match": true,
+      "parameters_unchanged": true
+    }
+  ],
+  "original_rewarded_update_metrics_match": true,
+  "all_action_probabilities_match_public_api": true,
+  "optimizer_steps_before_reward": 832,
+  "diagnostic_repeated_environment_decisions": 28672,
+  "newly_independent_experience_decisions": 0,
+  "prefix_optimizer_updates": 832,
+  "oracle_optimizer_updates": 64,
+  "counterfactual_gradient_calculations": 320,
+  "policies_exported": false,
+  "branches": {
+    "original": {
+      "exact_full_batch_kl": 15.781415939331055,
+      "final_entropy": 0.010702972300350666,
+      "final_mean_action_probabilities": [
+        0.940047562122345,
+        1.597683694853913e-05,
+        0.0009610778652131557,
+        0.05860205739736557,
+        0.000373341201338917
+      ],
+      "final_argmax_action_fractions": [
+        0.939453125,
+        0.0,
+        0.0,
+        0.060546875,
+        0.0
+      ],
+      "encoder_actor_change_l2": 8.279867008266754,
+      "accepted_optimizer_steps": 64,
+      "gradient_calculations": 64,
+      "mean_approx_kl_pre": 9.781219482421875,
+      "max_exact_minibatch_kl_pre": 18.983430862426758,
+      "traced_vs_original_full_state_max_error": 0.0
+    },
+    "learning_rate_10x_smaller": {
+      "exact_full_batch_kl": 0.06773246079683304,
+      "final_entropy": 0.39141857624053955,
+      "final_mean_action_probabilities": [
+        0.0016475424636155367,
+        0.11781374365091324,
+        0.13101106882095337,
+        0.409457802772522,
+        0.34006983041763306
+      ],
+      "final_argmax_action_fractions": [
+        0.0,
+        0.111328125,
+        0.123046875,
+        0.4345703125,
+        0.3310546875
+      ],
+      "encoder_actor_change_l2": 0.8074089605413701,
+      "accepted_optimizer_steps": 64,
+      "gradient_calculations": 64,
+      "mean_approx_kl_pre": 0.04904913157224655,
+      "max_exact_minibatch_kl_pre": 0.12407566606998444
+    },
+    "fresh_adam_moments_and_clock": {
+      "exact_full_batch_kl": 1.117795705795288,
+      "final_entropy": 0.8055989146232605,
+      "final_mean_action_probabilities": [
+        0.13713429868221283,
+        0.1129479855298996,
+        0.3027975857257843,
+        0.21269410848617554,
+        0.23442603647708893
+      ],
+      "final_argmax_action_fractions": [
+        0.1279296875,
+        0.09423828125,
+        0.31884765625,
+        0.25048828125,
+        0.20849609375
+      ],
+      "encoder_actor_change_l2": 2.7477779206079704,
+      "accepted_optimizer_steps": 64,
+      "gradient_calculations": 64,
+      "mean_approx_kl_pre": 0.6556248068809509,
+      "max_exact_minibatch_kl_pre": 1.3763761520385742
+    },
+    "actor_loss_only": {
+      "exact_full_batch_kl": 24.823307037353516,
+      "final_entropy": 2.694159047678113e-05,
+      "final_mean_action_probabilities": [
+        0.9375012516975403,
+        7.141135682786626e-08,
+        1.602970343128618e-07,
+        0.06249769777059555,
+        8.492680194649438e-07
+      ],
+      "final_argmax_action_fractions": [
+        0.9375,
+        0.0,
+        0.0,
+        0.0625,
+        0.0
+      ],
+      "encoder_actor_change_l2": 8.310218967482685,
+      "accepted_optimizer_steps": 64,
+      "gradient_calculations": 64,
+      "mean_approx_kl_pre": 13.953153610229492,
+      "max_exact_minibatch_kl_pre": 32.61591720581055
+    },
+    "exact_kl_stop_0015": {
+      "exact_full_batch_kl": 1.2745113372802734,
+      "final_entropy": 0.21071773767471313,
+      "final_mean_action_probabilities": [
+        0.00018844525038730353,
+        0.03450252488255501,
+        0.07399729639291763,
+        0.7686437368392944,
+        0.12266799062490463
+      ],
+      "final_argmax_action_fractions": [
+        0.0,
+        0.03125,
+        0.06494140625,
+        0.7861328125,
+        0.11767578125
+      ],
+      "encoder_actor_change_l2": 0.5983851863765977,
+      "accepted_optimizer_steps": 1,
+      "gradient_calculations": 64,
+      "mean_approx_kl_pre": 1.3670451641082764,
+      "max_exact_minibatch_kl_pre": 1.5739011764526367
+    }
+  },
+  "limitations": [
+    "Single recorded first-reward batch, not an online learning experiment.",
+    "No policy branch is retained for training; current pilot remains unchanged.",
+    "KL-stop checks current minibatch before accepting a proposed step; it is not a hard full-rollout bound.",
+    "Instrumented stopping still computes all proposals to retain diagnostics; accepted update counts are separate.",
+    "Lower KL/retained preferences alone do not establish better gameplay."
+  ]
+}

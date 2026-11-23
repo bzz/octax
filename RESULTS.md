@@ -140,3 +140,8 @@ Holding the data, CNN and optimizer fixed, 100 epochs improve training CE from 0
 ## Offline duration replication: inconsistent scoring
 
 Seed 2's 100-epoch clone fits actions substantially better but scores 1/128, identical to its 20-epoch clone and below random 3/128. The 100-epoch scores [7,1]/128 therefore do not replicate the first seed's lead. [Combined results/card](runs/tetris/human_bc_duration_100epoch/RESULT.md). A separately declared bounded two-seed fresh PPO pilot is now running; its results are pending and offline gains will not be credited to RL.
+
+
+## Fresh PPO after cloning: failed online improvement
+
+Both fixed 64K PPO seeds score 0/128 after starting from offline policies scoring 7/128 and 1/128; random remains 3/128. Each found one training reward but underwent a large first-reward update. Exact reconstruction identifies excessive step size: a .000005 diagnostic profile keeps local divergence small without discarding updates, but has not yet been tested for gameplay. [Completed PPO card](runs/tetris/human_bc_100epoch_ppo_64k/RESULT.md), [first-reward diagnostic](runs/tetris/curriculum_first_reward_diagnostic/RESULT.md), [stability follow-up](runs/tetris/curriculum_stability_diagnostic/RESULT.md).

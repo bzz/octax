@@ -1,0 +1,30 @@
+{
+  "1": {
+    "weights_sha256": "8dde4760ef6ff3512af083ce6f5b3cea04e7fdb90f526e0985c8da9f4bca1d20",
+    "offline_candidate_screen": true,
+    "original_scoring_games": {
+      "clone_100_epochs": 7,
+      "clone_20_epochs": 0,
+      "scratch_ppo_64k": 1,
+      "untrained_seed1": 2,
+      "random": 3,
+      "noop": 0
+    },
+    "offline_updates": 1800,
+    "example_presentations": 224000
+  },
+  "2": {
+    "weights_sha256": "7572a5d2634078cfd8b785db1a23f609d40f1607730aac9d8a0d110621893c93",
+    "offline_candidate_screen": false,
+    "original_scoring_games": {
+      "clone_100_epochs": 1,
+      "clone_20_epochs": 1,
+      "scratch_ppo_64k": 1,
+      "untrained_seed2": 0,
+      "random": 3,
+      "noop": 0
+    },
+    "offline_updates": 1800,
+    "example_presentations": 224000
+  }
+}

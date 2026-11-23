@@ -1,0 +1,72 @@
+{
+  "original": {
+    "exact_full_batch_kl": 15.781415939331055,
+    "final_entropy": 0.010702972300350666,
+    "final_mean_action_probabilities": [
+      0.940047562122345,
+      1.597683694853913e-05,
+      0.0009610778652131557,
+      0.05860205739736557,
+      0.000373341201338917
+    ],
+    "final_argmax_action_fractions": [
+      0.939453125,
+      0.0,
+      0.0,
+      0.060546875,
+      0.0
+    ],
+    "encoder_actor_change_l2": 8.279867008266754,
+    "accepted_optimizer_steps": 64,
+    "gradient_calculations": 64,
+    "mean_approx_kl_pre": 9.781219482421875,
+    "max_exact_minibatch_kl_pre": 18.983430862426758,
+    "traced_vs_original_full_state_max_error": 0.0
+  },
+  "learning_rate_10x_smaller_and_kl_stop": {
+    "exact_full_batch_kl": 0.01722816936671734,
+    "final_entropy": 0.3009865880012512,
+    "final_mean_action_probabilities": [
+      0.00021625083172693849,
+      0.0983537808060646,
+      0.12917406857013702,
+      0.45876777172088623,
+      0.3134881556034088
+    ],
+    "final_argmax_action_fractions": [
+      0.0,
+      0.0947265625,
+      0.1298828125,
+      0.4658203125,
+      0.3095703125
+    ],
+    "encoder_actor_change_l2": 0.0598385146449636,
+    "accepted_optimizer_steps": 1,
+    "gradient_calculations": 64,
+    "mean_approx_kl_pre": 0.016943326219916344,
+    "max_exact_minibatch_kl_pre": 0.02891751192510128
+  },
+  "learning_rate_100x_smaller_and_kl_stop": {
+    "exact_full_batch_kl": 0.004025235306471586,
+    "final_entropy": 0.3097197413444519,
+    "final_mean_action_probabilities": [
+      0.0002531309728510678,
+      0.11697117984294891,
+      0.13018445670604706,
+      0.4264468252658844,
+      0.32614439725875854
+    ],
+    "final_argmax_action_fractions": [
+      0.0,
+      0.1123046875,
+      0.12939453125,
+      0.435546875,
+      0.32275390625
+    ],
+    "encoder_actor_change_l2": 0.11179076756526815,
+    "accepted_optimizer_steps": 64,
+    "gradient_calculations": 64,
+    "mean_approx_kl_pre": 0.0026981360279023647,
+    "max_exact_minibatch_kl_pre": 0.004808482248336077
+  }
+}

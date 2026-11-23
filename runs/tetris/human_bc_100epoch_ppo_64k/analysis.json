@@ -1,0 +1,547 @@
+{
+  "conclusion": "Fresh PPO does not establish a replicated scoring gain beyond offline initialization and random play.",
+  "candidate_screen": false,
+  "seeds": {
+    "1": {
+      "scores": {
+        "ppo": 0,
+        "pretrained": 7,
+        "scratch_entropy_zero": 0,
+        "scratch_entropy_001": 1,
+        "untrained": 2,
+        "random": 3,
+        "noop": 0
+      },
+      "candidate_screen": false,
+      "training": {
+        "first_reward_context": [
+          {
+            "step": 26624.0,
+            "reward_sum": 0.0,
+            "positive_reward_steps": 0.0,
+            "entropy": 0.3673364222049713,
+            "advantage_std": 0.0,
+            "value_loss": 0.0,
+            "approx_kl": 0.0
+          },
+          {
+            "step": 28672.0,
+            "reward_sum": 1.0,
+            "positive_reward_steps": 1.0,
+            "entropy": 0.07786911725997925,
+            "advantage_std": 0.09286598116159439,
+            "value_loss": 0.001371065154671669,
+            "approx_kl": 9.781219482421875
+          },
+          {
+            "step": 30720.0,
+            "reward_sum": 0.0,
+            "positive_reward_steps": 0.0,
+            "entropy": 0.003565006423741579,
+            "advantage_std": 0.00047505731345154345,
+            "value_loss": 1.4017041394254193e-06,
+            "approx_kl": 0.2829448878765106
+          },
+          {
+            "step": 32768.0,
+            "reward_sum": 0.0,
+            "positive_reward_steps": 0.0,
+            "entropy": 5.251268703432288e-06,
+            "advantage_std": 0.0001215090524055995,
+            "value_loss": 3.891858835203266e-09,
+            "approx_kl": 5.094591415399918e-12
+          }
+        ],
+        "zero_advantage_and_value_loss_before_first_reward": true,
+        "steps": 65536,
+        "rollouts": 32,
+        "reward_sum": 1.0,
+        "positive_reward_events": 1,
+        "completed_episodes": 84,
+        "reward_event_rollouts": [
+          {
+            "rollout_end_step": 28672,
+            "positive_events": 1,
+            "reward_sum": 1.0
+          }
+        ],
+        "final_entropy": 7.89250225352589e-06,
+        "final_approx_kl": 0.0,
+        "max_clipped_grad_norm": 0.0951240211725235,
+        "max_advantage_std": 0.09286598116159439,
+        "step": 65536,
+        "seed": 1,
+        "wall_training_and_periodic_eval_seconds": 434.63585433299886,
+        "collect_seconds": 28.2965189179522,
+        "update_seconds": 400.3007992458879,
+        "training_steps_per_second": 152.9080963006575,
+        "steady_training_steps_per_second": 153.07583842531764,
+        "parameter_change_l2": 11.737652765622135,
+        "final_evaluation": {
+          "mean_return": 0.0,
+          "scoring_fraction": 0.0,
+          "mean_length": 800.375,
+          "terminated": 8,
+          "truncated": 0,
+          "action_distribution": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seconds": 4.996238249994349
+        }
+      },
+      "encoder_actor_parameter_change_l2": 9.046315272263454,
+      "parent": {
+        "sha256": "8dde4760ef6ff3512af083ce6f5b3cea04e7fdb90f526e0985c8da9f4bca1d20",
+        "components": "encoder_actor",
+        "metadata": {
+          "actions": 5,
+          "architecture": "octax_cnn_v2",
+          "dataset_sha256": "7a5a60ca8632cd751a23a2553d21762254b8aa208a94f658d835f6abc3c05cec",
+          "epochs": 100,
+          "observation_shape": [
+            4,
+            32,
+            64
+          ],
+          "optimizer_updates": 1800,
+          "seed": 1
+        }
+      },
+      "handoff_audit": {
+        "initial_episode_arrays_exact": true,
+        "scratch_control_config_differences": {
+          "run_dir": [
+            "runs/tetris/v2_entropy_zero_seed1",
+            "runs/tetris/human_bc_100epoch_ppo_seed1"
+          ],
+          "initialization_weights_sha256": [
+            null,
+            "8dde4760ef6ff3512af083ce6f5b3cea04e7fdb90f526e0985c8da9f4bca1d20"
+          ],
+          "purpose": [
+            null,
+            "curriculum_ppo"
+          ],
+          "initialization": [
+            null,
+            "pretrained_policy_weights"
+          ]
+        },
+        "source_frozen": true,
+        "training_decisions": 65536,
+        "optimizer_updates": 2048,
+        "parent_weights_sha256": "8dde4760ef6ff3512af083ce6f5b3cea04e7fdb90f526e0985c8da9f4bca1d20"
+      },
+      "checkpoint_sha256": "ebbbc143832fd4121bc2211c5dd672794839a823d5859d50aa5c9d2fe676aa8b",
+      "policies": {
+        "ppo": {
+          "mean_return": 0.0,
+          "scoring_fraction": 0.0,
+          "mean_length": 829.78125,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seconds": 19.456332291010767
+        },
+        "pretrained": {
+          "mean_return": 0.0546875,
+          "scoring_fraction": 0.0546875,
+          "mean_length": 632.6015625,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            0.0014696256776950342,
+            0.06300865720672323,
+            0.13804601533844615,
+            0.3306657774813827,
+            0.4668099242957529
+          ],
+          "seconds": 27.51590808297624
+        },
+        "scratch_entropy_zero": {
+          "mean_return": 0.0,
+          "scoring_fraction": 0.0,
+          "mean_length": 1532.84375,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            0.26668671382846426,
+            0.14858004933640498,
+            0.4291808525820065,
+            0.06995270228945383,
+            0.08559968196367046
+          ],
+          "seconds": 60.73108387499815
+        },
+        "scratch_entropy_001": {
+          "mean_return": 0.0078125,
+          "scoring_fraction": 0.0078125,
+          "mean_length": 1400.6875,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            0.26401655437062155,
+            0.1639652402837892,
+            0.2324137700236491,
+            0.15394226049707732,
+            0.1856621748248628
+          ],
+          "seconds": 39.842345874989405
+        },
+        "untrained": {
+          "mean_return": 0.015625,
+          "scoring_fraction": 0.015625,
+          "mean_length": 1312.15625,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            0.1948188811355355,
+            0.1998440067636762,
+            0.20120745909643,
+            0.19394365190883325,
+            0.21018600109552502
+          ],
+          "seconds": 77.69467779199476
+        },
+        "random": {
+          "mean_return": 0.0234375,
+          "scoring_fraction": 0.0234375,
+          "mean_length": 1273.875,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            0.19958173878912766,
+            0.20087577274065352,
+            0.1990420469041311,
+            0.19992517907958002,
+            0.2005752624865077
+          ],
+          "seconds": 26.94171404201188
+        },
+        "noop": {
+          "mean_return": 0.0,
+          "scoring_fraction": 0.0,
+          "mean_length": 777.703125,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "seconds": 13.589682584017282
+        }
+      },
+      "paired_comparisons": {
+        "pretrained": {
+          "ablation_only_scoring": 0,
+          "control_only_scoring": 7,
+          "exact_p": 0.015625,
+          "mean_return_difference": -0.0546875
+        },
+        "random": {
+          "ablation_only_scoring": 0,
+          "control_only_scoring": 3,
+          "exact_p": 0.25,
+          "mean_return_difference": -0.0234375
+        },
+        "scratch_entropy_zero": {
+          "ablation_only_scoring": 0,
+          "control_only_scoring": 0,
+          "exact_p": 1.0,
+          "mean_return_difference": 0.0
+        }
+      }
+    },
+    "2": {
+      "scores": {
+        "ppo": 0,
+        "pretrained": 1,
+        "scratch_entropy_zero": 0,
+        "scratch_entropy_001": 1,
+        "untrained": 0,
+        "random": 3,
+        "noop": 0
+      },
+      "candidate_screen": false,
+      "training": {
+        "first_reward_context": [
+          {
+            "step": 4096.0,
+            "reward_sum": 0.0,
+            "positive_reward_steps": 0.0,
+            "entropy": 0.3724258542060852,
+            "advantage_std": 0.0,
+            "value_loss": 0.0,
+            "approx_kl": 0.0
+          },
+          {
+            "step": 6144.0,
+            "reward_sum": 1.0,
+            "positive_reward_steps": 1.0,
+            "entropy": 0.5212020874023438,
+            "advantage_std": 0.07965930551290512,
+            "value_loss": 0.0013532155426219106,
+            "approx_kl": 2.422273635864258
+          },
+          {
+            "step": 8192.0,
+            "reward_sum": 0.0,
+            "positive_reward_steps": 0.0,
+            "entropy": 0.08773242682218552,
+            "advantage_std": 0.0005927109159529209,
+            "value_loss": 4.835495133193035e-07,
+            "approx_kl": 0.048094019293785095
+          },
+          {
+            "step": 10240.0,
+            "reward_sum": 0.0,
+            "positive_reward_steps": 0.0,
+            "entropy": 0.4167879521846771,
+            "advantage_std": 0.006554065737873316,
+            "value_loss": 6.819131158408709e-06,
+            "approx_kl": 0.06529887765645981
+          }
+        ],
+        "zero_advantage_and_value_loss_before_first_reward": true,
+        "steps": 65536,
+        "rollouts": 32,
+        "reward_sum": 1.0,
+        "positive_reward_events": 1,
+        "completed_episodes": 50,
+        "reward_event_rollouts": [
+          {
+            "rollout_end_step": 6144,
+            "positive_events": 1,
+            "reward_sum": 1.0
+          }
+        ],
+        "final_entropy": 0.6455590128898621,
+        "final_approx_kl": 0.0031890070531517267,
+        "max_clipped_grad_norm": 0.3364710211753845,
+        "max_advantage_std": 0.07965930551290512,
+        "step": 65536,
+        "seed": 2,
+        "wall_training_and_periodic_eval_seconds": 782.7586722499982,
+        "collect_seconds": 34.91270095400978,
+        "update_seconds": 735.9593022529443,
+        "training_steps_per_second": 85.01541076515878,
+        "steady_training_steps_per_second": 84.05363030325977,
+        "parameter_change_l2": 11.088979732892662,
+        "final_evaluation": {
+          "mean_return": 0.0,
+          "scoring_fraction": 0.0,
+          "mean_length": 1382.875,
+          "terminated": 8,
+          "truncated": 0,
+          "action_distribution": [
+            0.742926873361656,
+            0.16984543071499594,
+            0.022778631474283648,
+            0.030823465606074303,
+            0.03362559884299015
+          ],
+          "seconds": 10.412462083011633
+        }
+      },
+      "encoder_actor_parameter_change_l2": 9.464691913573638,
+      "parent": {
+        "sha256": "7572a5d2634078cfd8b785db1a23f609d40f1607730aac9d8a0d110621893c93",
+        "components": "encoder_actor",
+        "metadata": {
+          "actions": 5,
+          "architecture": "octax_cnn_v2",
+          "dataset_sha256": "7a5a60ca8632cd751a23a2553d21762254b8aa208a94f658d835f6abc3c05cec",
+          "epochs": 100,
+          "observation_shape": [
+            4,
+            32,
+            64
+          ],
+          "optimizer_updates": 1800,
+          "seed": 2
+        }
+      },
+      "handoff_audit": {
+        "initial_episode_arrays_exact": true,
+        "scratch_control_config_differences": {
+          "run_dir": [
+            "runs/tetris/v2_entropy_zero_seed2",
+            "runs/tetris/human_bc_100epoch_ppo_seed2"
+          ],
+          "initialization_weights_sha256": [
+            null,
+            "7572a5d2634078cfd8b785db1a23f609d40f1607730aac9d8a0d110621893c93"
+          ],
+          "purpose": [
+            null,
+            "curriculum_ppo"
+          ],
+          "initialization": [
+            null,
+            "pretrained_policy_weights"
+          ]
+        },
+        "source_frozen": true,
+        "training_decisions": 65536,
+        "optimizer_updates": 2048,
+        "parent_weights_sha256": "7572a5d2634078cfd8b785db1a23f609d40f1607730aac9d8a0d110621893c93"
+      },
+      "checkpoint_sha256": "08fc7a2c51b38409de118127fdad7b0fd110120b2c166716b38dc7b2d040fc02",
+      "policies": {
+        "ppo": {
+          "mean_return": 0.0,
+          "scoring_fraction": 0.0,
+          "mean_length": 1280.078125,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            0.6615685077815074,
+            0.2301373207201709,
+            0.02546231309124199,
+            0.0477631980469942,
+            0.03506866036008544
+          ],
+          "seconds": 38.57969058299204
+        },
+        "pretrained": {
+          "mean_return": 0.0078125,
+          "scoring_fraction": 0.0078125,
+          "mean_length": 603.40625,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            0.0031591485835620694,
+            0.15350354756849138,
+            0.09885286653891967,
+            0.3491377078046507,
+            0.3953467295043762
+          ],
+          "seconds": 23.908884375006892
+        },
+        "scratch_entropy_zero": {
+          "mean_return": 0.0,
+          "scoring_fraction": 0.0,
+          "mean_length": 1474.640625,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            0.306308740477023,
+            0.2549720800618795,
+            0.15528147747862298,
+            0.1134174640007629,
+            0.17002023798171165
+          ],
+          "seconds": 61.89829929199186
+        },
+        "scratch_entropy_001": {
+          "mean_return": 0.0078125,
+          "scoring_fraction": 0.0078125,
+          "mean_length": 1309.453125,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            0.19987470914623232,
+            0.2001968856273492,
+            0.19944514050474316,
+            0.19983891175944157,
+            0.20064435296223376
+          ],
+          "seconds": 37.0142557079962
+        },
+        "untrained": {
+          "mean_return": 0.0,
+          "scoring_fraction": 0.0,
+          "mean_length": 1301.234375,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            0.1950191524874218,
+            0.20141332148560862,
+            0.20564608124497172,
+            0.20511173284981807,
+            0.19280971193217977
+          ],
+          "seconds": 88.97844733300735
+        },
+        "random": {
+          "mean_return": 0.0234375,
+          "scoring_fraction": 0.0234375,
+          "mean_length": 1273.875,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            0.19958173878912766,
+            0.20087577274065352,
+            0.1990420469041311,
+            0.19992517907958002,
+            0.2005752624865077
+          ],
+          "seconds": 30.432313666999107
+        },
+        "noop": {
+          "mean_return": 0.0,
+          "scoring_fraction": 0.0,
+          "mean_length": 777.703125,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "seconds": 13.595323249988724
+        }
+      },
+      "paired_comparisons": {
+        "pretrained": {
+          "ablation_only_scoring": 0,
+          "control_only_scoring": 1,
+          "exact_p": 1.0,
+          "mean_return_difference": -0.0078125
+        },
+        "random": {
+          "ablation_only_scoring": 0,
+          "control_only_scoring": 3,
+          "exact_p": 0.25,
+          "mean_return_difference": -0.0234375
+        },
+        "scratch_entropy_zero": {
+          "ablation_only_scoring": 0,
+          "control_only_scoring": 0,
+          "exact_p": 1.0,
+          "mean_return_difference": 0.0
+        }
+      }
+    }
+  },
+  "total_fresh_ppo_decisions": 131072,
+  "total_ppo_optimizer_updates": 4096,
+  "offline_updates_including_reference_fits": 4320,
+  "offline_example_presentations": 537600,
+  "original_human_decisions": 2240,
+  "shared_human_prefix": true,
+  "shared_game_bank": true,
+  "reserved_confirmation_bank_used": false,
+  "offline_fit_data_replayed_during_ppo": false,
+  "limitations": [
+    "Two initialization seeds; both share one incomplete human prefix and the same exploratory game bank.",
+    "Do not pool columns into 256 independent game seeds or attribute offline gains to PPO.",
+    "Paired exact-test p-values are unadjusted exploratory diagnostics after multiple investigations.",
+    "Raw human recording stays local; published weights suffice for PPO and gameplay reproduction."
+  ]
+}

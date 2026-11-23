@@ -1,0 +1,25 @@
+{
+  "initial_episode_arrays_exact": true,
+  "scratch_control_config_differences": {
+    "run_dir": [
+      "runs/tetris/v2_entropy_zero_seed2",
+      "runs/tetris/human_bc_100epoch_ppo_seed2"
+    ],
+    "initialization_weights_sha256": [
+      null,
+      "7572a5d2634078cfd8b785db1a23f609d40f1607730aac9d8a0d110621893c93"
+    ],
+    "purpose": [
+      null,
+      "curriculum_ppo"
+    ],
+    "initialization": [
+      null,
+      "pretrained_policy_weights"
+    ]
+  },
+  "source_frozen": true,
+  "training_decisions": 65536,
+  "optimizer_updates": 2048,
+  "parent_weights_sha256": "7572a5d2634078cfd8b785db1a23f609d40f1607730aac9d8a0d110621893c93"
+}
