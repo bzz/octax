@@ -1,3 +1,4 @@
+import copy
 import pickle
 import time
 import os
@@ -6,6 +7,7 @@ import hydra
 from omegaconf import DictConfig, OmegaConf
 
 from octax.agents import PPOOctax, PQNOctax
+from octax.checkpoints import save_checkpoint
 from octax.environments import create_environment
 from octax.wrappers import OctaxGymnaxWrapper
 from rejax.evaluate import evaluate
@@ -17,6 +19,7 @@ import jax.numpy as jnp
 @hydra.main(version_base=None, config_path="conf", config_name="config")
 def main(cfg : DictConfig) -> None:
     cfg = OmegaConf.to_container(cfg)
+    full_config = copy.deepcopy(cfg)
 
     env_name = cfg.pop("env", None)
 
@@ -69,11 +72,12 @@ def main(cfg : DictConfig) -> None:
 
     os.makedirs(f"results/{env_name}/", exist_ok=True)
 
-    params = []
+    params = jax.device_get(ts.agent_ts.params)
+    save_checkpoint(f"results/{env_name}/{job_id}.msgpack", ts, full_config)
 
     with open(f"results/{env_name}/{job_id}.pkl", 'wb') as f:
         pickle.dump(
-            {"params": params,"timesteps": t, "returns": returns, "config": cfg, "time": end-start},
+            {"params": params,"timesteps": t, "returns": returns, "config": full_config, "time": end-start},
             f,
             protocol=pickle.HIGHEST_PROTOCOL
         )
