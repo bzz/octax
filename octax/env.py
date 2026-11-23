@@ -103,6 +103,8 @@ class OctaxEnv:
         self.rom_path = rom_path
         self.max_num_steps_per_episodes = max_num_steps_per_episodes
         self.instruction_frequency = instruction_frequency
+        if fps != 60:
+            raise ValueError("Per-frame CHIP-8 timers currently require fps=60")
         self.fps = fps
         self.frame_skip = frame_skip
         self.terminated_fn = terminated_fn
@@ -231,14 +233,16 @@ class OctaxEnv:
             state
         )
 
-        final_state, states = jax.lax.scan(run_instruction, state, length=self.instructions_per_step * self.frame_skip)
-        if self.disable_delay:
-            final_state: OctaxEnvState = final_state.replace(
-                delay_timer=jnp.zeros((), jnp.uint8),
-                sound_timer=jnp.zeros((), jnp.uint8),
-            )
-        else:
-            final_state = tick_timers(final_state)
+        def run_frame(s, _):
+            s = run_n_instruction(s, self.instructions_per_step)
+            if self.disable_delay:
+                s = s.replace(delay_timer=jnp.zeros((), jnp.uint8),
+                              sound_timer=jnp.zeros((), jnp.uint8))
+            else:
+                s = tick_timers(s)
+            return s, s.display
+
+        final_state, observation = jax.lax.scan(run_frame, state, None, length=self.frame_skip)
 
         final_state = jax.lax.cond(
             action == (self.num_actions - 1),
@@ -246,8 +250,6 @@ class OctaxEnv:
             lambda s: s.replace(keypad=s.keypad.at[self.action_set[action]].set(0)),
             final_state
         )
-
-        observation = states.display[self.instructions_per_step - 1:: self.instructions_per_step]
 
         previous_score = final_state.previous_score
         current_score = self.score_fn(final_state) * 1.0
