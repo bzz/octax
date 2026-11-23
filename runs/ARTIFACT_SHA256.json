@@ -1,7 +1,7 @@
 {
   "README.md": {
-    "sha256": "53e4f1ede3920a6203b3daef310440b1955571523753b5de5c6ef447c86841b2",
-    "bytes": 4958
+    "sha256": "2fa301a73ebd68044e27e1b2fae81cfc8d2047a5eeb2bee54604e5be90e25252",
+    "bytes": 5434
   },
   "tetris/continued_seed0/checkpoint.msgpack": {
     "sha256": "42dfa42cf14c222155882f016a7b85caaa3d1aa6496af35adfd663043d8e45f3",
@@ -198,6 +198,374 @@
   "tetris/entropy_diagnostic/visualizations/policy_trajectory.npz": {
     "sha256": "703b069c059d49c6d326cb10e3dcc3efc6a4b1de487ef5acde67089e230c084a",
     "bytes": 4021
+  },
+  "tetris/human_bc_100epoch_seed1/RESULT.md": {
+    "sha256": "31c7c34e2a12541a9b7ae33d81efaa704b76ad4c98d284b821f7fcbefb626747",
+    "bytes": 3795
+  },
+  "tetris/human_bc_100epoch_seed1/analysis.json": {
+    "sha256": "8c06d1f09620358a67a532a424d3c46ecf8eab3dcb04a2280b1d064c0999e889",
+    "bytes": 4710
+  },
+  "tetris/human_bc_100epoch_seed1/fit_comparison.png": {
+    "sha256": "c7fc1790d899f95f7550b0b19a51a9ea036ff9a379b99a8f534fd96b858afa45",
+    "bytes": 72056
+  },
+  "tetris/human_bc_100epoch_seed1/policy_card.gif": {
+    "sha256": "931cd0cbea1e421419963107f4b64932c1a63b685bde0dd631c86ee6241d5a58",
+    "bytes": 71906
+  },
+  "tetris/human_bc_100epoch_seed1/policy_card.png": {
+    "sha256": "2d86e60902d12d81e2371f0a0638987d641864e164a3c8ef75f1a4fb610ad456",
+    "bytes": 3900
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/cloning_checkpoint.msgpack": {
+    "sha256": "6f357d857a9c23c95dd45294627958600d9005fe4e405f3d13be1a62010e56a4",
+    "bytes": 13490047
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/config.yaml": {
+    "sha256": "ca329c022fbdc83079d6f2452e716dced7e96a0b71b2f3f024d322e4d9f925cd",
+    "bytes": 743
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/dataset_manifest.json": {
+    "sha256": "8fb7561f616a5522f135e48e6132e83618a8e996cdab6b744e88a5606df3cfe3",
+    "bytes": 740
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/dataset_validation.json": {
+    "sha256": "3db22bcb4ec4bf149c7600086569de0e6816a70a5e2283358b8371868aaf4a68",
+    "bytes": 200
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/heldout/comparison.json": {
+    "sha256": "e7ccd104deef578539fd845d9283b0e1b880e1876e6c361270e46df40c9afd1b",
+    "bytes": 63654
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/heldout/illustration.json": {
+    "sha256": "258214cfc8e412226729feb370c8cde6f14eb7547473240be0a993323c7666bb",
+    "bytes": 59
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/heldout/policy_trajectory.npz": {
+    "sha256": "861914428e5582380e41d62e619a5af9597917974c62e8caf1d36ff61490a1b4",
+    "bytes": 2509
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/heldout/source_manifest.json": {
+    "sha256": "0be4415213ecee8a73e6ce3ec9a91500ad50042dbc274a87be1aad69b582616d",
+    "bytes": 477
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/heldout/source_snapshot/evaluate_policy_weights.py": {
+    "sha256": "7ae56d3bb6b8792c88b2012512ddfcd6f64300cf03f11849531d26a0f2f9011d",
+    "bytes": 3031
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/heldout/source_snapshot/experiment_utils.py": {
+    "sha256": "56acd748517c545f735536729044a77d2c85671a47c1cb7fa6b9ab90321daaa7",
+    "bytes": 4809
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/heldout/source_snapshot/octax/agents/ppo.py": {
+    "sha256": "87dceaf2a5c0a8679939b84c306bfaa571ae5bd28e044f4c252d1f3621442364",
+    "bytes": 10291
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/heldout/source_snapshot/policy_initialization.py": {
+    "sha256": "c7070a63bda01fa945c26a847fada7434a41e94fb5369f3d26a24725c3494847",
+    "bytes": 4599
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/heldout/source_snapshot/visualize_run.py": {
+    "sha256": "86063a73d7e03dcc594bcb28d58a76c5a01e1af1e017cb9fce50423e2265286e",
+    "bytes": 8070
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/initial_evaluation.json": {
+    "sha256": "ca11170e13540c9831a9f573ec9dc992f7d422371fd9ad22fb7c3e973daea81e",
+    "bytes": 1638
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/matched_20_epoch_audit.json": {
+    "sha256": "6ebcd89685ad31f3e2cacc49595255f7b1333f9b295ad2761af2b4f6655f9f4a",
+    "bytes": 198
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/metrics.csv": {
+    "sha256": "fbc8d1139bec776691de7566ae34bfdfc3bd6cbc6d59bb09a8f58621963326a9",
+    "bytes": 7293
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/policy_weights.msgpack": {
+    "sha256": "8dde4760ef6ff3512af083ce6f5b3cea04e7fdb90f526e0985c8da9f4bca1d20",
+    "bytes": 4496640
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/pretrained_evaluation.json": {
+    "sha256": "5b7323a952f4fd671ebbf4700e2f0aebad7eb54ec2bebc88e03e209e0f2ba4c6",
+    "bytes": 1600
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/run_status.json": {
+    "sha256": "4c4ec48bf0b585f8203fc563bc7495bc82a71067fd40b251f8f03f890cc8a6e6",
+    "bytes": 155
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_manifest.json": {
+    "sha256": "8640407475b8861801d3c4024601da9cab18346ccf0d3273a55059227e31e9e7",
+    "bytes": 5443
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/CLONING_DURATION_EXPERIMENT.md": {
+    "sha256": "2b6deb8a4fc5022bbd83f1dcf14523d16185e0cfb395030387bedb6af56426a9",
+    "bytes": 3140
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/CURRICULUM.md": {
+    "sha256": "2d678d6823177af62ed866b8219b6117f4ea9dd77eb23badf827da88d7da4734",
+    "bytes": 11968
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/evaluate_initial_policy.py": {
+    "sha256": "68a2f4189bf60e99b4334ee6f7acf32542a3f379e7efd3b578c825e3e765a447",
+    "bytes": 2724
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/experiment_utils.py": {
+    "sha256": "56acd748517c545f735536729044a77d2c85671a47c1cb7fa6b9ab90321daaa7",
+    "bytes": 4809
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/human_demonstrations.py": {
+    "sha256": "8154fafd589ddb21b45dbc33d57813396a85c2b49c65f462380e8c5078cfd1c5",
+    "bytes": 11392
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/__init__.py": {
+    "sha256": "bfb440ef4fcfd09a8d680c3f05eb8e9f16c6b1770e2dadb66835350a88925dc0",
+    "bytes": 597
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/agents/__init__.py": {
+    "sha256": "533188ba1365fd79ade62cd18c097f8b6fc19b28a36223de0b8bff2bf87dd1bf",
+    "bytes": 75
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/agents/ppo.py": {
+    "sha256": "87dceaf2a5c0a8679939b84c306bfaa571ae5bd28e044f4c252d1f3621442364",
+    "bytes": 10291
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/agents/pqn.py": {
+    "sha256": "784d0d13507e642e681ab5d426226bccf263fdefe5161bf489be79642190e149",
+    "bytes": 6814
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/checkpoints.py": {
+    "sha256": "230af35150c1a85532b758fbb6be0514014c77863fea3e247c9faa548b3ac021",
+    "bytes": 742
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/constants.py": {
+    "sha256": "5b35f9547ed79c5d6075c4b80bf066538646c1d2a47ecea1f3c429c2ad793535",
+    "bytes": 1192
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/decode.py": {
+    "sha256": "bfd5179fe2518389eb50a8737806ce73eb023b74448d17a1e3e084aa53122de5",
+    "bytes": 858
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/emulator.py": {
+    "sha256": "8f59c32911753c8a0e7a98d906681138e5b25c3c3153b7eed2fd4e67d4b80d2f",
+    "bytes": 2770
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/env.py": {
+    "sha256": "30a80cb6290c7bfba3cfe8bf816bf77740d342e0d958a1784628e9126b947a06",
+    "bytes": 12086
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/environments/__init__.py": {
+    "sha256": "e99273b4fe229184d93ba0d2f2c44fa2e5d89f3ca4011f6ea10e6b171e6b856d",
+    "bytes": 4558
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/environments/airplane.py": {
+    "sha256": "2712ef1ba5500737eeea236186bd6a00430a89dba37cdc339d62273bc61b0c1c",
+    "bytes": 730
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/environments/blinky.py": {
+    "sha256": "8d9c34bd8946d7047b85889285112f39ea38342c06609ad7eeacc2c3f2993ac2",
+    "bytes": 2463
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/environments/brix.py": {
+    "sha256": "0335febd2973d88edd9ce5c3617acdb2b797f6cdb637a5dee2d59381239df727",
+    "bytes": 1182
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/environments/cavern.py": {
+    "sha256": "b21be152432a31e9f19b69fffcb2963b05adf210903779db9e3f8fbff445e95c",
+    "bytes": 2223
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/environments/deep.py": {
+    "sha256": "ad55daffc2c7f8d019969ccbb1950112454ceb4aa14c518d48c85516d5b9fae9",
+    "bytes": 1153
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/environments/filter.py": {
+    "sha256": "a84bb0fcec1e2b6933686b1c2f7bf9f7b08236b15f48f0300b1cea7c3c5fcb80",
+    "bytes": 527
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/environments/flight_runner.py": {
+    "sha256": "de92269e8c7dc8d1480f25f7b072ab0e735eaa4de3967f4d5eba5699be38082b",
+    "bytes": 881
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/environments/missile.py": {
+    "sha256": "24a08af72ef18e0fe8e68f1a9e54128b76c4acc49fa783abfa3dbfbd98027337",
+    "bytes": 982
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/environments/pong.py": {
+    "sha256": "5dfbb1a064cc09d1aae09b6ac7b6e3ea0f14179b803541ce9f04b3f2373cb7af",
+    "bytes": 666
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/environments/rocket.py": {
+    "sha256": "4861cb029cdbfd5c8352850f6c79f78ca9301b751680511223b214c974a3c40b",
+    "bytes": 1432
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/environments/shooting_stars.py": {
+    "sha256": "b40010c2d1804ef275d4b45f706570a7f57f5c713669c24374aa04f592dbd062",
+    "bytes": 734
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/environments/space_flight.py": {
+    "sha256": "84ddbc713f026007ee0321f089c932c7f8be4e5ad816f98f9aa98916aa41fad0",
+    "bytes": 1192
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/environments/spacejam.py": {
+    "sha256": "9968c22e13d7cd3b96226a20ce574f7d8f75ad4ad74c6da150d4ab9e1b76e583",
+    "bytes": 915
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/environments/squash.py": {
+    "sha256": "5adc877fb2a799ccdbd49f028f487def0103d212fbb2f7762599dc874880236e",
+    "bytes": 713
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/environments/submarine.py": {
+    "sha256": "b44910abce81c25a390e4fccd8f419595aac6856e77ebe86ee2e3f3c9b040056",
+    "bytes": 776
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/environments/tank.py": {
+    "sha256": "baf1ffd3f3d62e92e16f692bb8b1073b2478324ddccb863bdbdf4cd750af8421",
+    "bytes": 799
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/environments/target_shooter.py": {
+    "sha256": "408ff26f80637bc71d50289f6be79391fdc76e125e05812203131166791374d2",
+    "bytes": 5501
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/environments/tetris.py": {
+    "sha256": "5164f0875acfa9a1e80224f7d2b56969fa67f4543f56657ec16e6faab3657adb",
+    "bytes": 2182
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/environments/ufo.py": {
+    "sha256": "981c6dde8e7f47cb82cc4e8edd953014e2d3f67da67f3077f4a2732d51e1c6cc",
+    "bytes": 1753
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/environments/vertical_brix.py": {
+    "sha256": "66328220611281cfba1b84008bdd3ca125d777b448c684121a8df5c003e6aeb7",
+    "bytes": 1121
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/environments/wipe_off.py": {
+    "sha256": "898be810e8d3f4bb07e52f4c51f71ee342cced7a92c7bdd26817dcb6456253ae",
+    "bytes": 1071
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/environments/worm.py": {
+    "sha256": "e22829e37a0ee082a5c645fd8d96c49bc6d4f6c587533079df786bdd0e495def",
+    "bytes": 2781
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/instructions/__init__.py": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/instructions/alu.py": {
+    "sha256": "c4f0505c190f1421f13ec1de4149700bca0f1ad19e0f2b7d3f2062f8e37472e8",
+    "bytes": 3230
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/instructions/control_flow.py": {
+    "sha256": "9ae00b24347aa673231360f15e0fd9f0ffe016704057a372c4f228562a77f0a2",
+    "bytes": 2682
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/instructions/display.py": {
+    "sha256": "17af2bfbfb7067cb3438a6898e7ce4a68737794e3fca9f50e70bd65fb1f431be",
+    "bytes": 1047
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/instructions/memory.py": {
+    "sha256": "d7052aac9c5fa001518146e6fb28623550930e1f925ff0a86c9e5fbe160d7e9a",
+    "bytes": 1120
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/instructions/misc.py": {
+    "sha256": "c2cc2476e7bbf6d0009d5a786dbec6c46b252ae6fe2e5ec6d872abe7aaf5fe9d",
+    "bytes": 4980
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/instructions/system.py": {
+    "sha256": "33be7f5501396f8558cfe563cf10ce41f9bf9fa42fc699e5967069e97dbcf66a",
+    "bytes": 1194
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/logging.py": {
+    "sha256": "6dbfcf5677adcaef8d4f5806ddda025bb42b053fd6a965ab5c3d382ff0b9a641",
+    "bytes": 22302
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/rendering.py": {
+    "sha256": "d074d5ead383f4249dddc666552338dccfd7a5fa238691303075223a2e328f5d",
+    "bytes": 8582
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/stack.py": {
+    "sha256": "533dc6283c31c5648c6943adb1eb94df22f97b1bc31aa127783ada015f1d85f4",
+    "bytes": 713
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/state.py": {
+    "sha256": "81853c534036880405a8c9f83bfb3a05b7c417942854e842d5298f4882af98e0",
+    "bytes": 1684
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/octax/wrappers.py": {
+    "sha256": "cd46727e367b182873625bf33e89f1afc0488b03c67df48b945640b208ed9a23",
+    "bytes": 2629
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/pixel_pretraining.py": {
+    "sha256": "c127c125fa0b5b536be4155fe20cf460efc50716e0bcdc7f9a3fbac4fc404a5d",
+    "bytes": 6681
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/policy_initialization.py": {
+    "sha256": "c7070a63bda01fa945c26a847fada7434a41e94fb5369f3d26a24725c3494847",
+    "bytes": 4599
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/pretrain_human_policy.py": {
+    "sha256": "cc7af598c12562e3afe13adc44b7601a41b90ee15233e13ea6fd9098533bf79b",
+    "bytes": 10238
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/requirements-macos.lock.txt": {
+    "sha256": "800cdcebc24c1f47821afe963d23e53f57de4123d4bc4a1b2a1167676fcb26c4",
+    "bytes": 1786
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/roms/Tetris [Fran Dachille, 1991].ch8": {
+    "sha256": "667cb026dee03f59f3a2fd81a2ffeab47da87731883f9601d37ba019976f94dd",
+    "bytes": 494
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/source_snapshot/train.py": {
+    "sha256": "7fb070201573056d256dbfdcea7f59df602c2f4f8f7cde2b79c27be2a4b7bed8",
+    "bytes": 9784
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/summary.json": {
+    "sha256": "27747a568de77bf22105f8c3b55162ee78f9da9bce6af14f194d4461bb9d530c",
+    "bytes": 1159
+  },
+  "tetris/human_bc_100epoch_seed1/pretrain/system.json": {
+    "sha256": "6b3f90b2cf3d2f186f4338f4f6a8a46409f602d1533ecc9ff044f287b9b78551",
+    "bytes": 475
+  },
+  "tetris/human_bc_100epoch_seed1/report_source_manifest.json": {
+    "sha256": "9e2eb099b7aad2c411d937a3a0db37e22f82e2763fec2552db8c0c9a0679ffbe",
+    "bytes": 672
+  },
+  "tetris/human_bc_100epoch_seed1/report_source_snapshot/diagnose_cloning_handoff.py": {
+    "sha256": "a73fcb42af258e0dce0c61b5e7a6372ed521109d7bb30bce1f421b47b5815608",
+    "bytes": 7370
+  },
+  "tetris/human_bc_100epoch_seed1/report_source_snapshot/experiment_utils.py": {
+    "sha256": "56acd748517c545f735536729044a77d2c85671a47c1cb7fa6b9ab90321daaa7",
+    "bytes": 4809
+  },
+  "tetris/human_bc_100epoch_seed1/report_source_snapshot/octax/agents/ppo.py": {
+    "sha256": "87dceaf2a5c0a8679939b84c306bfaa571ae5bd28e044f4c252d1f3621442364",
+    "bytes": 10291
+  },
+  "tetris/human_bc_100epoch_seed1/report_source_snapshot/pixel_pretraining.py": {
+    "sha256": "c127c125fa0b5b536be4155fe20cf460efc50716e0bcdc7f9a3fbac4fc404a5d",
+    "bytes": 6681
+  },
+  "tetris/human_bc_100epoch_seed1/report_source_snapshot/policy_initialization.py": {
+    "sha256": "c7070a63bda01fa945c26a847fada7434a41e94fb5369f3d26a24725c3494847",
+    "bytes": 4599
+  },
+  "tetris/human_bc_100epoch_seed1/report_source_snapshot/round_card.py": {
+    "sha256": "2396fdd9352ec3c5a644ff586795a84ebbe016a2b6ddd9dfd45c607fd637be03",
+    "bytes": 3290
+  },
+  "tetris/human_bc_100epoch_seed1/report_source_snapshot/summarize_cloning_duration.py": {
+    "sha256": "6033f922c6a190e55a519c7e9d81f6906a7cb58aa95b171bd08e354e4ba8248e",
+    "bytes": 11606
+  },
+  "tetris/human_bc_100epoch_seed1/result_card.html": {
+    "sha256": "0865a9119c408c49d8930d874f44a3ff2b1211e79c7d9b1c13c4c05c73d169c6",
+    "bytes": 97650
+  },
+  "tetris/human_bc_100epoch_seed1/visualizations/policy_trajectory.npz": {
+    "sha256": "861914428e5582380e41d62e619a5af9597917974c62e8caf1d36ff61490a1b4",
+    "bytes": 2509
   },
   "tetris/human_bc_handoff_entropy_zero_seed1/checkpoint.msgpack": {
     "sha256": "46e220af23c5274435867e876f30cd0b5e591d1f9ae70daf4755122dfd3bbf8e",

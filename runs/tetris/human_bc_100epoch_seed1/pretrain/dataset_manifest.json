@@ -1,0 +1,30 @@
+{
+  "sha256": "7a5a60ca8632cd751a23a2553d21762254b8aa208a94f658d835f6abc3c05cec",
+  "source": "human",
+  "decisions": 2240,
+  "complete": false,
+  "return_sum": 11.0,
+  "episode_id": "episode_000_seed200000",
+  "reset_seed": 200000,
+  "full_replay_validation_required": true,
+  "action_counts": [
+    47,
+    116,
+    191,
+    171,
+    1715
+  ],
+  "action_proportions": [
+    0.020982142857142855,
+    0.05178571428571429,
+    0.08526785714285715,
+    0.07633928571428572,
+    0.765625
+  ],
+  "majority_action_accuracy": 0.765625,
+  "constant_action_cross_entropy": 0.8451794354376385,
+  "independent_trajectories": 1,
+  "held_out_action_validation": false,
+  "dataset_collection_decisions": 2240,
+  "diagnostic_replay_transitions": 2241
+}

@@ -130,3 +130,8 @@ Fresh seeds 1 and 2 each received 65,536 strictly on-policy decisions. Both foun
 ## Independent cloning / PPO handoff
 
 A fixed human-prefix clone passes its offline fit gate but scores 0/128 versus random 3/128. Two fresh 2,048-step PPO processes exactly reproduce the disk-loaded initialization. With no task feedback, entropy .01 erases the fitted preferences; entropy zero preserves all encoder/actor weights exactly. This validates stage separation, not learning. No full 64K curriculum PPO run has started. [Report, diagnostic and actual-policy card](runs/tetris/human_bc_seed1/RESULT.md).
+
+
+## Longer offline cloning: exploratory candidate, seed 1
+
+Holding the data, CNN and optimizer fixed, 100 epochs improve training CE from 0.420 to 0.170 and training-prefix rotation recall from 0% to 83%. The entire state at epoch 20 exactly matches the prior run. Final stochastic play scores in 7/128 games versus 20-epoch cloning 0/128 and random 3/128. This passes the predeclared exploratory screen and triggers seed-2 replication; it is not confirmation or a gain from PPO. [Evidence, fit curve and actual-policy card](runs/tetris/human_bc_100epoch_seed1/RESULT.md).

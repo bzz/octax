@@ -34,3 +34,6 @@ See [EXPERIMENT.md](../EXPERIMENT.md) for commands and [FORK_CHANGELOG.md](../FO
 
 
 [Independent cloning / PPO handoff](tetris/human_bc_seed1/RESULT.md): human-prefix provenance and validation, offline checkpoint and weights-only artifact, actor-only original-score evaluation, two separate fresh PPO smokes, read-only confusion/retention audit and actual-policy card. The raw human archive is excluded; offline reproduction requires a separately supplied copy, while published weights suffice for evaluation and PPO. The clone scores 0/128 versus random 3/128; no full 64K curriculum run or useful learning is claimed.
+
+
+[Matched 100-epoch offline cloning, seed 1](tetris/human_bc_100epoch_seed1/RESULT.md): exact 20-epoch full-state match, final training CE 0.170, rotation recall 83%, and 7/128 scoring games versus random 3/128. This is an exploratory offline candidate, not confirmed on-policy learning. Includes weights, checkpoint, hashes, frozen sources, curves and actual-policy card; raw human data is excluded. Seed-2 replication is separately budgeted and not included while running.

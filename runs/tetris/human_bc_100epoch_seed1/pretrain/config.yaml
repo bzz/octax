@@ -1,0 +1,35 @@
+env: tetris
+experiment_version: 2
+env_kwargs:
+  timer_mode: frame
+agent: PPO
+seed: 1
+num_envs: 16
+num_steps: 128
+num_epochs: 4
+num_minibatches: 16
+learning_rate: 0.0005
+total_timesteps: 65536
+eval_freq: 65536
+eval_episodes: 8
+eval_seed_start: 10000
+gamma: 0.995
+gae_lambda: 0.98
+clip_eps: 0.2
+vf_coef: 0.5
+ent_coef: 0.01
+max_grad_norm: 0.5
+advantage_std_floor: 0.01
+grad_clip_mode: global_norm
+zero_init_value: true
+run_dir: runs/tetris/human_bc_100epoch_seed1/pretrain
+resume: null
+encoder_checkpoint: null
+initialization: human_behavior_cloning
+pretraining:
+  dataset_sha256: 7a5a60ca8632cd751a23a2553d21762254b8aa208a94f658d835f6abc3c05cec
+  epochs: 100
+  batch_size: 128
+  learning_rate: 0.0005
+  max_grad_norm: 0.5
+  source: human_prefix

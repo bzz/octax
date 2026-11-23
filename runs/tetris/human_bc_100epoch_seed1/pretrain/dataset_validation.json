@@ -1,0 +1,10 @@
+{
+  "file": "dataset.npz",
+  "steps": 2240,
+  "score": 11.0,
+  "source": "human",
+  "complete": false,
+  "exact_replay": true,
+  "mid_episode_restore": true,
+  "diagnostic_replay_transitions": 2241
+}
