@@ -1,4 +1,4 @@
-"""Independent 20-epoch cloning stage; exports only CNN/actor weights for PPO."""
+"""Independent cloning stage; exports only CNN/actor weights for PPO."""
 import argparse
 import csv
 import datetime
@@ -22,9 +22,9 @@ from policy_initialization import save_policy_weights, read_policy_weights
 
 ROOT = Path(__file__).resolve().parent
 DATA_SHA256 = '7a5a60ca8632cd751a23a2553d21762254b8aa208a94f658d835f6abc3c05cec'
-EPOCHS = 20
 SOURCES = ['pretrain_human_policy.py', 'pixel_pretraining.py', 'policy_initialization.py', 'human_demonstrations.py',
     'evaluate_initial_policy.py', 'experiment_utils.py', 'train.py', 'CURRICULUM.md',
+    'CLONING_DURATION_EXPERIMENT.md',
     'requirements-macos.lock.txt', 'roms/Tetris [Fran Dachille, 1991].ch8']
 SOURCES += [str(p.relative_to(ROOT)) for p in sorted((ROOT/'octax').rglob('*.py'))]
 
@@ -36,8 +36,13 @@ def exact(a, b):
         np.testing.assert_array_equal(x, y)
 
 
-def run(directory, dataset, seed):
+def run(directory, dataset, seed, epochs=20, reference_20_epoch=None):
     os.chdir(ROOT)
+    if epochs not in (20, 100):
+        raise ValueError('Only the declared 20/100-epoch experiments are supported')
+    if epochs == 100 and reference_20_epoch is None:
+        raise ValueError('The duration ablation requires its matched 20-epoch checkpoint')
+    reference_bytes = Path(reference_20_epoch).read_bytes() if reference_20_epoch else None
     data_bytes = Path(dataset).read_bytes()
     assert hashlib.sha256(data_bytes).hexdigest() == DATA_SHA256, 'Pinned dataset changed'
     out = Path(directory).resolve(); relative = str(out.relative_to(ROOT))
@@ -67,7 +72,7 @@ def run(directory, dataset, seed):
         control = ROOT/f'runs/tetris/v2_credit_horizon_seed{seed}'
         cfg = OmegaConf.to_container(OmegaConf.load(control/'config.yaml'))
         cfg.update(run_dir=relative, initialization='human_behavior_cloning',
-            pretraining=dict(dataset_sha256=DATA_SHA256, epochs=EPOCHS, batch_size=128,
+            pretraining=dict(dataset_sha256=DATA_SHA256, epochs=epochs, batch_size=128,
                              learning_rate=.0005, max_grad_norm=.5, source='human_prefix'))
         OmegaConf.save(OmegaConf.create(cfg), out/'config.yaml')
         sources = {name: (ROOT/name).read_bytes() for name in SOURCES}
@@ -90,7 +95,7 @@ def run(directory, dataset, seed):
         with (out/'metrics.csv').open('w', newline='') as stream:
             writer = csv.DictWriter(stream, ['epoch', 'loss_during_epoch', 'entropy_during_epoch',
                 'examples_seen', 'optimizer_updates', 'seconds']); writer.writeheader()
-            for epoch in range(1, EPOCHS+1):
+            for epoch in range(1, epochs+1):
                 status('pretraining', epoch=epoch-1)
                 assert all((ROOT/n).read_bytes() == d for n, d in sources.items()), 'Frozen source changed'
                 start = time.perf_counter()
@@ -101,12 +106,22 @@ def run(directory, dataset, seed):
                 row = dict(epoch=epoch, loss_during_epoch=float(metrics['loss']), entropy_during_epoch=float(metrics['entropy']),
                     examples_seen=int(state.examples_seen), optimizer_updates=int(state.policy.step), seconds=seconds)
                 writer.writerow(row); stream.flush(); print('PRETRAIN', row, flush=True)
+                if epoch == 20 and reference_bytes is not None:
+                    assert Path(reference_20_epoch).read_bytes() == reference_bytes
+                    reference, _ = restore_checkpoint(reference_20_epoch,
+                        cloner.init(fresh.agent_ts.params, jax.random.PRNGKey(999)))
+                    exact(state, reference)
+                    write_json(out/'matched_20_epoch_audit.json', dict(full_cloning_state_exact=True,
+                        reference_sha256=hashlib.sha256(reference_bytes).hexdigest(),
+                        epoch=20, optimizer_updates=int(state.policy.step),
+                        examples_seen=int(state.examples_seen)))
+                    print('MATCHED 20-EPOCH FULL STATE EXACT', flush=True)
         after = float(cloner.fit_metrics(state, pairs.observations, pairs.actions)['cross_entropy'])
         save_checkpoint(out/'cloning_checkpoint.msgpack', state, cfg)
         restored, _ = restore_checkpoint(out/'cloning_checkpoint.msgpack', cloner.init(fresh.agent_ts.params, jax.random.PRNGKey(999)))
         exact(state, restored)
         weights_sha = save_policy_weights(out/'policy_weights.msgpack', restored.policy.params,
-            dict(dataset_sha256=DATA_SHA256, epochs=EPOCHS, optimizer_updates=int(state.policy.step),
+            dict(dataset_sha256=DATA_SHA256, epochs=epochs, optimizer_updates=int(state.policy.step),
                 seed=seed, observation_shape=[4,32,64], actions=5, architecture='octax_cnn_v2'))
         weights, _ = read_policy_weights(out/'policy_weights.msgpack', weights_sha)
         exact(restored.policy.params, weights)
@@ -118,7 +133,7 @@ def run(directory, dataset, seed):
         write_json(out/'pretrained_evaluation.json', final_eval)
         # This is a training-fit gate, not a gameplay/generalization claim.
         fit_gate = after < before and after < constant_ce
-        summary = dict(seed=seed, epochs=EPOCHS, examples_seen=int(state.examples_seen),
+        summary = dict(seed=seed, epochs=epochs, examples_seen=int(state.examples_seen),
             optimizer_updates=int(state.policy.step), training_seconds=total_seconds,
             initial_training_cross_entropy=before, final_training_cross_entropy=after,
             constant_action_cross_entropy=constant_ce, training_fit_gate=fit_gate,
@@ -128,7 +143,7 @@ def run(directory, dataset, seed):
             evaluation_decisions=sum(initial_eval['episodes']['lengths'])+sum(final_eval['episodes']['lengths']),
             policy_weights_sha256=weights_sha,
             initial_parameter_sha256=original_hash, final_evaluation=final_eval['summary'])
-        assert summary['examples_seen'] == 44800 and summary['optimizer_updates'] == 360
+        assert summary['examples_seen'] == 2240*epochs and summary['optimizer_updates'] == 18*epochs
         write_json(out/'summary.json', summary)
         status('complete', training_fit_gate=fit_gate, ppo_training_started=False)
         print('PRETRAINING COMPLETE', summary, flush=True)
@@ -141,5 +156,7 @@ if __name__ == '__main__':
     parser.add_argument('--run', required=True)
     parser.add_argument('--dataset', required=True)
     parser.add_argument('--seed', type=int, choices=[1, 2], required=True)
+    parser.add_argument('--epochs', type=int, choices=[20, 100], default=20)
+    parser.add_argument('--reference-20-epoch', help='Matching completed cloning checkpoint; required at 100 epochs')
     args = parser.parse_args()
-    run(args.run, args.dataset, args.seed)
+    run(args.run, args.dataset, args.seed, args.epochs, args.reference_20_epoch)
