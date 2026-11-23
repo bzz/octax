@@ -1,0 +1,16 @@
+# Candidate follow-up; not part of the frozen baseline/credit replication.
+defaults:
+  - credit_horizon
+  - _self_
+experiment_version: 3
+seed: 1
+run_dir: runs/tetris/v3_self_imitation_seed1
+self_imitation:
+  enabled: true
+  capacity: 50000
+  batch_size: 128
+  updates_per_rollout: 10
+  loss_weight: 0.1
+  value_weight: 0.01
+  priority_alpha: 0.6
+  priority_beta: 0.1

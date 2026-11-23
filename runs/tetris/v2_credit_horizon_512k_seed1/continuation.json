@@ -1,0 +1,9 @@
+{
+  "parent_run": "runs/tetris/v2_credit_horizon_seed1",
+  "starting_step": 65536,
+  "target_step": 524288,
+  "added_training_steps": 458752,
+  "parent_sha256": {
+    "checkpoint.msgpack": "25b0378a12d015f2e5e35c60063ecd7d8e99427ea7fcf1c168a043d1b9d3d75f"
+  }
+}

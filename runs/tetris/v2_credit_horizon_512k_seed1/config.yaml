@@ -1,0 +1,27 @@
+env: tetris
+experiment_version: 2
+env_kwargs:
+  timer_mode: frame
+agent: PPO
+seed: 1
+num_envs: 16
+num_steps: 128
+num_epochs: 4
+num_minibatches: 16
+learning_rate: 0.0005
+total_timesteps: 524288
+eval_freq: 65536
+eval_episodes: 8
+eval_seed_start: 10000
+gamma: 0.995
+gae_lambda: 0.98
+clip_eps: 0.2
+vf_coef: 0.5
+ent_coef: 0.01
+max_grad_norm: 0.5
+advantage_std_floor: 0.01
+grad_clip_mode: global_norm
+zero_init_value: true
+run_dir: runs/tetris/v2_credit_horizon_512k_seed1
+resume: runs/tetris/v2_credit_horizon_seed1/checkpoint.msgpack
+encoder_checkpoint: null

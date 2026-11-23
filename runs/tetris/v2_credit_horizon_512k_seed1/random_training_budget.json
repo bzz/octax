@@ -1,0 +1,44 @@
+{
+  "policy": "uniform_random",
+  "timer_mode": "frame",
+  "seed": 1,
+  "total_steps": 524288,
+  "positive_reward_events": 4,
+  "reward_sum": 4.0,
+  "completed_episodes": 400,
+  "positive_events": [
+    {
+      "vector_step": 2551,
+      "environment_steps_consumed": 40816,
+      "env_index": 8,
+      "reward": 1.0
+    },
+    {
+      "vector_step": 3072,
+      "environment_steps_consumed": 49152,
+      "env_index": 8,
+      "reward": 1.0
+    },
+    {
+      "vector_step": 8079,
+      "environment_steps_consumed": 129264,
+      "env_index": 15,
+      "reward": 1.0
+    },
+    {
+      "vector_step": 12339,
+      "environment_steps_consumed": 197424,
+      "env_index": 13,
+      "reward": 1.0
+    }
+  ],
+  "action_distribution": [
+    0.20019912719726562,
+    0.2002391815185547,
+    0.20013427734375,
+    0.19971275329589844,
+    0.19971466064453125
+  ],
+  "elapsed_seconds": 168.04900045800605,
+  "note": "Matched budget and initial reset states; no claim of identical action RNG or episode boundaries."
+}
