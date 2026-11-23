@@ -1,0 +1,30 @@
+{
+  "step": 524288,
+  "seed": 1,
+  "wall_training_and_periodic_eval_seconds": 3353.785875875008,
+  "collect_seconds": 192.3653179150424,
+  "update_seconds": 2968.605457086931,
+  "training_steps_per_second": 145.13009852162065,
+  "steady_training_steps_per_second": 145.23014132012045,
+  "parameter_change_l2": 37.27734178922777,
+  "final_evaluation": {
+    "mean_return": 0.0,
+    "scoring_fraction": 0.0,
+    "mean_length": 1452.625,
+    "terminated": 8,
+    "truncated": 0,
+    "action_distribution": [
+      0.17786765338611135,
+      0.2066087255829963,
+      0.2315635487479563,
+      0.15144996127699853,
+      0.23251011100593752
+    ],
+    "seconds": 9.009366541024065
+  },
+  "sil_updates_applied": 1935,
+  "sil_seconds": 63.11089575235383,
+  "first_sil_step": 67584,
+  "replay_size": 50000,
+  "replay_positive_episodes": 4
+}

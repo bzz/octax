@@ -47,3 +47,7 @@ The three-seed replication adds fresh baseline/longer-credit seeds 1 and 2, exac
 ### Pixel-only self-imitation candidate
 
 `self_imitation.py`, `train_self_imitation.py` and `conf/self_imitation.yaml` add an experimental completed-episode replay objective after the negative three-seed comparison. This is experiment-only work, excluded from `upstream-fixes`. See `SELF_IMITATION.md` for rationale, constraints, validation and the matched-budget protocol.
+
+### Matched 512K continuation
+
+The fixed seed-1 PPO/replay continuation and cumulative audit are experiment-only work. Parent-checkpoint hashes and source snapshots preserve provenance across the resumed budget; `upstream-fixes` is unchanged. See [results](runs/tetris/learning_512k_seed1/RESULT.md).

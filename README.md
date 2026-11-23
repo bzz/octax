@@ -2,7 +2,7 @@
 
 ## Pixel-only Tetris research fork
 
-This fork records reproducible CPU PPO experiments using only four monochrome game frames and the original score reward. **Three-seed 64K replication:** training reward events were baseline [0, 0, 0] and longer credit [1, 2, 0]; scoring games were [1, 1, 1] versus [2, 1, 1] out of 128 per policy, with 3/128 for the shared random control. Neither configuration passes the exploratory learning gate at 64K steps; useful scoring improvement is not established. [Latest result and animation](runs/tetris/v2_replication_64k/RESULT.md).
+This fork records reproducible CPU PPO experiments using only four monochrome game frames and the original score reward. **Matched 512K continuation:** The on-policy PPO arm does not exceed both random and its untrained network; the learning objective remains unmet. [Latest comparison and animation](runs/tetris/learning_512k_seed1/RESULT.md). The report includes earlier 64K parents, full training counters and shared controls.
 
 - [Setup and reproduction](EXPERIMENT.md) · [Results](RESULTS.md) · [Recorded runs and checkpoints](runs/README.md)
 - [Implementation log](IMPLEMENTATION_LOG.md) · [Sparse-reward investigation](REWARD_DIAGNOSIS.md)

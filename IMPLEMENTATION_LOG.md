@@ -212,3 +212,7 @@ Prepared an isolated positive-target-protecting replacement variant, with four p
 The user asked whether the investigation was exploring on-policy online RL. The original plan was PPO. Self-imitation remained online in its data collection but added updates from older experience, making it an off-policy auxiliary/hybrid method rather than strictly on-policy PPO. Introducing that branch broadened the original methodology; it is now labeled a side experiment.
 
 The main investigation returns to strictly online, on-policy PPO. The FIFO replay run has finished training and its already-started final evaluation will be recorded, but no further replay training is planned. The protected-retention module remains inactive and its proposed launch is shelved. It must not be used as a shortcut to satisfying the on-policy learning objective. Pixel-only observations and original-score evaluation remain unchanged.
+
+## 2026-11-23 — Matched 512K continuation completed
+
+The on-policy PPO arm does not exceed both random and its untrained network; the learning objective remains unmet. Cumulative training reward events: PPO 5, replay 4. Final scoring games: PPO 1/128, replay 1/128, untrained 2/128, random 3/128. All continuation/source/checkpoint/control audits passed. This is one selected seed on reused evaluation games; full evidence and the actual-gameplay card are in `runs/tetris/learning_512k_seed1/RESULT.md`.

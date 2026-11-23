@@ -1,0 +1,11 @@
+{
+  "parent_run": "runs/tetris/v3_self_imitation_seed1",
+  "starting_step": 65536,
+  "target_step": 524288,
+  "added_training_steps": 458752,
+  "parent_sha256": {
+    "checkpoint.msgpack": "e5f26c343ed313f962c20ac357376994028795be792d4e06f10b726875cbd3d3",
+    "replay.npz": "7418860701c35220a36d14790186f63096d53552130a077c2d88459e6db53e91",
+    "checkpoint_pair.json": "657205851f2d0b1a788e42aa9d021dcd9ab0d75011f350699d55cea78be6d23f"
+  }
+}

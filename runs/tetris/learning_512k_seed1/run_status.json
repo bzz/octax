@@ -1,0 +1,10 @@
+{
+  "phase": "complete",
+  "updated_at": "2026-11-23T15:25:37.551835+00:00",
+  "pid": 73677,
+  "completed": [
+    "runs/tetris/v2_credit_horizon_512k_seed1",
+    "runs/tetris/v3_self_imitation_512k_seed1"
+  ],
+  "total_new_training_steps": 917504
+}

@@ -1,0 +1,7 @@
+{
+  "step": 524288,
+  "sha256": {
+    "checkpoint.msgpack": "67e0d61b11c5d58753ee69964fa9ab89f755399017bb0c73b0bec05f62d657b0",
+    "replay.npz": "e718819f9f952eb754e8f6321686a6c6775c19a953ff8493153800ff21fa7eaa"
+  }
+}

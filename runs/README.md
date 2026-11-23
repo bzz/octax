@@ -1,6 +1,6 @@
 # Recorded Tetris experiments
 
-All training policies observe only four monochrome pixel frames and receive the ROM score difference. Checkpoints contain model, optimizer, RNG and emulator state. The eleven checkpoints are about 26 MB each and are stored directly in Git. New runs remain ignored; this is an explicitly published snapshot.
+All training policies observe only four monochrome pixel frames and receive the ROM score difference. Checkpoints contain model, optimizer, RNG and emulator state. The twelve checkpoints are about 26 MB each and are stored directly in Git. New runs remain ignored; this is an explicitly published snapshot.
 
 | Directory | Timing / purpose | Recorded budget |
 | --- | --- | --- |
@@ -24,4 +24,6 @@ See [EXPERIMENT.md](../EXPERIMENT.md) for commands and [FORK_CHANGELOG.md](../FO
 
 [Self-imitation seed 1](tetris/v3_self_imitation_seed1/RESULT.md): fresh 65,536-step score-replay test, full model/replay checkpoints, exported successful episodes, validation evidence and actual-gameplay card.
 
-[Longer-credit PPO at 512K](tetris/v2_credit_horizon_512k_seed1/RESULT.md): completed seed-1 continuation, 1/128 games scoring. The matched replay arm is still in progress at this publication.
+[Longer-credit PPO at 512K](tetris/v2_credit_horizon_512k_seed1/RESULT.md): completed seed-1 continuation, 1/128 games scoring. The completed matched comparison is linked below.
+
+[Matched 512K continuation](tetris/learning_512k_seed1/RESULT.md): corrected longer-credit PPO versus self-imitation replay, each resumed from 64K to 524,288 decisions. Full checkpoints, parent hashes, cumulative metrics and actual-gameplay card are included.

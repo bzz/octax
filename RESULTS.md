@@ -101,3 +101,7 @@ Configuration, initial-policy, repeated-control, finite-metric and checkpoint ch
 ## 64K self-imitation mechanism test
 
 Replay does not beat all scoring controls in this exploratory sample; useful learning remains unestablished. See [full evidence and animation](runs/tetris/v3_self_imitation_seed1/RESULT.md). This selected seed-1 test retains original pixels and game rewards; it adds replay compute.
+
+## Corrected PPO and score replay at 512K
+
+The on-policy PPO arm does not exceed both random and its untrained network; the learning objective remains unmet. See [full cumulative comparison and animation](runs/tetris/learning_512k_seed1/RESULT.md). Both arms continue seed 1 from 64K; these are not independent replications.
