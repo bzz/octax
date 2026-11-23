@@ -68,6 +68,7 @@ def main():
     assert sum(e['return_sum'] > 0 for e in episodes) == replay.positive_episodes == train['replay_positive_episodes']
     success_files = sorted((RUN/'successful_episodes').glob('*.npz'))
     assert len(success_files) == replay.positive_episodes
+    successes = []
     for path in success_files:
         with np.load(path, allow_pickle=False) as episode:
             rewards, targets = episode['rewards'], episode['returns']
@@ -76,6 +77,12 @@ def main():
             for i in range(len(rewards)-1, -1, -1):
                 value = float(rewards[i]) + cfg['gamma'] * value; expected[i] = value
             np.testing.assert_array_equal(targets, expected)
+            first_reward = int(np.flatnonzero(rewards > 0)[0])
+            successes.append(dict(file=path.name, decisions=len(rewards), score=float(rewards.sum()),
+                first_reward_action_index=first_reward,
+                decisions_after_first_reward_before_completion=len(rewards)-first_reward-1,
+                completion_global_step=int(episode['environment_steps_at_end']),
+                transitions_with_return_over_point01=int((targets > .01).sum())))
     policies = {'replay': evaluation['policy'], 'longer_credit': control['policy'],
                 'untrained': initial['policy'], 'random': evaluation['random']}
     counts = {name: dict(scoring_games=sum(x > 0 for x in p['episodes']['returns']), **p['summary'])
@@ -89,6 +96,7 @@ def main():
         policies=counts, paired_comparisons=comparisons,
         pre_activation_matching_rollouts=matched, pre_activation_matching_keys=sorted(keys),
         completed_scoring_episodes=replay.positive_episodes, replay_checkpoint_step=65536,
+        successful_episodes=successes,
         checks='Sources, initial/repeated controls, paired checkpoint hashes, replay restoration, finite metrics and completed-episode targets passed.')
     (RUN/'analysis.json').write_text(json.dumps(analysis, indent=2)+'\n')
     table = '\n'.join(f"| {name.replace('_', ' ')} | {r['scoring_games']}/128 | {r['mean_return']:.5f} | {r['mean_length']:.1f} |" for name, r in counts.items())
@@ -103,6 +111,8 @@ The same longer-credit CNN/PPO configuration receives completed-episode self-imi
 ## Reward discovery and retention
 
 Replay encountered {train['positive_reward_events']} positive reward events, versus {prior['positive_reward_events']} in the control. It completed {train['completed_episodes']} games, including {replay.positive_episodes} scoring games. First auxiliary update rollout: {first}. Final entropy: {train['final_entropy']:.6f}. Successful completed trajectories are retained as packed pixels/actions/rewards/returns; a reward event and a completed scoring game are different units.
+
+Replay waits for episode completion, so it can start substantially after a reward is first seen. The exported episode audit in `analysis.json` records the first reward index and this delay for each success. At this small budget, the number of active replay rollouts matters when interpreting the result; the trial does not test unlimited reuse of those successes.
 
 All non-timing PPO diagnostics and action/reward counts matched the control for {matched} rollouts through the first activation rollout. This extends the separately verified 2,048-step complete-state equality check; diagnostic equality alone is not proof of complete-state identity at every later step. Replay/model checkpoint hashes and roundtrips passed, as did independent discounted-return reconstruction of every exported scoring episode.
 
