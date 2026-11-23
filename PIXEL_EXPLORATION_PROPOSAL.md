@@ -1,6 +1,6 @@
-# Pixel-only exploration with on-policy PPO — proposed, not enabled
+# Pixel-only exploration with on-policy PPO — controlled experiment
 
-Status: the reward-scope preference remains unanswered. `pixel_novelty.py` and the opt-in `on_policy_novelty.py` integration are implemented and tested, but neither is imported by the existing PPO trainers. Tiny test-only optimizer updates validate the integration; no novelty learning pilot or training smoke benchmark has run. The completed score-only experiments and their original checkpoints remain the evidence for the current learning result.
+Status: `pixel_novelty.py` and the opt-in `on_policy_novelty.py` integration passed their targeted correctness checks. `train_pixel_novelty.py` provides a separate reproducible runner; existing score-only trainers are unchanged. The next gate is a separately counted CPU smoke comparison, followed by the frozen two-seed 64K pilot if it passes. The completed score-only experiments remain the current learning evidence; no novelty performance result is claimed here.
 
 ## What the source review establishes
 
@@ -60,10 +60,21 @@ The combined targeted suite passed **12 tests in 25.68 seconds** on CPU. Five in
 - Rejection of duplicate, stale and pending rollouts/checkpoints.
 - Full save/restore into a fresh template followed by an exactly identical next collection, PPO update, predictor update and metrics; configuration mismatch rejection; inference-only exports rejected for resume.
 
-Reproduce with `JAX_PLATFORMS=cpu MPLCONFIGDIR=.matplotlib .venv/bin/python -m pytest -q tests/test_on_policy_novelty.py tests/test_pixel_novelty.py`. Existing emulator dtype warnings and dependency deprecations remain. These tests execute tiny diagnostic rollouts and optimizer updates; they do not measure learning or constitute a pilot. A reproducible run harness, CPU smoke benchmark, source freeze and actual original-score comparison remain outstanding.
+Reproduce with `JAX_PLATFORMS=cpu MPLCONFIGDIR=.matplotlib .venv/bin/python -m pytest -q tests/test_on_policy_novelty.py tests/test_pixel_novelty.py`. Existing emulator dtype warnings and dependency deprecations remain. These tests execute tiny diagnostic rollouts and optimizer updates; they do not measure learning or constitute a pilot.
 
-## Decision needed
+## Runner and bounded protocol
 
-The pending question is whether to permit this pixel-derived exploration reward while retaining on-policy PPO and original-score evaluation, or to keep the training reward strictly game score. The request is about the experimental objective; no skill file or automatic approval rejection requires it. Without that answer, this proposal remains inactive.
+The original attached brief explicitly permits reward shaping as a separate controlled experiment while retaining original-score evaluation. The later user clarification requires online, on-policy learning. This experiment fits both: the actor consumes only pixels and the updates use only the current rollout. An earlier reward-scope preference question remains unanswered; that is not an explicit user prohibition or an external approval requirement. Proceed under the original experimental scope rather than converting our optional question into a new blocker. No reply or additional approval is implied.
+
+`train_pixel_novelty.py` refuses existing output directories, snapshots and freezes its sources, checks unchanged base PPO/environment sources against the saved control, validates initial policy hashes and initial evaluation arrays for pilot seeds, logs both advantage streams and all original rewards, verifies full checkpoints and the fixed target, and writes a separate inference export for the existing evaluator. No warm-up interactions are hidden: there are zero normalization warm-up decisions. The observation normalizer starts with mean zero/variance one and updates only after the current rollout's bonuses have been frozen. Full checkpoints are saved after every rollout; this fresh-run CLI intentionally does not implement an automatic resume command. Exact state continuation is tested through `restore_online_checkpoint`; do not restart a failed run without inspecting its checkpoint/status.
+
+Run two sequential smoke diagnostics with seed 101, 8,192 training decisions each, the full 16-environment/128-step rollout shape and 128-sized minibatches. Both use the same initial policy, separate output directories and two original-score evaluation games at initialization and completion. Coefficient zero disables all auxiliary optimizer updates. Report overall and warmed collection/update throughput; this extended-collector control includes auxiliary-value inference, so it is not an isolated benchmark of the original unmodified trainer. The tiny evaluation sample is a correctness check, not a learning comparison. Smoke gates: finite states/metrics, complete budgets/update counts, target unchanged, exact checkpoint restore and no stale-rollout errors. The enabled run must produce nonzero novelty and predictor/head updates. If a gate fails, diagnose it before any pilot.
+
+```sh
+JAX_PLATFORMS=cpu .venv/bin/python -u train_pixel_novelty.py --smoke --coefficient 0 --run runs/tetris/pixel_novelty_smoke_control
+JAX_PLATFORMS=cpu .venv/bin/python -u train_pixel_novelty.py --smoke --run runs/tetris/pixel_novelty_smoke
+```
+
+After successful smoke validation, fresh pilot seeds 1 and 2 each receive 65,536 decisions, 32 rollouts and 2,048 PPO/intrinsic-head/predictor optimizer updates. All settings above, including coefficient .01, are frozen before either pilot; no coefficient tuning on evaluation games. Use `--seed 1 --run runs/tetris/pixel_novelty_seed1` and correspondingly seed 2. Evaluate exported `checkpoint.msgpack` with `evaluate_checkpoint.py --episodes 128 --seed-start 50000 --out <run>/heldout`; compare each seed with its saved 128-step credit control, exact untrained network and the same random games. Report random's equal-training-budget reward events separately. All games use corrected frame timing. Illustrative animation seed 30016 is preselected. Report the two-seed screen before considering longer runs or the reserved fresh confirmation bank; a screen pass alone does not establish statistically convincing learning.
 
 [Latest score-only result](runs/tetris/v2_entropy_zero_64k/RESULT.md) · [Implementation log](IMPLEMENTATION_LOG.md).
