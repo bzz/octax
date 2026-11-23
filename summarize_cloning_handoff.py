@@ -68,6 +68,13 @@ The fixed human prefix contains 2,240 decisions and 11 points, with
 replayed exactly before training. It is not a completed game or an independent
 validation set. The original recording remains untouched.
 
+The raw human archive is retained locally and excluded from GitHub publication.
+Reproducing offline training or the training-prefix diagnostic therefore requires
+that separately supplied archive with the recorded SHA-256. Published weights,
+configs and source snapshots support independent gameplay evaluation and PPO
+handoff reproduction without that archive. Automatic approval review required
+this exclusion because publication of the raw recording was not authorized.
+
 Twenty epochs, 360 Adam updates and 44,800 example presentations reduce training
 cross-entropy from 1.5820 to 0.4201, below the empirical constant-distribution
 baseline 0.8452. Offline training took 96.82 seconds while other work overlapped;

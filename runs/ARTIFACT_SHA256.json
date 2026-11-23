@@ -1,7 +1,7 @@
 {
   "README.md": {
-    "sha256": "95d56c62b2939a2815223b037dfc711d9c8374eb2c0c5e8434321a9b1ab98cf6",
-    "bytes": 4809
+    "sha256": "53e4f1ede3920a6203b3daef310440b1955571523753b5de5c6ef447c86841b2",
+    "bytes": 4958
   },
   "tetris/continued_seed0/checkpoint.msgpack": {
     "sha256": "42dfa42cf14c222155882f016a7b85caaa3d1aa6496af35adfd663043d8e45f3",
@@ -720,8 +720,8 @@
     "bytes": 475
   },
   "tetris/human_bc_seed1/RESULT.md": {
-    "sha256": "c26e32ac8ed2b515ebcad0a4c81317f8c774cdd4bec057509ade213e3f31505c",
-    "bytes": 5830
+    "sha256": "1279dafce9efe179e4d13c907c22785aca032fbba8229629ed604faf3baf15c6",
+    "bytes": 6303
   },
   "tetris/human_bc_seed1/analysis.json": {
     "sha256": "fdada2cf3ed80b67608b4b7ddad91081bcd62f80cae5dcf4700a80d5b63371d1",
@@ -1064,7 +1064,7 @@
     "bytes": 475
   },
   "tetris/human_bc_seed1/report_source_manifest.json": {
-    "sha256": "73ab655bb28a9a09f8ecfb68de5b98381244d658e7a456319d4c04add0f6bdc8",
+    "sha256": "e3652eb925cf1a87b9a2f2de08bc4645f382d0a098a4fb76b3c7496b0c74bebd",
     "bytes": 192
   },
   "tetris/human_bc_seed1/report_source_snapshot/round_card.py": {
@@ -1072,8 +1072,8 @@
     "bytes": 3290
   },
   "tetris/human_bc_seed1/report_source_snapshot/summarize_cloning_handoff.py": {
-    "sha256": "8d333879aac53083d63a9554cfbb7cb4dd744fdb65e4da9308fd21c7b3a43142",
-    "bytes": 8966
+    "sha256": "7a3bdd55f95aecaae2e0ad37998019dec9c411efe0fbf07624a47cb03277b1ab",
+    "bytes": 9439
   },
   "tetris/human_bc_seed1/result_card.html": {
     "sha256": "f2faafc6414cca1c3070364809d176f4fac0c97b1c3ee336f49a58f83fd61a2a",

@@ -35,6 +35,11 @@ If reconstruction fails to help actual control, temporal contrast is another can
 
 ## Data currently available
 
+Raw human recordings remain local. Published results retain their hashes and
+validation summaries, trained weights and configurations, but full offline
+training reproduction requires the separately supplied recording. PPO handoff
+and gameplay evaluation can be reproduced with the published weights alone.
+
 Four archived agent scoring episodes contain 6,551 decisions and one point each: lengths 2,021, 1,481, 1,187 and 1,862. They were selected from the previous 524,288-decision self-imitation collection history, including its 64K parent, not collected for only 6,551 decisions. Collection began with score-only PPO and later included SIL-assisted behavior after replay activation; that is acceptable offline-data provenance but must be labeled. The archives contain packed pre-action pixels and actions. Their historical exporter records completed episodes; they lack reset/emulator snapshots for an independent exact replay of each whole game. Preserve these limits when auditing them.
 
 A human recording also exists: `runs/tetris/human_demos/20261123T155105Z_ec4cb0/episode_000_seed200000.npz`. The inspected, checksum-matched version has 2,240 decisions and score 11, and is marked `complete=false`, `end_reason=in_progress`. It was copied to a fixed scratch snapshot without modifying the recorder's original. `validate_human_demos.py` reproduced every transition, pixel, reward and full emulator state exactly and verified independent mid-episode restoration. This is a valid supervised prefix, not a completed episode or a held-out dataset. The attempt to inspect whether the recorder process was still live was unavailable in the sandbox; no claim is made that recording had stopped. The fixed copy is now retained at `runs/tetris/human_bc_seed1/pretrain/dataset.npz` with the completed offline experiment. The original recording remains untouched.

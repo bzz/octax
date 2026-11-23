@@ -4,6 +4,11 @@ This recipe separates reusable stage implementations from experiment settings an
 
 ## Stage 1: offline human-action cloning
 
+The raw human recording is excluded from the public repository. Reproducing
+this stage and its training-prefix diagnostics requires a separately supplied
+copy matching the checksum below. The published weights suffice for stage 2
+and standalone gameplay evaluation.
+
 ```sh
 JAX_PLATFORMS=cpu .venv/bin/python pretrain_human_policy.py \
   --seed 1 --dataset PATH_TO_PINNED_HUMAN_EPISODE \
