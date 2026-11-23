@@ -117,3 +117,7 @@ The trained networks remain responsive to pixels, but greedy inference does not 
 ## Two-seed PPO entropy ablation at 64K
 
 Removing entropy regularization does not pass the two-seed scoring screen; useful on-policy learning remains unestablished. Both entropy-zero seeds discovered one reward and scored 0/128, compared with matched controls 1/128 each and shared random 3/128. [Results and animations](runs/tetris/v2_entropy_zero_64k/RESULT.md).
+
+## Pixel-novelty smoke update
+
+Matched, strictly on-policy pixel-novelty smoke runs passed correctness gates at 8,192 decisions each. Neither found original game rewards. Warmed throughput was 157.29 decisions/s with the bonus disabled and 73.88 enabled. This is implementation/runtime evidence, not evidence of better play. See the [smoke report and actual-policy card](runs/tetris/pixel_novelty_smoke/SMOKE_REPORT.md). A separate frozen two-seed 64K pilot is in progress; its scores are not yet available.

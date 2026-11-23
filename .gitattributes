@@ -2,3 +2,6 @@
 runs/** -text
 # Python's CSV writer uses CRLF; retain those valid line endings.
 runs/**/*.csv whitespace=cr-at-eol
+# Preserve archival source bytes, including inherited upstream whitespace.
+runs/**/source_snapshot/** -whitespace
+runs/**/report_source_snapshot/** -whitespace

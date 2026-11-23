@@ -1,6 +1,6 @@
 # Recorded Tetris experiments
 
-All training policies observe only four monochrome pixel frames and receive the ROM score difference. Checkpoints contain model, optimizer, RNG and emulator state. The twelve checkpoints are about 26 MB each and are stored directly in Git. New runs remain ignored; this is an explicitly published snapshot.
+All actors observe only four monochrome pixel frames. Score-only PPO uses the ROM score difference; explicitly labeled auxiliary-method experiments document their additional training objectives. Full checkpoints contain model, optimizer, RNG and emulator state; inference-only policy exports are labeled separately. Checkpoints are stored directly in Git. New runs remain ignored; this is an explicitly published snapshot.
 
 | Directory | Timing / purpose | Recorded budget |
 | --- | --- | --- |
@@ -27,3 +27,5 @@ See [EXPERIMENT.md](../EXPERIMENT.md) for commands and [FORK_CHANGELOG.md](../FO
 [Longer-credit PPO at 512K](tetris/v2_credit_horizon_512k_seed1/RESULT.md): completed seed-1 continuation, 1/128 games scoring. The completed matched comparison is linked below.
 
 [Matched 512K continuation](tetris/learning_512k_seed1/RESULT.md): corrected longer-credit PPO versus self-imitation replay, each resumed from 64K to 524,288 decisions. Full checkpoints, parent hashes, cumulative metrics and actual-gameplay card are included.
+
+[Pixel-novelty CPU smoke](tetris/pixel_novelty_smoke/SMOKE_REPORT.md): strictly current-rollout PPO, matched coefficient-zero/enabled seed-101 runs at 8,192 decisions each. Correctness gates passed; neither found original game rewards. Includes full and inference-only checkpoints, frozen source snapshots, runtime measurements and an actual-policy animation. This is smoke evidence, not a learning result. The separate two-seed 64K pilot is not included until complete.

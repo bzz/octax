@@ -1,0 +1,31 @@
+{
+  "step": 8192,
+  "seed": 101,
+  "parameter_change_l2": 1.355811062164356,
+  "training_reward_events": 0,
+  "training_completed_games": 0,
+  "optimizer_updates": 256,
+  "training_steps_per_second": 154.43141421366437,
+  "steady_training_steps_per_second": 157.28727543756787,
+  "collect_seconds": 3.7644782919669524,
+  "update_seconds": 49.28172374996939,
+  "evaluation_decisions": 4820,
+  "normalization_warmup_decisions": 0,
+  "target_unchanged": true,
+  "final_evaluation": {
+    "mean_return": 0.0,
+    "scoring_fraction": 0.0,
+    "mean_length": 1126.5,
+    "terminated": 2,
+    "truncated": 0,
+    "action_distribution": [
+      0.18641810918774968,
+      0.2166000887705282,
+      0.1877496671105193,
+      0.19928983577452286,
+      0.20994229915667997
+    ],
+    "seconds": 1.3939784170070197
+  },
+  "purpose": "smoke_only"
+}

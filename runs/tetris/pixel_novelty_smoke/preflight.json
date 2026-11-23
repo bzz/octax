@@ -1,0 +1,55 @@
+{
+  "initial_parameter_sha256": "b0a203c47292e8170b325acb210c41262a848368a84ddf2db027c0d55de3ca7a",
+  "target_sha256": "df5e70c7c4a60d883b6d2d79951dea9fe9f1f792c92588e0001c943651471f7f",
+  "matched_control": null,
+  "training_decisions": 8192,
+  "normalization_warmup_decisions": 0,
+  "expected_optimizer_updates": 256,
+  "control_config_sha256": "067e17ee6d9624848516dd398012205463005a015432130ae631210ca0311a13",
+  "unchanged_environment_and_base_ppo_sources": true,
+  "config_differences": {
+    "purpose": [
+      null,
+      "smoke_only"
+    ],
+    "eval_episodes": [
+      8,
+      2
+    ],
+    "seed": [
+      1,
+      101
+    ],
+    "total_timesteps": [
+      65536,
+      8192
+    ],
+    "novelty": [
+      null,
+      {
+        "coefficient": 0.01,
+        "learning_rate": 0.0001,
+        "gamma": 0.99,
+        "variance_floor": 0.0001,
+        "features": 128,
+        "intrinsic_value_coefficient": 0.5
+      }
+    ],
+    "method": [
+      null,
+      "online_pixel_novelty"
+    ],
+    "normalization_warmup_decisions": [
+      null,
+      0
+    ],
+    "run_dir": [
+      "runs/tetris/v2_credit_horizon_seed1",
+      "runs/tetris/pixel_novelty_smoke"
+    ],
+    "eval_freq": [
+      65536,
+      8192
+    ]
+  }
+}

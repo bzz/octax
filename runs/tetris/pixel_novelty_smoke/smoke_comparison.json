@@ -1,0 +1,189 @@
+{
+  "control": {
+    "summary": {
+      "step": 8192,
+      "seed": 101,
+      "parameter_change_l2": 1.355811062164356,
+      "training_reward_events": 0,
+      "training_completed_games": 0,
+      "optimizer_updates": 256,
+      "training_steps_per_second": 154.43141421366437,
+      "steady_training_steps_per_second": 157.28727543756787,
+      "collect_seconds": 3.7644782919669524,
+      "update_seconds": 49.28172374996939,
+      "evaluation_decisions": 4820,
+      "normalization_warmup_decisions": 0,
+      "target_unchanged": true,
+      "final_evaluation": {
+        "mean_return": 0.0,
+        "scoring_fraction": 0.0,
+        "mean_length": 1126.5,
+        "terminated": 2,
+        "truncated": 0,
+        "action_distribution": [
+          0.18641810918774968,
+          0.2166000887705282,
+          0.1877496671105193,
+          0.19928983577452286,
+          0.20994229915667997
+        ],
+        "seconds": 1.3939784170070197
+      },
+      "purpose": "smoke_only"
+    },
+    "initial": {
+      "summary": {
+        "mean_return": 0.0,
+        "scoring_fraction": 0.0,
+        "mean_length": 1283.5,
+        "terminated": 2,
+        "truncated": 0,
+        "action_distribution": [
+          0.18737826256330348,
+          0.22828204129333854,
+          0.1978963770938839,
+          0.1897156213478769,
+          0.1967276977015972
+        ],
+        "seconds": 2.256541292008478
+      },
+      "episodes": {
+        "action_counts": [
+          [
+            276,
+            329,
+            279,
+            282,
+            267
+          ],
+          [
+            205,
+            257,
+            229,
+            205,
+            238
+          ]
+        ],
+        "final_score": [
+          0.0,
+          0.0
+        ],
+        "lengths": [
+          1433,
+          1134
+        ],
+        "returns": [
+          0.0,
+          0.0
+        ],
+        "terminated": [
+          true,
+          true
+        ],
+        "truncated": [
+          false,
+          false
+        ]
+      },
+      "step": 0,
+      "checkpoint_roundtrip_exact": true
+    },
+    "initial_parameter_sha256": "b0a203c47292e8170b325acb210c41262a848368a84ddf2db027c0d55de3ca7a"
+  },
+  "novelty": {
+    "summary": {
+      "step": 8192,
+      "seed": 101,
+      "parameter_change_l2": 3.9389971990873187,
+      "training_reward_events": 0,
+      "training_completed_games": 0,
+      "optimizer_updates": 256,
+      "training_steps_per_second": 73.17382981786596,
+      "steady_training_steps_per_second": 73.8771764148741,
+      "collect_seconds": 3.824888584029395,
+      "update_seconds": 108.12770458200248,
+      "evaluation_decisions": 4834,
+      "normalization_warmup_decisions": 0,
+      "target_unchanged": true,
+      "final_evaluation": {
+        "mean_return": 0.0,
+        "scoring_fraction": 0.0,
+        "mean_length": 1133.5,
+        "terminated": 2,
+        "truncated": 0,
+        "action_distribution": [
+          0.17026907807675343,
+          0.2774591971768858,
+          0.13233348037053375,
+          0.18526687251874724,
+          0.23467137185707984
+        ],
+        "seconds": 1.5769031249801628
+      },
+      "purpose": "smoke_only"
+    },
+    "initial": {
+      "summary": {
+        "mean_return": 0.0,
+        "scoring_fraction": 0.0,
+        "mean_length": 1283.5,
+        "terminated": 2,
+        "truncated": 0,
+        "action_distribution": [
+          0.18737826256330348,
+          0.22828204129333854,
+          0.1978963770938839,
+          0.1897156213478769,
+          0.1967276977015972
+        ],
+        "seconds": 2.0389220420038328
+      },
+      "episodes": {
+        "action_counts": [
+          [
+            276,
+            329,
+            279,
+            282,
+            267
+          ],
+          [
+            205,
+            257,
+            229,
+            205,
+            238
+          ]
+        ],
+        "final_score": [
+          0.0,
+          0.0
+        ],
+        "lengths": [
+          1433,
+          1134
+        ],
+        "returns": [
+          0.0,
+          0.0
+        ],
+        "terminated": [
+          true,
+          true
+        ],
+        "truncated": [
+          false,
+          false
+        ]
+      },
+      "step": 0,
+      "checkpoint_roundtrip_exact": true
+    },
+    "initial_parameter_sha256": "b0a203c47292e8170b325acb210c41262a848368a84ddf2db027c0d55de3ca7a"
+  },
+  "illustration": {
+    "seed": 30016,
+    "length": 1020,
+    "final_score": 0.0
+  }
+}

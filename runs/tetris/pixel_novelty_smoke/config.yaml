@@ -1,0 +1,37 @@
+env: tetris
+experiment_version: 2
+env_kwargs:
+  timer_mode: frame
+agent: PPO
+seed: 101
+num_envs: 16
+num_steps: 128
+num_epochs: 4
+num_minibatches: 16
+learning_rate: 0.0005
+total_timesteps: 8192
+eval_freq: 8192
+eval_episodes: 2
+eval_seed_start: 10000
+gamma: 0.995
+gae_lambda: 0.98
+clip_eps: 0.2
+vf_coef: 0.5
+ent_coef: 0.01
+max_grad_norm: 0.5
+advantage_std_floor: 0.01
+grad_clip_mode: global_norm
+zero_init_value: true
+run_dir: runs/tetris/pixel_novelty_smoke
+resume: null
+encoder_checkpoint: null
+method: online_pixel_novelty
+purpose: smoke_only
+novelty:
+  coefficient: 0.01
+  learning_rate: 0.0001
+  gamma: 0.99
+  variance_floor: 0.0001
+  features: 128
+  intrinsic_value_coefficient: 0.5
+normalization_warmup_decisions: 0

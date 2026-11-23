@@ -1,7 +1,7 @@
 {
   "README.md": {
-    "sha256": "d2e787885cd8fa1b8fc491f373e1955f4ee00a7278f6cde16f38a7b5dd123b29",
-    "bytes": 3458
+    "sha256": "f13caa0442aaddff456dd90806dc8c9b0e23b903a65a9c3e9866270e53280533",
+    "bytes": 4046
   },
   "tetris/continued_seed0/checkpoint.msgpack": {
     "sha256": "42dfa42cf14c222155882f016a7b85caaa3d1aa6496af35adfd663043d8e45f3",
@@ -302,6 +302,578 @@
   "tetris/learning_512k_seed1/visualizations/policy_trajectory.npz": {
     "sha256": "74675cb43c5a102a26b27170d91bbb63100ceeaab0d8bd3542cc1a93919824bf",
     "bytes": 4955
+  },
+  "tetris/pixel_novelty_smoke/SMOKE_REPORT.md": {
+    "sha256": "004a7ffa1f4beed76ed4adf61324f63c18f7ea66097217eeaa83feee74ca008f",
+    "bytes": 1813
+  },
+  "tetris/pixel_novelty_smoke/checkpoint.msgpack": {
+    "sha256": "06ccf77a6bbf4270dbfd137c10822f6c3e0e680ef30c2af324ab5fdb248f1d3a",
+    "bytes": 8693677
+  },
+  "tetris/pixel_novelty_smoke/checkpoint_full.msgpack": {
+    "sha256": "4c1b51ebbbd0473fe7f6639f21581b3817853b4306d403eeab247cbd5d50fd09",
+    "bytes": 46944794
+  },
+  "tetris/pixel_novelty_smoke/config.yaml": {
+    "sha256": "9a87528d4c2a009c8dcb3b31610c9aebe1bae62abd736bae9f5eb11275dfc79e",
+    "bytes": 721
+  },
+  "tetris/pixel_novelty_smoke/evaluation.json": {
+    "sha256": "575c771cf308c1e1515acbf9691076c1c3007c86ed1cbf3d61dd8c7e7619fe7d",
+    "bytes": 1935
+  },
+  "tetris/pixel_novelty_smoke/job.log": {
+    "sha256": "b6c4f4cb7d6d4ab78ba215033a6a6d7f80f31d56cf98ee3c22eb5df6d113ca3e",
+    "bytes": 5530
+  },
+  "tetris/pixel_novelty_smoke/metrics.csv": {
+    "sha256": "7c263d87388ca12acca9b44b36c343df3ada908854503a342d614f6202960793",
+    "bytes": 2180
+  },
+  "tetris/pixel_novelty_smoke/policy_card.gif": {
+    "sha256": "6f5e12eeebbebc64f11e4d859ed2ba3c0d476ed300dc15fc0c119ebf166212e4",
+    "bytes": 156403
+  },
+  "tetris/pixel_novelty_smoke/policy_card.png": {
+    "sha256": "0b4ec033d2863eb53e54ed193a2c9e2eeceb84ed0deeeaaa6d522360574a47c5",
+    "bytes": 4031
+  },
+  "tetris/pixel_novelty_smoke/preflight.json": {
+    "sha256": "94bcbdf9b8574808ca752d1ec0824ed6eb3ceb40eb9360cd2569e7ca67cd38e0",
+    "bytes": 1227
+  },
+  "tetris/pixel_novelty_smoke/report_source_manifest.json": {
+    "sha256": "480f2fc27737b740911b08cc78083fb5107fe80b7b438b3f69d35921e3141c2b",
+    "bytes": 380
+  },
+  "tetris/pixel_novelty_smoke/report_source_snapshot/round_card.py": {
+    "sha256": "2396fdd9352ec3c5a644ff586795a84ebbe016a2b6ddd9dfd45c607fd637be03",
+    "bytes": 3290
+  },
+  "tetris/pixel_novelty_smoke/report_source_snapshot/run_pixel_novelty.py": {
+    "sha256": "95408ba466b3726df2a3367b81d71257e1f218e2fc84fcd2081d2a67b109c42a",
+    "bytes": 5718
+  },
+  "tetris/pixel_novelty_smoke/report_source_snapshot/summarize_pixel_novelty_smoke.py": {
+    "sha256": "c3d47b1a50d0060cfac56168d415c6df929032d26fbbb178514f7466e08ffc0a",
+    "bytes": 4300
+  },
+  "tetris/pixel_novelty_smoke/report_source_snapshot/visualize_run.py": {
+    "sha256": "86063a73d7e03dcc594bcb28d58a76c5a01e1af1e017cb9fce50423e2265286e",
+    "bytes": 8070
+  },
+  "tetris/pixel_novelty_smoke/result_card.html": {
+    "sha256": "b0804a1d6477a4316422074b62da92a2dda2abcc4ee397d1766f6cf98f9d8ae5",
+    "bytes": 210160
+  },
+  "tetris/pixel_novelty_smoke/run_status.json": {
+    "sha256": "207bd40d3b90677a029fa327d9d2a5725ab4943974a60391b048150ae5ee83bc",
+    "bytes": 110
+  },
+  "tetris/pixel_novelty_smoke/smoke_comparison.json": {
+    "sha256": "bf8685b39d75abba2c8207a59c503d4050829a79e02ce134d1f419cec09435ef",
+    "bytes": 4450
+  },
+  "tetris/pixel_novelty_smoke/source_manifest.json": {
+    "sha256": "b769bf113fd9aab8b3f7da1b5c081f1f890cc1d4e776e1e364d30bc3c3313b10",
+    "bytes": 5439
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/PIXEL_EXPLORATION_PROPOSAL.md": {
+    "sha256": "e65f82df9409d5d98a035a9375de9944c9f849dd42dc89b99885c79bef007828",
+    "bytes": 14735
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/evaluate_checkpoint.py": {
+    "sha256": "98a9657a44778100fce240550e9d4d873324e8cfa19706ba754fa1315851348b",
+    "bytes": 1334
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/evaluate_initial_policy.py": {
+    "sha256": "68a2f4189bf60e99b4334ee6f7acf32542a3f379e7efd3b578c825e3e765a447",
+    "bytes": 2724
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/experiment_utils.py": {
+    "sha256": "56acd748517c545f735536729044a77d2c85671a47c1cb7fa6b9ab90321daaa7",
+    "bytes": 4809
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/__init__.py": {
+    "sha256": "bfb440ef4fcfd09a8d680c3f05eb8e9f16c6b1770e2dadb66835350a88925dc0",
+    "bytes": 597
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/agents/__init__.py": {
+    "sha256": "533188ba1365fd79ade62cd18c097f8b6fc19b28a36223de0b8bff2bf87dd1bf",
+    "bytes": 75
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/agents/ppo.py": {
+    "sha256": "87dceaf2a5c0a8679939b84c306bfaa571ae5bd28e044f4c252d1f3621442364",
+    "bytes": 10291
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/agents/pqn.py": {
+    "sha256": "784d0d13507e642e681ab5d426226bccf263fdefe5161bf489be79642190e149",
+    "bytes": 6814
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/checkpoints.py": {
+    "sha256": "230af35150c1a85532b758fbb6be0514014c77863fea3e247c9faa548b3ac021",
+    "bytes": 742
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/constants.py": {
+    "sha256": "5b35f9547ed79c5d6075c4b80bf066538646c1d2a47ecea1f3c429c2ad793535",
+    "bytes": 1192
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/decode.py": {
+    "sha256": "bfd5179fe2518389eb50a8737806ce73eb023b74448d17a1e3e084aa53122de5",
+    "bytes": 858
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/emulator.py": {
+    "sha256": "8f59c32911753c8a0e7a98d906681138e5b25c3c3153b7eed2fd4e67d4b80d2f",
+    "bytes": 2770
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/env.py": {
+    "sha256": "30a80cb6290c7bfba3cfe8bf816bf77740d342e0d958a1784628e9126b947a06",
+    "bytes": 12086
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/environments/__init__.py": {
+    "sha256": "e99273b4fe229184d93ba0d2f2c44fa2e5d89f3ca4011f6ea10e6b171e6b856d",
+    "bytes": 4558
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/environments/airplane.py": {
+    "sha256": "2712ef1ba5500737eeea236186bd6a00430a89dba37cdc339d62273bc61b0c1c",
+    "bytes": 730
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/environments/blinky.py": {
+    "sha256": "8d9c34bd8946d7047b85889285112f39ea38342c06609ad7eeacc2c3f2993ac2",
+    "bytes": 2463
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/environments/brix.py": {
+    "sha256": "0335febd2973d88edd9ce5c3617acdb2b797f6cdb637a5dee2d59381239df727",
+    "bytes": 1182
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/environments/cavern.py": {
+    "sha256": "b21be152432a31e9f19b69fffcb2963b05adf210903779db9e3f8fbff445e95c",
+    "bytes": 2223
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/environments/deep.py": {
+    "sha256": "ad55daffc2c7f8d019969ccbb1950112454ceb4aa14c518d48c85516d5b9fae9",
+    "bytes": 1153
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/environments/filter.py": {
+    "sha256": "a84bb0fcec1e2b6933686b1c2f7bf9f7b08236b15f48f0300b1cea7c3c5fcb80",
+    "bytes": 527
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/environments/flight_runner.py": {
+    "sha256": "de92269e8c7dc8d1480f25f7b072ab0e735eaa4de3967f4d5eba5699be38082b",
+    "bytes": 881
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/environments/missile.py": {
+    "sha256": "24a08af72ef18e0fe8e68f1a9e54128b76c4acc49fa783abfa3dbfbd98027337",
+    "bytes": 982
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/environments/pong.py": {
+    "sha256": "5dfbb1a064cc09d1aae09b6ac7b6e3ea0f14179b803541ce9f04b3f2373cb7af",
+    "bytes": 666
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/environments/rocket.py": {
+    "sha256": "4861cb029cdbfd5c8352850f6c79f78ca9301b751680511223b214c974a3c40b",
+    "bytes": 1432
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/environments/shooting_stars.py": {
+    "sha256": "b40010c2d1804ef275d4b45f706570a7f57f5c713669c24374aa04f592dbd062",
+    "bytes": 734
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/environments/space_flight.py": {
+    "sha256": "84ddbc713f026007ee0321f089c932c7f8be4e5ad816f98f9aa98916aa41fad0",
+    "bytes": 1192
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/environments/spacejam.py": {
+    "sha256": "9968c22e13d7cd3b96226a20ce574f7d8f75ad4ad74c6da150d4ab9e1b76e583",
+    "bytes": 915
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/environments/squash.py": {
+    "sha256": "5adc877fb2a799ccdbd49f028f487def0103d212fbb2f7762599dc874880236e",
+    "bytes": 713
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/environments/submarine.py": {
+    "sha256": "b44910abce81c25a390e4fccd8f419595aac6856e77ebe86ee2e3f3c9b040056",
+    "bytes": 776
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/environments/tank.py": {
+    "sha256": "baf1ffd3f3d62e92e16f692bb8b1073b2478324ddccb863bdbdf4cd750af8421",
+    "bytes": 799
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/environments/target_shooter.py": {
+    "sha256": "408ff26f80637bc71d50289f6be79391fdc76e125e05812203131166791374d2",
+    "bytes": 5501
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/environments/tetris.py": {
+    "sha256": "5164f0875acfa9a1e80224f7d2b56969fa67f4543f56657ec16e6faab3657adb",
+    "bytes": 2182
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/environments/ufo.py": {
+    "sha256": "981c6dde8e7f47cb82cc4e8edd953014e2d3f67da67f3077f4a2732d51e1c6cc",
+    "bytes": 1753
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/environments/vertical_brix.py": {
+    "sha256": "66328220611281cfba1b84008bdd3ca125d777b448c684121a8df5c003e6aeb7",
+    "bytes": 1121
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/environments/wipe_off.py": {
+    "sha256": "898be810e8d3f4bb07e52f4c51f71ee342cced7a92c7bdd26817dcb6456253ae",
+    "bytes": 1071
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/environments/worm.py": {
+    "sha256": "e22829e37a0ee082a5c645fd8d96c49bc6d4f6c587533079df786bdd0e495def",
+    "bytes": 2781
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/instructions/__init__.py": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/instructions/alu.py": {
+    "sha256": "c4f0505c190f1421f13ec1de4149700bca0f1ad19e0f2b7d3f2062f8e37472e8",
+    "bytes": 3230
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/instructions/control_flow.py": {
+    "sha256": "9ae00b24347aa673231360f15e0fd9f0ffe016704057a372c4f228562a77f0a2",
+    "bytes": 2682
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/instructions/display.py": {
+    "sha256": "17af2bfbfb7067cb3438a6898e7ce4a68737794e3fca9f50e70bd65fb1f431be",
+    "bytes": 1047
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/instructions/memory.py": {
+    "sha256": "d7052aac9c5fa001518146e6fb28623550930e1f925ff0a86c9e5fbe160d7e9a",
+    "bytes": 1120
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/instructions/misc.py": {
+    "sha256": "c2cc2476e7bbf6d0009d5a786dbec6c46b252ae6fe2e5ec6d872abe7aaf5fe9d",
+    "bytes": 4980
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/instructions/system.py": {
+    "sha256": "33be7f5501396f8558cfe563cf10ce41f9bf9fa42fc699e5967069e97dbcf66a",
+    "bytes": 1194
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/logging.py": {
+    "sha256": "6dbfcf5677adcaef8d4f5806ddda025bb42b053fd6a965ab5c3d382ff0b9a641",
+    "bytes": 22302
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/rendering.py": {
+    "sha256": "d074d5ead383f4249dddc666552338dccfd7a5fa238691303075223a2e328f5d",
+    "bytes": 8582
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/stack.py": {
+    "sha256": "533dc6283c31c5648c6943adb1eb94df22f97b1bc31aa127783ada015f1d85f4",
+    "bytes": 713
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/state.py": {
+    "sha256": "81853c534036880405a8c9f83bfb3a05b7c417942854e842d5298f4882af98e0",
+    "bytes": 1684
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/octax/wrappers.py": {
+    "sha256": "cd46727e367b182873625bf33e89f1afc0488b03c67df48b945640b208ed9a23",
+    "bytes": 2629
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/on_policy_novelty.py": {
+    "sha256": "86f659ad871923b20989f99f7a0e8b7a3208a47f0fc3f4881acf221312555bc7",
+    "bytes": 11810
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/pixel_novelty.py": {
+    "sha256": "b627490caa12e87b8e22a1a3b0e56d9dc2d53f8d5762c3e9813521832ca1ae47",
+    "bytes": 7603
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/requirements-macos.lock.txt": {
+    "sha256": "800cdcebc24c1f47821afe963d23e53f57de4123d4bc4a1b2a1167676fcb26c4",
+    "bytes": 1786
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/roms/Tetris [Fran Dachille, 1991].ch8": {
+    "sha256": "667cb026dee03f59f3a2fd81a2ffeab47da87731883f9601d37ba019976f94dd",
+    "bytes": 494
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/round_card.py": {
+    "sha256": "2396fdd9352ec3c5a644ff586795a84ebbe016a2b6ddd9dfd45c607fd637be03",
+    "bytes": 3290
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/train_pixel_novelty.py": {
+    "sha256": "1b21a0688b5ffaf4ca8d3b93d29695a2d1bc56285e8c3b2c220d2c1531b2bf15",
+    "bytes": 12593
+  },
+  "tetris/pixel_novelty_smoke/source_snapshot/visualize_run.py": {
+    "sha256": "86063a73d7e03dcc594bcb28d58a76c5a01e1af1e017cb9fce50423e2265286e",
+    "bytes": 8070
+  },
+  "tetris/pixel_novelty_smoke/summary.json": {
+    "sha256": "f7a58114d0dfbafd6b7d7589256ceac12412a114670c056cb49c4523a366f84b",
+    "bytes": 836
+  },
+  "tetris/pixel_novelty_smoke/system.json": {
+    "sha256": "bc887fa68ddf524cc5f433cf8d7e67cad1bbd8aea295097dbd984a93074bb2be",
+    "bytes": 475
+  },
+  "tetris/pixel_novelty_smoke/visualizations/policy_trajectory.npz": {
+    "sha256": "a25407c6be0a6bbfdd48f6ba3b63cff2b4bd74fc4d7dfec6685ab9b3d3334812",
+    "bytes": 4045
+  },
+  "tetris/pixel_novelty_smoke_control/checkpoint.msgpack": {
+    "sha256": "db54d4719a07e73ec117cf4752f1d7c83295e8f6dfd9c73fcc79b4ed8ac8aff0",
+    "bytes": 8693686
+  },
+  "tetris/pixel_novelty_smoke_control/checkpoint_full.msgpack": {
+    "sha256": "084d8d5a65dedce6626ff3c4bd1e4fb0255b62e339cac6317c6434985ee991e8",
+    "bytes": 46944803
+  },
+  "tetris/pixel_novelty_smoke_control/config.yaml": {
+    "sha256": "fc79166405da51783db324c91303c2ecfb6c6ede5ecc4886d27a5e63630430d2",
+    "bytes": 728
+  },
+  "tetris/pixel_novelty_smoke_control/evaluation.json": {
+    "sha256": "6baad0110d50c824629b02e7e73a32402412c2409ee2482d563b21b68b10d558",
+    "bytes": 1934
+  },
+  "tetris/pixel_novelty_smoke_control/job.log": {
+    "sha256": "99fd71f1634b2e82afb80c0c596386f3299f2d14be6447a61b9f6c73386f1d57",
+    "bytes": 5083
+  },
+  "tetris/pixel_novelty_smoke_control/metrics.csv": {
+    "sha256": "b29b4c179762d8b9077b6d586b80d1276b028416355335e0d8abfb646ac24aef",
+    "bytes": 1727
+  },
+  "tetris/pixel_novelty_smoke_control/preflight.json": {
+    "sha256": "d92a542e1484263d25a92585bc130127bfd6c3ac47b7e7dab135cf9ef0be4fbf",
+    "bytes": 1234
+  },
+  "tetris/pixel_novelty_smoke_control/run_status.json": {
+    "sha256": "6f5a38deed05f86e3aa00fd129d0c63d6515a54a3edcd427b05431dda5fd4501",
+    "bytes": 110
+  },
+  "tetris/pixel_novelty_smoke_control/source_manifest.json": {
+    "sha256": "b769bf113fd9aab8b3f7da1b5c081f1f890cc1d4e776e1e364d30bc3c3313b10",
+    "bytes": 5439
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/PIXEL_EXPLORATION_PROPOSAL.md": {
+    "sha256": "e65f82df9409d5d98a035a9375de9944c9f849dd42dc89b99885c79bef007828",
+    "bytes": 14735
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/evaluate_checkpoint.py": {
+    "sha256": "98a9657a44778100fce240550e9d4d873324e8cfa19706ba754fa1315851348b",
+    "bytes": 1334
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/evaluate_initial_policy.py": {
+    "sha256": "68a2f4189bf60e99b4334ee6f7acf32542a3f379e7efd3b578c825e3e765a447",
+    "bytes": 2724
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/experiment_utils.py": {
+    "sha256": "56acd748517c545f735536729044a77d2c85671a47c1cb7fa6b9ab90321daaa7",
+    "bytes": 4809
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/__init__.py": {
+    "sha256": "bfb440ef4fcfd09a8d680c3f05eb8e9f16c6b1770e2dadb66835350a88925dc0",
+    "bytes": 597
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/agents/__init__.py": {
+    "sha256": "533188ba1365fd79ade62cd18c097f8b6fc19b28a36223de0b8bff2bf87dd1bf",
+    "bytes": 75
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/agents/ppo.py": {
+    "sha256": "87dceaf2a5c0a8679939b84c306bfaa571ae5bd28e044f4c252d1f3621442364",
+    "bytes": 10291
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/agents/pqn.py": {
+    "sha256": "784d0d13507e642e681ab5d426226bccf263fdefe5161bf489be79642190e149",
+    "bytes": 6814
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/checkpoints.py": {
+    "sha256": "230af35150c1a85532b758fbb6be0514014c77863fea3e247c9faa548b3ac021",
+    "bytes": 742
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/constants.py": {
+    "sha256": "5b35f9547ed79c5d6075c4b80bf066538646c1d2a47ecea1f3c429c2ad793535",
+    "bytes": 1192
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/decode.py": {
+    "sha256": "bfd5179fe2518389eb50a8737806ce73eb023b74448d17a1e3e084aa53122de5",
+    "bytes": 858
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/emulator.py": {
+    "sha256": "8f59c32911753c8a0e7a98d906681138e5b25c3c3153b7eed2fd4e67d4b80d2f",
+    "bytes": 2770
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/env.py": {
+    "sha256": "30a80cb6290c7bfba3cfe8bf816bf77740d342e0d958a1784628e9126b947a06",
+    "bytes": 12086
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/environments/__init__.py": {
+    "sha256": "e99273b4fe229184d93ba0d2f2c44fa2e5d89f3ca4011f6ea10e6b171e6b856d",
+    "bytes": 4558
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/environments/airplane.py": {
+    "sha256": "2712ef1ba5500737eeea236186bd6a00430a89dba37cdc339d62273bc61b0c1c",
+    "bytes": 730
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/environments/blinky.py": {
+    "sha256": "8d9c34bd8946d7047b85889285112f39ea38342c06609ad7eeacc2c3f2993ac2",
+    "bytes": 2463
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/environments/brix.py": {
+    "sha256": "0335febd2973d88edd9ce5c3617acdb2b797f6cdb637a5dee2d59381239df727",
+    "bytes": 1182
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/environments/cavern.py": {
+    "sha256": "b21be152432a31e9f19b69fffcb2963b05adf210903779db9e3f8fbff445e95c",
+    "bytes": 2223
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/environments/deep.py": {
+    "sha256": "ad55daffc2c7f8d019969ccbb1950112454ceb4aa14c518d48c85516d5b9fae9",
+    "bytes": 1153
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/environments/filter.py": {
+    "sha256": "a84bb0fcec1e2b6933686b1c2f7bf9f7b08236b15f48f0300b1cea7c3c5fcb80",
+    "bytes": 527
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/environments/flight_runner.py": {
+    "sha256": "de92269e8c7dc8d1480f25f7b072ab0e735eaa4de3967f4d5eba5699be38082b",
+    "bytes": 881
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/environments/missile.py": {
+    "sha256": "24a08af72ef18e0fe8e68f1a9e54128b76c4acc49fa783abfa3dbfbd98027337",
+    "bytes": 982
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/environments/pong.py": {
+    "sha256": "5dfbb1a064cc09d1aae09b6ac7b6e3ea0f14179b803541ce9f04b3f2373cb7af",
+    "bytes": 666
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/environments/rocket.py": {
+    "sha256": "4861cb029cdbfd5c8352850f6c79f78ca9301b751680511223b214c974a3c40b",
+    "bytes": 1432
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/environments/shooting_stars.py": {
+    "sha256": "b40010c2d1804ef275d4b45f706570a7f57f5c713669c24374aa04f592dbd062",
+    "bytes": 734
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/environments/space_flight.py": {
+    "sha256": "84ddbc713f026007ee0321f089c932c7f8be4e5ad816f98f9aa98916aa41fad0",
+    "bytes": 1192
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/environments/spacejam.py": {
+    "sha256": "9968c22e13d7cd3b96226a20ce574f7d8f75ad4ad74c6da150d4ab9e1b76e583",
+    "bytes": 915
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/environments/squash.py": {
+    "sha256": "5adc877fb2a799ccdbd49f028f487def0103d212fbb2f7762599dc874880236e",
+    "bytes": 713
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/environments/submarine.py": {
+    "sha256": "b44910abce81c25a390e4fccd8f419595aac6856e77ebe86ee2e3f3c9b040056",
+    "bytes": 776
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/environments/tank.py": {
+    "sha256": "baf1ffd3f3d62e92e16f692bb8b1073b2478324ddccb863bdbdf4cd750af8421",
+    "bytes": 799
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/environments/target_shooter.py": {
+    "sha256": "408ff26f80637bc71d50289f6be79391fdc76e125e05812203131166791374d2",
+    "bytes": 5501
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/environments/tetris.py": {
+    "sha256": "5164f0875acfa9a1e80224f7d2b56969fa67f4543f56657ec16e6faab3657adb",
+    "bytes": 2182
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/environments/ufo.py": {
+    "sha256": "981c6dde8e7f47cb82cc4e8edd953014e2d3f67da67f3077f4a2732d51e1c6cc",
+    "bytes": 1753
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/environments/vertical_brix.py": {
+    "sha256": "66328220611281cfba1b84008bdd3ca125d777b448c684121a8df5c003e6aeb7",
+    "bytes": 1121
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/environments/wipe_off.py": {
+    "sha256": "898be810e8d3f4bb07e52f4c51f71ee342cced7a92c7bdd26817dcb6456253ae",
+    "bytes": 1071
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/environments/worm.py": {
+    "sha256": "e22829e37a0ee082a5c645fd8d96c49bc6d4f6c587533079df786bdd0e495def",
+    "bytes": 2781
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/instructions/__init__.py": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/instructions/alu.py": {
+    "sha256": "c4f0505c190f1421f13ec1de4149700bca0f1ad19e0f2b7d3f2062f8e37472e8",
+    "bytes": 3230
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/instructions/control_flow.py": {
+    "sha256": "9ae00b24347aa673231360f15e0fd9f0ffe016704057a372c4f228562a77f0a2",
+    "bytes": 2682
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/instructions/display.py": {
+    "sha256": "17af2bfbfb7067cb3438a6898e7ce4a68737794e3fca9f50e70bd65fb1f431be",
+    "bytes": 1047
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/instructions/memory.py": {
+    "sha256": "d7052aac9c5fa001518146e6fb28623550930e1f925ff0a86c9e5fbe160d7e9a",
+    "bytes": 1120
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/instructions/misc.py": {
+    "sha256": "c2cc2476e7bbf6d0009d5a786dbec6c46b252ae6fe2e5ec6d872abe7aaf5fe9d",
+    "bytes": 4980
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/instructions/system.py": {
+    "sha256": "33be7f5501396f8558cfe563cf10ce41f9bf9fa42fc699e5967069e97dbcf66a",
+    "bytes": 1194
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/logging.py": {
+    "sha256": "6dbfcf5677adcaef8d4f5806ddda025bb42b053fd6a965ab5c3d382ff0b9a641",
+    "bytes": 22302
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/rendering.py": {
+    "sha256": "d074d5ead383f4249dddc666552338dccfd7a5fa238691303075223a2e328f5d",
+    "bytes": 8582
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/stack.py": {
+    "sha256": "533dc6283c31c5648c6943adb1eb94df22f97b1bc31aa127783ada015f1d85f4",
+    "bytes": 713
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/state.py": {
+    "sha256": "81853c534036880405a8c9f83bfb3a05b7c417942854e842d5298f4882af98e0",
+    "bytes": 1684
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/octax/wrappers.py": {
+    "sha256": "cd46727e367b182873625bf33e89f1afc0488b03c67df48b945640b208ed9a23",
+    "bytes": 2629
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/on_policy_novelty.py": {
+    "sha256": "86f659ad871923b20989f99f7a0e8b7a3208a47f0fc3f4881acf221312555bc7",
+    "bytes": 11810
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/pixel_novelty.py": {
+    "sha256": "b627490caa12e87b8e22a1a3b0e56d9dc2d53f8d5762c3e9813521832ca1ae47",
+    "bytes": 7603
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/requirements-macos.lock.txt": {
+    "sha256": "800cdcebc24c1f47821afe963d23e53f57de4123d4bc4a1b2a1167676fcb26c4",
+    "bytes": 1786
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/roms/Tetris [Fran Dachille, 1991].ch8": {
+    "sha256": "667cb026dee03f59f3a2fd81a2ffeab47da87731883f9601d37ba019976f94dd",
+    "bytes": 494
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/round_card.py": {
+    "sha256": "2396fdd9352ec3c5a644ff586795a84ebbe016a2b6ddd9dfd45c607fd637be03",
+    "bytes": 3290
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/train_pixel_novelty.py": {
+    "sha256": "1b21a0688b5ffaf4ca8d3b93d29695a2d1bc56285e8c3b2c220d2c1531b2bf15",
+    "bytes": 12593
+  },
+  "tetris/pixel_novelty_smoke_control/source_snapshot/visualize_run.py": {
+    "sha256": "86063a73d7e03dcc594bcb28d58a76c5a01e1af1e017cb9fce50423e2265286e",
+    "bytes": 8070
+  },
+  "tetris/pixel_novelty_smoke_control/summary.json": {
+    "sha256": "515edf5c48a898c12c136acead3a95d60d10e15e20f9e65a178dd20e90df121b",
+    "bytes": 837
+  },
+  "tetris/pixel_novelty_smoke_control/system.json": {
+    "sha256": "2835e49a5fc2f0f2e9fa3e0c0893473e85ec53494f017df46de69bf6c1419d63",
+    "bytes": 475
   },
   "tetris/pixel_response_diagnostic/RESULT.md": {
     "sha256": "ea8fe22ee72722a6cef9ca31a6e00d05bb5419f4fe6e0dc9e9310f83ca94f573",

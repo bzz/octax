@@ -1,0 +1,116 @@
+[
+  {
+    "summary": {
+      "mean_return": 0.0,
+      "scoring_fraction": 0.0,
+      "mean_length": 1283.5,
+      "terminated": 2,
+      "truncated": 0,
+      "action_distribution": [
+        0.18737826256330348,
+        0.22828204129333854,
+        0.1978963770938839,
+        0.1897156213478769,
+        0.1967276977015972
+      ],
+      "seconds": 2.256541292008478
+    },
+    "episodes": {
+      "action_counts": [
+        [
+          276,
+          329,
+          279,
+          282,
+          267
+        ],
+        [
+          205,
+          257,
+          229,
+          205,
+          238
+        ]
+      ],
+      "final_score": [
+        0.0,
+        0.0
+      ],
+      "lengths": [
+        1433,
+        1134
+      ],
+      "returns": [
+        0.0,
+        0.0
+      ],
+      "terminated": [
+        true,
+        true
+      ],
+      "truncated": [
+        false,
+        false
+      ]
+    },
+    "step": 0,
+    "checkpoint_roundtrip_exact": true
+  },
+  {
+    "summary": {
+      "mean_return": 0.0,
+      "scoring_fraction": 0.0,
+      "mean_length": 1126.5,
+      "terminated": 2,
+      "truncated": 0,
+      "action_distribution": [
+        0.18641810918774968,
+        0.2166000887705282,
+        0.1877496671105193,
+        0.19928983577452286,
+        0.20994229915667997
+      ],
+      "seconds": 1.3939784170070197
+    },
+    "episodes": {
+      "action_counts": [
+        [
+          215,
+          238,
+          208,
+          232,
+          217
+        ],
+        [
+          205,
+          250,
+          215,
+          217,
+          256
+        ]
+      ],
+      "final_score": [
+        0.0,
+        0.0
+      ],
+      "lengths": [
+        1110,
+        1143
+      ],
+      "returns": [
+        0.0,
+        0.0
+      ],
+      "terminated": [
+        true,
+        true
+      ],
+      "truncated": [
+        false,
+        false
+      ]
+    },
+    "step": 8192,
+    "checkpoint_roundtrip_exact": true
+  }
+]

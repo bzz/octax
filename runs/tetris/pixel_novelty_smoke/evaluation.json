@@ -1,0 +1,116 @@
+[
+  {
+    "summary": {
+      "mean_return": 0.0,
+      "scoring_fraction": 0.0,
+      "mean_length": 1283.5,
+      "terminated": 2,
+      "truncated": 0,
+      "action_distribution": [
+        0.18737826256330348,
+        0.22828204129333854,
+        0.1978963770938839,
+        0.1897156213478769,
+        0.1967276977015972
+      ],
+      "seconds": 2.0389220420038328
+    },
+    "episodes": {
+      "action_counts": [
+        [
+          276,
+          329,
+          279,
+          282,
+          267
+        ],
+        [
+          205,
+          257,
+          229,
+          205,
+          238
+        ]
+      ],
+      "final_score": [
+        0.0,
+        0.0
+      ],
+      "lengths": [
+        1433,
+        1134
+      ],
+      "returns": [
+        0.0,
+        0.0
+      ],
+      "terminated": [
+        true,
+        true
+      ],
+      "truncated": [
+        false,
+        false
+      ]
+    },
+    "step": 0,
+    "checkpoint_roundtrip_exact": true
+  },
+  {
+    "summary": {
+      "mean_return": 0.0,
+      "scoring_fraction": 0.0,
+      "mean_length": 1133.5,
+      "terminated": 2,
+      "truncated": 0,
+      "action_distribution": [
+        0.17026907807675343,
+        0.2774591971768858,
+        0.13233348037053375,
+        0.18526687251874724,
+        0.23467137185707984
+      ],
+      "seconds": 1.5769031249801628
+    },
+    "episodes": {
+      "action_counts": [
+        [
+          149,
+          259,
+          107,
+          171,
+          179
+        ],
+        [
+          237,
+          370,
+          193,
+          249,
+          353
+        ]
+      ],
+      "final_score": [
+        0.0,
+        0.0
+      ],
+      "lengths": [
+        865,
+        1402
+      ],
+      "returns": [
+        0.0,
+        0.0
+      ],
+      "terminated": [
+        true,
+        true
+      ],
+      "truncated": [
+        false,
+        false
+      ]
+    },
+    "step": 8192,
+    "checkpoint_roundtrip_exact": true
+  }
+]
