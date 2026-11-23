@@ -46,6 +46,14 @@ def run_n_instruction(state, n):
     return state
 
 
+def tick_timers(state):
+    """One 60 Hz tick; widen before subtracting to avoid uint8 underflow."""
+    def decrement(value):
+        return jnp.maximum(value.astype(jnp.int16) - 1, 0).astype(jnp.uint8)
+    return state.replace(delay_timer=decrement(state.delay_timer),
+                         sound_timer=decrement(state.sound_timer))
+
+
 class OctaxEnv:
     """JAX-compatible CHIP-8 environment for reinforcement learning.
 
@@ -230,10 +238,7 @@ class OctaxEnv:
                 sound_timer=jnp.zeros((), jnp.uint8),
             )
         else:
-            final_state: OctaxEnvState = final_state.replace(
-                delay_timer=jnp.maximum(final_state.delay_timer - 1, 0),
-                sound_timer=jnp.maximum(final_state.sound_timer - 1, 0),
-            )
+            final_state = tick_timers(final_state)
 
         final_state = jax.lax.cond(
             action == (self.num_actions - 1),
