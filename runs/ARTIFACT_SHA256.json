@@ -172,7 +172,7 @@
     "bytes": 2418
   },
   "tetris/learning_512k_seed1/report_source_manifest.json": {
-    "sha256": "5af19e9c1e443d96c428e93b49d536a8a0a8e8c261dee5489e61cf3113854e92",
+    "sha256": "787e70566e3739aa5753ef3f367322f26c261dec277a92fb2f8293c20995d28e",
     "bytes": 580
   },
   "tetris/learning_512k_seed1/report_source_snapshot/audit_replay_buffer.py": {
@@ -192,16 +192,16 @@
     "bytes": 14358
   },
   "tetris/learning_512k_seed1/report_source_snapshot/summarize_learning_512k.py": {
-    "sha256": "a68648a2749909cbf117d61495796b23a5452833a5f35c403c781b995d03fdef",
-    "bytes": 16684
+    "sha256": "f32ab509481ca6a061d0996c84c512cc4e94696827da19c95f5aaf7f6a3c658b",
+    "bytes": 16696
   },
   "tetris/learning_512k_seed1/report_source_snapshot/summarize_v2_baseline.py": {
     "sha256": "5b982afc74e19d78e11676a09bc5e75fa42f172d6a7651130e8bd5c833b6021c",
     "bytes": 9577
   },
   "tetris/learning_512k_seed1/result_card.html": {
-    "sha256": "9b376a0284a3822e81cffb1c356059ca42082e9dd02544307f10443d11bc4467",
-    "bytes": 295248
+    "sha256": "8f77ff783f7ff1c0b236eb3c4d3f502a7f64b601fbccf0b137ebc5c414c8e418",
+    "bytes": 295272
   },
   "tetris/learning_512k_seed1/run_status.json": {
     "sha256": "e47a4712b4cce8475c855a48ac5bd3ddc7d458635e1250b72337588b6b818a4b",

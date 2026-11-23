@@ -200,7 +200,7 @@ See [protocol](../../../LEARNING_512K.md), [implementation log](../../../IMPLEME
     (SERIES/'RESULT.md').write_text(text)
     visual = SERIES/'visualizations'; visual.mkdir(exist_ok=True)
     shutil.copy2(ROOT/'runs/tetris/v3_self_imitation_512k_seed1/visualizations/policy_trajectory.npz', visual/'policy_trajectory.npz')
-    write_round_card(SERIES, '512K · PPO versus score replay', conclusion,
+    write_round_card(SERIES, '512K · replay side experiment illustration', conclusion,
         [('PPO / replay scoring games', f"{records['credit']['scoring_games']} / {records['replay']['scoring_games']} of 128"),
          ('Untrained / random scoring games', f'{initial_count} / {random_count} of 128'),
          ('Total decisions per arm', f'{TARGET:,}')],
