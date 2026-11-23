@@ -55,3 +55,7 @@ The fixed seed-1 PPO/replay continuation and cumulative audit are experiment-onl
 ## Strictly on-policy long-trace PPO at 512K
 
 The fresh long-trace PPO trial and matched-control report are experiment-only work. No emulator or upstream-fix changes enter this run. [Evidence](runs/tetris/v2_long_trace_512k_seed1/RESULT.md).
+
+## Two-seed PPO entropy ablation at 64K
+
+The two-seed entropy-coefficient ablation is experiment-only work. Each fresh 64K run changes only coefficient 0.01 to 0.0. Frozen sources, exact initialization and original-score comparisons are recorded; upstream-fixes is unchanged. [Results and animations](runs/tetris/v2_entropy_zero_64k/RESULT.md).

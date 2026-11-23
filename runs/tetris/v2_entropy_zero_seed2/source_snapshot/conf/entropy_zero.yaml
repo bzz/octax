@@ -1,0 +1,6 @@
+defaults:
+  - credit_horizon
+  - _self_
+ent_coef: 0.0
+seed: 1
+run_dir: runs/tetris/v2_entropy_zero_seed1

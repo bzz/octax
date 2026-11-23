@@ -1,0 +1,10 @@
+{
+  "phase": "complete",
+  "pid": 54750,
+  "updated_at": "2026-11-23T17:27:28.885467+00:00",
+  "completed": [
+    "runs/tetris/v2_entropy_zero_seed1",
+    "runs/tetris/v2_entropy_zero_seed2"
+  ],
+  "total_new_training_steps": 131072
+}

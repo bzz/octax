@@ -113,3 +113,7 @@ The long-trace policy does not exceed both random and its initialization; useful
 ## Pixel response and greedy inference
 
 The trained networks remain responsive to pixels, but greedy inference does not establish a scoring gain. Long trace scores 1/128, prior PPO 0/128 and the initial network 0/128, versus random 3/128. These are frozen-policy diagnostics, with no added training updates. [Evidence and greedy-policy animation](runs/tetris/pixel_response_diagnostic/RESULT.md).
+
+## Two-seed PPO entropy ablation at 64K
+
+Removing entropy regularization does not pass the two-seed scoring screen; useful on-policy learning remains unestablished. Both entropy-zero seeds discovered one reward and scored 0/128, compared with matched controls 1/128 each and shared random 3/128. [Results and animations](runs/tetris/v2_entropy_zero_64k/RESULT.md).

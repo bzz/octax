@@ -1,0 +1,32 @@
+{
+  "1": {
+    "config_differences": {
+      "run_dir": [
+        "runs/tetris/v2_credit_horizon_seed1",
+        "runs/tetris/v2_entropy_zero_seed1"
+      ],
+      "ent_coef": [
+        0.01,
+        0.0
+      ]
+    },
+    "initial_parameter_sha256": "40aa44888c5cbbc5fd5af4de05272fa2ed082881a46972df2b984c86bc97d552",
+    "initial_parameters_match_exactly": true,
+    "optimizer_updates": 2048
+  },
+  "2": {
+    "config_differences": {
+      "run_dir": [
+        "runs/tetris/v2_credit_horizon_seed2",
+        "runs/tetris/v2_entropy_zero_seed2"
+      ],
+      "ent_coef": [
+        0.01,
+        0.0
+      ]
+    },
+    "initial_parameter_sha256": "7dff1a49f8d458d1ac3f97dbdb193ac540557fa44985772259fcc6f1d025d728",
+    "initial_parameters_match_exactly": true,
+    "optimizer_updates": 2048
+  }
+}
