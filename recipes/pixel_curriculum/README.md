@@ -30,3 +30,20 @@ This program imports the ordinary PPO runner and the weights-only initialization
 Use `--smoke` with a separate output directory for a separately counted 2,048-decision handoff check before the full pilot. Otherwise the budget is 65,536 fresh PPO decisions, using the matched 128-step credit profile and 2,048 PPO optimizer updates. Repeat with seed 2; the human dataset is shared evidence, not two independent demonstrations. Keep pretrained-only and post-PPO evaluations so the contribution of RL is visible. Include random and scratch-PPO controls; the reused 128-game bank is exploratory and the fresh confirmation bank is reserved.
 
 The 2,240 original demonstration decisions, 2,241 diagnostic replay transitions per validation, offline optimizer work, smoke decisions and actual fresh PPO decisions are different quantities and must be reported separately. No curriculum run has yet established a scoring improvement. Do not use the old concurrent self-imitation runner for this recipe.
+
+## Completed first investigation
+
+The frozen 20-epoch seed-1 fit passed the training-loss gate but scored 0/128 versus random 3/128. Both independent 2,048-step handoff smokes reproduced the initial policy exactly. Entropy .01 erased its preferences in the absence of task feedback; `--entropy-coef 0` preserved weights exactly. This is a diagnostic comparison, not a full 64K result or a claim that zero entropy solves learning. No full curriculum PPO run has started. See the [result and actual-policy card](../../runs/tetris/human_bc_seed1/RESULT.md) before launching a longer run.
+
+Reproduce the read-only audit after those runs exist:
+
+```sh
+JAX_PLATFORMS=cpu .venv/bin/python diagnose_cloning_handoff.py \
+  --pretrain runs/tetris/human_bc_seed1/pretrain \
+  --entropy-smoke runs/tetris/human_bc_handoff_smoke_seed1 \
+  --zero-smoke runs/tetris/human_bc_handoff_entropy_zero_seed1 \
+  --out runs/tetris/human_bc_seed1/handoff_diagnostic_reproduced
+MPLCONFIGDIR=../../work/mpl .venv/bin/python summarize_cloning_handoff.py
+```
+
+All fit/confusion metrics use the same training prefix; none is independent action validation. The audit reads completed files, runs no environments and performs no optimization. The next offline-fit experiment must have its own settings, output directory and evaluation, preserving this completed baseline.

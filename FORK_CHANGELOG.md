@@ -66,4 +66,6 @@ The optional RND component, terminal-observation wrapper, opt-in on-policy integ
 
 ### Independent curriculum stages
 
+The first completed offline cloning / fresh-PPO handoff investigation validates the disk boundary but establishes no gameplay improvement. The optional entropy-zero smoke isolates preference retention from the default entropy-driven update. Read-only fit/confusion audits and actual-policy reports are experiment tools, not upstream emulator fixes. See [evidence](runs/tetris/human_bc_seed1/RESULT.md).
+
 The offline pixel-cloning component, strict weights-only handoff and separate pretraining/PPO entry points are experiment-layer work. An optional initialization argument in `train.py` loads selected weights into freshly created PPO state; the default runner behavior is retained. Six targeted tests verify supervised fitting, checkpoint continuation, schema rejection and fresh on-policy collection/update after the disk boundary. No optimizer, critic, dataset or environment state crosses that boundary. This is not an upstream bugfix or a claim of learned gameplay. [Curriculum recipe](recipes/pixel_curriculum/README.md).

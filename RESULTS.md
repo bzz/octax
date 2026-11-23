@@ -125,3 +125,8 @@ Matched, strictly on-policy pixel-novelty smoke runs passed correctness gates at
 ## Pixel-only novelty at 64K: failed scoring screen
 
 Fresh seeds 1 and 2 each received 65,536 strictly on-policy decisions. Both found zero original training rewards and scored 0/128, compared with score-only PPO 1/128 each, untrained networks 2/128 and 0/128, and shared random 3/128. Source/checkpoint/budget/control audits passed, but this method does not establish useful learning. Do not extend it or consume unused confirmation seeds. [Two-seed results, curves and actual-policy card](runs/tetris/pixel_novelty_64k/RESULT.md).
+
+
+## Independent cloning / PPO handoff
+
+A fixed human-prefix clone passes its offline fit gate but scores 0/128 versus random 3/128. Two fresh 2,048-step PPO processes exactly reproduce the disk-loaded initialization. With no task feedback, entropy .01 erases the fitted preferences; entropy zero preserves all encoder/actor weights exactly. This validates stage separation, not learning. No full 64K curriculum PPO run has started. [Report, diagnostic and actual-policy card](runs/tetris/human_bc_seed1/RESULT.md).
