@@ -1,0 +1,36 @@
+........................................................................ [ 77%]
+.....................                                                    [100%]
+=============================== warnings summary ===============================
+.venv/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/ops.py:684
+  [REPO_ROOT]/.venv/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/ops.py:684: DeprecationWarning: jax.core.pytype_aval_mappings is deprecated.
+    jax.core.pytype_aval_mappings[onp.ndarray])
+
+tests/test_alu.py::TestBasicALU::test_alu_set_basic
+tests/test_alu.py::TestALUShifts::test_shift_right_legacy
+tests/test_env_timing.py::test_timing_runs_one_tick_per_frame[legacy-4]
+tests/test_env_timing.py::test_old_checkpoint_environment_keeps_legacy_timers
+  [REPO_ROOT]/.venv/lib/python3.11/site-packages/jax/_src/ops/scatter.py:105: FutureWarning: scatter inputs have incompatible types: cannot safely cast value from dtype=int32 to dtype=uint8 with jax_numpy_dtype_promotion=standard. In future JAX releases this will result in an error.
+    warnings.warn(
+
+tests/test_env_timing.py::test_timing_runs_one_tick_per_frame[legacy-4]
+tests/test_env_timing.py::test_timing_runs_one_tick_per_frame[step_saturating-4]
+tests/test_system.py::test_execute_clear_screen
+tests/test_timer_cadence.py::test_timer_ticks_once_for_each_of_four_frames[False-1]
+tests/test_timer_cadence.py::test_timer_ticks_once_for_each_of_four_frames[True-0]
+  [REPO_ROOT]/.venv/lib/python3.11/site-packages/jax/_src/ops/scatter.py:105: FutureWarning: scatter inputs have incompatible types: cannot safely cast value from dtype=int32 to dtype=bool with jax_numpy_dtype_promotion=standard. In future JAX releases this will result in an error.
+    warnings.warn(
+
+tests/test_env_timing.py::test_timing_runs_one_tick_per_frame[legacy-4]
+tests/test_env_timing.py::test_old_checkpoint_environment_keeps_legacy_timers
+  [REPO_ROOT]/.venv/lib/python3.11/site-packages/jax/_src/ops/scatter.py:105: FutureWarning: scatter inputs have incompatible types: cannot safely cast value from dtype=uint16 to dtype=uint8 with jax_numpy_dtype_promotion=standard. In future JAX releases this will result in an error.
+    warnings.warn(
+
+tests/test_global_gradient_clip.py::test_optimizer_limits_full_gradient_norm
+tests/test_ppo_sparse_rewards.py::test_global_clip_really_limits_full_gradient_norm
+tests/test_ppo_sparse_rewards.py::test_zero_value_head_can_learn_when_a_score_arrives
+tests/test_ppo_sparse_rewards.py::test_zero_value_head_can_learn_when_a_score_arrives
+  [REPO_ROOT]/.venv/lib/python3.11/site-packages/optax/_src/linear_algebra.py:44: DeprecationWarning: optax.global_norm is deprecated in favor of optax.tree.norm
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+93 passed, 16 warnings in 13.63s

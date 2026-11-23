@@ -97,3 +97,7 @@ Completed the four new seed-1/2 runs at 65,536 steps each, with unchanged pixel-
 Compared each final policy with its exactly reconstructed untrained network on the same game seeds. Mean score gain over initialization: baseline -0.01042, longer credit -0.00781. Neither configuration passes the exploratory learning gate at 64K steps; useful scoring improvement is not established. Three training seeds and reused evaluation seeds do not establish broad generalization; duplicated random evaluations are not independent control samples.
 
 Configuration, initial-policy, repeated-control, finite-metric and checkpoint checks passed. The run directory `runs/tetris/v2_replication_64k/` contains the full comparison and a compact actual-gameplay card using the preselected longer-credit seed-1 policy. The goal of a demonstrably useful learning setup remains subject to fresh evidence; the screening gate is not a completion criterion.
+
+## 64K self-imitation mechanism test
+
+Replay does not beat all scoring controls in this exploratory sample; useful learning remains unestablished. See [full evidence and animation](runs/tetris/v3_self_imitation_seed1/RESULT.md). This selected seed-1 test retains original pixels and game rewards; it adds replay compute.

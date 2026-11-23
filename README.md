@@ -342,3 +342,5 @@ OCTAX is released under the MIT License. See [LICENSE](https://github.com/riiswa
 ------
 
 <p align="center">   Made with ❤️ for the RL research community </p>
+
+[Latest score-replay follow-up](runs/tetris/v3_self_imitation_seed1/RESULT.md): Replay does not beat all scoring controls in this exploratory sample; useful learning remains unestablished.

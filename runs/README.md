@@ -1,6 +1,6 @@
 # Recorded Tetris experiments
 
-All training policies observe only four monochrome pixel frames and receive the ROM score difference. Checkpoints contain model, optimizer, RNG and emulator state. The nine checkpoints are about 26 MB each and are stored directly in Git. New runs remain ignored; this is an explicitly published snapshot.
+All training policies observe only four monochrome pixel frames and receive the ROM score difference. Checkpoints contain model, optimizer, RNG and emulator state. The ten checkpoints are about 26 MB each and are stored directly in Git. New runs remain ignored; this is an explicitly published snapshot.
 
 | Directory | Timing / purpose | Recorded budget |
 | --- | --- | --- |
@@ -21,3 +21,5 @@ Use each run's configuration and timer semantics; do not combine v1 and v2 as on
 See [EXPERIMENT.md](../EXPERIMENT.md) for commands and [FORK_CHANGELOG.md](../FORK_CHANGELOG.md) for source-provenance limits. Historical status JSON describes completed local jobs, not current processes. Local checkout prefixes in text files have been made relative; checkpoint bytes, numeric results and source snapshots are unchanged.
 
 [ARTIFACT_SHA256.json](ARTIFACT_SHA256.json) records sizes and SHA-256 hashes of all published artifacts in this directory except the manifest itself.
+
+[Self-imitation seed 1](tetris/v3_self_imitation_seed1/RESULT.md): fresh 65,536-step score-replay test, full model/replay checkpoints, exported successful episodes, validation evidence and actual-gameplay card.

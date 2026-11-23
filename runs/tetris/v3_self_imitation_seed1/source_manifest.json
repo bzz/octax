@@ -1,0 +1,19 @@
+{
+  "train_self_imitation.py": "11d63ceebe7a8fc2f98eda5bacab96cd71f9000530c807c7a4d1211a9657253f",
+  "self_imitation.py": "f67dcfd1843d67373f379fc180b77ca4f9faed4aa1c82177fc27192ccd487fb6",
+  "run_self_imitation.py": "76b3d1000aef02e83c6c27ca88c8d48b9f697d4e47d765574eeb8ecb081fc251",
+  "octax/agents/ppo.py": "87dceaf2a5c0a8679939b84c306bfaa571ae5bd28e044f4c252d1f3621442364",
+  "octax/env.py": "30a80cb6290c7bfba3cfe8bf816bf77740d342e0d958a1784628e9126b947a06",
+  "octax/checkpoints.py": "230af35150c1a85532b758fbb6be0514014c77863fea3e247c9faa548b3ac021",
+  "octax/wrappers.py": "cd46727e367b182873625bf33e89f1afc0488b03c67df48b945640b208ed9a23",
+  "experiment_utils.py": "56acd748517c545f735536729044a77d2c85671a47c1cb7fa6b9ab90321daaa7",
+  "conf/config.yaml": "34244e3f6a1a9ed5fd7a95c7df9608d8452d6368ae753785c7a75327314e565f",
+  "conf/credit_horizon.yaml": "39db8bd05241cccac37e55e12ff2a2c996ae7ab1985c807ceda0f772ec33bb72",
+  "conf/self_imitation.yaml": "ee047f87d710f2abc3b091ec8c90d1a453d47957a01a67dd6e17d9fad570ff6f",
+  "evaluate_checkpoint.py": "98a9657a44778100fce240550e9d4d873324e8cfa19706ba754fa1315851348b",
+  "visualize_run.py": "86063a73d7e03dcc594bcb28d58a76c5a01e1af1e017cb9fce50423e2265286e",
+  "requirements-macos.lock.txt": "800cdcebc24c1f47821afe963d23e53f57de4123d4bc4a1b2a1167676fcb26c4",
+  "tests/test_self_imitation.py": "857d6b7787fce7fe6adce45c1710574e2e00dafbe23b82bb3d96bfb1e06db431",
+  "SELF_IMITATION.md": "fda904d20135f7ce2f361d01c583595540f307b6578c0b3d0073d515e41e1629",
+  "roms/Tetris [Fran Dachille, 1991].ch8": "667cb026dee03f59f3a2fd81a2ffeab47da87731883f9601d37ba019976f94dd"
+}
