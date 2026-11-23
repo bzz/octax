@@ -18,8 +18,8 @@ from rejax.networks import DiscretePolicy, VNetwork
 class Agent(nn.Module):
     action_dim: int
     features_list: Tuple[int] = (32, 64, 64)
-    kernel_sizes: Tuple[Tuple[int, int] | int] = ((8, 4), 4,3)
-    strides_list: Tuple[Tuple[int, int] | int] = ((4, 2), 2,1)
+    kernel_sizes: Tuple[Tuple[int, int] | int] = ((8, 4), (4, 4), (3, 3))
+    strides_list: Tuple[Tuple[int, int] | int] = ((4, 2), (2, 2), (1, 1))
     activation: Callable[[jnp.ndarray], jnp.ndarray] = nn.relu
     hidden_layer_sizes: Tuple[int] = (256,)
 
@@ -42,7 +42,7 @@ class Agent(nn.Module):
         self.critic = VNetwork(hidden_layer_sizes=self.hidden_layer_sizes,activation=self.activation)
 
     def __call__(self, obs, rng, action=None):
-        features = self.features(obs)
+        features = self.encode(obs)
 
         value = self.critic(features)
 
@@ -53,12 +53,17 @@ class Agent(nn.Module):
             return action, *self.actor.log_prob_entropy(features, action), value
 
     def call_critic(self, obs):
-        features = self.features(obs)
+        features = self.encode(obs)
         return self.critic(features)
 
     def call_actor(self, obs, rng):
-        features = self.features(obs)
+        features = self.encode(obs)
         return self.actor(features, rng)
+
+
+    def encode(self, obs):
+        # Gymnax gives NCHW; Flax convolutions require NHWC.
+        return self.features(jnp.transpose(obs, (0, 2, 3, 1)).astype(jnp.float32))
 
 
 class PPOOctax(OnPolicyMixin, Algorithm):
