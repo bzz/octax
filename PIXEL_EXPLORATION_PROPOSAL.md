@@ -1,6 +1,6 @@
 # Pixel-only exploration with on-policy PPO — proposed, not enabled
 
-Status: the reward-scope preference remains unanswered. An isolated `pixel_novelty.py` component is implemented and tested, but is not imported by the existing PPO trainers. There is no integrated intrinsic value head, active novelty reward or new policy-training run. The completed score-only experiments and their original checkpoints remain the evidence for the current learning result.
+Status: the reward-scope preference remains unanswered. `pixel_novelty.py` and the opt-in `on_policy_novelty.py` integration are implemented and tested, but neither is imported by the existing PPO trainers. Tiny test-only optimizer updates validate the integration; no novelty learning pilot or training smoke benchmark has run. The completed score-only experiments and their original checkpoints remain the evidence for the current learning result.
 
 ## What the source review establishes
 
@@ -44,7 +44,23 @@ Seven targeted CPU tests passed (7.73 seconds). They check the full newest-frame
 
 The initial integrity assertions were corrected to canonicalize dictionary order across JIT and compare serialized optimizer values rather than newly created Python callback identities. Exact array comparisons and restored next-update checks remain in place. Three existing emulator dtype warnings remain.
 
-Reproduce with `JAX_PLATFORMS=cpu .venv/bin/python -m pytest -q tests/test_pixel_novelty.py`. Shared-policy intrinsic-value integration, zero-bonus equivalence to baseline PPO, full combined-state checkpoint checks, rollout lifecycle integration and a CPU policy-training smoke test remain unfinished. No novelty run should be described as ready on the strength of the component tests alone.
+Reproduce the component checks with `JAX_PLATFORMS=cpu .venv/bin/python -m pytest -q tests/test_pixel_novelty.py`.
+
+## Opt-in on-policy integration validation
+
+`on_policy_novelty.py` composes the existing PPO state with a separate intrinsic-value head and the auxiliary RND state. It does not register another Rejax initializer: doing so would alter the order of RNG splitting and invalidate matched initializations. Tagged independent initialization keys preserve the original policy parameters and collection RNG. The extra value head consumes only the original shared CNN's pixel features. Both return streams stop at game-over, with separate discounts and unchanged original-score rewards. PPO gradients from both value heads and the actor are clipped jointly before their Adam updates; the separate predictor is fit afterward on the current rollout only.
+
+The host lifecycle requires collection followed by consumption of that rollout before further collection, and rejects stale generation/step/RNG markers. Frozen bonus values are computed once before PPO epochs. These guards prevent accidental reuse in the runner; they are not a security boundary against deliberately modifying state. Persistent state contains no historical transition buffer. Format-2 checkpoints contain the entire PPO, auxiliary-head, predictor, fixed-target, normalizer, environment and RNG state. Format-1 policy exports are explicitly inference-only and cannot restore either full trainer.
+
+The combined targeted suite passed **12 tests in 25.68 seconds** on CPU. Five integration tests verify:
+
+- Exact original initialization, trajectory, full PPO state and metrics with novelty disabled across two updates, including validation-only injected reward/terminal flags to exercise nonzero targets. Auxiliary parameters and optimizers stay fixed.
+- Separate score/novelty GAE against an independent NumPy recurrence with internal terminals and nonzero rollout-end bootstrap values.
+- Finite enabled updates, changed policy/intrinsic-head/predictor weights, fixed target weights, bounded reported clipped gradient norm and no additional environment steps during updates.
+- Rejection of duplicate, stale and pending rollouts/checkpoints.
+- Full save/restore into a fresh template followed by an exactly identical next collection, PPO update, predictor update and metrics; configuration mismatch rejection; inference-only exports rejected for resume.
+
+Reproduce with `JAX_PLATFORMS=cpu MPLCONFIGDIR=.matplotlib .venv/bin/python -m pytest -q tests/test_on_policy_novelty.py tests/test_pixel_novelty.py`. Existing emulator dtype warnings and dependency deprecations remain. These tests execute tiny diagnostic rollouts and optimizer updates; they do not measure learning or constitute a pilot. A reproducible run harness, CPU smoke benchmark, source freeze and actual original-score comparison remain outstanding.
 
 ## Decision needed
 

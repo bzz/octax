@@ -62,4 +62,4 @@ The two-seed entropy-coefficient ablation is experiment-only work. Each fresh 64
 
 ### Inactive pixel-novelty component
 
-The optional RND component and its terminal-observation wrapper are experiment preparation, not upstream emulator fixes. Seven targeted tests validate the component; existing PPO trainers do not import it. Policy integration and learning evidence remain outstanding. See [scope and checks](PIXEL_EXPLORATION_PROPOSAL.md).
+The optional RND component, terminal-observation wrapper and opt-in on-policy integration are experiment preparation, not upstream emulator fixes. Twelve targeted tests validate the component and integration, including exact disabled-bonus baseline equivalence and complete checkpoint continuation. Existing PPO trainers do not import them. No novelty learning pilot has run; learning evidence remains outstanding. See [scope and checks](PIXEL_EXPLORATION_PROPOSAL.md).
