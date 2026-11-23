@@ -1,0 +1,53 @@
+{
+  "protocol_code_commit": "71ca6b6511342e77394bed6a38d197835fd1ee4d",
+  "conditions": {
+    "baseline": {
+      "num_steps": 32,
+      "gamma": 0.99,
+      "gae_lambda": 0.95,
+      "num_minibatches": 4
+    },
+    "credit_horizon": {
+      "num_steps": 128,
+      "gamma": 0.995,
+      "gae_lambda": 0.98,
+      "num_minibatches": 16
+    }
+  },
+  "training_seeds": [
+    0,
+    1,
+    2
+  ],
+  "new_training_seeds": [
+    1,
+    2
+  ],
+  "steps_per_run": 65536,
+  "num_envs": 16,
+  "num_epochs": 4,
+  "minibatch_size": 128,
+  "optimizer_updates_per_run": 2048,
+  "observations": "four monochrome 32x64 frames",
+  "reward": "original ROM score difference",
+  "evaluation": {
+    "episodes_per_policy": 128,
+    "seed_start": 50000,
+    "seeds_reused": true,
+    "random_control_is_shared": true,
+    "compare_to_exact_initial_network": true
+  },
+  "illustrative_policy": {
+    "condition": "credit_horizon",
+    "training_seed": 1,
+    "game_seed": 30016,
+    "selected_before_final_evaluation": true
+  },
+  "screening_is_not_completion": true,
+  "possible_fresh_confirmation": {
+    "seed_start": 60000,
+    "episodes": 512,
+    "not_yet_run": true
+  },
+  "series_execution": "Sequential, launch-time source/ROM freeze; no training-source drift allowed."
+}

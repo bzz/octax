@@ -1,0 +1,11 @@
+{
+  "phase": "complete",
+  "updated_at": "2026-11-23T13:12:14.744792+00:00",
+  "completed": [
+    "runs/tetris/v2_baseline_seed1",
+    "runs/tetris/v2_credit_horizon_seed1",
+    "runs/tetris/v2_baseline_seed2",
+    "runs/tetris/v2_credit_horizon_seed2"
+  ],
+  "total_new_training_steps": 262144
+}

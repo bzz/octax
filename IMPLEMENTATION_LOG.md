@@ -152,3 +152,19 @@ On the same previously inspected 128 seeds, longer credit scored in 2/128 games,
 Initial policy evaluation and repeated random/no-op controls matched their baseline arrays exactly. Finite-state checks and exact checkpoint roundtrip passed; final entropy 1.578472, throughput 139.5 decisions/s. This is a single-seed, bundled, exploratory comparison; it does not isolate rollout/gamma/lambda effects or establish performance across seeds. No further run was launched.
 
 Saved full evidence in `runs/tetris/v2_credit_horizon_seed0/RESULT.md`, plus a small reusable result card with actual policy gameplay and links to the settings and log. Rendering continues to use Matplotlib/Seaborn primitives from the existing MinAtar-style workflow.
+
+## 2026-11-23 — Three-seed replication started
+
+The active goal is to repeat baseline and longer-credit configurations with fresh seeds 1 and 2, each at 65,536 decisions, then compare them with seed 0. The broader objective remains a transferable pixel-only network that measurably improves game score over random; nonzero gradients or a completed run do not satisfy that objective.
+
+Four new runs are scheduled sequentially: baseline seed 1, longer-credit seed 1, baseline seed 2, longer-credit seed 2 (262,144 new training decisions). Settings remain identical to the previous two arms, including corrected timing, original score-only reward, architecture and optimization. The runner snapshots sources and ROM at launch and rejects source drift or existing output directories. No board features, heuristics, recurrence, reward shaping or architecture change is introduced.
+
+Each final policy uses the same 128 previously inspected evaluation seeds 50000–50127 and the preselected illustrative gameplay seed 30016. Random/no-op evaluation is repeated for integrity, not counted as independent control replications. Equal-budget uniform-random rollouts are added for training seeds 1 and 2. Reports will compare individual training seeds, reward discovery and actual scoring; pooling repeated controls as independent samples would overstate evidence. Any proposed next configuration must be justified by these outcomes and the project constraints.
+
+## 2026-11-23 — Three-seed 64K replication completed
+
+Completed the four new seed-1/2 runs at 65,536 steps each, with unchanged pixel-only observations, original score reward and corrected timing. Including seed 0, baseline training reward events were [0, 0, 0]; longer credit events were [1, 2, 0]. Final scoring games (out of 128 per policy) were baseline [1, 1, 1] and longer credit [2, 1, 1], versus 3/128 for the shared random control.
+
+Compared each final policy with its exactly reconstructed untrained network on the same game seeds. Mean score gain over initialization: baseline -0.01042, longer credit -0.00781. Neither configuration passes the exploratory learning gate at 64K steps; useful scoring improvement is not established. Three training seeds and reused evaluation seeds do not establish broad generalization; duplicated random evaluations are not independent control samples.
+
+Configuration, initial-policy, repeated-control, finite-metric and checkpoint checks passed. The run directory `runs/tetris/v2_replication_64k/` contains the full comparison and a compact actual-gameplay card using the preselected longer-credit seed-1 policy. The goal of a demonstrably useful learning setup remains subject to fresh evidence; the screening gate is not a completion criterion.

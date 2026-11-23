@@ -1,0 +1,19 @@
+{
+  "policy": "uniform_random",
+  "timer_mode": "frame",
+  "seed": 2,
+  "total_steps": 65536,
+  "positive_reward_events": 0,
+  "reward_sum": 0.0,
+  "completed_episodes": 42,
+  "positive_events": [],
+  "action_distribution": [
+    0.197998046875,
+    0.2011260986328125,
+    0.20068359375,
+    0.1989593505859375,
+    0.20123291015625
+  ],
+  "elapsed_seconds": 21.84842954200576,
+  "note": "Matched budget and initial reset states; no claim of identical action RNG or episode boundaries."
+}

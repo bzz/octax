@@ -1,7 +1,7 @@
 {
   "README.md": {
-    "sha256": "53d19fda13faa66624a609ad372a1c1545e6c52207d9c4841dfce2cc7acc8020",
-    "bytes": 2611
+    "sha256": "d43128738ef6fc2938c82f0b14fd860346acabba1353e78449d1784f986631e2",
+    "bytes": 2804
   },
   "tetris/continued_seed0/checkpoint.msgpack": {
     "sha256": "42dfa42cf14c222155882f016a7b85caaa3d1aa6496af35adfd663043d8e45f3",
@@ -419,6 +419,294 @@
     "sha256": "7ec76d3f5bb4dc64533f37fbcf607ee6eb0381b7837f9ab455597a7ea99eb0f0",
     "bytes": 4889
   },
+  "tetris/v2_baseline_seed1/checkpoint.msgpack": {
+    "sha256": "ccbf0b73cf9032627c63325a38eca39a9d5c0e56de32182d349070f92fa3f9da",
+    "bytes": 26310554
+  },
+  "tetris/v2_baseline_seed1/config.yaml": {
+    "sha256": "d7f6a8f24b55b9cf9bcab1cc43f9aea40fd1e6c9e1e152f091a90d2792b04f26",
+    "bytes": 490
+  },
+  "tetris/v2_baseline_seed1/eval.gif": {
+    "sha256": "d743039c9600f2394f4addefa4eade9cc8ae0bcce9b92dc5c822a7783cc213a6",
+    "bytes": 24363
+  },
+  "tetris/v2_baseline_seed1/eval_000000000.gif": {
+    "sha256": "0a2766e726d77be2a3c12e04ee80b963b1080e19181fe524755d3aa818d7c2e1",
+    "bytes": 24435
+  },
+  "tetris/v2_baseline_seed1/eval_000065536.gif": {
+    "sha256": "d743039c9600f2394f4addefa4eade9cc8ae0bcce9b92dc5c822a7783cc213a6",
+    "bytes": 24363
+  },
+  "tetris/v2_baseline_seed1/evaluation.json": {
+    "sha256": "e66741d71733f990e087019692b6a59ee5b38ebef348a1c362650b7311178531",
+    "bytes": 3901
+  },
+  "tetris/v2_baseline_seed1/heldout/comparison.json": {
+    "sha256": "a00c5d62c99cea595383c9fe70d87a59382e3b12a6a2f5f7a87e257c29324059",
+    "bytes": 63671
+  },
+  "tetris/v2_baseline_seed1/heldout/eval.gif": {
+    "sha256": "290395d4a6f3ce4657f05f2605c8064ee464cd202a8ed67ac2f69d8c96c3ca3c",
+    "bytes": 55978
+  },
+  "tetris/v2_baseline_seed1/job.log": {
+    "sha256": "ba2f74ff2d1c1115de2ed8b0a425c8a73bdb763fd14068b22942d68c43d9ef5c",
+    "bytes": 17211
+  },
+  "tetris/v2_baseline_seed1/metrics.csv": {
+    "sha256": "99351274589b985da25633ccd2b08d2642c6d0b7a43a5a58cfe269efd679c398",
+    "bytes": 35063
+  },
+  "tetris/v2_baseline_seed1/random_training_budget.json": {
+    "sha256": "704959c42255057bac658215ba8d49bca2277672aa9e33cc4aab2c7e4960e43a",
+    "bytes": 751
+  },
+  "tetris/v2_baseline_seed1/run_status.json": {
+    "sha256": "1f99f42adc41b3af2d8ff0dab7d0edde42074df640d7b0c26fad55b87cf06ad4",
+    "bytes": 106
+  },
+  "tetris/v2_baseline_seed1/source_manifest.json": {
+    "sha256": "ae51bfaf803b51020d08567297a0eb36c56622a9159ce79c414b28059da5545b",
+    "bytes": 1322
+  },
+  "tetris/v2_baseline_seed1/source_snapshot/compare_random_budget.py": {
+    "sha256": "784bab9110c348aa0445f389918e8159509005858c8359d52c903f0f5e2c0a43",
+    "bytes": 2659
+  },
+  "tetris/v2_baseline_seed1/source_snapshot/conf/config.yaml": {
+    "sha256": "34244e3f6a1a9ed5fd7a95c7df9608d8452d6368ae753785c7a75327314e565f",
+    "bytes": 575
+  },
+  "tetris/v2_baseline_seed1/source_snapshot/conf/credit_horizon.yaml": {
+    "sha256": "39db8bd05241cccac37e55e12ff2a2c996ae7ab1985c807ceda0f772ec33bb72",
+    "bytes": 218
+  },
+  "tetris/v2_baseline_seed1/source_snapshot/evaluate_checkpoint.py": {
+    "sha256": "98a9657a44778100fce240550e9d4d873324e8cfa19706ba754fa1315851348b",
+    "bytes": 1334
+  },
+  "tetris/v2_baseline_seed1/source_snapshot/experiment_utils.py": {
+    "sha256": "56acd748517c545f735536729044a77d2c85671a47c1cb7fa6b9ab90321daaa7",
+    "bytes": 4809
+  },
+  "tetris/v2_baseline_seed1/source_snapshot/octax/agents/ppo.py": {
+    "sha256": "87dceaf2a5c0a8679939b84c306bfaa571ae5bd28e044f4c252d1f3621442364",
+    "bytes": 10291
+  },
+  "tetris/v2_baseline_seed1/source_snapshot/octax/checkpoints.py": {
+    "sha256": "230af35150c1a85532b758fbb6be0514014c77863fea3e247c9faa548b3ac021",
+    "bytes": 742
+  },
+  "tetris/v2_baseline_seed1/source_snapshot/octax/env.py": {
+    "sha256": "30a80cb6290c7bfba3cfe8bf816bf77740d342e0d958a1784628e9126b947a06",
+    "bytes": 12086
+  },
+  "tetris/v2_baseline_seed1/source_snapshot/octax/wrappers.py": {
+    "sha256": "cd46727e367b182873625bf33e89f1afc0488b03c67df48b945640b208ed9a23",
+    "bytes": 2629
+  },
+  "tetris/v2_baseline_seed1/source_snapshot/requirements-macos.lock.txt": {
+    "sha256": "800cdcebc24c1f47821afe963d23e53f57de4123d4bc4a1b2a1167676fcb26c4",
+    "bytes": 1786
+  },
+  "tetris/v2_baseline_seed1/source_snapshot/roms/Tetris [Fran Dachille, 1991].ch8": {
+    "sha256": "667cb026dee03f59f3a2fd81a2ffeab47da87731883f9601d37ba019976f94dd",
+    "bytes": 494
+  },
+  "tetris/v2_baseline_seed1/source_snapshot/run_replication_64k.py": {
+    "sha256": "4f35353928e709b8fa627f2b543dba0469b1cf4b0c6b9767409342dc77063a72",
+    "bytes": 4225
+  },
+  "tetris/v2_baseline_seed1/source_snapshot/train.py": {
+    "sha256": "154038c70ae5c6a9da14c2ef5dcad7e3a76bbbbbcdbcb40b0accf375f5e8c32c",
+    "bytes": 9079
+  },
+  "tetris/v2_baseline_seed1/source_snapshot/visualize_run.py": {
+    "sha256": "86063a73d7e03dcc594bcb28d58a76c5a01e1af1e017cb9fce50423e2265286e",
+    "bytes": 8070
+  },
+  "tetris/v2_baseline_seed1/summary.json": {
+    "sha256": "28400fe98e81fe249d5d0e3d8b4cde2f660eefd3a851bdd509f23fb5c9ac55a6",
+    "bytes": 679
+  },
+  "tetris/v2_baseline_seed1/system.json": {
+    "sha256": "8da056076d97f715790bd64a8f3a0fed3b27890da0baca8773361f6be4cae786",
+    "bytes": 474
+  },
+  "tetris/v2_baseline_seed1/visualizations/gameplay.gif": {
+    "sha256": "5a2e6fcaba659a29112117304c3f70928a0e3237ffc187020a5a5b56cb6168d4",
+    "bytes": 836772
+  },
+  "tetris/v2_baseline_seed1/visualizations/gameplay.json": {
+    "sha256": "db4b16b32ba2189565cfdae0c8fa4e419dcf39363d089354ab7041b0a5daac57",
+    "bytes": 175
+  },
+  "tetris/v2_baseline_seed1/visualizations/gameplay.png": {
+    "sha256": "e2ce59bc739fc0747cc351563f8ddf473c115313c9d5f727f54137eaca00380d",
+    "bytes": 9937
+  },
+  "tetris/v2_baseline_seed1/visualizations/learning_curves.pdf": {
+    "sha256": "cbd7e9710a1df9e8eb1606235abd840651283e673e096067850ca99e57cce8f0",
+    "bytes": 31364
+  },
+  "tetris/v2_baseline_seed1/visualizations/learning_curves.png": {
+    "sha256": "70eff2b1f34341cd285840f2b9059d904d3c5478aec200e2593bfa0066968eb7",
+    "bytes": 241368
+  },
+  "tetris/v2_baseline_seed1/visualizations/policy_trajectory.npz": {
+    "sha256": "a20aea768afd221593bff175283d3e6d12c1b171e58ba565672bbe86e8a9b2fd",
+    "bytes": 4067
+  },
+  "tetris/v2_baseline_seed1/visualizations/random_trajectory.npz": {
+    "sha256": "7ec76d3f5bb4dc64533f37fbcf607ee6eb0381b7837f9ab455597a7ea99eb0f0",
+    "bytes": 4889
+  },
+  "tetris/v2_baseline_seed2/checkpoint.msgpack": {
+    "sha256": "990fb30d458c8c9016bad6c58e4aaef49186d155e9b714c441b9737c25ab8068",
+    "bytes": 26310554
+  },
+  "tetris/v2_baseline_seed2/config.yaml": {
+    "sha256": "6b56c778a23e9752eca711800e582f00a5f8477667a238518c8bcda9954118c6",
+    "bytes": 490
+  },
+  "tetris/v2_baseline_seed2/eval.gif": {
+    "sha256": "d743039c9600f2394f4addefa4eade9cc8ae0bcce9b92dc5c822a7783cc213a6",
+    "bytes": 24363
+  },
+  "tetris/v2_baseline_seed2/eval_000000000.gif": {
+    "sha256": "36af2e7ea39ae57824e976176d554678c222b837d286929e0ae8a089d199bdd9",
+    "bytes": 24120
+  },
+  "tetris/v2_baseline_seed2/eval_000065536.gif": {
+    "sha256": "d743039c9600f2394f4addefa4eade9cc8ae0bcce9b92dc5c822a7783cc213a6",
+    "bytes": 24363
+  },
+  "tetris/v2_baseline_seed2/evaluation.json": {
+    "sha256": "3f71e9bd9f4d974d2c60fc3659d0e41cc332faaaf1051441c58821b2a1f3a33c",
+    "bytes": 3904
+  },
+  "tetris/v2_baseline_seed2/heldout/comparison.json": {
+    "sha256": "30b58da364435c942f03aba78224110dd93ed5972eef68c0ed9ad953535c53d7",
+    "bytes": 63671
+  },
+  "tetris/v2_baseline_seed2/heldout/eval.gif": {
+    "sha256": "290395d4a6f3ce4657f05f2605c8064ee464cd202a8ed67ac2f69d8c96c3ca3c",
+    "bytes": 55978
+  },
+  "tetris/v2_baseline_seed2/job.log": {
+    "sha256": "9af1ea8e85e46c41500ef0d09dca7c19c886972c0b36d8b414f4211480825733",
+    "bytes": 16915
+  },
+  "tetris/v2_baseline_seed2/metrics.csv": {
+    "sha256": "1eb946aa45dfb9c963820fab48ed11bbff4a0ca2bc85a6af78d45cebcb1c40e0",
+    "bytes": 34799
+  },
+  "tetris/v2_baseline_seed2/random_training_budget.json": {
+    "sha256": "abf649bc755168bad17ac49483b8ce3af21a7c9661e610b33b2998d5bc46bbc4",
+    "bytes": 490
+  },
+  "tetris/v2_baseline_seed2/run_status.json": {
+    "sha256": "53dda61598991942ed80164f889a0e6d2c4f788f777239d180ff56c3182f6721",
+    "bytes": 106
+  },
+  "tetris/v2_baseline_seed2/source_manifest.json": {
+    "sha256": "ae51bfaf803b51020d08567297a0eb36c56622a9159ce79c414b28059da5545b",
+    "bytes": 1322
+  },
+  "tetris/v2_baseline_seed2/source_snapshot/compare_random_budget.py": {
+    "sha256": "784bab9110c348aa0445f389918e8159509005858c8359d52c903f0f5e2c0a43",
+    "bytes": 2659
+  },
+  "tetris/v2_baseline_seed2/source_snapshot/conf/config.yaml": {
+    "sha256": "34244e3f6a1a9ed5fd7a95c7df9608d8452d6368ae753785c7a75327314e565f",
+    "bytes": 575
+  },
+  "tetris/v2_baseline_seed2/source_snapshot/conf/credit_horizon.yaml": {
+    "sha256": "39db8bd05241cccac37e55e12ff2a2c996ae7ab1985c807ceda0f772ec33bb72",
+    "bytes": 218
+  },
+  "tetris/v2_baseline_seed2/source_snapshot/evaluate_checkpoint.py": {
+    "sha256": "98a9657a44778100fce240550e9d4d873324e8cfa19706ba754fa1315851348b",
+    "bytes": 1334
+  },
+  "tetris/v2_baseline_seed2/source_snapshot/experiment_utils.py": {
+    "sha256": "56acd748517c545f735536729044a77d2c85671a47c1cb7fa6b9ab90321daaa7",
+    "bytes": 4809
+  },
+  "tetris/v2_baseline_seed2/source_snapshot/octax/agents/ppo.py": {
+    "sha256": "87dceaf2a5c0a8679939b84c306bfaa571ae5bd28e044f4c252d1f3621442364",
+    "bytes": 10291
+  },
+  "tetris/v2_baseline_seed2/source_snapshot/octax/checkpoints.py": {
+    "sha256": "230af35150c1a85532b758fbb6be0514014c77863fea3e247c9faa548b3ac021",
+    "bytes": 742
+  },
+  "tetris/v2_baseline_seed2/source_snapshot/octax/env.py": {
+    "sha256": "30a80cb6290c7bfba3cfe8bf816bf77740d342e0d958a1784628e9126b947a06",
+    "bytes": 12086
+  },
+  "tetris/v2_baseline_seed2/source_snapshot/octax/wrappers.py": {
+    "sha256": "cd46727e367b182873625bf33e89f1afc0488b03c67df48b945640b208ed9a23",
+    "bytes": 2629
+  },
+  "tetris/v2_baseline_seed2/source_snapshot/requirements-macos.lock.txt": {
+    "sha256": "800cdcebc24c1f47821afe963d23e53f57de4123d4bc4a1b2a1167676fcb26c4",
+    "bytes": 1786
+  },
+  "tetris/v2_baseline_seed2/source_snapshot/roms/Tetris [Fran Dachille, 1991].ch8": {
+    "sha256": "667cb026dee03f59f3a2fd81a2ffeab47da87731883f9601d37ba019976f94dd",
+    "bytes": 494
+  },
+  "tetris/v2_baseline_seed2/source_snapshot/run_replication_64k.py": {
+    "sha256": "4f35353928e709b8fa627f2b543dba0469b1cf4b0c6b9767409342dc77063a72",
+    "bytes": 4225
+  },
+  "tetris/v2_baseline_seed2/source_snapshot/train.py": {
+    "sha256": "154038c70ae5c6a9da14c2ef5dcad7e3a76bbbbbcdbcb40b0accf375f5e8c32c",
+    "bytes": 9079
+  },
+  "tetris/v2_baseline_seed2/source_snapshot/visualize_run.py": {
+    "sha256": "86063a73d7e03dcc594bcb28d58a76c5a01e1af1e017cb9fce50423e2265286e",
+    "bytes": 8070
+  },
+  "tetris/v2_baseline_seed2/summary.json": {
+    "sha256": "e31af6b5b3db18600433afd3374fb138108f653fcfd7e4bc1154876bb1a0a67e",
+    "bytes": 683
+  },
+  "tetris/v2_baseline_seed2/system.json": {
+    "sha256": "6e562a1a21917029bd76dfeb3d5215f7ea246a419e7d2b62b31ad9594891e55d",
+    "bytes": 474
+  },
+  "tetris/v2_baseline_seed2/visualizations/gameplay.gif": {
+    "sha256": "5a2e6fcaba659a29112117304c3f70928a0e3237ffc187020a5a5b56cb6168d4",
+    "bytes": 836772
+  },
+  "tetris/v2_baseline_seed2/visualizations/gameplay.json": {
+    "sha256": "db4b16b32ba2189565cfdae0c8fa4e419dcf39363d089354ab7041b0a5daac57",
+    "bytes": 175
+  },
+  "tetris/v2_baseline_seed2/visualizations/gameplay.png": {
+    "sha256": "e2ce59bc739fc0747cc351563f8ddf473c115313c9d5f727f54137eaca00380d",
+    "bytes": 9937
+  },
+  "tetris/v2_baseline_seed2/visualizations/learning_curves.pdf": {
+    "sha256": "d3555234ac6c941f9f10822df22fbc75aa421fb574d672e939dec276bb07345e",
+    "bytes": 31268
+  },
+  "tetris/v2_baseline_seed2/visualizations/learning_curves.png": {
+    "sha256": "5af16ddc4ba5a9167cccc7f045af742f89a3de9d40ef8ec6d9dbd8bd5c24da0f",
+    "bytes": 233584
+  },
+  "tetris/v2_baseline_seed2/visualizations/policy_trajectory.npz": {
+    "sha256": "a20aea768afd221593bff175283d3e6d12c1b171e58ba565672bbe86e8a9b2fd",
+    "bytes": 4067
+  },
+  "tetris/v2_baseline_seed2/visualizations/random_trajectory.npz": {
+    "sha256": "7ec76d3f5bb4dc64533f37fbcf607ee6eb0381b7837f9ab455597a7ea99eb0f0",
+    "bytes": 4889
+  },
   "tetris/v2_credit_horizon_seed0/RESULT.md": {
     "sha256": "6f6eae264e7330ff82cc4d47309efb6b33cd5393a3a3deebaf4400639bb765df",
     "bytes": 4209
@@ -590,6 +878,370 @@
   "tetris/v2_credit_horizon_seed0/visualizations/random_trajectory.npz": {
     "sha256": "7ec76d3f5bb4dc64533f37fbcf607ee6eb0381b7837f9ab455597a7ea99eb0f0",
     "bytes": 4889
+  },
+  "tetris/v2_credit_horizon_seed1/checkpoint.msgpack": {
+    "sha256": "25b0378a12d015f2e5e35c60063ecd7d8e99427ea7fcf1c168a043d1b9d3d75f",
+    "bytes": 26310562
+  },
+  "tetris/v2_credit_horizon_seed1/config.yaml": {
+    "sha256": "067e17ee6d9624848516dd398012205463005a015432130ae631210ca0311a13",
+    "bytes": 499
+  },
+  "tetris/v2_credit_horizon_seed1/eval.gif": {
+    "sha256": "e0ce1ab9788a0e924760f8bc6954004abca46e2c211a1b377f96c04cbec43c98",
+    "bytes": 24431
+  },
+  "tetris/v2_credit_horizon_seed1/eval_000000000.gif": {
+    "sha256": "0a2766e726d77be2a3c12e04ee80b963b1080e19181fe524755d3aa818d7c2e1",
+    "bytes": 24435
+  },
+  "tetris/v2_credit_horizon_seed1/eval_000065536.gif": {
+    "sha256": "e0ce1ab9788a0e924760f8bc6954004abca46e2c211a1b377f96c04cbec43c98",
+    "bytes": 24431
+  },
+  "tetris/v2_credit_horizon_seed1/evaluation.json": {
+    "sha256": "954729c9bb09b32cc18a38398f736602f176edb2476373d501cf8f9c0c8bb124",
+    "bytes": 3909
+  },
+  "tetris/v2_credit_horizon_seed1/heldout/comparison.json": {
+    "sha256": "7f36b6c9fafd4e04bbc17a50ee40a34505a02002470124ad60c5529a5f73efb7",
+    "bytes": 63675
+  },
+  "tetris/v2_credit_horizon_seed1/heldout/eval.gif": {
+    "sha256": "dc9a4499ef471321f4b6350c0e2f94e067cd9c7e191eae3e4c83cecf58648d62",
+    "bytes": 48210
+  },
+  "tetris/v2_credit_horizon_seed1/job.log": {
+    "sha256": "b6368c66af3ede5e3daacf431f0cf3913967b5d376d68db5cc0b59e12e39380e",
+    "bytes": 7680
+  },
+  "tetris/v2_credit_horizon_seed1/metrics.csv": {
+    "sha256": "715101b43be53158c3117d3965cbcc925ab2e9dc3fd58d636cc964f0d1837ceb",
+    "bytes": 10710
+  },
+  "tetris/v2_credit_horizon_seed1/run_status.json": {
+    "sha256": "27fca34ae32b79f3ce5fbc776acb503dca1027e2bf4801073bfe36c7154faab4",
+    "bytes": 106
+  },
+  "tetris/v2_credit_horizon_seed1/source_manifest.json": {
+    "sha256": "ae51bfaf803b51020d08567297a0eb36c56622a9159ce79c414b28059da5545b",
+    "bytes": 1322
+  },
+  "tetris/v2_credit_horizon_seed1/source_snapshot/compare_random_budget.py": {
+    "sha256": "784bab9110c348aa0445f389918e8159509005858c8359d52c903f0f5e2c0a43",
+    "bytes": 2659
+  },
+  "tetris/v2_credit_horizon_seed1/source_snapshot/conf/config.yaml": {
+    "sha256": "34244e3f6a1a9ed5fd7a95c7df9608d8452d6368ae753785c7a75327314e565f",
+    "bytes": 575
+  },
+  "tetris/v2_credit_horizon_seed1/source_snapshot/conf/credit_horizon.yaml": {
+    "sha256": "39db8bd05241cccac37e55e12ff2a2c996ae7ab1985c807ceda0f772ec33bb72",
+    "bytes": 218
+  },
+  "tetris/v2_credit_horizon_seed1/source_snapshot/evaluate_checkpoint.py": {
+    "sha256": "98a9657a44778100fce240550e9d4d873324e8cfa19706ba754fa1315851348b",
+    "bytes": 1334
+  },
+  "tetris/v2_credit_horizon_seed1/source_snapshot/experiment_utils.py": {
+    "sha256": "56acd748517c545f735536729044a77d2c85671a47c1cb7fa6b9ab90321daaa7",
+    "bytes": 4809
+  },
+  "tetris/v2_credit_horizon_seed1/source_snapshot/octax/agents/ppo.py": {
+    "sha256": "87dceaf2a5c0a8679939b84c306bfaa571ae5bd28e044f4c252d1f3621442364",
+    "bytes": 10291
+  },
+  "tetris/v2_credit_horizon_seed1/source_snapshot/octax/checkpoints.py": {
+    "sha256": "230af35150c1a85532b758fbb6be0514014c77863fea3e247c9faa548b3ac021",
+    "bytes": 742
+  },
+  "tetris/v2_credit_horizon_seed1/source_snapshot/octax/env.py": {
+    "sha256": "30a80cb6290c7bfba3cfe8bf816bf77740d342e0d958a1784628e9126b947a06",
+    "bytes": 12086
+  },
+  "tetris/v2_credit_horizon_seed1/source_snapshot/octax/wrappers.py": {
+    "sha256": "cd46727e367b182873625bf33e89f1afc0488b03c67df48b945640b208ed9a23",
+    "bytes": 2629
+  },
+  "tetris/v2_credit_horizon_seed1/source_snapshot/requirements-macos.lock.txt": {
+    "sha256": "800cdcebc24c1f47821afe963d23e53f57de4123d4bc4a1b2a1167676fcb26c4",
+    "bytes": 1786
+  },
+  "tetris/v2_credit_horizon_seed1/source_snapshot/roms/Tetris [Fran Dachille, 1991].ch8": {
+    "sha256": "667cb026dee03f59f3a2fd81a2ffeab47da87731883f9601d37ba019976f94dd",
+    "bytes": 494
+  },
+  "tetris/v2_credit_horizon_seed1/source_snapshot/run_replication_64k.py": {
+    "sha256": "4f35353928e709b8fa627f2b543dba0469b1cf4b0c6b9767409342dc77063a72",
+    "bytes": 4225
+  },
+  "tetris/v2_credit_horizon_seed1/source_snapshot/train.py": {
+    "sha256": "154038c70ae5c6a9da14c2ef5dcad7e3a76bbbbbcdbcb40b0accf375f5e8c32c",
+    "bytes": 9079
+  },
+  "tetris/v2_credit_horizon_seed1/source_snapshot/visualize_run.py": {
+    "sha256": "86063a73d7e03dcc594bcb28d58a76c5a01e1af1e017cb9fce50423e2265286e",
+    "bytes": 8070
+  },
+  "tetris/v2_credit_horizon_seed1/summary.json": {
+    "sha256": "ceb5ceb974fa1b0105856a183f8aacf426d4a8d8d2f0b2badb92a3981edbcce2",
+    "bytes": 687
+  },
+  "tetris/v2_credit_horizon_seed1/system.json": {
+    "sha256": "6e562a1a21917029bd76dfeb3d5215f7ea246a419e7d2b62b31ad9594891e55d",
+    "bytes": 474
+  },
+  "tetris/v2_credit_horizon_seed1/visualizations/gameplay.gif": {
+    "sha256": "4a2241fb1d9e678637e98b31d620da30a07ba6ed75dfbefdef31d3e3391abb84",
+    "bytes": 858326
+  },
+  "tetris/v2_credit_horizon_seed1/visualizations/gameplay.json": {
+    "sha256": "4c181ede21d573c1d9227b03cc4dc1d5bbf60cdd188c71574810f33cc304c5ae",
+    "bytes": 175
+  },
+  "tetris/v2_credit_horizon_seed1/visualizations/gameplay.png": {
+    "sha256": "d8c9162fe368d97c54ff0f9e463da2caa2493268bba6324179a7b4c8c8d97d53",
+    "bytes": 9899
+  },
+  "tetris/v2_credit_horizon_seed1/visualizations/learning_curves.pdf": {
+    "sha256": "271882e615e431aa7b9a55f182d278e2441989a9fc673bec7a954109cbff92ac",
+    "bytes": 28777
+  },
+  "tetris/v2_credit_horizon_seed1/visualizations/learning_curves.png": {
+    "sha256": "171ae27448475628068d351bd85904b7603b063b100816e2279e48b5f906419a",
+    "bytes": 248053
+  },
+  "tetris/v2_credit_horizon_seed1/visualizations/policy_trajectory.npz": {
+    "sha256": "3cade174a10008a78259b46cbf7d5268b482234f02fb02da174c1e23cc64909a",
+    "bytes": 4516
+  },
+  "tetris/v2_credit_horizon_seed1/visualizations/random_trajectory.npz": {
+    "sha256": "7ec76d3f5bb4dc64533f37fbcf607ee6eb0381b7837f9ab455597a7ea99eb0f0",
+    "bytes": 4889
+  },
+  "tetris/v2_credit_horizon_seed2/checkpoint.msgpack": {
+    "sha256": "4cad34b553fd9e152ad5121979976a70827b42b7f71da36d9cefb2b7655e3dee",
+    "bytes": 26310562
+  },
+  "tetris/v2_credit_horizon_seed2/config.yaml": {
+    "sha256": "913748186c4db833598aace030ce46866d822e3079ec3e7525ae472a9b7cf4f9",
+    "bytes": 499
+  },
+  "tetris/v2_credit_horizon_seed2/eval.gif": {
+    "sha256": "d743039c9600f2394f4addefa4eade9cc8ae0bcce9b92dc5c822a7783cc213a6",
+    "bytes": 24363
+  },
+  "tetris/v2_credit_horizon_seed2/eval_000000000.gif": {
+    "sha256": "36af2e7ea39ae57824e976176d554678c222b837d286929e0ae8a089d199bdd9",
+    "bytes": 24120
+  },
+  "tetris/v2_credit_horizon_seed2/eval_000065536.gif": {
+    "sha256": "d743039c9600f2394f4addefa4eade9cc8ae0bcce9b92dc5c822a7783cc213a6",
+    "bytes": 24363
+  },
+  "tetris/v2_credit_horizon_seed2/evaluation.json": {
+    "sha256": "9613b60c7e1120acf5d3ca60c1bbaff819f435db75c77ade09924deb2f4f281e",
+    "bytes": 3903
+  },
+  "tetris/v2_credit_horizon_seed2/heldout/comparison.json": {
+    "sha256": "50d9066d71377d8f447651edaebd5bd5c73a4107d8a6620fdb78e035df7fc942",
+    "bytes": 63678
+  },
+  "tetris/v2_credit_horizon_seed2/heldout/eval.gif": {
+    "sha256": "290395d4a6f3ce4657f05f2605c8064ee464cd202a8ed67ac2f69d8c96c3ca3c",
+    "bytes": 55978
+  },
+  "tetris/v2_credit_horizon_seed2/job.log": {
+    "sha256": "79aa26a1c83c7ceecd48a970762bf3be663c99db4321d8d3eb54a5996dd77801",
+    "bytes": 7501
+  },
+  "tetris/v2_credit_horizon_seed2/metrics.csv": {
+    "sha256": "b3f691e04226de9480331ebdd37fa57e8e3b059e3c0fa3459364db34d185ec73",
+    "bytes": 9369
+  },
+  "tetris/v2_credit_horizon_seed2/run_status.json": {
+    "sha256": "a91449933f67a622a471e645f6ece4121fa5bd80f0a18cf9599fe60e12bc4f10",
+    "bytes": 106
+  },
+  "tetris/v2_credit_horizon_seed2/source_manifest.json": {
+    "sha256": "ae51bfaf803b51020d08567297a0eb36c56622a9159ce79c414b28059da5545b",
+    "bytes": 1322
+  },
+  "tetris/v2_credit_horizon_seed2/source_snapshot/compare_random_budget.py": {
+    "sha256": "784bab9110c348aa0445f389918e8159509005858c8359d52c903f0f5e2c0a43",
+    "bytes": 2659
+  },
+  "tetris/v2_credit_horizon_seed2/source_snapshot/conf/config.yaml": {
+    "sha256": "34244e3f6a1a9ed5fd7a95c7df9608d8452d6368ae753785c7a75327314e565f",
+    "bytes": 575
+  },
+  "tetris/v2_credit_horizon_seed2/source_snapshot/conf/credit_horizon.yaml": {
+    "sha256": "39db8bd05241cccac37e55e12ff2a2c996ae7ab1985c807ceda0f772ec33bb72",
+    "bytes": 218
+  },
+  "tetris/v2_credit_horizon_seed2/source_snapshot/evaluate_checkpoint.py": {
+    "sha256": "98a9657a44778100fce240550e9d4d873324e8cfa19706ba754fa1315851348b",
+    "bytes": 1334
+  },
+  "tetris/v2_credit_horizon_seed2/source_snapshot/experiment_utils.py": {
+    "sha256": "56acd748517c545f735536729044a77d2c85671a47c1cb7fa6b9ab90321daaa7",
+    "bytes": 4809
+  },
+  "tetris/v2_credit_horizon_seed2/source_snapshot/octax/agents/ppo.py": {
+    "sha256": "87dceaf2a5c0a8679939b84c306bfaa571ae5bd28e044f4c252d1f3621442364",
+    "bytes": 10291
+  },
+  "tetris/v2_credit_horizon_seed2/source_snapshot/octax/checkpoints.py": {
+    "sha256": "230af35150c1a85532b758fbb6be0514014c77863fea3e247c9faa548b3ac021",
+    "bytes": 742
+  },
+  "tetris/v2_credit_horizon_seed2/source_snapshot/octax/env.py": {
+    "sha256": "30a80cb6290c7bfba3cfe8bf816bf77740d342e0d958a1784628e9126b947a06",
+    "bytes": 12086
+  },
+  "tetris/v2_credit_horizon_seed2/source_snapshot/octax/wrappers.py": {
+    "sha256": "cd46727e367b182873625bf33e89f1afc0488b03c67df48b945640b208ed9a23",
+    "bytes": 2629
+  },
+  "tetris/v2_credit_horizon_seed2/source_snapshot/requirements-macos.lock.txt": {
+    "sha256": "800cdcebc24c1f47821afe963d23e53f57de4123d4bc4a1b2a1167676fcb26c4",
+    "bytes": 1786
+  },
+  "tetris/v2_credit_horizon_seed2/source_snapshot/roms/Tetris [Fran Dachille, 1991].ch8": {
+    "sha256": "667cb026dee03f59f3a2fd81a2ffeab47da87731883f9601d37ba019976f94dd",
+    "bytes": 494
+  },
+  "tetris/v2_credit_horizon_seed2/source_snapshot/run_replication_64k.py": {
+    "sha256": "4f35353928e709b8fa627f2b543dba0469b1cf4b0c6b9767409342dc77063a72",
+    "bytes": 4225
+  },
+  "tetris/v2_credit_horizon_seed2/source_snapshot/train.py": {
+    "sha256": "154038c70ae5c6a9da14c2ef5dcad7e3a76bbbbbcdbcb40b0accf375f5e8c32c",
+    "bytes": 9079
+  },
+  "tetris/v2_credit_horizon_seed2/source_snapshot/visualize_run.py": {
+    "sha256": "86063a73d7e03dcc594bcb28d58a76c5a01e1af1e017cb9fce50423e2265286e",
+    "bytes": 8070
+  },
+  "tetris/v2_credit_horizon_seed2/summary.json": {
+    "sha256": "10dc653d8fde930e9d54596d3acd42c45454261b301964e3eb3b1e8b02a9fc53",
+    "bytes": 685
+  },
+  "tetris/v2_credit_horizon_seed2/system.json": {
+    "sha256": "6e562a1a21917029bd76dfeb3d5215f7ea246a419e7d2b62b31ad9594891e55d",
+    "bytes": 474
+  },
+  "tetris/v2_credit_horizon_seed2/visualizations/gameplay.gif": {
+    "sha256": "5a2e6fcaba659a29112117304c3f70928a0e3237ffc187020a5a5b56cb6168d4",
+    "bytes": 836772
+  },
+  "tetris/v2_credit_horizon_seed2/visualizations/gameplay.json": {
+    "sha256": "db4b16b32ba2189565cfdae0c8fa4e419dcf39363d089354ab7041b0a5daac57",
+    "bytes": 175
+  },
+  "tetris/v2_credit_horizon_seed2/visualizations/gameplay.png": {
+    "sha256": "e2ce59bc739fc0747cc351563f8ddf473c115313c9d5f727f54137eaca00380d",
+    "bytes": 9937
+  },
+  "tetris/v2_credit_horizon_seed2/visualizations/learning_curves.pdf": {
+    "sha256": "1afaebd2d8919706a4cbba1915c70509f592022cc626eb810de857391497051e",
+    "bytes": 28790
+  },
+  "tetris/v2_credit_horizon_seed2/visualizations/learning_curves.png": {
+    "sha256": "4b891ccb189d7cbfb20812795a1c3be3dbade08f04bded43e17db22c939eb0fe",
+    "bytes": 210703
+  },
+  "tetris/v2_credit_horizon_seed2/visualizations/policy_trajectory.npz": {
+    "sha256": "a20aea768afd221593bff175283d3e6d12c1b171e58ba565672bbe86e8a9b2fd",
+    "bytes": 4067
+  },
+  "tetris/v2_credit_horizon_seed2/visualizations/random_trajectory.npz": {
+    "sha256": "7ec76d3f5bb4dc64533f37fbcf607ee6eb0381b7837f9ab455597a7ea99eb0f0",
+    "bytes": 4889
+  },
+  "tetris/v2_replication_64k/RESULT.md": {
+    "sha256": "a389881b3b1254f593d1d6f15c256eae4862e92cd6fcabdde1fbbc4cad911d26",
+    "bytes": 4313
+  },
+  "tetris/v2_replication_64k/analysis.json": {
+    "sha256": "b24ca4978e254016921e859876e99e27c3e412bd17705ae6cf6ebd1ea514fb94",
+    "bytes": 156638
+  },
+  "tetris/v2_replication_64k/initial_seed0.json": {
+    "sha256": "b4bfdbb02e009bc2c946012fa034c5dafd9af5027c947aaa72d50417601cd4f1",
+    "bytes": 21802
+  },
+  "tetris/v2_replication_64k/initial_seed0.log": {
+    "sha256": "88853527826a136276f5c54cf14a172aba48b68e351f44045867b97faeabfb02",
+    "bytes": 1257
+  },
+  "tetris/v2_replication_64k/initial_seed1.json": {
+    "sha256": "be237a0175376be930c4b0da2f7d2addc6500dc09b45ce229964bd8b880053fe",
+    "bytes": 21802
+  },
+  "tetris/v2_replication_64k/initial_seed1.log": {
+    "sha256": "eade579ed3d27c9901ee8c6fcedf70224978f99e5c4838ae57ccaf9915c19643",
+    "bytes": 1252
+  },
+  "tetris/v2_replication_64k/initial_seed2.json": {
+    "sha256": "e1623dcf2ec99d59e7f562f7831ff90a4aed371bbd6d4ec624a07f12feda1f5d",
+    "bytes": 21796
+  },
+  "tetris/v2_replication_64k/initial_seed2.log": {
+    "sha256": "38ee958b65d0f2684f149b3d8a7b1b2eb69e328e51a0f33e2d019e0207fe9f7e",
+    "bytes": 1247
+  },
+  "tetris/v2_replication_64k/job.log": {
+    "sha256": "9b289a9bf1028468c9634d074395585a93a786a89165b1b76de300945d26a5a2",
+    "bytes": 838
+  },
+  "tetris/v2_replication_64k/policy_card.gif": {
+    "sha256": "be51e0fcab5e40e383703d12f4689612250034141096936bcd171e0b219ec221",
+    "bytes": 190133
+  },
+  "tetris/v2_replication_64k/policy_card.png": {
+    "sha256": "03e4905df4fceb7dd6d272cd6997423d4597ca17cc9ada11518d79ee4f663ad6",
+    "bytes": 3892
+  },
+  "tetris/v2_replication_64k/protocol.json": {
+    "sha256": "cfa179440df93ce4a0e008b5e5eb7d0ad63f0ed317480cc5628406d68d9cbe4f",
+    "bytes": 1259
+  },
+  "tetris/v2_replication_64k/report_source_manifest.json": {
+    "sha256": "76ec140be8e57006a495882535d0321f4876b329762561d28ca656c542449776",
+    "bytes": 492
+  },
+  "tetris/v2_replication_64k/report_source_snapshot/evaluate_initial_policy.py": {
+    "sha256": "68a2f4189bf60e99b4334ee6f7acf32542a3f379e7efd3b578c825e3e765a447",
+    "bytes": 2724
+  },
+  "tetris/v2_replication_64k/report_source_snapshot/round_card.py": {
+    "sha256": "2396fdd9352ec3c5a644ff586795a84ebbe016a2b6ddd9dfd45c607fd637be03",
+    "bytes": 3290
+  },
+  "tetris/v2_replication_64k/report_source_snapshot/summarize_credit_ablation.py": {
+    "sha256": "514cef9c7ca15886c3237e0a330cf72460d8c7e742a4b10a856eeedb87b4d47d",
+    "bytes": 14358
+  },
+  "tetris/v2_replication_64k/report_source_snapshot/summarize_replication_64k.py": {
+    "sha256": "36294da3e01c59d9311ba7409369b85cd4e40ebe44e290788d13a230fc031f2f",
+    "bytes": 14545
+  },
+  "tetris/v2_replication_64k/report_source_snapshot/summarize_v2_baseline.py": {
+    "sha256": "5b982afc74e19d78e11676a09bc5e75fa42f172d6a7651130e8bd5c833b6021c",
+    "bytes": 9577
+  },
+  "tetris/v2_replication_64k/result_card.html": {
+    "sha256": "7f83a40180ee128c2dd304278713bb3847c8d0679a36e6fb8c8a1b91b3f544fc",
+    "bytes": 255162
+  },
+  "tetris/v2_replication_64k/run_status.json": {
+    "sha256": "b09978f10f14f346b26c0cade2c74c23657cd6f4d617cd7bef6215550089cafd",
+    "bytes": 297
+  },
+  "tetris/v2_replication_64k/visualizations/policy_trajectory.npz": {
+    "sha256": "3cade174a10008a78259b46cbf7d5268b482234f02fb02da174c1e23cc64909a",
+    "bytes": 4516
   },
   "tetris/v2_validation_8192/checkpoint.msgpack": {
     "sha256": "4fdf7c31975efbe8a49a9c576e43a6b2af95381a30c08311c738090a7dfbf443",

@@ -2,7 +2,7 @@
 
 ## Pixel-only Tetris research fork
 
-This fork records reproducible CPU PPO experiments using only four monochrome game frames and the original score reward. **The longer-credit 65,536-step ablation encountered 1 training rewards:** final evaluation scored in 2/128 games, versus 1/128 for the v2 baseline and 3/128 for random. No scoring improvement is established by this one-seed exploratory comparison. [Latest result and animation](runs/tetris/v2_credit_horizon_seed0/RESULT.md).
+This fork records reproducible CPU PPO experiments using only four monochrome game frames and the original score reward. **Three-seed 64K replication:** training reward events were baseline [0, 0, 0] and longer credit [1, 2, 0]; scoring games were [1, 1, 1] versus [2, 1, 1] out of 128 per policy, with 3/128 for the shared random control. Neither configuration passes the exploratory learning gate at 64K steps; useful scoring improvement is not established. [Latest result and animation](runs/tetris/v2_replication_64k/RESULT.md).
 
 - [Setup and reproduction](EXPERIMENT.md) · [Results](RESULTS.md) · [Recorded runs and checkpoints](runs/README.md)
 - [Implementation log](IMPLEMENTATION_LOG.md) · [Sparse-reward investigation](REWARD_DIAGNOSIS.md)

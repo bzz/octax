@@ -1,5 +1,7 @@
 # Why rewards are sparse, and what changes before the next run
 
+This is the historical pre-v2 investigation. Follow-up baseline, longer-credit and three-seed results are indexed in [RESULTS.md](RESULTS.md) and the [implementation log](IMPLEMENTATION_LOG.md).
+
 The 499,712-step run is not a sound basis for simply buying more training time. We found an emulator timing defect and a PPO normalization problem. Both are now corrected for new runs. Line-clear rewards also remain intrinsically rare under random keypress exploration; the fixes do not establish that PPO will learn Tetris.
 
 The agent remains strictly pixel-based: four monochrome 32×64 frames, the same CNN and actor/value heads, and five keypress actions. No board geometry, holes, piece locations or emulator registers are supplied to the policy. No reward shaping was added.

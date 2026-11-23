@@ -1,0 +1,24 @@
+.venv/lib/python3.11/site-packages/jax/_src/ops/scatter.py:105: FutureWarning: scatter inputs have incompatible types: cannot safely cast value from dtype=uint16 to dtype=uint8 with jax_numpy_dtype_promotion=standard. In future JAX releases this will result in an error.
+  warnings.warn(
+.venv/lib/python3.11/site-packages/jax/_src/ops/scatter.py:105: FutureWarning: scatter inputs have incompatible types: cannot safely cast value from dtype=int32 to dtype=uint8 with jax_numpy_dtype_promotion=standard. In future JAX releases this will result in an error.
+  warnings.warn(
+.venv/lib/python3.11/site-packages/jax/_src/ops/scatter.py:105: FutureWarning: scatter inputs have incompatible types: cannot safely cast value from dtype=int32 to dtype=bool with jax_numpy_dtype_promotion=standard. In future JAX releases this will result in an error.
+  warnings.warn(
+{
+  "training_seed": 0,
+  "initial_evaluation": {
+    "mean_return": 0.0390625,
+    "scoring_fraction": 0.0390625,
+    "mean_length": 1237.7734375,
+    "terminated": 128,
+    "truncated": 0,
+    "action_distribution": [
+      0.19565752516805,
+      0.19455297125003945,
+      0.19479912898033894,
+      0.2174456401678922,
+      0.19754473443367943
+    ],
+    "seconds": 82.55224108297261
+  }
+}
