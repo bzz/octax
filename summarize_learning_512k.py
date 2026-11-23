@@ -92,6 +92,12 @@ def main():
     assert status['phase'] == 'complete' and status['total_new_training_steps'] == 917504
     initial = load(ROOT/'runs/tetris/v2_replication_64k/initial_seed1.json')
     assert initial['initial_development_arrays_exact'] and initial['seed_start'] == 50000
+    random_budget = load(ROOT/'runs/tetris/v2_credit_horizon_512k_seed1/random_training_budget.json')
+    random_parent = load(ROOT/'runs/tetris/v2_baseline_seed1/random_training_budget.json')
+    assert random_budget['total_steps'] == TARGET and random_budget['seed'] == 1 and random_budget['timer_mode'] == 'frame'
+    assert [e for e in random_budget['positive_events'] if e['environment_steps_consumed'] <= 65536] == random_parent['positive_events']
+    for name, expected in load(SERIES/'random_control_source_manifest.json').items():
+        assert hashlib.sha256((SERIES/'random_control_sources'/name).read_bytes()).hexdigest() == expected
     records, controls = {}, None
     for arm, parent_name, output, _, _ in ARMS:
         parent, run = ROOT/'runs/tetris'/parent_name, ROOT/'runs/tetris'/output
@@ -141,6 +147,7 @@ def main():
     analysis = dict(conclusion=conclusion, records=records, candidates_for_confirmation=candidates,
                     controls=controls, initial_policy=initial,
                     replay_vs_credit=compare(records['replay']['final'], records['credit']['final']),
+                    uniform_random_training_budget=random_budget,
                     total_new_training_steps=917504, total_steps_per_arm=TARGET,
                     limitations=['One selected training seed; continuations are not independent replications.',
                                  'Previously inspected evaluation seeds and a single shared random control.',
@@ -166,6 +173,8 @@ Both seed-1 arms resume their full 65,536-step states to {TARGET:,} total decisi
 {table}
 
 The exact untrained seed-1 network scored {initial_count}/128; the shared random control scored {random_count}/128. The corresponding 64K parents scored 1/128 for PPO and 0/128 for replay. Final evaluation uses the previously inspected seeds 50000–50127; paired comparisons and complete episode arrays are in `analysis.json`. These small counts on reused games cannot establish statistically convincing improvement. A candidate must be frozen and tested on unused seeds before a learning claim, with independent training-seed replication required for a dependable setup.
+
+A separate uniform-random rollout at the same {TARGET:,}-decision budget encountered {random_budget['positive_reward_events']} reward events in {random_budget['completed_episodes']} completed games. It starts from the same seed-1 reset scheme; its first 64K reward-event records exactly reproduce the earlier random control. This measures reward discovery over the training horizon, not held-out policy skill. Random and PPO action RNG paths and episode boundaries differ. The random rollout briefly ran alongside PPO, so reported training throughput is observed laptop throughput, not an isolated compute benchmark.
 
 ![Full learning history](learning_curves.png)
 
