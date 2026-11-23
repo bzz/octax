@@ -1,4 +1,5 @@
 """Audit and report the fixed 20-versus-100-epoch offline cloning experiment."""
+import argparse
 import csv
 import hashlib
 import json
@@ -25,9 +26,12 @@ def read(path):
 
 
 def main():
-    root = ROOT/'runs/tetris/human_bc_100epoch_seed1'
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--seed', type=int, choices=[1, 2], default=1)
+    seed = parser.parse_args().seed
+    root = ROOT/f'runs/tetris/human_bc_100epoch_seed{seed}'
     run = root/'pretrain'
-    previous = ROOT/'runs/tetris/human_bc_seed1'
+    previous = ROOT/f'runs/tetris/human_bc_seed{seed}'
     assert read(run/'run_status.json')['phase'] == 'complete'
     summary = read(run/'summary.json')
     old_summary = read(previous/'pretrain/summary.json')
@@ -44,13 +48,19 @@ def main():
     pairs = load_human_pairs(run/'dataset.npz', summary['dataset_sha256'])
     fit = fit_metrics(Agent(action_dim=5), weights, pairs.observations, pairs.actions)
     assert np.isclose(fit['cross_entropy'], summary['final_training_cross_entropy'], atol=1e-6)
-    old_diag = read(previous/'handoff_diagnostic/diagnostic.json')
-    old_fit = old_diag['pretrained']
+    old_weights, _ = read_policy_weights(previous/'pretrain/policy_weights.msgpack', old_summary['policy_weights_sha256'])
+    old_fit = fit_metrics(Agent(action_dim=5), old_weights, pairs.observations, pairs.actions)
+    _, inverse = np.unique(np.packbits(pairs.observations.reshape(len(pairs.actions), -1), axis=1), axis=0, return_inverse=True)
+    counts = np.zeros((inverse.max()+1, 5), dtype=np.int64)
+    np.add.at(counts, (inverse, pairs.actions), 1)
+    conditional = counts/counts.sum(axis=1, keepdims=True)
+    old_diag = dict(empirical_observation_conditional_ce_lower_bound=float(-np.sum(counts*np.log(np.maximum(conditional, 1e-30)))/len(pairs.actions)),
+        empirical_observation_argmax_accuracy_upper_bound=float(counts.max(axis=1).sum()/len(pairs.actions)))
     evaluations = {
         'clone_100_epochs': read(run/'heldout/comparison.json'),
         'clone_20_epochs': read(previous/'pretrain/heldout/comparison.json'),
-        'scratch_ppo_64k': read(ROOT/'runs/tetris/v2_credit_horizon_seed1/heldout/comparison.json'),
-        'untrained_seed1': read(ROOT/'runs/tetris/v2_replication_64k/initial_seed1.json')}
+        'scratch_ppo_64k': read(ROOT/f'runs/tetris/v2_credit_horizon_seed{seed}/heldout/comparison.json'),
+        f'untrained_seed{seed}': read(ROOT/f'runs/tetris/v2_replication_64k/initial_seed{seed}.json')}
     reference = evaluations['clone_100_epochs']
     assert reference['monitoring_arrays_exact']
     for label, evaluation in evaluations.items():
@@ -66,7 +76,7 @@ def main():
     conclusion = ('Longer offline fitting passes the exploratory scoring screen; seed replication and fresh on-policy RL remain necessary.' if candidate else
         'Longer offline fitting does not pass the original-score screen; useful gameplay remains unestablished.')
     analysis = dict(conclusion=conclusion, candidate_screen=candidate, scoring_games=scores,
-        episodes_per_policy=128, seed_start=50000, offline_summary=summary,
+        training_seed=seed, episodes_per_policy=128, seed_start=50000, offline_summary=summary,
         fit_20_epochs=old_fit, fit_100_epochs=fit, matched_20_epoch_audit=audit,
         initialization=provenance, source_snapshot_audits=True, original_controls_exact=True,
         diagnostic_optimization_updates=0, diagnostic_environment_decisions=0,
@@ -96,14 +106,14 @@ def main():
         [('Cross-entropy', 'cross_entropy'), ('Entropy (nats)', 'entropy'), ('Argmax accuracy', 'argmax_accuracy')])
     recall_table = '\n'.join(f'| {action} | {old_fit["per_action_recall"][i]:.2%} | {fit["per_action_recall"][i]:.2%} |'
         for i, action in enumerate(actions))
-    next_step = ('Replicate the fixed offline setup with seed 2 before declaring a learning setup. Any PPO follow-up must be separately declared and preserve the independent weights-only handoff.' if candidate else
+    next_step = ('Combine the independent seed results before declaring a learning setup. Any PPO follow-up must be separately declared and preserve the independent weights-only handoff.' if candidate else
         'Do not automatically spend a full PPO budget on this initialization. Diagnose remaining imitation errors and coverage/observation limitations. Better in-sample action fitting alone does not solve reward discovery.')
     (root/'RESULT.md').write_text(f'''# Offline cloning duration: 20 versus 100 epochs
 
 **{conclusion}**
 
 The [predeclared protocol](../../../CLONING_DURATION_EXPERIMENT.md) changes only
-offline duration. Both runs use seed 1, the same human prefix, CNN, four pixel
+offline duration. Both runs use seed {seed}, the same human prefix, CNN, four pixel
 frames, action space, optimizer and shuffled minibatches. The 100-epoch run
 starts fresh; its entire state at epoch 20 exactly matches the prior archived
 cloning checkpoint, including parameters, Adam moments, RNG and counters.
@@ -164,7 +174,7 @@ standalone gameplay evaluation and an independent fresh PPO process.
 
 The actual-policy animation uses preselected seed 30016, without selecting a
 successful game. See [the card](result_card.html), [full evidence](analysis.json),
-[20-epoch result](../human_bc_seed1/RESULT.md), and
+[20-epoch summary](../human_bc_seed{seed}/pretrain/summary.json), and
 [implementation log](../../../IMPLEMENTATION_LOG.md).
 ''')
     (root/'visualizations').mkdir(exist_ok=True)
