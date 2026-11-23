@@ -1555,6 +1555,234 @@
     "sha256": "7ec76d3f5bb4dc64533f37fbcf607ee6eb0381b7837f9ab455597a7ea99eb0f0",
     "bytes": 4889
   },
+  "tetris/v2_long_trace_512k_seed1/RESULT.md": {
+    "sha256": "e1a39bd938fbda1524af70b7453e94fcfcda284de7f875341564ba065e86e535",
+    "bytes": 3781
+  },
+  "tetris/v2_long_trace_512k_seed1/analysis.json": {
+    "sha256": "d9b72f633f1e84f250de0d0fe1fce4009d90359e5ffdf7c1a0aa23afca0a6878",
+    "bytes": 128483
+  },
+  "tetris/v2_long_trace_512k_seed1/checkpoint.msgpack": {
+    "sha256": "2ff817def71f77b01782e923a42f50967f2cbe34f467c600736c71f2a3fe16ad",
+    "bytes": 26310565
+  },
+  "tetris/v2_long_trace_512k_seed1/comparison_curves.png": {
+    "sha256": "52b8c3bbc2afeb19e2b9bc9c07b804f1ba21195c3e3571485c5d8dd93c7208b1",
+    "bytes": 152275
+  },
+  "tetris/v2_long_trace_512k_seed1/config.yaml": {
+    "sha256": "4a96661b902bd9189ee2ff54fbffc143472a5b5ab431bec599e4f1457cbb68b0",
+    "bytes": 502
+  },
+  "tetris/v2_long_trace_512k_seed1/eval.gif": {
+    "sha256": "dba247089657a283e7c3443af535f8298da707e9a2cb886ca805b0c7fd22ad8c",
+    "bytes": 24610
+  },
+  "tetris/v2_long_trace_512k_seed1/eval_000000000.gif": {
+    "sha256": "0a2766e726d77be2a3c12e04ee80b963b1080e19181fe524755d3aa818d7c2e1",
+    "bytes": 24435
+  },
+  "tetris/v2_long_trace_512k_seed1/eval_000065536.gif": {
+    "sha256": "42f8b891a04719feb7c3b4f040a13bafecda32b69332f3de160e8f267c610550",
+    "bytes": 24807
+  },
+  "tetris/v2_long_trace_512k_seed1/eval_000131072.gif": {
+    "sha256": "7ae82fb3825ca0188c4fcd4a2be61baadb616a3e54584ec14abea817ce85e827",
+    "bytes": 23763
+  },
+  "tetris/v2_long_trace_512k_seed1/eval_000196608.gif": {
+    "sha256": "a336d267c061be012d1d49c6e426486ec17dfd58bfdf130e26583b3bc9fbfba6",
+    "bytes": 23795
+  },
+  "tetris/v2_long_trace_512k_seed1/eval_000262144.gif": {
+    "sha256": "ebeac2b08924e94db16a5ef6d9689facf291937082888179f2d59e7c4e66dce5",
+    "bytes": 24030
+  },
+  "tetris/v2_long_trace_512k_seed1/eval_000327680.gif": {
+    "sha256": "c38a5bed09aa4dee97a205e881a6ddcdd9a9165b7441eedfc35bd45627a7a97f",
+    "bytes": 24697
+  },
+  "tetris/v2_long_trace_512k_seed1/eval_000393216.gif": {
+    "sha256": "bafd9b3f01a4727098df6c0c3764198ce45237becc1e237709d057781ce97f38",
+    "bytes": 24239
+  },
+  "tetris/v2_long_trace_512k_seed1/eval_000458752.gif": {
+    "sha256": "d743039c9600f2394f4addefa4eade9cc8ae0bcce9b92dc5c822a7783cc213a6",
+    "bytes": 24363
+  },
+  "tetris/v2_long_trace_512k_seed1/eval_000524288.gif": {
+    "sha256": "dba247089657a283e7c3443af535f8298da707e9a2cb886ca805b0c7fd22ad8c",
+    "bytes": 24610
+  },
+  "tetris/v2_long_trace_512k_seed1/evaluation.json": {
+    "sha256": "e84d1a27518aae94b3e50058959122ece0c5fcf35c4bd13a3f8bfd769caec9f2",
+    "bytes": 17579
+  },
+  "tetris/v2_long_trace_512k_seed1/heldout/comparison.json": {
+    "sha256": "41b19e5bf2c7b4ea65d74ca4e83d030cb99176ec20d046337d15ecd9017d4d31",
+    "bytes": 63670
+  },
+  "tetris/v2_long_trace_512k_seed1/heldout/eval.gif": {
+    "sha256": "2e5ec83f585c9cc54e0035558b3ed451acdb14ec218046f96a317e2dd49d2e1d",
+    "bytes": 55913
+  },
+  "tetris/v2_long_trace_512k_seed1/job.log": {
+    "sha256": "aa2fee7e55f7e587c4aa39e53a9431bfdf3d84c40aab1bb48a5cb8d7afe5733a",
+    "bytes": 9755
+  },
+  "tetris/v2_long_trace_512k_seed1/metrics.csv": {
+    "sha256": "7dc9a05abb9e155cecb1279f4cdbe0a219b1c4961b6f6cada4737498bd570020",
+    "bytes": 11752
+  },
+  "tetris/v2_long_trace_512k_seed1/policy_card.gif": {
+    "sha256": "674647845f51f8d08b1f92e35a43e5acb7ec4e78cc8a94a4c4e0a01e6d92d4e5",
+    "bytes": 238554
+  },
+  "tetris/v2_long_trace_512k_seed1/policy_card.png": {
+    "sha256": "3fbc15364ac18b78110998ef11e31e4f85a081fbda5fff23bf179bab8aa4a67b",
+    "bytes": 3748
+  },
+  "tetris/v2_long_trace_512k_seed1/post_training_gradients.json": {
+    "sha256": "2bac2b4106c7137334553b20d11b7c5d09642320ec3ba015f9394c36a0104c4d",
+    "bytes": 22208
+  },
+  "tetris/v2_long_trace_512k_seed1/report_source_manifest.json": {
+    "sha256": "5905ad0e93cff5c2247ded93e31d01034543eb0fd7354264f5a8f32caec8b701",
+    "bytes": 484
+  },
+  "tetris/v2_long_trace_512k_seed1/report_source_snapshot/diagnose_ppo_entropy.py": {
+    "sha256": "fe79cba936b7601ba87325d8608aad365fd1f9a2016268897adc2eb71c7bab7f",
+    "bytes": 6863
+  },
+  "tetris/v2_long_trace_512k_seed1/report_source_snapshot/round_card.py": {
+    "sha256": "2396fdd9352ec3c5a644ff586795a84ebbe016a2b6ddd9dfd45c607fd637be03",
+    "bytes": 3290
+  },
+  "tetris/v2_long_trace_512k_seed1/report_source_snapshot/summarize_credit_ablation.py": {
+    "sha256": "514cef9c7ca15886c3237e0a330cf72460d8c7e742a4b10a856eeedb87b4d47d",
+    "bytes": 14358
+  },
+  "tetris/v2_long_trace_512k_seed1/report_source_snapshot/summarize_long_trace.py": {
+    "sha256": "d03941513d1531da3bdb9b86b20eca22b20b9c40cce09359b36f0cb5d3e21ac3",
+    "bytes": 14793
+  },
+  "tetris/v2_long_trace_512k_seed1/report_source_snapshot/summarize_v2_baseline.py": {
+    "sha256": "5b982afc74e19d78e11676a09bc5e75fa42f172d6a7651130e8bd5c833b6021c",
+    "bytes": 9577
+  },
+  "tetris/v2_long_trace_512k_seed1/resolved_preflight.yaml": {
+    "sha256": "f1a3997469be94cdffe2e7197b20b0b44d7113499631d6da1f6ba5b3f27b4a96",
+    "bytes": 515
+  },
+  "tetris/v2_long_trace_512k_seed1/result_card.html": {
+    "sha256": "cfaf4f485687cb14419dc458c53564d71dd5716c6db7757a60c6c9c020846d57",
+    "bytes": 319590
+  },
+  "tetris/v2_long_trace_512k_seed1/run_status.json": {
+    "sha256": "8ca2ac4655d616e3ac3e8cd1212a86f93dd8ed17a8fb2bc696d49b6cb9561057",
+    "bytes": 123
+  },
+  "tetris/v2_long_trace_512k_seed1/source_manifest.json": {
+    "sha256": "43366c4ad7dd87df05d21af3689f90e5bcb8f20309e8554277062bf3e298b805",
+    "bytes": 1406
+  },
+  "tetris/v2_long_trace_512k_seed1/source_snapshot/ON_POLICY_CREDIT.md": {
+    "sha256": "b169c465684359d08eb1c820ee9d0c226594a6577e0e53c8b1cf8e97b93fa360",
+    "bytes": 3992
+  },
+  "tetris/v2_long_trace_512k_seed1/source_snapshot/conf/config.yaml": {
+    "sha256": "34244e3f6a1a9ed5fd7a95c7df9608d8452d6368ae753785c7a75327314e565f",
+    "bytes": 575
+  },
+  "tetris/v2_long_trace_512k_seed1/source_snapshot/conf/credit_horizon.yaml": {
+    "sha256": "39db8bd05241cccac37e55e12ff2a2c996ae7ab1985c807ceda0f772ec33bb72",
+    "bytes": 218
+  },
+  "tetris/v2_long_trace_512k_seed1/source_snapshot/conf/long_trace.yaml": {
+    "sha256": "a67208b6ea7e32b3ec163d1b48e04dcc6fb86cebf13738b7a3d10c828fdd5ce9",
+    "bytes": 248
+  },
+  "tetris/v2_long_trace_512k_seed1/source_snapshot/evaluate_checkpoint.py": {
+    "sha256": "98a9657a44778100fce240550e9d4d873324e8cfa19706ba754fa1315851348b",
+    "bytes": 1334
+  },
+  "tetris/v2_long_trace_512k_seed1/source_snapshot/experiment_utils.py": {
+    "sha256": "56acd748517c545f735536729044a77d2c85671a47c1cb7fa6b9ab90321daaa7",
+    "bytes": 4809
+  },
+  "tetris/v2_long_trace_512k_seed1/source_snapshot/octax/agents/ppo.py": {
+    "sha256": "87dceaf2a5c0a8679939b84c306bfaa571ae5bd28e044f4c252d1f3621442364",
+    "bytes": 10291
+  },
+  "tetris/v2_long_trace_512k_seed1/source_snapshot/octax/checkpoints.py": {
+    "sha256": "230af35150c1a85532b758fbb6be0514014c77863fea3e247c9faa548b3ac021",
+    "bytes": 742
+  },
+  "tetris/v2_long_trace_512k_seed1/source_snapshot/octax/env.py": {
+    "sha256": "30a80cb6290c7bfba3cfe8bf816bf77740d342e0d958a1784628e9126b947a06",
+    "bytes": 12086
+  },
+  "tetris/v2_long_trace_512k_seed1/source_snapshot/octax/wrappers.py": {
+    "sha256": "cd46727e367b182873625bf33e89f1afc0488b03c67df48b945640b208ed9a23",
+    "bytes": 2629
+  },
+  "tetris/v2_long_trace_512k_seed1/source_snapshot/requirements-macos.lock.txt": {
+    "sha256": "800cdcebc24c1f47821afe963d23e53f57de4123d4bc4a1b2a1167676fcb26c4",
+    "bytes": 1786
+  },
+  "tetris/v2_long_trace_512k_seed1/source_snapshot/roms/Tetris [Fran Dachille, 1991].ch8": {
+    "sha256": "667cb026dee03f59f3a2fd81a2ffeab47da87731883f9601d37ba019976f94dd",
+    "bytes": 494
+  },
+  "tetris/v2_long_trace_512k_seed1/source_snapshot/run_long_trace.py": {
+    "sha256": "464bb3d0849df8defbc7db3d06ab4ed0914286d670f5e47942259662823afacb",
+    "bytes": 4349
+  },
+  "tetris/v2_long_trace_512k_seed1/source_snapshot/train.py": {
+    "sha256": "154038c70ae5c6a9da14c2ef5dcad7e3a76bbbbbcdbcb40b0accf375f5e8c32c",
+    "bytes": 9079
+  },
+  "tetris/v2_long_trace_512k_seed1/source_snapshot/visualize_run.py": {
+    "sha256": "86063a73d7e03dcc594bcb28d58a76c5a01e1af1e017cb9fce50423e2265286e",
+    "bytes": 8070
+  },
+  "tetris/v2_long_trace_512k_seed1/summary.json": {
+    "sha256": "3a949b0e1786654f9b9c52eda99a25f24857c920d484ce37d2856336474a99be",
+    "bytes": 683
+  },
+  "tetris/v2_long_trace_512k_seed1/system.json": {
+    "sha256": "9a1ca08840827963a9febc4f642611c1e5a0d75399d203c5f083b1fca5a0d710",
+    "bytes": 474
+  },
+  "tetris/v2_long_trace_512k_seed1/visualizations/gameplay.gif": {
+    "sha256": "4105c6d96c5e5d2a4a8511311a992e6420de7bec84dfe8a36e6790380cb71871",
+    "bytes": 943808
+  },
+  "tetris/v2_long_trace_512k_seed1/visualizations/gameplay.json": {
+    "sha256": "1e3c2352a69804b0cd39f66409d0025d61ea7aaf6272e8dc51243dc324752fdf",
+    "bytes": 176
+  },
+  "tetris/v2_long_trace_512k_seed1/visualizations/gameplay.png": {
+    "sha256": "374e9767191b0f98474febf255fb31169dfa747d323ca43ac6869ee1ce7c81e1",
+    "bytes": 10252
+  },
+  "tetris/v2_long_trace_512k_seed1/visualizations/learning_curves.pdf": {
+    "sha256": "1b3e4035906ffe9bafa48a0c91f7f35480d96aa6de9f1d80eb3243d7fdd84ea6",
+    "bytes": 28501
+  },
+  "tetris/v2_long_trace_512k_seed1/visualizations/learning_curves.png": {
+    "sha256": "58fc52c32e55208fbe6d4feae4e4d1e5367b9ae49cb2abe3753bccae78340422",
+    "bytes": 229901
+  },
+  "tetris/v2_long_trace_512k_seed1/visualizations/policy_trajectory.npz": {
+    "sha256": "35856b1accc03223d75b233546d8d3ef25ef8e104e8ecd4d266a9b5452500f52",
+    "bytes": 5106
+  },
+  "tetris/v2_long_trace_512k_seed1/visualizations/random_trajectory.npz": {
+    "sha256": "7ec76d3f5bb4dc64533f37fbcf607ee6eb0381b7837f9ab455597a7ea99eb0f0",
+    "bytes": 4889
+  },
   "tetris/v2_replication_64k/RESULT.md": {
     "sha256": "a389881b3b1254f593d1d6f15c256eae4862e92cd6fcabdde1fbbc4cad911d26",
     "bytes": 4313

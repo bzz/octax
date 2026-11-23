@@ -105,3 +105,7 @@ Replay does not beat all scoring controls in this exploratory sample; useful lea
 ## Corrected PPO and score replay at 512K
 
 The on-policy PPO arm does not exceed both random and its untrained network; the learning objective remains unmet. See [full cumulative comparison and animation](runs/tetris/learning_512k_seed1/RESULT.md). Both arms continue seed 1 from 64K; these are not independent replications.
+
+## Strictly on-policy long-trace PPO at 512K
+
+The long-trace policy does not exceed both random and its initialization; useful on-policy learning remains unestablished. See [results and actual-policy animation](runs/tetris/v2_long_trace_512k_seed1/RESULT.md).

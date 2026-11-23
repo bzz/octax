@@ -1,0 +1,25 @@
+{
+  "step": 524288,
+  "seed": 1,
+  "wall_training_and_periodic_eval_seconds": 4037.070700417011,
+  "collect_seconds": 190.7908895399014,
+  "update_seconds": 3775.962096789939,
+  "training_steps_per_second": 132.17056918008072,
+  "steady_training_steps_per_second": 132.2668645288774,
+  "parameter_change_l2": 32.44794415794539,
+  "final_evaluation": {
+    "mean_return": 0.0,
+    "scoring_fraction": 0.0,
+    "mean_length": 1164.875,
+    "terminated": 8,
+    "truncated": 0,
+    "action_distribution": [
+      0.19637300139499947,
+      0.2017383839467754,
+      0.19680223199914154,
+      0.19755338555639018,
+      0.20753299710269343
+    ],
+    "seconds": 9.133614541991847
+  }
+}

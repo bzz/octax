@@ -51,3 +51,7 @@ The three-seed replication adds fresh baseline/longer-credit seeds 1 and 2, exac
 ### Matched 512K continuation
 
 The fixed seed-1 PPO/replay continuation and cumulative audit are experiment-only work. Parent-checkpoint hashes and source snapshots preserve provenance across the resumed budget; `upstream-fixes` is unchanged. See [results](runs/tetris/learning_512k_seed1/RESULT.md).
+
+## Strictly on-policy long-trace PPO at 512K
+
+The fresh long-trace PPO trial and matched-control report are experiment-only work. No emulator or upstream-fix changes enter this run. [Evidence](runs/tetris/v2_long_trace_512k_seed1/RESULT.md).
