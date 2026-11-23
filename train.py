@@ -21,13 +21,16 @@ from experiment_utils import (evaluate, make_evaluator, restore_checkpoint, save
 def run(cfg, *, policy_weights_path=None, policy_weights_sha256=None):
     if cfg['agent'] != 'PPO':
         raise ValueError('This experimental runner supports PPO only.')
+    if cfg.get('target_kl') is not None and (not np.isfinite(cfg['target_kl']) or cfg['target_kl'] <= 0):
+        raise ValueError('target_kl must be positive and finite, or None')
     if policy_weights_path is not None:
         if cfg['resume'] or cfg['encoder_checkpoint'] or not policy_weights_sha256:
             raise ValueError('Weights-only initialization requires a fresh run and an explicit checksum.')
     if cfg['resume']:
         previous = serialization.msgpack_restore(Path(cfg['resume']).read_bytes())['config']
         defaults = dict(experiment_version=1, env_kwargs={'timer_mode': 'legacy'},
-                        advantage_std_floor=0.0, grad_clip_mode='elementwise', zero_init_value=False)
+                        advantage_std_floor=0.0, grad_clip_mode='elementwise', zero_init_value=False,
+                        target_kl=None)
         for key, default in defaults.items():
             if cfg.get(key, default) != previous.get(key, default):
                 raise ValueError(f'Resume changes {key}; start a fresh run for changed environment/PPO semantics.')
@@ -45,6 +48,7 @@ def run(cfg, *, policy_weights_path=None, policy_weights_sha256=None):
                'learning_rate', 'total_timesteps', 'eval_freq', 'gamma', 'gae_lambda',
                'clip_eps', 'vf_coef', 'ent_coef', 'max_grad_norm', 'advantage_std_floor',
                'grad_clip_mode', 'zero_init_value']}
+    options['target_kl'] = cfg.get('target_kl')
     agent = PPOOctax.create_agent({}, env, env.default_params)
     algo = PPOOctax(env=env, env_params=env.default_params, agent=agent,
                     eval_callback=lambda *args: (), **options)
@@ -109,6 +113,9 @@ def run(cfg, *, policy_weights_path=None, policy_weights_sha256=None):
     fields = ['step','loss','actor_loss','value_loss','entropy','grad_norm','reward_sum',
               'positive_reward_steps','done_count','collect_seconds','update_seconds','steps_per_second']
     fields += ['clipped_grad_norm', 'approx_kl', 'clip_fraction', 'advantage_std', 'normalized_advantage_std']
+    if cfg.get('target_kl') is not None:
+        from octax.agents.ppo_kl_stop import GUARD_METRICS
+        fields += list(GUARD_METRICS)
     fields += [f'action_{i}_fraction' for i in range(raw.num_actions)]
     total_collect = total_update = 0.0
     steady_collect = steady_update = 0.0
@@ -148,7 +155,7 @@ def run(cfg, *, policy_weights_path=None, policy_weights_sha256=None):
             if int(ts.global_step)//cfg['eval_freq'] > previous_step//cfg['eval_freq'] or int(ts.global_step) == cfg['total_timesteps']:
                 checkpoint_and_eval(ts)
     delta = sum(float(np.square(a-b).sum()) for a,b in zip(jax.tree.leaves(initial_params),jax.tree.leaves(jax.device_get(ts.agent_ts.params))))**0.5
-    write_json(out/'summary.json', dict(step=int(ts.global_step),seed=cfg['seed'],
+    write_json(out/'summary.json', dict(step=int(ts.global_step),seed=cfg['seed'], optimizer_updates=int(ts.agent_ts.step),
         wall_training_and_periodic_eval_seconds=time.perf_counter()-start,
         collect_seconds=total_collect,update_seconds=total_update,
         training_steps_per_second=(int(ts.global_step)-start_step)/(total_collect+total_update),

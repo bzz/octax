@@ -1,4 +1,5 @@
 from collections.abc import Callable
+import math
 from typing import Tuple
 
 import chex
@@ -89,6 +90,7 @@ class PPOOctax(OnPolicyMixin, Algorithm):
     advantage_std_floor: chex.Scalar = struct.field(pytree_node=True, default=0.0)
     grad_clip_mode: str = struct.field(pytree_node=False, default="elementwise")
     zero_init_value: bool = struct.field(pytree_node=False, default=False)
+    target_kl: float | None = struct.field(pytree_node=False, default=None)
 
     def make_act(self, ts):
         def act(obs, rng):
@@ -128,6 +130,12 @@ class PPOOctax(OnPolicyMixin, Algorithm):
         return ts
 
     def update_trajectories(self, ts, trajectories):
+
+        if self.target_kl is not None:
+            if not math.isfinite(self.target_kl) or self.target_kl <= 0:
+                raise ValueError('target_kl must be positive and finite, or None')
+            from octax.agents.ppo_kl_stop import update_with_kl_stop
+            return update_with_kl_stop(self, ts, trajectories)
 
         last_val = self.agent.apply(
             ts.agent_ts.params, ts.last_obs, method="call_critic"

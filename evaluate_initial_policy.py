@@ -19,7 +19,7 @@ def initial_state(config):
             'total_timesteps', 'eval_freq', 'gamma', 'gae_lambda', 'clip_eps', 'vf_coef',
             'ent_coef', 'max_grad_norm', 'advantage_std_floor', 'grad_clip_mode', 'zero_init_value']
     algo = PPOOctax(env=env, env_params=env.default_params, agent=agent, eval_callback=None,
-                    **{key: config[key] for key in keys})
+                    target_kl=config.get('target_kl'), **{key: config[key] for key in keys})
     return raw, agent, algo.init_state(jax.random.PRNGKey(config['seed']))
 
 
