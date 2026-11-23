@@ -180,3 +180,11 @@ Validation: 93 tests passed, including six replay/loss/checkpoint tests. A 2,048
 ## 2026-11-23 — 64K score-replay mechanism test completed
 
 Replay does not beat all scoring controls in this exploratory sample; useful learning remains unestablished. Training reward events: 2 (control 2); completed scoring episodes retained: 2; auxiliary updates applied: 170. Final scored games: replay 0/128, longer credit 1/128, untrained 2/128, random 3/128. Evaluation remains exploratory on reused seeds. Full checks and evidence: `runs/tetris/v3_self_imitation_seed1/RESULT.md`. The broader learning goal remains dependent on stronger scoring evidence.
+
+## 2026-11-23 — Matched 512K learning-budget continuation prepared
+
+The 64K replay result scored 0/128, compared with longer-credit PPO 1/128, untrained seed 1 at 2/128 and random 3/128. Correctness checks passed, but useful learning remains unestablished. Completed-episode replay started only at step 32,768 and consumed two scoring episodes. The original Stage C budget was approximately 500K; corrected timing has not yet been tested at that scale.
+
+Continue both seed-1 longer-credit PPO and PPO+replay from their exact 65,536-step checkpoints to 524,288 total decisions each (458,752 added per arm). This keeps source code, architecture, original reward and optimizer settings fixed while increasing experience; no new mechanism is added. Full model/optimizer/RNG/emulator state is retained, plus replay state for the replay arm. Both receive the same environment budget, with auxiliary compute reported separately. CPU estimate is approximately 51 minutes training per arm at recent throughput, plus evaluation.
+
+The fixed launcher checks resolved configuration, parent source/checkpoint integrity, source drift, restored initial evaluations and target steps. Periodic evaluation uses eight development games every 64K; final 128-game comparisons remain exploratory. Freeze a promising checkpoint before unused-seed confirmation and independent training-seed replication. Details, limitations and commands are in `LEARNING_512K.md`. Run completion alone will not satisfy the goal.
