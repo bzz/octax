@@ -95,7 +95,7 @@ class PPOOctax(OnPolicyMixin, Algorithm):
         agent_params = self.agent.init(rng, obs_ph, rng)
 
         tx = optax.chain(
-            optax.clip(self.max_grad_norm),
+            optax.clip_by_global_norm(self.max_grad_norm),
             optax.adam(learning_rate=self.learning_rate),
         )
 
