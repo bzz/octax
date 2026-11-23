@@ -29,6 +29,7 @@ def main():
     parser.add_argument('--seed', type=int, choices=[1, 2], required=True)
     parser.add_argument('--run', required=True)
     parser.add_argument('--smoke', action='store_true', help='Separate 2048-step handoff smoke')
+    parser.add_argument('--entropy-coef', type=float, choices=[0., .01], default=.01)
     args = parser.parse_args()
     os.chdir(ROOT)
     weights = Path(args.weights).read_bytes()
@@ -49,7 +50,7 @@ def main():
         cfg = OmegaConf.to_container(OmegaConf.load(ROOT/f'runs/tetris/v2_credit_horizon_seed{args.seed}/config.yaml'))
         cfg.update(run_dir=relative, resume=None, encoder_checkpoint=None,
             initialization='pretrained_policy_weights', initialization_weights_sha256=args.weights_sha256,
-            purpose='handoff_smoke' if args.smoke else 'curriculum_ppo')
+            purpose='handoff_smoke' if args.smoke else 'curriculum_ppo', ent_coef=args.entropy_coef)
         if args.smoke: cfg.update(total_timesteps=2048, eval_freq=2048, eval_episodes=2)
         sources = {name: (ROOT/name).read_bytes() for name in SOURCES}
         for name, data in sources.items():
