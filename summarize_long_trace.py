@@ -90,10 +90,15 @@ def main():
     prior = load(ROOT/'runs/tetris/learning_512k_seed1/analysis.json')['records']['credit']
     random_budget = load(CONTROL/'random_training_budget.json')
     assert random_budget['total_steps'] == train['steps']
+    diagnostic = load(RUN/'post_training_gradients.json')[0]
+    assert diagnostic['checkpoint_step'] == 524288
+    assert diagnostic['checkpoint_sha256'] == hashlib.sha256((RUN/'checkpoint.msgpack').read_bytes()).hexdigest()
+    assert diagnostic['fresh_diagnostic_decisions'] == cfg['num_steps']*cfg['num_envs']
+    assert diagnostic['validation']['reconstructed_update_matches_ppo']
     analysis = dict(conclusion=conclusion,candidate_for_confirmation=candidate,
         config_differences=changes,training=train,control_training=prior['training'],
         policies=counts,paired_comparisons=comparisons,raw_policies=policies,
-        random_training_budget=random_budget,
+        random_training_budget=random_budget,post_training_diagnostic=diagnostic,
         checks='Source snapshots, unchanged PPO implementation, fresh initialization, complete step sequence, actual optimizer counter, checkpoint roundtrips and repeated controls passed.',
         limitations=['One selected training seed; independent training-seed replication is still needed.',
                      'Reused 128-game evaluation bank; comparisons are exploratory. Paired p-values are unadjusted scoring-probability tests, not tests of score magnitude.',
@@ -138,6 +143,14 @@ The eight development games are repeated monitoring data. The 128 final games, s
 
 The actual-gameplay card uses preselected game seed 30016. No replay, demonstrations, auxiliary objectives or shaped rewards enter this trial. Longer lambda/rollout settings do not guarantee complete-episode Monte Carlo targets: episode boundaries stop credit and unfinished rollouts bootstrap. The on-policy learning objective remains actual scoring improvement.
 
+## Final-checkpoint diagnostic
+
+An additional {diagnostic['fresh_diagnostic_decisions']:,} fresh decisions were collected only for gradient measurement after training; they produced {diagnostic['diagnostic_positive_events']} rewards. They are additional diagnostic interaction, outside the 524,288 training budget, and no diagnostic weights were saved or used to continue training. This measurement overlapped final evaluation, so evaluation timings are not isolated throughput measurements.
+
+The mean per-minibatch entropy-to-policy gradient-norm ratio was {diagnostic['gradient_summary']['entropy_to_policy_norm']['mean']:.3f}. Mean raw norms were {diagnostic['gradient_summary']['entropy_gradient_norm']['mean']:.3g} for entropy and {diagnostic['gradient_summary']['policy_gradient_norm']['mean']:.3g} for policy. Both are small; this local measurement again does not show entropy dominating policy gradients. All 128 minibatches are measured at the same parameters, not along the four-epoch update trajectory. A reconstructed first-minibatch update, including saved Adam state, matched the actual PPO implementation to maximum state-element difference {diagnostic['validation']['maximum_state_element_difference']:.3g}.
+
+These data do not identify the cause of the failed learning result or rule out an entropy-coefficient ablation. They show that increasing available credit alone did not produce a useful policy in this selected seed. There is no evidence here to promote this configuration or spend the unused confirmation bank. Reproduce the diagnostic with `JAX_PLATFORMS=cpu .venv/bin/python diagnose_ppo_entropy.py --runs runs/tetris/v2_long_trace_512k_seed1 --out runs/tetris/v2_long_trace_512k_seed1/post_training_gradients.json`, then run `summarize_long_trace.py`.
+
 [Protocol](../../../ON_POLICY_CREDIT.md) · [diagnostic rationale](../entropy_diagnostic/RESULT.md) · [implementation log](../../../IMPLEMENTATION_LOG.md).
 ''')
     write_round_card(RUN,'On-policy PPO · long-trace result',conclusion,
@@ -150,6 +163,10 @@ The actual-gameplay card uses preselected game seed 30016. No replay, demonstrat
     if heading not in log.read_text():
         with log.open('a') as stream:
             stream.write(f"\n{heading}\n\n{conclusion} Long trace found {train['positive_reward_events']} training reward events and scored {counts['long_trace']['scoring_games']}/128, compared with control {counts['credit_control']['scoring_games']}/128, untrained {counts['untrained']['scoring_games']}/128 and random {counts['random']['scoring_games']}/128. Exact step/optimizer counts, fresh initialization, source snapshots, checkpoint restoration and controls passed. Both arms are strictly on-policy with original rewards. Full evidence and actual-gameplay card: `runs/tetris/v2_long_trace_512k_seed1/RESULT.md`.\n")
+    diagnostic_heading = '### Long-trace final-checkpoint gradient diagnostic'
+    if diagnostic_heading not in log.read_text():
+        with log.open('a') as stream:
+            stream.write(f"\n{diagnostic_heading}\n\nCollected {diagnostic['fresh_diagnostic_decisions']:,} additional fresh diagnostic decisions after the completed training budget; no rewards occurred and no updated policy was saved or used for training. The mean entropy-to-policy gradient-norm ratio was {diagnostic['gradient_summary']['entropy_to_policy_norm']['mean']:.3f}, with all 128 minibatches measured at the same fixed parameters. The configured first-minibatch update matched actual PPO including Adam state to maximum element difference {diagnostic['validation']['maximum_state_element_difference']:.3g}. This does not show dominant local entropy gradients or establish the cause of failure. Longer credit alone did not produce scoring improvement; do not promote this configuration or use the unused confirmation bank. Evaluation overlapped this diagnostic and its timing is not an isolated benchmark.\n")
     print(json.dumps(analysis,indent=2))
 
 
