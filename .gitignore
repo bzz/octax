@@ -77,3 +77,7 @@ outputs/
 results/
 
 docs/_build/
+# Local experiment outputs and plot caches
+runs/
+train.log
+.matplotlib/

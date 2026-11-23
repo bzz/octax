@@ -15,6 +15,20 @@ from flax import linen as nn
 from rejax.algos.ppo import AdvantageMinibatch, Trajectory
 from rejax.networks import DiscretePolicy, VNetwork
 
+
+def normalize_advantages(advantages, std_floor=0.0):
+    """Avoid turning tiny, reward-free critic errors into unit-scale signals."""
+    scale = jnp.maximum(advantages.std() + 1e-8, std_floor)
+    return (advantages - advantages.mean()) / scale
+
+
+def gradient_clipper(mode, limit):
+    if mode == "global_norm":
+        return optax.clip_by_global_norm(limit)
+    if mode == "elementwise":
+        return optax.clip(limit)
+    raise ValueError(f"Unknown gradient clipping mode: {mode}")
+
 class Agent(nn.Module):
     action_dim: int
     features_list: Tuple[int] = (32, 64, 64)
@@ -60,7 +74,6 @@ class Agent(nn.Module):
         features = self.encode(obs)
         return self.actor(features, rng)
 
-
     def encode(self, obs):
         # Gymnax gives NCHW; Flax convolutions require NHWC.
         return self.features(jnp.transpose(obs, (0, 2, 3, 1)).astype(jnp.float32))
@@ -73,6 +86,9 @@ class PPOOctax(OnPolicyMixin, Algorithm):
     clip_eps: chex.Scalar = struct.field(pytree_node=True, default=0.2)
     vf_coef: chex.Scalar = struct.field(pytree_node=True, default=0.5)
     ent_coef: chex.Scalar = struct.field(pytree_node=True, default=0.01)
+    advantage_std_floor: chex.Scalar = struct.field(pytree_node=True, default=0.0)
+    grad_clip_mode: str = struct.field(pytree_node=False, default="elementwise")
+    zero_init_value: bool = struct.field(pytree_node=False, default=False)
 
     def make_act(self, ts):
         def act(obs, rng):
@@ -91,11 +107,16 @@ class PPOOctax(OnPolicyMixin, Algorithm):
 
     @register_init
     def initialize_network_params(self, rng):
-        obs_ph = jnp.empty([1, *self.env.observation_space(self.env_params).shape])
+        obs_ph = jnp.zeros([1, *self.env.observation_space(self.env_params).shape])
         agent_params = self.agent.init(rng, obs_ph, rng)
+        if self.zero_init_value:
+            # Same architecture/parameter names; only the fresh value output changes.
+            output_name = f"Dense_{len(self.agent.hidden_layer_sizes)}"
+            output = agent_params['params']['critic'][output_name]
+            agent_params['params']['critic'][output_name] = jax.tree.map(jnp.zeros_like, output)
 
         tx = optax.chain(
-            optax.clip_by_global_norm(self.max_grad_norm),
+            gradient_clipper(self.grad_clip_mode, self.max_grad_norm),
             optax.adam(learning_rate=self.learning_rate),
         )
 
@@ -103,6 +124,10 @@ class PPOOctax(OnPolicyMixin, Algorithm):
 
     def train_iteration(self, ts):
         ts, trajectories = self.collect_trajectories(ts)
+        ts, _ = self.update_trajectories(ts, trajectories)
+        return ts
+
+    def update_trajectories(self, ts, trajectories):
 
         last_val = self.agent.apply(
             ts.agent_ts.params, ts.last_obs, method="call_critic"
@@ -116,15 +141,15 @@ class PPOOctax(OnPolicyMixin, Algorithm):
             ts = ts.replace(rng=rng)
             batch = AdvantageMinibatch(trajectories, advantages, targets)
             minibatches = self.shuffle_and_split(batch, minibatch_rng)
-            ts, _ = jax.lax.scan(
-                lambda ts, mbs: (self.update(ts, mbs), None),
+            ts, metrics = jax.lax.scan(
+                self.update_with_metrics,
                 ts,
                 minibatches,
             )
-            return ts, None
+            return ts, metrics
 
-        ts, _ = jax.lax.scan(update_epoch, ts, None, self.num_epochs)
-        return ts
+        ts, metrics = jax.lax.scan(update_epoch, ts, None, self.num_epochs)
+        return ts, jax.tree.map(jnp.mean, metrics)
 
     def collect_trajectories(self, ts):
         def env_step(ts, unused):
@@ -178,15 +203,17 @@ class PPOOctax(OnPolicyMixin, Algorithm):
         return advantages, advantages + trajectories.value
 
     def update(self, ts, batch):
+        ts, _ = self.update_with_metrics(ts, batch)
+        return ts
+
+    def update_with_metrics(self, ts, batch):
         def loss_fn(params):
             _, log_prob, entropy, value = self.agent.apply(params, batch.trajectories.obs, None, batch.trajectories.action)
 
             # Actor loss
             entropy = entropy.mean()
             ratio = jnp.exp(log_prob - batch.trajectories.log_prob)
-            advantages = (batch.advantages - batch.advantages.mean()) / (
-                    batch.advantages.std() + 1e-8
-            )
+            advantages = normalize_advantages(batch.advantages, self.advantage_std_floor)
             clipped_ratio = jnp.clip(ratio, 1 - self.clip_eps, 1 + self.clip_eps)
             pi_loss1 = ratio * advantages
             pi_loss2 = clipped_ratio * advantages
@@ -202,7 +229,17 @@ class PPOOctax(OnPolicyMixin, Algorithm):
             value_loss = 0.5 * jnp.maximum(value_losses, value_losses_clipped).mean()
             value_loss =  self.vf_coef * value_loss
 
-            return actor_loss + value_loss
+            log_ratio = log_prob - batch.trajectories.log_prob
+            approx_kl = ((ratio - 1) - log_ratio).mean()
+            clip_fraction = (jnp.abs(ratio - 1) > self.clip_eps).mean()
+            return actor_loss + value_loss, (actor_loss, value_loss, entropy, approx_kl, clip_fraction)
 
-        grads = jax.grad(loss_fn)(ts.agent_ts.params)
-        return ts.replace(agent_ts=ts.agent_ts.apply_gradients(grads=grads))
+        (loss, (actor_loss, value_loss, entropy, approx_kl, clip_fraction)), grads = jax.value_and_grad(loss_fn, has_aux=True)(ts.agent_ts.params)
+        clipper = gradient_clipper(self.grad_clip_mode, self.max_grad_norm)
+        clipped, _ = clipper.update(grads, clipper.init(grads))
+        metrics = dict(loss=loss, actor_loss=actor_loss, value_loss=value_loss,
+                       entropy=entropy, grad_norm=optax.global_norm(grads),
+                       clipped_grad_norm=optax.global_norm(clipped), approx_kl=approx_kl,
+                       clip_fraction=clip_fraction, advantage_std=batch.advantages.std(),
+                       normalized_advantage_std=normalize_advantages(batch.advantages, self.advantage_std_floor).std())
+        return ts.replace(agent_ts=ts.agent_ts.apply_gradients(grads=grads)), metrics

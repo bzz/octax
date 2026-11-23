@@ -1,5 +1,17 @@
 # <img src="https://github.com/riiswa/octax/blob/main/imgs/octax_logo.png?raw=true" alt="Octax Logo" width="80" align="left"/> OCTAX: Accelerated CHIP-8 Arcade Environments for Reinforcement Learning in JAX
 
+## Pixel-only Tetris research fork
+
+This fork records reproducible CPU PPO experiments using only four monochrome game frames and the original score reward. **The current 65,536-step v2 baseline does not beat random play:** no training rewards; final evaluation scored in 1/128 PPO games versus 3/128 random games under corrected timing. This is one training seed.
+
+- [Setup and reproduction](EXPERIMENT.md) · [Results](RESULTS.md) · [Recorded runs and checkpoints](runs/README.md)
+- [Implementation log](IMPLEMENTATION_LOG.md) · [Sparse-reward investigation](REWARD_DIAGNOSIS.md)
+- [Fork changelog and upstream candidates](FORK_CHANGELOG.md): five separate fixes with rationale/tests on [`upstream-fixes`](https://github.com/bzz/octax/tree/upstream-fixes); experiment code and data follow on `main`.
+
+The upstream project description follows. Its performance claims are not measurements of these small macOS CPU experiments.
+
+---
+
 [![Build Linux](https://github.com/riiswa/octax/actions/workflows/build_wheels_linux.yml/badge.svg)](https://github.com/riiswa/octax/actions/workflows/build_wheels_linux.yml)
 [![Build Windows](https://github.com/riiswa/octax/actions/workflows/build_wheels_windows.yml/badge.svg)](https://github.com/riiswa/octax/actions/workflows/build_wheels_windows.yml)
 [![Build macOS](https://github.com/riiswa/octax/actions/workflows/build_wheels_macos.yml/badge.svg)](https://github.com/riiswa/octax/actions/workflows/build_wheels_macos.yml)

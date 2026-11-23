@@ -1,0 +1,9 @@
+# Prepared ablation; not launched. Match environment-step budget and minibatch size.
+defaults:
+  - config
+  - _self_
+num_steps: 128
+num_minibatches: 16
+gamma: 0.995
+gae_lambda: 0.98
+run_dir: runs/tetris/v2_credit_horizon_seed0

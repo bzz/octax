@@ -79,6 +79,7 @@ class OctaxEnv:
 
         render_mode: str = "rgb_array",
         disable_delay: bool = True,
+        timer_mode: str = "frame",
         render_scale: int = 8,
         color_scheme: str = "classic",
     ):
@@ -103,8 +104,6 @@ class OctaxEnv:
         self.rom_path = rom_path
         self.max_num_steps_per_episodes = max_num_steps_per_episodes
         self.instruction_frequency = instruction_frequency
-        if fps != 60:
-            raise ValueError("Per-frame CHIP-8 timers currently require fps=60")
         self.fps = fps
         self.frame_skip = frame_skip
         self.terminated_fn = terminated_fn
@@ -112,6 +111,11 @@ class OctaxEnv:
         self.startup_instructions = startup_instructions
         self.custom_startup = custom_startup
         self.disable_delay = disable_delay
+        if timer_mode not in ("legacy", "step_saturating", "frame"):
+            raise ValueError(f"Unknown timer mode: {timer_mode}")
+        if timer_mode == "frame" and fps != 60:
+            raise ValueError("Frame timer mode currently requires fps=60")
+        self.timer_mode = timer_mode
 
         # Rendering parameters
         self.render_mode = render_mode
@@ -233,16 +237,31 @@ class OctaxEnv:
             state
         )
 
-        def run_frame(s, _):
-            s = run_n_instruction(s, self.instructions_per_step)
-            if self.disable_delay:
-                s = s.replace(delay_timer=jnp.zeros((), jnp.uint8),
-                              sound_timer=jnp.zeros((), jnp.uint8))
-            else:
-                s = tick_timers(s)
-            return s, s.display
-
-        final_state, observation = jax.lax.scan(run_frame, state, None, length=self.frame_skip)
+        if self.timer_mode == "frame":
+            def run_frame(s, _):
+                s = run_n_instruction(s, self.instructions_per_step)
+                if self.disable_delay:
+                    s = s.replace(delay_timer=jnp.zeros((), jnp.uint8),
+                                  sound_timer=jnp.zeros((), jnp.uint8))
+                else:
+                    s = tick_timers(s)
+                return s, s.display
+            final_state, observation = jax.lax.scan(run_frame, state, None, length=self.frame_skip)
+        else:
+            final_state, states = jax.lax.scan(run_instruction, state, length=self.instructions_per_step * self.frame_skip)
+            observation = states.display[self.instructions_per_step - 1:: self.instructions_per_step]
+        if self.timer_mode != "frame" and self.disable_delay:
+            final_state: OctaxEnvState = final_state.replace(
+                delay_timer=jnp.zeros((), jnp.uint8),
+                sound_timer=jnp.zeros((), jnp.uint8),
+            )
+        elif self.timer_mode == "step_saturating":
+            final_state = tick_timers(final_state)
+        elif self.timer_mode == "legacy":
+            final_state: OctaxEnvState = final_state.replace(
+                delay_timer=jnp.maximum(final_state.delay_timer - 1, 0),
+                sound_timer=jnp.maximum(final_state.sound_timer - 1, 0),
+            )
 
         final_state = jax.lax.cond(
             action == (self.num_actions - 1),
