@@ -59,3 +59,7 @@ The fresh long-trace PPO trial and matched-control report are experiment-only wo
 ## Two-seed PPO entropy ablation at 64K
 
 The two-seed entropy-coefficient ablation is experiment-only work. Each fresh 64K run changes only coefficient 0.01 to 0.0. Frozen sources, exact initialization and original-score comparisons are recorded; upstream-fixes is unchanged. [Results and animations](runs/tetris/v2_entropy_zero_64k/RESULT.md).
+
+### Inactive pixel-novelty component
+
+The optional RND component and its terminal-observation wrapper are experiment preparation, not upstream emulator fixes. Seven targeted tests validate the component; existing PPO trainers do not import it. Policy integration and learning evidence remain outstanding. See [scope and checks](PIXEL_EXPLORATION_PROPOSAL.md).

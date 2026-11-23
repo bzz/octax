@@ -1,6 +1,6 @@
 # Pixel-only exploration with on-policy PPO — proposed, not enabled
 
-Status: awaiting the user's answer about changing the training reward. No RND module, bonus, new value head or training run has been implemented or launched. The completed score-only experiments and their original checkpoints remain the evidence for the current learning result.
+Status: the reward-scope preference remains unanswered. An isolated `pixel_novelty.py` component is implemented and tested, but is not imported by the existing PPO trainers. There is no integrated intrinsic value head, active novelty reward or new policy-training run. The completed score-only experiments and their original checkpoints remain the evidence for the current learning result.
 
 ## What the source review establishes
 
@@ -28,13 +28,23 @@ Use experiment-specific observation plumbing and verify it against raw environme
 
 ## Required evidence before a learning claim
 
-After reward-scope approval, first implement and check: frozen target hashes; correct terminal pixels; fixed bonus/preprocessing within PPO epochs; no retained transition buffer across rollouts; predictor fitting on repeated diagnostic inputs; and full restoration of predictor, target, optimizer, normalizer, policy, RNG and environment state. With the intrinsic coefficient disabled, the extended path must reproduce the original PPO actor/critic updates and trajectories; additional-head gradients must also be disabled for that check.
+Before any novelty-driven policy run, implement and check: frozen target hashes; correct terminal pixels; fixed bonus/preprocessing within PPO epochs; no retained transition buffer across rollouts; predictor fitting on repeated diagnostic inputs; and full restoration of predictor, target, optimizer, normalizer, policy, RNG and environment state. With the intrinsic coefficient disabled, the extended path must reproduce the original PPO actor/critic updates and trajectories; additional-head gradients must also be disabled for that check.
 
 Then run a separately counted short smoke test and measure CPU overhead. A proposed first discovery pilot uses fresh seeds 1 and 2 at 65,536 training decisions each, matched to the saved score-only controls. Report any normalization warm-up interactions separately and include them in total environment-use accounting. Freeze settings before either pilot starts; do not tune the coefficient against the 128-game evaluation bank.
 
 Success remains improved original game score, evaluated with the existing ordinary game resets and no novelty reward in the score. Monitor raw score events, novelty scale, return/advantage balance, episode lengths, predictor error, action probabilities and actual gameplay. New or unpredictable images could be attractive without producing line clears; that is a project-specific failure possibility, not a result already observed for RND here. Additional novelty reward or unique frames alone would not justify declaring the goal complete.
 
 Use the reused 128-game bank only for exploratory screening. A frozen candidate needs unused game seeds and independent training-seed evidence. Do not consume the reserved 60000–60511 bank for a policy that fails the scoring screen. Preserve the implementation log, source/checkpoint provenance and actual-policy animation cards.
+
+## Inactive component validation
+
+`pixel_novelty.py` now contains the small target/predictor CNNs, observation and discounted-return moments, frozen per-rollout rewards/targets, predictor updates, stale-batch rejection and an experiment-specific terminal-observation wrapper. Persistent auxiliary state has no experience buffer. The existing trainer, actor/critic and environment wrapper are unchanged.
+
+Seven targeted CPU tests passed (7.73 seconds). They check the full newest-frame input, unchanged target arrays and canonical hashes, predictor fitting, episode-boundary normalization, zero-variance inputs, stale-batch rejection, complete auxiliary checkpoint restoration and an identical next update. A natural terminal no-op episode verifies that transition pixels are retained while the original wrapper's reset observation, state, reward and done flag remain exact. Synthetic predictor fitting and this environment validation are not PPO training or learning evidence.
+
+The initial integrity assertions were corrected to canonicalize dictionary order across JIT and compare serialized optimizer values rather than newly created Python callback identities. Exact array comparisons and restored next-update checks remain in place. Three existing emulator dtype warnings remain.
+
+Reproduce with `JAX_PLATFORMS=cpu .venv/bin/python -m pytest -q tests/test_pixel_novelty.py`. Shared-policy intrinsic-value integration, zero-bonus equivalence to baseline PPO, full combined-state checkpoint checks, rollout lifecycle integration and a CPU policy-training smoke test remain unfinished. No novelty run should be described as ready on the strength of the component tests alone.
 
 ## Decision needed
 
