@@ -18,9 +18,12 @@ from experiment_utils import (evaluate, make_evaluator, restore_checkpoint, save
                               save_gif, system_info, write_json, environment_from_config)
 
 
-def run(cfg):
+def run(cfg, *, policy_weights_path=None, policy_weights_sha256=None):
     if cfg['agent'] != 'PPO':
         raise ValueError('This experimental runner supports PPO only.')
+    if policy_weights_path is not None:
+        if cfg['resume'] or cfg['encoder_checkpoint'] or not policy_weights_sha256:
+            raise ValueError('Weights-only initialization requires a fresh run and an explicit checksum.')
     if cfg['resume']:
         previous = serialization.msgpack_restore(Path(cfg['resume']).read_bytes())['config']
         defaults = dict(experiment_version=1, env_kwargs={'timer_mode': 'legacy'},
@@ -46,6 +49,12 @@ def run(cfg):
     algo = PPOOctax(env=env, env_params=env.default_params, agent=agent,
                     eval_callback=lambda *args: (), **options)
     ts = algo.init_state(jax.random.PRNGKey(cfg['seed']))
+    if policy_weights_path is not None:
+        # Independent PPO process: initialize all state here, then read only
+        # selected weights. No pretraining dataset or optimizer is imported.
+        from policy_initialization import initialize_ppo_from_file
+        ts, provenance = initialize_ppo_from_file(ts, policy_weights_path, policy_weights_sha256)
+        write_json(out/'initialization.json', provenance)
     if cfg['resume']:
         ts, previous = restore_checkpoint(cfg['resume'], ts)
         for key in ['env','seed','num_envs','num_steps','num_minibatches','num_epochs',

@@ -63,3 +63,7 @@ The two-seed entropy-coefficient ablation is experiment-only work. Each fresh 64
 ### Controlled on-policy pixel-novelty experiment
 
 The optional RND component, terminal-observation wrapper, opt-in on-policy integration and separate runner are experiment work, not upstream emulator fixes. Twelve targeted tests validate the component and integration, including exact disabled-bonus baseline equivalence and complete checkpoint continuation. Existing score-only trainers do not import them. Matched CPU smoke runs passed correctness gates; a frozen two-seed 64K original-score comparison is the next step. Useful learning remains unestablished. See [scope and checks](PIXEL_EXPLORATION_PROPOSAL.md).
+
+### Independent curriculum stages
+
+The offline pixel-cloning component, strict weights-only handoff and separate pretraining/PPO entry points are experiment-layer work. An optional initialization argument in `train.py` loads selected weights into freshly created PPO state; the default runner behavior is retained. Six targeted tests verify supervised fitting, checkpoint continuation, schema rejection and fresh on-policy collection/update after the disk boundary. No optimizer, critic, dataset or environment state crosses that boundary. This is not an upstream bugfix or a claim of learned gameplay. [Curriculum recipe](recipes/pixel_curriculum/README.md).
