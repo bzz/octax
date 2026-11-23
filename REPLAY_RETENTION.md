@@ -1,4 +1,4 @@
-# Replay retention investigation — candidate, not active
+# Replay retention investigation — shelved side experiment
 
 At the saved 65,536-step replay checkpoint, 1,440 of the 50,000 replay transitions had a positive discounted return. At 131,072 steps, that number was **zero**, despite the cumulative counter still showing two completed scoring episodes. The read-only, hash-verified audit is recorded in `runs/tetris/learning_512k_seed1/replay_buffer_audit.jsonl`.
 
@@ -14,8 +14,8 @@ Array indices, priority calculation, sampling, replay loss, auxiliary-update bud
 
 The module supports an explicit fork from a FIFO checkpoint that preserves all replay arrays, indices, pending episodes and RNG. Subsequent checkpoints carry a retention-mode marker and reject an implicit mode change. Four focused tests pass: survival under a flood of nonpositive targets, bounded replacement when full of positive targets, exact FIFO/sample equivalence before the first protected eviction, and explicit-fork/checkpoint continuation with unchanged parent bytes.
 
-## Activation requirements
+## Historical activation requirements (not scheduled)
 
-This module is **not connected to either live trainer**. Finish the fixed FIFO comparison before deciding whether to run it. If needed, start the ablation from the exact saved 64K replay parent and retain the same 524,288-decision target. Record a distinct method-fork checkpoint/configuration and original parent hashes; do not edit the published parent or call this an unchanged resume. Verify model/optimizer/emulator/collection-RNG identity and replay/sample identity at the fork, then verify trainer integration before launching.
+The user clarified that the main investigation should remain online and on-policy PPO. This off-policy auxiliary variant is therefore **shelved** and is not connected to either trainer. The following describes the previously prepared protocol, not a scheduled run: start the ablation from the exact saved 64K replay parent and retain the same 524,288-decision target. Record a distinct method-fork checkpoint/configuration and original parent hashes; do not edit the published parent or call this an unchanged resume. Verify model/optimizer/emulator/collection-RNG identity and replay/sample identity at the fork, then verify trainer integration before launching.
 
 The common trainer requires a small replay-factory hook after the frozen run finishes. Fresh-game confirmation and independent training-seed replication remain necessary before claiming a dependable learning setup. The original scoring objective has not been replaced by a retention test.

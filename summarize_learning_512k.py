@@ -142,11 +142,14 @@ def main():
             scoring_games=sum(x > 0 for x in policy['episodes']['returns']),
             paired_comparisons=comparisons, development_evaluations=dev,
             cumulative_development_evaluations=old_dev[:-1]+dev)
-    candidates = [arm for arm, r in records.items()
-                  if all(r['paired_comparisons'][name]['mean_return_difference'] > 0 for name in ['random', 'untrained'])]
-    conclusion = ('At least one policy exceeds random and its untrained network on the exploratory bank; freeze it and evaluate unused seeds before claiming learning.'
-                  if candidates else 'Neither 512K policy exceeds both random and its untrained network; the learning objective remains unmet.')
+    above_controls = [arm for arm, r in records.items()
+                      if all(r['paired_comparisons'][name]['mean_return_difference'] > 0 for name in ['random', 'untrained'])]
+    candidates = [arm for arm in above_controls if arm == 'credit']
+    conclusion = ('The on-policy PPO arm exceeds both controls on the exploratory bank; freeze it and evaluate unused seeds before claiming learning.'
+                  if candidates else 'The on-policy PPO arm does not exceed both random and its untrained network; the learning objective remains unmet.')
     analysis = dict(conclusion=conclusion, records=records, candidates_for_confirmation=candidates,
+                    exploratory_arms_above_controls=above_controls,
+                    method_scope='Strictly online, on-policy PPO. Replay is an archived off-policy auxiliary side experiment.',
                     controls=controls, initial_policy=initial,
                     replay_vs_credit=compare(records['replay']['final'], records['credit']['final']),
                     uniform_random_training_budget=random_budget,
@@ -167,6 +170,8 @@ def main():
 ## Fixed continuation protocol
 
 Both seed-1 arms resume their full 65,536-step states to {TARGET:,} total decisions, adding 458,752 decisions each. These are continuations of the same selected training seed, not independent replications. Four-frame monochrome pixels, CNN, original score reward, keypress actions, corrected timing and longer-credit PPO settings remain fixed. Replay retains its full buffer, pending episodes and sampler RNG. Both arms receive 16,384 cumulative PPO optimizer updates; additional replay work is reported below.
+
+The `credit` arm is online, on-policy PPO. The `replay` arm collects experience online but adds off-policy auxiliary updates from older episodes. The user clarified the intended on-policy scope while final evaluation was running. The replay branch is retained as a labeled side experiment; it cannot satisfy the strictly on-policy objective, and the prepared protected-retention variant is shelved.
 
 ## Cumulative experience and final scores
 

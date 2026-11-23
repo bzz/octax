@@ -206,3 +206,9 @@ The replay continuation restored its parent development evaluation exactly and i
 The 131,072-step replay checkpoint passed restoration and scored 1/8 on the small repeated development sample. Its 50,000-slot FIFO buffer has zero positive-return transitions, down from 1,440 at 65,536; the cumulative completed-scoring-episode counter remains two. This shows that the original successes are no longer available for replay, not that eviction alone caused any scoring outcome. Auxiliary updates can continue on zero-return transitions when the critic predicts a negative value.
 
 Prepared an isolated positive-target-protecting replacement variant, with four passing tests covering bounded storage, eviction protection, exact FIFO sampling before divergence, and explicit checkpoint-fork continuation. It is not imported or enabled by the live trainers. The fixed 512K FIFO run continues unchanged. Rationale, limitations and activation requirements are in `REPLAY_RETENTION.md`; original-score performance remains the goal.
+
+## 2026-11-23 — Scope clarified: online, on-policy PPO
+
+The user asked whether the investigation was exploring on-policy online RL. The original plan was PPO. Self-imitation remained online in its data collection but added updates from older experience, making it an off-policy auxiliary/hybrid method rather than strictly on-policy PPO. Introducing that branch broadened the original methodology; it is now labeled a side experiment.
+
+The main investigation returns to strictly online, on-policy PPO. The FIFO replay run has finished training and its already-started final evaluation will be recorded, but no further replay training is planned. The protected-retention module remains inactive and its proposed launch is shelved. It must not be used as a shortcut to satisfying the on-policy learning objective. Pixel-only observations and original-score evaluation remain unchanged.
