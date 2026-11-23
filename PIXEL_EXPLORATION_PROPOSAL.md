@@ -1,6 +1,6 @@
 # Pixel-only exploration with on-policy PPO — controlled experiment
 
-Status: `pixel_novelty.py` and the opt-in `on_policy_novelty.py` integration passed their targeted correctness checks. `train_pixel_novelty.py` provides a separate reproducible runner; existing score-only trainers are unchanged. The next gate is a separately counted CPU smoke comparison, followed by the frozen two-seed 64K pilot if it passes. The completed score-only experiments remain the current learning evidence; no novelty performance result is claimed here.
+Status: the component/integration correctness checks and matched CPU smoke gates passed. `train_pixel_novelty.py` provides a separate reproducible runner; existing score-only trainers are unchanged. The frozen two-seed 64K pilot is the next experiment. The smoke found no original game rewards; no novelty scoring improvement is claimed here.
 
 ## What the source review establishes
 
@@ -76,5 +76,9 @@ JAX_PLATFORMS=cpu .venv/bin/python -u train_pixel_novelty.py --smoke --run runs/
 ```
 
 After successful smoke validation, fresh pilot seeds 1 and 2 each receive 65,536 decisions, 32 rollouts and 2,048 PPO/intrinsic-head/predictor optimizer updates. All settings above, including coefficient .01, are frozen before either pilot; no coefficient tuning on evaluation games. Use `--seed 1 --run runs/tetris/pixel_novelty_seed1` and correspondingly seed 2. Evaluate exported `checkpoint.msgpack` with `evaluate_checkpoint.py --episodes 128 --seed-start 50000 --out <run>/heldout`; compare each seed with its saved 128-step credit control, exact untrained network and the same random games. Report random's equal-training-budget reward events separately. All games use corrected frame timing. Illustrative animation seed 30016 is preselected. Report the two-seed screen before considering longer runs or the reserved fresh confirmation bank; a screen pass alone does not establish statistically convincing learning.
+
+Both smoke arms completed 8,192 decisions and 256 PPO updates. Enabled auxiliary optimizers each completed 256 updates; the disabled arm had zero. Initial policies/evaluation arrays matched, checkpoint/source/fixed-target checks passed and states/metrics remained finite. Warmed throughput over three rollouts was 157.29 decisions/s disabled and 73.88 enabled. Neither arm encountered original training rewards; each environment received only 512 decisions, and no training game completed in either arm. This smoke therefore does not test terminal handling at the pilot batch shape (terminal behavior is covered by the targeted tests). Two-game monitoring evaluations and a preselected actual-policy illustration are additional evaluation work. [Smoke evidence and animation](runs/tetris/pixel_novelty_smoke/SMOKE_REPORT.md).
+
+Launch both pilot seeds sequentially with `JAX_PLATFORMS=cpu .venv/bin/python -u run_pixel_novelty.py`; it rechecks smoke gates, refuses duplicate directories, freezes the protocol/report sources and runs original-score evaluation plus gameplay export after each training seed. Once the series status is complete, run `JAX_PLATFORMS=cpu .venv/bin/python summarize_pixel_novelty.py` for the source/checkpoint/control audit, curves, actual-policy cards and implementation-log update.
 
 [Latest score-only result](runs/tetris/v2_entropy_zero_64k/RESULT.md) · [Implementation log](IMPLEMENTATION_LOG.md).

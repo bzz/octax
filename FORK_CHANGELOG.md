@@ -60,6 +60,6 @@ The fresh long-trace PPO trial and matched-control report are experiment-only wo
 
 The two-seed entropy-coefficient ablation is experiment-only work. Each fresh 64K run changes only coefficient 0.01 to 0.0. Frozen sources, exact initialization and original-score comparisons are recorded; upstream-fixes is unchanged. [Results and animations](runs/tetris/v2_entropy_zero_64k/RESULT.md).
 
-### Inactive pixel-novelty component
+### Controlled on-policy pixel-novelty experiment
 
-The optional RND component, terminal-observation wrapper and opt-in on-policy integration are experiment preparation, not upstream emulator fixes. Twelve targeted tests validate the component and integration, including exact disabled-bonus baseline equivalence and complete checkpoint continuation. Existing PPO trainers do not import them. No novelty learning pilot has run; learning evidence remains outstanding. See [scope and checks](PIXEL_EXPLORATION_PROPOSAL.md).
+The optional RND component, terminal-observation wrapper, opt-in on-policy integration and separate runner are experiment work, not upstream emulator fixes. Twelve targeted tests validate the component and integration, including exact disabled-bonus baseline equivalence and complete checkpoint continuation. Existing score-only trainers do not import them. Matched CPU smoke runs passed correctness gates; a frozen two-seed 64K original-score comparison is the next step. Useful learning remains unestablished. See [scope and checks](PIXEL_EXPLORATION_PROPOSAL.md).

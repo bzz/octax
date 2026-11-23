@@ -66,7 +66,8 @@ def main():
     (SERIES/'smoke_validation.json').write_text(json.dumps(smoke, indent=2)+'\n')
     frozen = {name: (ROOT/name).read_bytes() for name in
         ['run_pixel_novelty.py', 'train_pixel_novelty.py', 'on_policy_novelty.py', 'pixel_novelty.py',
-         'PIXEL_EXPLORATION_PROPOSAL.md', 'evaluate_checkpoint.py', 'visualize_run.py']}
+         'PIXEL_EXPLORATION_PROPOSAL.md', 'evaluate_checkpoint.py', 'visualize_run.py',
+         'summarize_pixel_novelty.py', 'summarize_pixel_novelty_smoke.py', 'round_card.py']}
     for name, data in frozen.items():
         dest = SERIES/'source_snapshot'/name; dest.parent.mkdir(parents=True, exist_ok=True); dest.write_bytes(data)
     (SERIES/'source_manifest.json').write_text(json.dumps({n: hashlib.sha256(d).hexdigest()
