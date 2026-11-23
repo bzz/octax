@@ -1,0 +1,11 @@
+{
+  "phase": "complete",
+  "pid": 79587,
+  "completed": [
+    "runs/tetris/pixel_novelty_seed1",
+    "runs/tetris/pixel_novelty_seed2"
+  ],
+  "updated_at": "2026-11-23T18:39:21.560801+00:00",
+  "total_new_training_steps": 131072,
+  "separate_smoke_training_steps": 16384
+}

@@ -1,6 +1,6 @@
 # Pixel-only exploration with on-policy PPO — controlled experiment
 
-Status: the component/integration correctness checks and matched CPU smoke gates passed. `train_pixel_novelty.py` provides a separate reproducible runner; existing score-only trainers are unchanged. The frozen two-seed 64K pilot is the next experiment. The smoke found no original game rewards; no novelty scoring improvement is claimed here.
+Status: the component/integration correctness checks and matched CPU smoke gates passed, and the fixed two-seed 64K pilot is complete. Both novelty seeds found zero original training rewards and scored in 0/128 evaluation games, versus score-only controls 1/128 each and shared random 3/128. This adaptation failed the predeclared screen; no extension or unused-seed confirmation is justified. [Full results and actual-policy cards](runs/tetris/pixel_novelty_64k/RESULT.md).
 
 ## What the source review establishes
 

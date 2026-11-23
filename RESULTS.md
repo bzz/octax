@@ -120,4 +120,8 @@ Removing entropy regularization does not pass the two-seed scoring screen; usefu
 
 ## Pixel-novelty smoke update
 
-Matched, strictly on-policy pixel-novelty smoke runs passed correctness gates at 8,192 decisions each. Neither found original game rewards. Warmed throughput was 157.29 decisions/s with the bonus disabled and 73.88 enabled. This is implementation/runtime evidence, not evidence of better play. See the [smoke report and actual-policy card](runs/tetris/pixel_novelty_smoke/SMOKE_REPORT.md). A separate frozen two-seed 64K pilot is in progress; its scores are not yet available.
+Matched, strictly on-policy pixel-novelty smoke runs passed correctness gates at 8,192 decisions each. Neither found original game rewards. Warmed throughput was 157.29 decisions/s with the bonus disabled and 73.88 enabled. This is implementation/runtime evidence, not evidence of better play. See the [smoke report and actual-policy card](runs/tetris/pixel_novelty_smoke/SMOKE_REPORT.md). The completed two-seed pilot is summarized below.
+
+## Pixel-only novelty at 64K: failed scoring screen
+
+Fresh seeds 1 and 2 each received 65,536 strictly on-policy decisions. Both found zero original training rewards and scored 0/128, compared with score-only PPO 1/128 each, untrained networks 2/128 and 0/128, and shared random 3/128. Source/checkpoint/budget/control audits passed, but this method does not establish useful learning. Do not extend it or consume unused confirmation seeds. [Two-seed results, curves and actual-policy card](runs/tetris/pixel_novelty_64k/RESULT.md).

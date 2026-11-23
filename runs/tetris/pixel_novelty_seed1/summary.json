@@ -1,0 +1,31 @@
+{
+  "step": 65536,
+  "seed": 1,
+  "parameter_change_l2": 11.496059342526179,
+  "training_reward_events": 0,
+  "training_completed_games": 46,
+  "optimizer_updates": 2048,
+  "training_steps_per_second": 72.31394524527849,
+  "steady_training_steps_per_second": 72.36011767626425,
+  "collect_seconds": 27.543740459019318,
+  "update_seconds": 878.7268243360741,
+  "evaluation_decisions": 20950,
+  "normalization_warmup_decisions": 0,
+  "target_unchanged": true,
+  "final_evaluation": {
+    "mean_return": 0.0,
+    "scoring_fraction": 0.0,
+    "mean_length": 1321.625,
+    "terminated": 8,
+    "truncated": 0,
+    "action_distribution": [
+      0.22689870424666603,
+      0.28166083420032156,
+      0.14584318547242978,
+      0.14291118887732904,
+      0.20268608720325357
+    ],
+    "seconds": 7.152545958000701
+  },
+  "purpose": "discovery_pilot"
+}

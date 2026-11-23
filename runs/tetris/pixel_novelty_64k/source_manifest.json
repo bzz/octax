@@ -1,0 +1,12 @@
+{
+  "run_pixel_novelty.py": "ebbd6cfdc4d99f77ee0b806a8e1970eb5f65ca7fe7c8debcee79b337d432c446",
+  "train_pixel_novelty.py": "1b21a0688b5ffaf4ca8d3b93d29695a2d1bc56285e8c3b2c220d2c1531b2bf15",
+  "on_policy_novelty.py": "86f659ad871923b20989f99f7a0e8b7a3208a47f0fc3f4881acf221312555bc7",
+  "pixel_novelty.py": "b627490caa12e87b8e22a1a3b0e56d9dc2d53f8d5762c3e9813521832ca1ae47",
+  "PIXEL_EXPLORATION_PROPOSAL.md": "e06046672e0913486e66c3d88548a24b631d2e8d67413119affffcaba9255685",
+  "evaluate_checkpoint.py": "98a9657a44778100fce240550e9d4d873324e8cfa19706ba754fa1315851348b",
+  "visualize_run.py": "86063a73d7e03dcc594bcb28d58a76c5a01e1af1e017cb9fce50423e2265286e",
+  "summarize_pixel_novelty.py": "def3b1be6db0709609424ab645e92b43fd99c9bdde4514975e2e021b9a48d9a4",
+  "summarize_pixel_novelty_smoke.py": "c3d47b1a50d0060cfac56168d415c6df929032d26fbbb178514f7466e08ffc0a",
+  "round_card.py": "2396fdd9352ec3c5a644ff586795a84ebbe016a2b6ddd9dfd45c607fd637be03"
+}

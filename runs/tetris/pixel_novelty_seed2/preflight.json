@@ -1,0 +1,39 @@
+{
+  "initial_parameter_sha256": "7dff1a49f8d458d1ac3f97dbdb193ac540557fa44985772259fcc6f1d025d728",
+  "target_sha256": "6baa2aee6e387a432021e729dc3176a546e18623c207c6bf4f6785af3162f749",
+  "matched_control": "runs/tetris/v2_credit_horizon_seed2",
+  "training_decisions": 65536,
+  "normalization_warmup_decisions": 0,
+  "expected_optimizer_updates": 2048,
+  "control_config_sha256": "913748186c4db833598aace030ce46866d822e3079ec3e7525ae472a9b7cf4f9",
+  "unchanged_environment_and_base_ppo_sources": true,
+  "config_differences": {
+    "method": [
+      null,
+      "online_pixel_novelty"
+    ],
+    "purpose": [
+      null,
+      "discovery_pilot"
+    ],
+    "normalization_warmup_decisions": [
+      null,
+      0
+    ],
+    "run_dir": [
+      "runs/tetris/v2_credit_horizon_seed2",
+      "runs/tetris/pixel_novelty_seed2"
+    ],
+    "novelty": [
+      null,
+      {
+        "coefficient": 0.01,
+        "learning_rate": 0.0001,
+        "gamma": 0.99,
+        "variance_floor": 0.0001,
+        "features": 128,
+        "intrinsic_value_coefficient": 0.5
+      }
+    ]
+  }
+}
