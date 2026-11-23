@@ -5,7 +5,11 @@ import json
 from pathlib import Path
 import shutil
 
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
 import numpy as np
+import seaborn as sns
 from omegaconf import OmegaConf
 
 from round_card import write_round_card
@@ -56,6 +60,33 @@ def combine_training(parent, child):
         final_action_distribution=[float(rows[-1][f'action_{i}_fraction']) for i in range(5)])
 
 
+def plot_cumulative(records):
+    """Show the entire training budget, including both 64K parents."""
+    sns.set_theme(style='whitegrid')
+    colors = sns.color_palette('cubehelix', 3)[::2]
+    fig, axes = plt.subplots(2, 2, figsize=(10, 7), constrained_layout=True)
+    for color, (arm, parent_name, output, _, _) in zip(colors, ARMS):
+        rows = read_rows(ROOT/'runs/tetris'/parent_name) + read_rows(ROOT/'runs/tetris'/output)
+        with (SERIES/f'combined_{arm}_metrics.csv').open('w', newline='') as stream:
+            writer = csv.DictWriter(stream, fieldnames=list(rows[0])); writer.writeheader(); writer.writerows(rows)
+        steps = np.array([int(r['step']) for r in rows])
+        axes[0, 0].step(steps, np.cumsum([int(r['positive_reward_steps']) for r in rows]), where='post', color=color, label=arm)
+        dev = records[arm]['cumulative_development_evaluations']
+        axes[0, 1].plot([e['step'] for e in dev], [e['summary']['mean_return'] for e in dev], 'o-', color=color, label=arm)
+        axes[1, 0].plot(steps, [float(r['entropy']) for r in rows], color=color, label=arm)
+        axes[1, 1].step(steps, np.cumsum([int(r.get('sil_updates_applied', 0)) for r in rows]), where='post', color=color, label=arm)
+    titles = ['Cumulative training reward events', 'Development mean score · same 8 games',
+              'Policy entropy · 0 to log(5)', 'Cumulative auxiliary replay updates']
+    for ax, title in zip(axes.flat, titles):
+        ax.set_title(title, fontsize=11); ax.set_xlabel('Environment decisions')
+        ax.axvline(65536, color='gray', ls=':', lw=1); ax.set_xlim(0, TARGET); ax.set_ylim(bottom=0)
+        ax.ticklabel_format(axis='x', style='sci', scilimits=(0, 0))
+    axes[1, 0].set_ylim(0, np.log(5)*1.02)
+    axes[0, 0].legend()
+    fig.suptitle('Seed 1 · full parent + continuation history (dotted line: resume)', fontsize=13)
+    fig.savefig(SERIES/'learning_curves.png', dpi=150); plt.close(fig)
+
+
 def main():
     status = load(SERIES/'run_status.json')
     assert status['phase'] == 'complete' and status['total_new_training_steps'] == 917504
@@ -101,7 +132,8 @@ def main():
                        [('parent_64k', prior['policy']), ('untrained', initial['policy']), ('random', controls['random'])]}
         records[arm] = dict(training=training, final=policy, parent_64k=prior['policy'],
             scoring_games=sum(x > 0 for x in policy['episodes']['returns']),
-            paired_comparisons=comparisons, development_evaluations=dev)
+            paired_comparisons=comparisons, development_evaluations=dev,
+            cumulative_development_evaluations=old_dev[:-1]+dev)
     candidates = [arm for arm, r in records.items()
                   if all(r['paired_comparisons'][name]['mean_return_difference'] > 0 for name in ['random', 'untrained'])]
     conclusion = ('At least one policy exceeds random and its untrained network on the exploratory bank; freeze it and evaluate unused seeds before claiming learning.'
@@ -115,6 +147,7 @@ def main():
                                  'Replay adds optimization compute; environment decisions are matched.',
                                  'Development games are repeated monitoring data, not fresh confirmation.'])
     (SERIES/'analysis.json').write_text(json.dumps(analysis, indent=2)+'\n')
+    plot_cumulative(records)
     table = '\n'.join(f"| {arm} | {r['training']['reward_events']} ({r['training']['added_reward_events']} added) | {r['scoring_games']}/128 | {r['final']['summary']['mean_return']:.5f} | {r['training']['auxiliary_updates']} |" for arm, r in records.items())
     random_count = sum(x > 0 for x in controls['random']['episodes']['returns'])
     initial_count = sum(x > 0 for x in initial['policy']['episodes']['returns'])
@@ -133,6 +166,10 @@ Both seed-1 arms resume their full 65,536-step states to {TARGET:,} total decisi
 {table}
 
 The exact untrained seed-1 network scored {initial_count}/128; the shared random control scored {random_count}/128. The corresponding 64K parents scored 1/128 for PPO and 0/128 for replay. Final evaluation uses the previously inspected seeds 50000–50127; paired comparisons and complete episode arrays are in `analysis.json`. These small counts on reused games cannot establish statistically convincing improvement. A candidate must be frozen and tested on unused seeds before a learning claim, with independent training-seed replication required for a dependable setup.
+
+![Full learning history](learning_curves.png)
+
+The curves include both parent and continuation. Their eight-game development scores are repeated monitoring measurements, separate from the final 128-game comparison. Combined raw metrics are exported beside the figure.
 
 ## Integrity and interpretation
 
