@@ -115,3 +115,19 @@ Each completed investigation should include its fixed-budget run, matched contro
 `round_card.write_round_card` exports a 440×265 policy GIF and a self-contained HTML card from the raw saved trajectory. Include links to the full result, implementation log, changed settings and code diff. Display the GIF directly in chat alongside the essential numbers and links. No website deployment or generated game imagery is needed.
 
 For this round, `run_credit_ablation.py` performs fresh training, the 128-game evaluation on seeds 50000–50127, and rendering. It refuses to overwrite an existing run. After it finishes, `summarize_credit_ablation.py` verifies matched initial evaluation and repeated controls, writes the comparison/report/card and appends the implementation log. These final evaluation seeds are reused from the baseline, so the comparison is exploratory.
+
+## Three-seed 64K replication
+
+`run_replication_64k.py` runs baseline seed 1, longer-credit seed 1, baseline seed 2 and longer-credit seed 2 sequentially. Each starts fresh, uses exactly 65,536 decisions, and receives final 128-game evaluation and the same preselected gameplay seed. A source/ROM snapshot is frozen at launch, and the runner refuses duplicate output directories or source drift between runs. The aggregate status is `runs/tetris/v2_replication_64k/run_status.json`; the foreground job handle, rather than this historical status file alone, determines whether a job is live.
+
+`evaluate_initial_policy.py` reconstructs each seed's fresh network, verifies its stored initial development evaluation exactly, and evaluates it on the same 128-game bank. This provides a learning comparator in addition to uniform random. For example:
+
+```sh
+.venv/bin/python evaluate_initial_policy.py --run runs/tetris/v2_baseline_seed1 --out runs/tetris/v2_replication_64k/initial_seed1.json
+```
+
+After all four new runs and the three initial-policy comparisons finish, `summarize_replication_64k.py` checks configuration/control integrity, compares all six policies, and generates the investigation report, implementation-log entry and compact gameplay card. The card uses the longer-credit training seed 1 and gameplay seed 30016, selected before final outcomes.
+
+Do not interpret all policy/episode pairs as independent training replicates. There are three training seeds per arm and one shared 128-game uniform-random evaluation control. Report reward-event discovery and scores per training seed, plus gain over each seed's untrained network. The evaluation game seeds have already been inspected, so these comparisons are exploratory.
+
+The screening rule for further confirmation requires rewards in at least two of three training seeds, average final score above random and above initialization, and positive final-minus-initial score in at least two seeds. Passing this heuristic does not complete the learning goal. A passing configuration should be frozen and evaluated on a new 512-game bank starting at seed 60000 before a positive claim; if neither passes, investigate useful experience and exploration rather than treating more weight updates as success.

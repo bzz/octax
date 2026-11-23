@@ -1,4 +1,5 @@
 """Uniform-random control with the v2 learner's reset scheme and step budget."""
+import argparse
 import json
 import time
 from pathlib import Path
@@ -10,7 +11,10 @@ from octax.agents.ppo import PPOOctax
 from octax.wrappers import OctaxGymnaxWrapper
 from experiment_utils import environment_from_config, write_json
 
-run=Path('runs/tetris/v2_baseline_seed0')
+parser=argparse.ArgumentParser()
+parser.add_argument('--run',type=Path,default=Path('runs/tetris/v2_baseline_seed0'))
+args=parser.parse_args()
+run=args.run
 cfg=OmegaConf.to_container(OmegaConf.load(run/'config.yaml'))
 raw,_=environment_from_config(cfg);env=OctaxGymnaxWrapper(raw)
 agent=PPOOctax.create_agent({},env,env.default_params)
