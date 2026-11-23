@@ -1,0 +1,56 @@
+{
+  "conclusion": "Neither trained policy establishes a scoring gain with greedy inference. Pixel response remains present; a completely inactive network is not the explanation on this sample.",
+  "greedy_scoring_games": {
+    "untrained": 0,
+    "long_trace": 1,
+    "credit_control": 0
+  },
+  "paired_comparisons": {
+    "long_trace": {
+      "random": {
+        "ablation_only_scoring": 1,
+        "control_only_scoring": 3,
+        "exact_p": 0.625,
+        "mean_return_difference": -0.015625
+      },
+      "untrained_greedy": {
+        "ablation_only_scoring": 1,
+        "control_only_scoring": 0,
+        "exact_p": 1.0,
+        "mean_return_difference": 0.0078125
+      },
+      "own_stochastic": {
+        "ablation_only_scoring": 1,
+        "control_only_scoring": 2,
+        "exact_p": 1.0,
+        "mean_return_difference": -0.0078125
+      }
+    },
+    "credit_control": {
+      "random": {
+        "ablation_only_scoring": 0,
+        "control_only_scoring": 3,
+        "exact_p": 0.25,
+        "mean_return_difference": -0.0234375
+      },
+      "untrained_greedy": {
+        "ablation_only_scoring": 0,
+        "control_only_scoring": 0,
+        "exact_p": 1.0,
+        "mean_return_difference": 0.0
+      },
+      "own_stochastic": {
+        "ablation_only_scoring": 0,
+        "control_only_scoring": 1,
+        "exact_p": 1.0,
+        "mean_return_difference": -0.0078125
+      }
+    }
+  },
+  "candidates_for_confirmation": [],
+  "limitations": [
+    "Exploratory reused game bank, selected training seed, multiple unadjusted comparisons.",
+    "Inactive on this observation sample does not mean permanently dead; no universal representation claim.",
+    "Read-only diagnosis; no new optimizer steps, auxiliary rewards or training policy."
+  ]
+}

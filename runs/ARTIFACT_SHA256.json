@@ -303,6 +303,134 @@
     "sha256": "74675cb43c5a102a26b27170d91bbb63100ceeaab0d8bd3542cc1a93919824bf",
     "bytes": 4955
   },
+  "tetris/pixel_response_diagnostic/RESULT.md": {
+    "sha256": "ea8fe22ee72722a6cef9ca31a6e00d05bb5419f4fe6e0dc9e9310f83ca94f573",
+    "bytes": 3070
+  },
+  "tetris/pixel_response_diagnostic/analysis.json": {
+    "sha256": "8835c7c1010016008a9c780a7bc1ac4852cb38ab06123d9b640bde2fd862a84a",
+    "bytes": 8664
+  },
+  "tetris/pixel_response_diagnostic/comparison.json": {
+    "sha256": "d1df5252781bb1e4dcb05a4df03720fb69f52a27f45d17368c17ffb1494512b5",
+    "bytes": 1766
+  },
+  "tetris/pixel_response_diagnostic/greedy.json": {
+    "sha256": "607abd968cdf2ee80fc3a6a7e9a3864977b550762575480dd434a53989694f22",
+    "bytes": 73631
+  },
+  "tetris/pixel_response_diagnostic/observations.npz": {
+    "sha256": "8b5dac7e4fb948d64ca4e9869b8e4c81e009ac7c6407e4a3b2f0fde3923c1dfa",
+    "bytes": 25488
+  },
+  "tetris/pixel_response_diagnostic/policy_card.gif": {
+    "sha256": "25a5c707f8cc2f8183a3acd332d0d5cdef4ce814385e98c6e683a82606e26b75",
+    "bytes": 154805
+  },
+  "tetris/pixel_response_diagnostic/policy_card.png": {
+    "sha256": "c6d2f88119da07f56bf478f44657ad916ecc74cf87e9dc35e601188e8199cda7",
+    "bytes": 4039
+  },
+  "tetris/pixel_response_diagnostic/result_card.html": {
+    "sha256": "150bbb792c6de6f35a6d3cf6d50aa7cf8a2b1f1c9d2e36224e87b8006a37972b",
+    "bytes": 208016
+  },
+  "tetris/pixel_response_diagnostic/source_manifest.json": {
+    "sha256": "56bd3fc6585287c2f5350ce876b2315b507a886a89d1048430957975711e7478",
+    "bytes": 2097
+  },
+  "tetris/pixel_response_diagnostic/source_snapshot/ON_POLICY_CREDIT.md": {
+    "sha256": "b169c465684359d08eb1c820ee9d0c226594a6577e0e53c8b1cf8e97b93fa360",
+    "bytes": 3992
+  },
+  "tetris/pixel_response_diagnostic/source_snapshot/conf/config.yaml": {
+    "sha256": "34244e3f6a1a9ed5fd7a95c7df9608d8452d6368ae753785c7a75327314e565f",
+    "bytes": 575
+  },
+  "tetris/pixel_response_diagnostic/source_snapshot/conf/credit_horizon.yaml": {
+    "sha256": "39db8bd05241cccac37e55e12ff2a2c996ae7ab1985c807ceda0f772ec33bb72",
+    "bytes": 218
+  },
+  "tetris/pixel_response_diagnostic/source_snapshot/conf/long_trace.yaml": {
+    "sha256": "a67208b6ea7e32b3ec163d1b48e04dcc6fb86cebf13738b7a3d10c828fdd5ce9",
+    "bytes": 248
+  },
+  "tetris/pixel_response_diagnostic/source_snapshot/diagnose_pixel_response.py": {
+    "sha256": "83a7ef6ba503dbe1d996d6124009b1d2c755a09f9b9cc642c6592824e5263613",
+    "bytes": 6702
+  },
+  "tetris/pixel_response_diagnostic/source_snapshot/evaluate_checkpoint.py": {
+    "sha256": "98a9657a44778100fce240550e9d4d873324e8cfa19706ba754fa1315851348b",
+    "bytes": 1334
+  },
+  "tetris/pixel_response_diagnostic/source_snapshot/evaluate_greedy_diagnostic.py": {
+    "sha256": "84c577cb8bc14ce400f86620e37de510edf47675114dbcc2129f18f45d968625",
+    "bytes": 3383
+  },
+  "tetris/pixel_response_diagnostic/source_snapshot/evaluate_initial_policy.py": {
+    "sha256": "68a2f4189bf60e99b4334ee6f7acf32542a3f379e7efd3b578c825e3e765a447",
+    "bytes": 2724
+  },
+  "tetris/pixel_response_diagnostic/source_snapshot/experiment_utils.py": {
+    "sha256": "56acd748517c545f735536729044a77d2c85671a47c1cb7fa6b9ab90321daaa7",
+    "bytes": 4809
+  },
+  "tetris/pixel_response_diagnostic/source_snapshot/octax/agents/ppo.py": {
+    "sha256": "87dceaf2a5c0a8679939b84c306bfaa571ae5bd28e044f4c252d1f3621442364",
+    "bytes": 10291
+  },
+  "tetris/pixel_response_diagnostic/source_snapshot/octax/checkpoints.py": {
+    "sha256": "230af35150c1a85532b758fbb6be0514014c77863fea3e247c9faa548b3ac021",
+    "bytes": 742
+  },
+  "tetris/pixel_response_diagnostic/source_snapshot/octax/env.py": {
+    "sha256": "30a80cb6290c7bfba3cfe8bf816bf77740d342e0d958a1784628e9126b947a06",
+    "bytes": 12086
+  },
+  "tetris/pixel_response_diagnostic/source_snapshot/octax/wrappers.py": {
+    "sha256": "cd46727e367b182873625bf33e89f1afc0488b03c67df48b945640b208ed9a23",
+    "bytes": 2629
+  },
+  "tetris/pixel_response_diagnostic/source_snapshot/requirements-macos.lock.txt": {
+    "sha256": "800cdcebc24c1f47821afe963d23e53f57de4123d4bc4a1b2a1167676fcb26c4",
+    "bytes": 1786
+  },
+  "tetris/pixel_response_diagnostic/source_snapshot/roms/Tetris [Fran Dachille, 1991].ch8": {
+    "sha256": "667cb026dee03f59f3a2fd81a2ffeab47da87731883f9601d37ba019976f94dd",
+    "bytes": 494
+  },
+  "tetris/pixel_response_diagnostic/source_snapshot/round_card.py": {
+    "sha256": "2396fdd9352ec3c5a644ff586795a84ebbe016a2b6ddd9dfd45c607fd637be03",
+    "bytes": 3290
+  },
+  "tetris/pixel_response_diagnostic/source_snapshot/run_long_trace.py": {
+    "sha256": "464bb3d0849df8defbc7db3d06ab4ed0914286d670f5e47942259662823afacb",
+    "bytes": 4349
+  },
+  "tetris/pixel_response_diagnostic/source_snapshot/summarize_credit_ablation.py": {
+    "sha256": "514cef9c7ca15886c3237e0a330cf72460d8c7e742a4b10a856eeedb87b4d47d",
+    "bytes": 14358
+  },
+  "tetris/pixel_response_diagnostic/source_snapshot/summarize_pixel_response.py": {
+    "sha256": "cbdb3b09a37fd7755658586e2b7fe1159667df601e6ef495d5e54c8d9d41aed7",
+    "bytes": 8838
+  },
+  "tetris/pixel_response_diagnostic/source_snapshot/summarize_v2_baseline.py": {
+    "sha256": "5b982afc74e19d78e11676a09bc5e75fa42f172d6a7651130e8bd5c833b6021c",
+    "bytes": 9577
+  },
+  "tetris/pixel_response_diagnostic/source_snapshot/train.py": {
+    "sha256": "154038c70ae5c6a9da14c2ef5dcad7e3a76bbbbbcdbcb40b0accf375f5e8c32c",
+    "bytes": 9079
+  },
+  "tetris/pixel_response_diagnostic/source_snapshot/visualize_run.py": {
+    "sha256": "86063a73d7e03dcc594bcb28d58a76c5a01e1af1e017cb9fce50423e2265286e",
+    "bytes": 8070
+  },
+  "tetris/pixel_response_diagnostic/visualizations/policy_trajectory.npz": {
+    "sha256": "d1d1479609d07e2d9b8afd3ae7a86bb32ad7b119518c99e56d31619bbcaa3b48",
+    "bytes": 3919
+  },
   "tetris/ppo_seed0_smoke/checkpoint.msgpack": {
     "sha256": "55fcd211cfb90616d4500dc9374f65c765f47679cea07281a8b6a2a571f36a12",
     "bytes": 26310430

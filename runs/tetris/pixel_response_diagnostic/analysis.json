@@ -1,0 +1,282 @@
+{
+  "collection": "First 128 per-environment decisions from the frozen long-trace final checkpoint, without updates.",
+  "executed_diagnostic_decisions": 2048,
+  "overlap": "These repeat the first 2048 decisions of the preceding 16384-decision gradient diagnostic; they are not new independent trajectories.",
+  "positive_rewards": 0,
+  "observation_sha256": "1509dc668d4d76bd94f1b3bd6ef82480069ba3e435342dbc72c85ceef9056ed3",
+  "unique_pixel_stacks": 1164,
+  "checkpoint_sha256": {
+    "long_trace": "2ff817def71f77b01782e923a42f50967f2cbe34f467c600736c71f2a3fe16ad",
+    "credit_control": "8b4cb88a0cb13034a823dddc8b2999f12d1b92d85edd0b7334ed2c1108d53996"
+  },
+  "initial_parameter_sha256": "40aa44888c5cbbc5fd5af4de05272fa2ed082881a46972df2b984c86bc97d552",
+  "results": {
+    "untrained": {
+      "layers": {
+        "actor_hidden": {
+          "shape": [
+            256
+          ],
+          "zero_fraction": 0.5068950653076172,
+          "channels_never_positive": 28,
+          "channels": 256,
+          "mean_observation_std": 0.017777591943740845,
+          "max_abs": 0.3903771638870239
+        },
+        "conv1": {
+          "shape": [
+            8,
+            32,
+            32
+          ],
+          "zero_fraction": 0.904839277267456,
+          "channels_never_positive": 0,
+          "channels": 32,
+          "mean_observation_std": 0.023966766893863678,
+          "max_abs": 2.2292604446411133
+        },
+        "conv2": {
+          "shape": [
+            4,
+            16,
+            64
+          ],
+          "zero_fraction": 0.8042148351669312,
+          "channels_never_positive": 0,
+          "channels": 64,
+          "mean_observation_std": 0.017997469753026962,
+          "max_abs": 1.6553447246551514
+        },
+        "conv3": {
+          "shape": [
+            4,
+            16,
+            64
+          ],
+          "zero_fraction": 0.7163316011428833,
+          "channels_never_positive": 0,
+          "channels": 64,
+          "mean_observation_std": 0.014967169612646103,
+          "max_abs": 0.9951952695846558
+        },
+        "encoder": {
+          "shape": [
+            4096
+          ],
+          "zero_fraction": 0.7163316011428833,
+          "channels_never_positive": 2370,
+          "channels": 4096,
+          "mean_observation_std": 0.014967169612646103,
+          "max_abs": 0.9951952695846558
+        }
+      },
+      "mean_action_probabilities": [
+        0.1961824744939804,
+        0.20066417753696442,
+        0.19850553572177887,
+        0.1921328753232956,
+        0.2125146985054016
+      ],
+      "action_probability_std": [
+        0.0035022199153900146,
+        0.003134532365947962,
+        0.004434181377291679,
+        0.005423243157565594,
+        0.0038143801502883434
+      ],
+      "action_probability_ranges": [
+        0.018899843096733093,
+        0.01821422576904297,
+        0.02143263816833496,
+        0.025240421295166016,
+        0.02003471553325653
+      ],
+      "mean_entropy": 1.6086381673812866,
+      "mean_kl_to_uniform": 0.0007997450528136607,
+      "mean_kl_to_mean_policy": 0.00021612450655084103,
+      "value_mean": 0.0,
+      "value_std": 0.0,
+      "instrumented_probabilities_and_values_match_actual_network": true
+    },
+    "long_trace": {
+      "layers": {
+        "actor_hidden": {
+          "shape": [
+            256
+          ],
+          "zero_fraction": 0.9390316009521484,
+          "channels_never_positive": 171,
+          "channels": 256,
+          "mean_observation_std": 0.004454966634511948,
+          "max_abs": 0.508800208568573
+        },
+        "conv1": {
+          "shape": [
+            8,
+            32,
+            32
+          ],
+          "zero_fraction": 0.6694462895393372,
+          "channels_never_positive": 0,
+          "channels": 32,
+          "mean_observation_std": 0.014366676099598408,
+          "max_abs": 2.534688949584961
+        },
+        "conv2": {
+          "shape": [
+            4,
+            16,
+            64
+          ],
+          "zero_fraction": 0.8797352313995361,
+          "channels_never_positive": 0,
+          "channels": 64,
+          "mean_observation_std": 0.012141376733779907,
+          "max_abs": 1.5109418630599976
+        },
+        "conv3": {
+          "shape": [
+            4,
+            16,
+            64
+          ],
+          "zero_fraction": 0.9659842252731323,
+          "channels_never_positive": 0,
+          "channels": 64,
+          "mean_observation_std": 0.0037429346702992916,
+          "max_abs": 0.6299870014190674
+        },
+        "encoder": {
+          "shape": [
+            4096
+          ],
+          "zero_fraction": 0.9659842252731323,
+          "channels_never_positive": 2999,
+          "channels": 4096,
+          "mean_observation_std": 0.0037429346702992916,
+          "max_abs": 0.6299870014190674
+        }
+      },
+      "mean_action_probabilities": [
+        0.1990968883037567,
+        0.19893909990787506,
+        0.20082683861255646,
+        0.20005424320697784,
+        0.2010837197303772
+      ],
+      "action_probability_std": [
+        0.0046570817939937115,
+        0.0035650813952088356,
+        0.004558599088340998,
+        0.0039698779582977295,
+        0.005940434988588095
+      ],
+      "action_probability_ranges": [
+        0.039675116539001465,
+        0.033322036266326904,
+        0.05047591030597687,
+        0.04361206293106079,
+        0.06275559961795807
+      ],
+      "mean_entropy": 1.6091632843017578,
+      "mean_kl_to_uniform": 0.0002746281323424693,
+      "mean_kl_to_mean_policy": 0.0002643227344378829,
+      "value_mean": 3.6350211303215474e-05,
+      "value_std": 6.417477379727643e-06,
+      "instrumented_probabilities_and_values_match_actual_network": true
+    },
+    "credit_control": {
+      "layers": {
+        "actor_hidden": {
+          "shape": [
+            256
+          ],
+          "zero_fraction": 0.8637371063232422,
+          "channels_never_positive": 110,
+          "channels": 256,
+          "mean_observation_std": 0.019769608974456787,
+          "max_abs": 0.8757213950157166
+        },
+        "conv1": {
+          "shape": [
+            8,
+            32,
+            32
+          ],
+          "zero_fraction": 0.7076229453086853,
+          "channels_never_positive": 0,
+          "channels": 32,
+          "mean_observation_std": 0.01205483265221119,
+          "max_abs": 2.234652519226074
+        },
+        "conv2": {
+          "shape": [
+            4,
+            16,
+            64
+          ],
+          "zero_fraction": 0.8231101036071777,
+          "channels_never_positive": 0,
+          "channels": 64,
+          "mean_observation_std": 0.01622210070490837,
+          "max_abs": 1.253957986831665
+        },
+        "conv3": {
+          "shape": [
+            4,
+            16,
+            64
+          ],
+          "zero_fraction": 0.9271053075790405,
+          "channels_never_positive": 0,
+          "channels": 64,
+          "mean_observation_std": 0.008648104965686798,
+          "max_abs": 1.0416673421859741
+        },
+        "encoder": {
+          "shape": [
+            4096
+          ],
+          "zero_fraction": 0.9271053075790405,
+          "channels_never_positive": 2544,
+          "channels": 4096,
+          "mean_observation_std": 0.008648104965686798,
+          "max_abs": 1.0416673421859741
+        }
+      },
+      "mean_action_probabilities": [
+        0.19629380106925964,
+        0.20823566615581512,
+        0.18640440702438354,
+        0.2037915289402008,
+        0.20527499914169312
+      ],
+      "action_probability_std": [
+        0.02114190347492695,
+        0.019850220531225204,
+        0.02401481382548809,
+        0.025891661643981934,
+        0.020428599789738655
+      ],
+      "action_probability_ranges": [
+        0.1730133295059204,
+        0.13200603425502777,
+        0.24597664177417755,
+        0.22824028134346008,
+        0.1775381863117218
+      ],
+      "mean_entropy": 1.6024142503738403,
+      "mean_kl_to_uniform": 0.00702366206025995,
+      "mean_kl_to_mean_policy": 0.0062438421882689,
+      "value_mean": -6.106556975282729e-05,
+      "value_std": 0.00016056686581578106,
+      "instrumented_probabilities_and_values_match_actual_network": true
+    }
+  },
+  "limitations": [
+    "One rollout distribution from one final policy; not a universal test of representation quality.",
+    "Activation and input-response measurements cannot establish learned game skill or explain causality.",
+    "The same observed pixels are supplied to all three networks; controls do not collect separate trajectories.",
+    "No weights are updated, saved or used to start training; no board features or game-state registers enter inference."
+  ]
+}

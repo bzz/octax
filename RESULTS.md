@@ -109,3 +109,7 @@ The on-policy PPO arm does not exceed both random and its untrained network; the
 ## Strictly on-policy long-trace PPO at 512K
 
 The long-trace policy does not exceed both random and its initialization; useful on-policy learning remains unestablished. See [results and actual-policy animation](runs/tetris/v2_long_trace_512k_seed1/RESULT.md).
+
+## Pixel response and greedy inference
+
+The trained networks remain responsive to pixels, but greedy inference does not establish a scoring gain. Long trace scores 1/128, prior PPO 0/128 and the initial network 0/128, versus random 3/128. These are frozen-policy diagnostics, with no added training updates. [Evidence and greedy-policy animation](runs/tetris/pixel_response_diagnostic/RESULT.md).
