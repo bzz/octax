@@ -31,3 +31,6 @@ See [EXPERIMENT.md](../EXPERIMENT.md) for commands and [FORK_CHANGELOG.md](../FO
 [Pixel-novelty CPU smoke](tetris/pixel_novelty_smoke/SMOKE_REPORT.md): strictly current-rollout PPO, matched coefficient-zero/enabled seed-101 runs at 8,192 decisions each. Correctness gates passed; neither found original game rewards. Includes full and inference-only checkpoints, frozen source snapshots, runtime measurements and an actual-policy animation. This is smoke evidence, not a learning result.
 
 [Two-seed pixel-novelty pilot at 64K](tetris/pixel_novelty_64k/RESULT.md): fresh on-policy seeds 1 and 2, each 65,536 decisions. Both scored 0/128 versus random 3/128 and found no original training rewards. Full/inference checkpoints, frozen sources, separate smoke accounting, source/control audits, curves and actual-policy cards are included. This version failed the exploratory screen; the reserved confirmation bank remains unused.
+
+
+[Independent cloning / PPO handoff](tetris/human_bc_seed1/RESULT.md): fixed human-prefix data and validation, offline checkpoint and weights-only artifact, actor-only original-score evaluation, two separate fresh PPO smokes, read-only confusion/retention audit and actual-policy card. The clone scores 0/128 versus random 3/128; no full 64K curriculum run or useful learning is claimed.

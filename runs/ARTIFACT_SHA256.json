@@ -1,7 +1,7 @@
 {
   "README.md": {
-    "sha256": "e13a6aa624d13806dc9b28bebb0e70021f14f979e9a960a78b89321a5a6e8b1d",
-    "bytes": 4420
+    "sha256": "95d56c62b2939a2815223b037dfc711d9c8374eb2c0c5e8434321a9b1ab98cf6",
+    "bytes": 4809
   },
   "tetris/continued_seed0/checkpoint.msgpack": {
     "sha256": "42dfa42cf14c222155882f016a7b85caaa3d1aa6496af35adfd663043d8e45f3",
@@ -198,6 +198,890 @@
   "tetris/entropy_diagnostic/visualizations/policy_trajectory.npz": {
     "sha256": "703b069c059d49c6d326cb10e3dcc3efc6a4b1de487ef5acde67089e230c084a",
     "bytes": 4021
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/checkpoint.msgpack": {
+    "sha256": "46e220af23c5274435867e876f30cd0b5e591d1f9ae70daf4755122dfd3bbf8e",
+    "bytes": 26310729
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/config.yaml": {
+    "sha256": "bfd78ed85700f7d0c6fbb39d3802e8b01786c8e2892926444f8782fb999bfb15",
+    "bytes": 669
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/eval.gif": {
+    "sha256": "b95ca7ed59b520163796d82cd59d73715283da43623b3afa3ae5ed51ddd83d44",
+    "bytes": 18533
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/eval_000000000.gif": {
+    "sha256": "b95ca7ed59b520163796d82cd59d73715283da43623b3afa3ae5ed51ddd83d44",
+    "bytes": 18533
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/eval_000002048.gif": {
+    "sha256": "b95ca7ed59b520163796d82cd59d73715283da43623b3afa3ae5ed51ddd83d44",
+    "bytes": 18533
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/evaluation.json": {
+    "sha256": "fdeae1045d42321ceb1da7ed5eeb30b22bd9d6821e0c350c9cc37abc300039c3",
+    "bytes": 1925
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/initialization.json": {
+    "sha256": "64dfb3a0326c0e7627900266ddcf4d3000547684e6e25d14dd902464e97c7bb5",
+    "bytes": 405
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/initialization_weights.msgpack": {
+    "sha256": "7ed538c10391ea75b02ea6a2c76262e39775f335ac9b06a243e2b9474eb03edc",
+    "bytes": 4496640
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/metrics.csv": {
+    "sha256": "aae359fb7f531705826f6ed3fdf39d2561603cf4c5c2499d09f95dc5127dcbc1",
+    "bytes": 503
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/run_status.json": {
+    "sha256": "298928c591fff88c9b8c031d77f2377b8ce12c3d1142e7704015531f522ca031",
+    "bytes": 110
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_manifest.json": {
+    "sha256": "2523a48ef14b1954a51140980b124b455d43a87c9bc97f6722ecfa8d3d4da988",
+    "bytes": 5146
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/evaluate_checkpoint.py": {
+    "sha256": "98a9657a44778100fce240550e9d4d873324e8cfa19706ba754fa1315851348b",
+    "bytes": 1334
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/experiment_utils.py": {
+    "sha256": "56acd748517c545f735536729044a77d2c85671a47c1cb7fa6b9ab90321daaa7",
+    "bytes": 4809
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/__init__.py": {
+    "sha256": "bfb440ef4fcfd09a8d680c3f05eb8e9f16c6b1770e2dadb66835350a88925dc0",
+    "bytes": 597
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/agents/__init__.py": {
+    "sha256": "533188ba1365fd79ade62cd18c097f8b6fc19b28a36223de0b8bff2bf87dd1bf",
+    "bytes": 75
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/agents/ppo.py": {
+    "sha256": "87dceaf2a5c0a8679939b84c306bfaa571ae5bd28e044f4c252d1f3621442364",
+    "bytes": 10291
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/agents/pqn.py": {
+    "sha256": "784d0d13507e642e681ab5d426226bccf263fdefe5161bf489be79642190e149",
+    "bytes": 6814
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/checkpoints.py": {
+    "sha256": "230af35150c1a85532b758fbb6be0514014c77863fea3e247c9faa548b3ac021",
+    "bytes": 742
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/constants.py": {
+    "sha256": "5b35f9547ed79c5d6075c4b80bf066538646c1d2a47ecea1f3c429c2ad793535",
+    "bytes": 1192
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/decode.py": {
+    "sha256": "bfd5179fe2518389eb50a8737806ce73eb023b74448d17a1e3e084aa53122de5",
+    "bytes": 858
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/emulator.py": {
+    "sha256": "8f59c32911753c8a0e7a98d906681138e5b25c3c3153b7eed2fd4e67d4b80d2f",
+    "bytes": 2770
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/env.py": {
+    "sha256": "30a80cb6290c7bfba3cfe8bf816bf77740d342e0d958a1784628e9126b947a06",
+    "bytes": 12086
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/environments/__init__.py": {
+    "sha256": "e99273b4fe229184d93ba0d2f2c44fa2e5d89f3ca4011f6ea10e6b171e6b856d",
+    "bytes": 4558
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/environments/airplane.py": {
+    "sha256": "2712ef1ba5500737eeea236186bd6a00430a89dba37cdc339d62273bc61b0c1c",
+    "bytes": 730
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/environments/blinky.py": {
+    "sha256": "8d9c34bd8946d7047b85889285112f39ea38342c06609ad7eeacc2c3f2993ac2",
+    "bytes": 2463
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/environments/brix.py": {
+    "sha256": "0335febd2973d88edd9ce5c3617acdb2b797f6cdb637a5dee2d59381239df727",
+    "bytes": 1182
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/environments/cavern.py": {
+    "sha256": "b21be152432a31e9f19b69fffcb2963b05adf210903779db9e3f8fbff445e95c",
+    "bytes": 2223
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/environments/deep.py": {
+    "sha256": "ad55daffc2c7f8d019969ccbb1950112454ceb4aa14c518d48c85516d5b9fae9",
+    "bytes": 1153
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/environments/filter.py": {
+    "sha256": "a84bb0fcec1e2b6933686b1c2f7bf9f7b08236b15f48f0300b1cea7c3c5fcb80",
+    "bytes": 527
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/environments/flight_runner.py": {
+    "sha256": "de92269e8c7dc8d1480f25f7b072ab0e735eaa4de3967f4d5eba5699be38082b",
+    "bytes": 881
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/environments/missile.py": {
+    "sha256": "24a08af72ef18e0fe8e68f1a9e54128b76c4acc49fa783abfa3dbfbd98027337",
+    "bytes": 982
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/environments/pong.py": {
+    "sha256": "5dfbb1a064cc09d1aae09b6ac7b6e3ea0f14179b803541ce9f04b3f2373cb7af",
+    "bytes": 666
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/environments/rocket.py": {
+    "sha256": "4861cb029cdbfd5c8352850f6c79f78ca9301b751680511223b214c974a3c40b",
+    "bytes": 1432
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/environments/shooting_stars.py": {
+    "sha256": "b40010c2d1804ef275d4b45f706570a7f57f5c713669c24374aa04f592dbd062",
+    "bytes": 734
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/environments/space_flight.py": {
+    "sha256": "84ddbc713f026007ee0321f089c932c7f8be4e5ad816f98f9aa98916aa41fad0",
+    "bytes": 1192
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/environments/spacejam.py": {
+    "sha256": "9968c22e13d7cd3b96226a20ce574f7d8f75ad4ad74c6da150d4ab9e1b76e583",
+    "bytes": 915
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/environments/squash.py": {
+    "sha256": "5adc877fb2a799ccdbd49f028f487def0103d212fbb2f7762599dc874880236e",
+    "bytes": 713
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/environments/submarine.py": {
+    "sha256": "b44910abce81c25a390e4fccd8f419595aac6856e77ebe86ee2e3f3c9b040056",
+    "bytes": 776
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/environments/tank.py": {
+    "sha256": "baf1ffd3f3d62e92e16f692bb8b1073b2478324ddccb863bdbdf4cd750af8421",
+    "bytes": 799
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/environments/target_shooter.py": {
+    "sha256": "408ff26f80637bc71d50289f6be79391fdc76e125e05812203131166791374d2",
+    "bytes": 5501
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/environments/tetris.py": {
+    "sha256": "5164f0875acfa9a1e80224f7d2b56969fa67f4543f56657ec16e6faab3657adb",
+    "bytes": 2182
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/environments/ufo.py": {
+    "sha256": "981c6dde8e7f47cb82cc4e8edd953014e2d3f67da67f3077f4a2732d51e1c6cc",
+    "bytes": 1753
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/environments/vertical_brix.py": {
+    "sha256": "66328220611281cfba1b84008bdd3ca125d777b448c684121a8df5c003e6aeb7",
+    "bytes": 1121
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/environments/wipe_off.py": {
+    "sha256": "898be810e8d3f4bb07e52f4c51f71ee342cced7a92c7bdd26817dcb6456253ae",
+    "bytes": 1071
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/environments/worm.py": {
+    "sha256": "e22829e37a0ee082a5c645fd8d96c49bc6d4f6c587533079df786bdd0e495def",
+    "bytes": 2781
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/instructions/__init__.py": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/instructions/alu.py": {
+    "sha256": "c4f0505c190f1421f13ec1de4149700bca0f1ad19e0f2b7d3f2062f8e37472e8",
+    "bytes": 3230
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/instructions/control_flow.py": {
+    "sha256": "9ae00b24347aa673231360f15e0fd9f0ffe016704057a372c4f228562a77f0a2",
+    "bytes": 2682
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/instructions/display.py": {
+    "sha256": "17af2bfbfb7067cb3438a6898e7ce4a68737794e3fca9f50e70bd65fb1f431be",
+    "bytes": 1047
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/instructions/memory.py": {
+    "sha256": "d7052aac9c5fa001518146e6fb28623550930e1f925ff0a86c9e5fbe160d7e9a",
+    "bytes": 1120
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/instructions/misc.py": {
+    "sha256": "c2cc2476e7bbf6d0009d5a786dbec6c46b252ae6fe2e5ec6d872abe7aaf5fe9d",
+    "bytes": 4980
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/instructions/system.py": {
+    "sha256": "33be7f5501396f8558cfe563cf10ce41f9bf9fa42fc699e5967069e97dbcf66a",
+    "bytes": 1194
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/logging.py": {
+    "sha256": "6dbfcf5677adcaef8d4f5806ddda025bb42b053fd6a965ab5c3d382ff0b9a641",
+    "bytes": 22302
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/rendering.py": {
+    "sha256": "d074d5ead383f4249dddc666552338dccfd7a5fa238691303075223a2e328f5d",
+    "bytes": 8582
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/stack.py": {
+    "sha256": "533dc6283c31c5648c6943adb1eb94df22f97b1bc31aa127783ada015f1d85f4",
+    "bytes": 713
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/state.py": {
+    "sha256": "81853c534036880405a8c9f83bfb3a05b7c417942854e842d5298f4882af98e0",
+    "bytes": 1684
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/octax/wrappers.py": {
+    "sha256": "cd46727e367b182873625bf33e89f1afc0488b03c67df48b945640b208ed9a23",
+    "bytes": 2629
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/policy_initialization.py": {
+    "sha256": "c7070a63bda01fa945c26a847fada7434a41e94fb5369f3d26a24725c3494847",
+    "bytes": 4599
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/requirements-macos.lock.txt": {
+    "sha256": "800cdcebc24c1f47821afe963d23e53f57de4123d4bc4a1b2a1167676fcb26c4",
+    "bytes": 1786
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/roms/Tetris [Fran Dachille, 1991].ch8": {
+    "sha256": "667cb026dee03f59f3a2fd81a2ffeab47da87731883f9601d37ba019976f94dd",
+    "bytes": 494
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/train.py": {
+    "sha256": "7fb070201573056d256dbfdcea7f59df602c2f4f8f7cde2b79c27be2a4b7bed8",
+    "bytes": 9784
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/train_pretrained_ppo.py": {
+    "sha256": "3e46175b014703eb3a13baf7f62955ba621e3bf37995f4cfb6234cda00531b85",
+    "bytes": 3427
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/source_snapshot/visualize_run.py": {
+    "sha256": "86063a73d7e03dcc594bcb28d58a76c5a01e1af1e017cb9fce50423e2265286e",
+    "bytes": 8070
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/summary.json": {
+    "sha256": "7bc5007f9c8aa41ffd2e2d0241b2932b17aafd03d9a27309702fafb7e637112e",
+    "bytes": 654
+  },
+  "tetris/human_bc_handoff_entropy_zero_seed1/system.json": {
+    "sha256": "010f871ffed259b61f6f3ee4a14c889a3246cbbe0096fbb24919a7fae552fc59",
+    "bytes": 474
+  },
+  "tetris/human_bc_handoff_smoke_seed1/checkpoint.msgpack": {
+    "sha256": "c9c179168e12b5c423e49fd49ec9859c278f8cbc1132409b3f77b41e617ba46b",
+    "bytes": 26310722
+  },
+  "tetris/human_bc_handoff_smoke_seed1/config.yaml": {
+    "sha256": "1d8bb3f6b4a6f27c604a17872f8b210b0fcf8057f73637ee85f9694bb7fc47c5",
+    "bytes": 663
+  },
+  "tetris/human_bc_handoff_smoke_seed1/eval.gif": {
+    "sha256": "e843b83f77ee52dbdd2b54deaaec6d08a091e9cf932d529103c893f359ea6b4b",
+    "bytes": 22882
+  },
+  "tetris/human_bc_handoff_smoke_seed1/eval_000000000.gif": {
+    "sha256": "b95ca7ed59b520163796d82cd59d73715283da43623b3afa3ae5ed51ddd83d44",
+    "bytes": 18533
+  },
+  "tetris/human_bc_handoff_smoke_seed1/eval_000002048.gif": {
+    "sha256": "e843b83f77ee52dbdd2b54deaaec6d08a091e9cf932d529103c893f359ea6b4b",
+    "bytes": 22882
+  },
+  "tetris/human_bc_handoff_smoke_seed1/evaluation.json": {
+    "sha256": "167af4549ac4c4e5dfea15b9a411fa5521173993bcfee251c5c7c5a4f6280717",
+    "bytes": 1930
+  },
+  "tetris/human_bc_handoff_smoke_seed1/initialization.json": {
+    "sha256": "64dfb3a0326c0e7627900266ddcf4d3000547684e6e25d14dd902464e97c7bb5",
+    "bytes": 405
+  },
+  "tetris/human_bc_handoff_smoke_seed1/initialization_weights.msgpack": {
+    "sha256": "7ed538c10391ea75b02ea6a2c76262e39775f335ac9b06a243e2b9474eb03edc",
+    "bytes": 4496640
+  },
+  "tetris/human_bc_handoff_smoke_seed1/metrics.csv": {
+    "sha256": "628021f842691f26ff26d4771a03a37a2294ab1a5e19d8d7d5fd5ff7b73c67ca",
+    "bytes": 601
+  },
+  "tetris/human_bc_handoff_smoke_seed1/run_status.json": {
+    "sha256": "4619012097272d495b62164afb1ed6545f1cb58c24338096f24064a871691ca0",
+    "bytes": 110
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_manifest.json": {
+    "sha256": "976c2fe9118b19916427d7158782f74de9a61b9ffa781a6f0e387356449fd3d4",
+    "bytes": 5146
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/evaluate_checkpoint.py": {
+    "sha256": "98a9657a44778100fce240550e9d4d873324e8cfa19706ba754fa1315851348b",
+    "bytes": 1334
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/experiment_utils.py": {
+    "sha256": "56acd748517c545f735536729044a77d2c85671a47c1cb7fa6b9ab90321daaa7",
+    "bytes": 4809
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/__init__.py": {
+    "sha256": "bfb440ef4fcfd09a8d680c3f05eb8e9f16c6b1770e2dadb66835350a88925dc0",
+    "bytes": 597
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/agents/__init__.py": {
+    "sha256": "533188ba1365fd79ade62cd18c097f8b6fc19b28a36223de0b8bff2bf87dd1bf",
+    "bytes": 75
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/agents/ppo.py": {
+    "sha256": "87dceaf2a5c0a8679939b84c306bfaa571ae5bd28e044f4c252d1f3621442364",
+    "bytes": 10291
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/agents/pqn.py": {
+    "sha256": "784d0d13507e642e681ab5d426226bccf263fdefe5161bf489be79642190e149",
+    "bytes": 6814
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/checkpoints.py": {
+    "sha256": "230af35150c1a85532b758fbb6be0514014c77863fea3e247c9faa548b3ac021",
+    "bytes": 742
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/constants.py": {
+    "sha256": "5b35f9547ed79c5d6075c4b80bf066538646c1d2a47ecea1f3c429c2ad793535",
+    "bytes": 1192
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/decode.py": {
+    "sha256": "bfd5179fe2518389eb50a8737806ce73eb023b74448d17a1e3e084aa53122de5",
+    "bytes": 858
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/emulator.py": {
+    "sha256": "8f59c32911753c8a0e7a98d906681138e5b25c3c3153b7eed2fd4e67d4b80d2f",
+    "bytes": 2770
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/env.py": {
+    "sha256": "30a80cb6290c7bfba3cfe8bf816bf77740d342e0d958a1784628e9126b947a06",
+    "bytes": 12086
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/environments/__init__.py": {
+    "sha256": "e99273b4fe229184d93ba0d2f2c44fa2e5d89f3ca4011f6ea10e6b171e6b856d",
+    "bytes": 4558
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/environments/airplane.py": {
+    "sha256": "2712ef1ba5500737eeea236186bd6a00430a89dba37cdc339d62273bc61b0c1c",
+    "bytes": 730
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/environments/blinky.py": {
+    "sha256": "8d9c34bd8946d7047b85889285112f39ea38342c06609ad7eeacc2c3f2993ac2",
+    "bytes": 2463
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/environments/brix.py": {
+    "sha256": "0335febd2973d88edd9ce5c3617acdb2b797f6cdb637a5dee2d59381239df727",
+    "bytes": 1182
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/environments/cavern.py": {
+    "sha256": "b21be152432a31e9f19b69fffcb2963b05adf210903779db9e3f8fbff445e95c",
+    "bytes": 2223
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/environments/deep.py": {
+    "sha256": "ad55daffc2c7f8d019969ccbb1950112454ceb4aa14c518d48c85516d5b9fae9",
+    "bytes": 1153
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/environments/filter.py": {
+    "sha256": "a84bb0fcec1e2b6933686b1c2f7bf9f7b08236b15f48f0300b1cea7c3c5fcb80",
+    "bytes": 527
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/environments/flight_runner.py": {
+    "sha256": "de92269e8c7dc8d1480f25f7b072ab0e735eaa4de3967f4d5eba5699be38082b",
+    "bytes": 881
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/environments/missile.py": {
+    "sha256": "24a08af72ef18e0fe8e68f1a9e54128b76c4acc49fa783abfa3dbfbd98027337",
+    "bytes": 982
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/environments/pong.py": {
+    "sha256": "5dfbb1a064cc09d1aae09b6ac7b6e3ea0f14179b803541ce9f04b3f2373cb7af",
+    "bytes": 666
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/environments/rocket.py": {
+    "sha256": "4861cb029cdbfd5c8352850f6c79f78ca9301b751680511223b214c974a3c40b",
+    "bytes": 1432
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/environments/shooting_stars.py": {
+    "sha256": "b40010c2d1804ef275d4b45f706570a7f57f5c713669c24374aa04f592dbd062",
+    "bytes": 734
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/environments/space_flight.py": {
+    "sha256": "84ddbc713f026007ee0321f089c932c7f8be4e5ad816f98f9aa98916aa41fad0",
+    "bytes": 1192
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/environments/spacejam.py": {
+    "sha256": "9968c22e13d7cd3b96226a20ce574f7d8f75ad4ad74c6da150d4ab9e1b76e583",
+    "bytes": 915
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/environments/squash.py": {
+    "sha256": "5adc877fb2a799ccdbd49f028f487def0103d212fbb2f7762599dc874880236e",
+    "bytes": 713
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/environments/submarine.py": {
+    "sha256": "b44910abce81c25a390e4fccd8f419595aac6856e77ebe86ee2e3f3c9b040056",
+    "bytes": 776
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/environments/tank.py": {
+    "sha256": "baf1ffd3f3d62e92e16f692bb8b1073b2478324ddccb863bdbdf4cd750af8421",
+    "bytes": 799
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/environments/target_shooter.py": {
+    "sha256": "408ff26f80637bc71d50289f6be79391fdc76e125e05812203131166791374d2",
+    "bytes": 5501
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/environments/tetris.py": {
+    "sha256": "5164f0875acfa9a1e80224f7d2b56969fa67f4543f56657ec16e6faab3657adb",
+    "bytes": 2182
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/environments/ufo.py": {
+    "sha256": "981c6dde8e7f47cb82cc4e8edd953014e2d3f67da67f3077f4a2732d51e1c6cc",
+    "bytes": 1753
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/environments/vertical_brix.py": {
+    "sha256": "66328220611281cfba1b84008bdd3ca125d777b448c684121a8df5c003e6aeb7",
+    "bytes": 1121
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/environments/wipe_off.py": {
+    "sha256": "898be810e8d3f4bb07e52f4c51f71ee342cced7a92c7bdd26817dcb6456253ae",
+    "bytes": 1071
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/environments/worm.py": {
+    "sha256": "e22829e37a0ee082a5c645fd8d96c49bc6d4f6c587533079df786bdd0e495def",
+    "bytes": 2781
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/instructions/__init__.py": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/instructions/alu.py": {
+    "sha256": "c4f0505c190f1421f13ec1de4149700bca0f1ad19e0f2b7d3f2062f8e37472e8",
+    "bytes": 3230
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/instructions/control_flow.py": {
+    "sha256": "9ae00b24347aa673231360f15e0fd9f0ffe016704057a372c4f228562a77f0a2",
+    "bytes": 2682
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/instructions/display.py": {
+    "sha256": "17af2bfbfb7067cb3438a6898e7ce4a68737794e3fca9f50e70bd65fb1f431be",
+    "bytes": 1047
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/instructions/memory.py": {
+    "sha256": "d7052aac9c5fa001518146e6fb28623550930e1f925ff0a86c9e5fbe160d7e9a",
+    "bytes": 1120
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/instructions/misc.py": {
+    "sha256": "c2cc2476e7bbf6d0009d5a786dbec6c46b252ae6fe2e5ec6d872abe7aaf5fe9d",
+    "bytes": 4980
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/instructions/system.py": {
+    "sha256": "33be7f5501396f8558cfe563cf10ce41f9bf9fa42fc699e5967069e97dbcf66a",
+    "bytes": 1194
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/logging.py": {
+    "sha256": "6dbfcf5677adcaef8d4f5806ddda025bb42b053fd6a965ab5c3d382ff0b9a641",
+    "bytes": 22302
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/rendering.py": {
+    "sha256": "d074d5ead383f4249dddc666552338dccfd7a5fa238691303075223a2e328f5d",
+    "bytes": 8582
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/stack.py": {
+    "sha256": "533dc6283c31c5648c6943adb1eb94df22f97b1bc31aa127783ada015f1d85f4",
+    "bytes": 713
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/state.py": {
+    "sha256": "81853c534036880405a8c9f83bfb3a05b7c417942854e842d5298f4882af98e0",
+    "bytes": 1684
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/octax/wrappers.py": {
+    "sha256": "cd46727e367b182873625bf33e89f1afc0488b03c67df48b945640b208ed9a23",
+    "bytes": 2629
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/policy_initialization.py": {
+    "sha256": "c7070a63bda01fa945c26a847fada7434a41e94fb5369f3d26a24725c3494847",
+    "bytes": 4599
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/requirements-macos.lock.txt": {
+    "sha256": "800cdcebc24c1f47821afe963d23e53f57de4123d4bc4a1b2a1167676fcb26c4",
+    "bytes": 1786
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/roms/Tetris [Fran Dachille, 1991].ch8": {
+    "sha256": "667cb026dee03f59f3a2fd81a2ffeab47da87731883f9601d37ba019976f94dd",
+    "bytes": 494
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/train.py": {
+    "sha256": "7fb070201573056d256dbfdcea7f59df602c2f4f8f7cde2b79c27be2a4b7bed8",
+    "bytes": 9784
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/train_pretrained_ppo.py": {
+    "sha256": "e6e143f1c544a86f8ee8f4ed98fe7e8bcbab93d0fd90c5b85eb06b391ada8ca0",
+    "bytes": 3313
+  },
+  "tetris/human_bc_handoff_smoke_seed1/source_snapshot/visualize_run.py": {
+    "sha256": "86063a73d7e03dcc594bcb28d58a76c5a01e1af1e017cb9fce50423e2265286e",
+    "bytes": 8070
+  },
+  "tetris/human_bc_handoff_smoke_seed1/summary.json": {
+    "sha256": "60986c7679564e501ea0b6037694aa21e662e2144f6f7e60d043e39e8302b7ec",
+    "bytes": 668
+  },
+  "tetris/human_bc_handoff_smoke_seed1/system.json": {
+    "sha256": "10a7a7102fe95856491c3e2b713123f85c840e3179224ccfbc364afec73632ff",
+    "bytes": 475
+  },
+  "tetris/human_bc_seed1/RESULT.md": {
+    "sha256": "c26e32ac8ed2b515ebcad0a4c81317f8c774cdd4bec057509ade213e3f31505c",
+    "bytes": 5830
+  },
+  "tetris/human_bc_seed1/analysis.json": {
+    "sha256": "fdada2cf3ed80b67608b4b7ddad91081bcd62f80cae5dcf4700a80d5b63371d1",
+    "bytes": 7271
+  },
+  "tetris/human_bc_seed1/handoff_diagnostic/diagnostic.json": {
+    "sha256": "8ff5e1dd28f89aade69cfb81814abb1a661fdd9fe89de281785cb2d47a30d81f",
+    "bytes": 5095
+  },
+  "tetris/human_bc_seed1/handoff_diagnostic/source_manifest.json": {
+    "sha256": "72c3fb301e067405c569e518e62960555ab041cae2d4f0251750ce1326b45e7a",
+    "bytes": 482
+  },
+  "tetris/human_bc_seed1/handoff_diagnostic/source_snapshot/diagnose_cloning_handoff.py": {
+    "sha256": "a73fcb42af258e0dce0c61b5e7a6372ed521109d7bb30bce1f421b47b5815608",
+    "bytes": 7370
+  },
+  "tetris/human_bc_seed1/handoff_diagnostic/source_snapshot/experiment_utils.py": {
+    "sha256": "56acd748517c545f735536729044a77d2c85671a47c1cb7fa6b9ab90321daaa7",
+    "bytes": 4809
+  },
+  "tetris/human_bc_seed1/handoff_diagnostic/source_snapshot/octax/agents/ppo.py": {
+    "sha256": "87dceaf2a5c0a8679939b84c306bfaa571ae5bd28e044f4c252d1f3621442364",
+    "bytes": 10291
+  },
+  "tetris/human_bc_seed1/handoff_diagnostic/source_snapshot/pixel_pretraining.py": {
+    "sha256": "c127c125fa0b5b536be4155fe20cf460efc50716e0bcdc7f9a3fbac4fc404a5d",
+    "bytes": 6681
+  },
+  "tetris/human_bc_seed1/handoff_diagnostic/source_snapshot/policy_initialization.py": {
+    "sha256": "c7070a63bda01fa945c26a847fada7434a41e94fb5369f3d26a24725c3494847",
+    "bytes": 4599
+  },
+  "tetris/human_bc_seed1/policy_card.gif": {
+    "sha256": "5147448b71f74252a9fc16c13cbad6a7d8f69b7e7e74fbf7b99e93d6c5168ad0",
+    "bytes": 77348
+  },
+  "tetris/human_bc_seed1/policy_card.png": {
+    "sha256": "0e253b994c3231aee6c22f3a30df17cab32063b37f1f9a460065fbe36f6e4643",
+    "bytes": 3893
+  },
+  "tetris/human_bc_seed1/pretrain/cloning_checkpoint.msgpack": {
+    "sha256": "952cc4ca3f5d82b2ded32a227c3f2606fc382a0d0cb958edbc011440cb5ec668",
+    "bytes": 13490038
+  },
+  "tetris/human_bc_seed1/pretrain/config.yaml": {
+    "sha256": "e54a4b46f795b19fde61a7c9b55d945e58327866a6b940fe387a1cadf6f91b2c",
+    "bytes": 733
+  },
+  "tetris/human_bc_seed1/pretrain/dataset_manifest.json": {
+    "sha256": "8fb7561f616a5522f135e48e6132e83618a8e996cdab6b744e88a5606df3cfe3",
+    "bytes": 740
+  },
+  "tetris/human_bc_seed1/pretrain/dataset_validation.json": {
+    "sha256": "3db22bcb4ec4bf149c7600086569de0e6816a70a5e2283358b8371868aaf4a68",
+    "bytes": 200
+  },
+  "tetris/human_bc_seed1/pretrain/heldout/comparison.json": {
+    "sha256": "a3246081bb8949a894b37d1e2444fe6ebc93d20b591ea8d85ac7133e3f56d694",
+    "bytes": 63666
+  },
+  "tetris/human_bc_seed1/pretrain/heldout/illustration.json": {
+    "sha256": "d952278fb5e41b07bbf609120d47f6487052b0a7976b492c20f6aaebd44e176c",
+    "bytes": 59
+  },
+  "tetris/human_bc_seed1/pretrain/heldout/policy_trajectory.npz": {
+    "sha256": "b64f340cd018ae89265b417f702c81598dc6120168b48e96081e6495d5e369fd",
+    "bytes": 2660
+  },
+  "tetris/human_bc_seed1/pretrain/heldout/source_manifest.json": {
+    "sha256": "0be4415213ecee8a73e6ce3ec9a91500ad50042dbc274a87be1aad69b582616d",
+    "bytes": 477
+  },
+  "tetris/human_bc_seed1/pretrain/heldout/source_snapshot/evaluate_policy_weights.py": {
+    "sha256": "7ae56d3bb6b8792c88b2012512ddfcd6f64300cf03f11849531d26a0f2f9011d",
+    "bytes": 3031
+  },
+  "tetris/human_bc_seed1/pretrain/heldout/source_snapshot/experiment_utils.py": {
+    "sha256": "56acd748517c545f735536729044a77d2c85671a47c1cb7fa6b9ab90321daaa7",
+    "bytes": 4809
+  },
+  "tetris/human_bc_seed1/pretrain/heldout/source_snapshot/octax/agents/ppo.py": {
+    "sha256": "87dceaf2a5c0a8679939b84c306bfaa571ae5bd28e044f4c252d1f3621442364",
+    "bytes": 10291
+  },
+  "tetris/human_bc_seed1/pretrain/heldout/source_snapshot/policy_initialization.py": {
+    "sha256": "c7070a63bda01fa945c26a847fada7434a41e94fb5369f3d26a24725c3494847",
+    "bytes": 4599
+  },
+  "tetris/human_bc_seed1/pretrain/heldout/source_snapshot/visualize_run.py": {
+    "sha256": "86063a73d7e03dcc594bcb28d58a76c5a01e1af1e017cb9fce50423e2265286e",
+    "bytes": 8070
+  },
+  "tetris/human_bc_seed1/pretrain/initial_evaluation.json": {
+    "sha256": "f49f41f872bbdf78248f8232a60ba8cf2b72e36063bb1cebdaa048d5593a2957",
+    "bytes": 1639
+  },
+  "tetris/human_bc_seed1/pretrain/metrics.csv": {
+    "sha256": "660eb8be05515536360f1fd7edb05d7f610bdd18a7cc8e30a0bf601b121e6e2a",
+    "bytes": 1468
+  },
+  "tetris/human_bc_seed1/pretrain/policy_weights.msgpack": {
+    "sha256": "7ed538c10391ea75b02ea6a2c76262e39775f335ac9b06a243e2b9474eb03edc",
+    "bytes": 4496640
+  },
+  "tetris/human_bc_seed1/pretrain/pretrained_evaluation.json": {
+    "sha256": "0cd87887e6d3f01e8f1c8459def3571f302d4c93a4a2293a2f0f18c933519e7d",
+    "bytes": 1605
+  },
+  "tetris/human_bc_seed1/pretrain/run_status.json": {
+    "sha256": "c1d6144bb336089efcb441edde4a31632e9657c0a8936ecee7d85529f2ea20c9",
+    "bytes": 156
+  },
+  "tetris/human_bc_seed1/pretrain/source_manifest.json": {
+    "sha256": "7ae3bb5e0a39ec8cebd35fd37d9fcc974f1d339bf7227961ccc665a0d37c982d",
+    "bytes": 5339
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/CURRICULUM.md": {
+    "sha256": "b975f138b3848d0dbce155b99aa81724584e65efb38281899b1ecbd9cde92ee6",
+    "bytes": 10909
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/evaluate_initial_policy.py": {
+    "sha256": "68a2f4189bf60e99b4334ee6f7acf32542a3f379e7efd3b578c825e3e765a447",
+    "bytes": 2724
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/experiment_utils.py": {
+    "sha256": "56acd748517c545f735536729044a77d2c85671a47c1cb7fa6b9ab90321daaa7",
+    "bytes": 4809
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/human_demonstrations.py": {
+    "sha256": "8154fafd589ddb21b45dbc33d57813396a85c2b49c65f462380e8c5078cfd1c5",
+    "bytes": 11392
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/__init__.py": {
+    "sha256": "bfb440ef4fcfd09a8d680c3f05eb8e9f16c6b1770e2dadb66835350a88925dc0",
+    "bytes": 597
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/agents/__init__.py": {
+    "sha256": "533188ba1365fd79ade62cd18c097f8b6fc19b28a36223de0b8bff2bf87dd1bf",
+    "bytes": 75
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/agents/ppo.py": {
+    "sha256": "87dceaf2a5c0a8679939b84c306bfaa571ae5bd28e044f4c252d1f3621442364",
+    "bytes": 10291
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/agents/pqn.py": {
+    "sha256": "784d0d13507e642e681ab5d426226bccf263fdefe5161bf489be79642190e149",
+    "bytes": 6814
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/checkpoints.py": {
+    "sha256": "230af35150c1a85532b758fbb6be0514014c77863fea3e247c9faa548b3ac021",
+    "bytes": 742
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/constants.py": {
+    "sha256": "5b35f9547ed79c5d6075c4b80bf066538646c1d2a47ecea1f3c429c2ad793535",
+    "bytes": 1192
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/decode.py": {
+    "sha256": "bfd5179fe2518389eb50a8737806ce73eb023b74448d17a1e3e084aa53122de5",
+    "bytes": 858
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/emulator.py": {
+    "sha256": "8f59c32911753c8a0e7a98d906681138e5b25c3c3153b7eed2fd4e67d4b80d2f",
+    "bytes": 2770
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/env.py": {
+    "sha256": "30a80cb6290c7bfba3cfe8bf816bf77740d342e0d958a1784628e9126b947a06",
+    "bytes": 12086
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/environments/__init__.py": {
+    "sha256": "e99273b4fe229184d93ba0d2f2c44fa2e5d89f3ca4011f6ea10e6b171e6b856d",
+    "bytes": 4558
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/environments/airplane.py": {
+    "sha256": "2712ef1ba5500737eeea236186bd6a00430a89dba37cdc339d62273bc61b0c1c",
+    "bytes": 730
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/environments/blinky.py": {
+    "sha256": "8d9c34bd8946d7047b85889285112f39ea38342c06609ad7eeacc2c3f2993ac2",
+    "bytes": 2463
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/environments/brix.py": {
+    "sha256": "0335febd2973d88edd9ce5c3617acdb2b797f6cdb637a5dee2d59381239df727",
+    "bytes": 1182
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/environments/cavern.py": {
+    "sha256": "b21be152432a31e9f19b69fffcb2963b05adf210903779db9e3f8fbff445e95c",
+    "bytes": 2223
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/environments/deep.py": {
+    "sha256": "ad55daffc2c7f8d019969ccbb1950112454ceb4aa14c518d48c85516d5b9fae9",
+    "bytes": 1153
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/environments/filter.py": {
+    "sha256": "a84bb0fcec1e2b6933686b1c2f7bf9f7b08236b15f48f0300b1cea7c3c5fcb80",
+    "bytes": 527
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/environments/flight_runner.py": {
+    "sha256": "de92269e8c7dc8d1480f25f7b072ab0e735eaa4de3967f4d5eba5699be38082b",
+    "bytes": 881
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/environments/missile.py": {
+    "sha256": "24a08af72ef18e0fe8e68f1a9e54128b76c4acc49fa783abfa3dbfbd98027337",
+    "bytes": 982
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/environments/pong.py": {
+    "sha256": "5dfbb1a064cc09d1aae09b6ac7b6e3ea0f14179b803541ce9f04b3f2373cb7af",
+    "bytes": 666
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/environments/rocket.py": {
+    "sha256": "4861cb029cdbfd5c8352850f6c79f78ca9301b751680511223b214c974a3c40b",
+    "bytes": 1432
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/environments/shooting_stars.py": {
+    "sha256": "b40010c2d1804ef275d4b45f706570a7f57f5c713669c24374aa04f592dbd062",
+    "bytes": 734
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/environments/space_flight.py": {
+    "sha256": "84ddbc713f026007ee0321f089c932c7f8be4e5ad816f98f9aa98916aa41fad0",
+    "bytes": 1192
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/environments/spacejam.py": {
+    "sha256": "9968c22e13d7cd3b96226a20ce574f7d8f75ad4ad74c6da150d4ab9e1b76e583",
+    "bytes": 915
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/environments/squash.py": {
+    "sha256": "5adc877fb2a799ccdbd49f028f487def0103d212fbb2f7762599dc874880236e",
+    "bytes": 713
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/environments/submarine.py": {
+    "sha256": "b44910abce81c25a390e4fccd8f419595aac6856e77ebe86ee2e3f3c9b040056",
+    "bytes": 776
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/environments/tank.py": {
+    "sha256": "baf1ffd3f3d62e92e16f692bb8b1073b2478324ddccb863bdbdf4cd750af8421",
+    "bytes": 799
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/environments/target_shooter.py": {
+    "sha256": "408ff26f80637bc71d50289f6be79391fdc76e125e05812203131166791374d2",
+    "bytes": 5501
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/environments/tetris.py": {
+    "sha256": "5164f0875acfa9a1e80224f7d2b56969fa67f4543f56657ec16e6faab3657adb",
+    "bytes": 2182
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/environments/ufo.py": {
+    "sha256": "981c6dde8e7f47cb82cc4e8edd953014e2d3f67da67f3077f4a2732d51e1c6cc",
+    "bytes": 1753
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/environments/vertical_brix.py": {
+    "sha256": "66328220611281cfba1b84008bdd3ca125d777b448c684121a8df5c003e6aeb7",
+    "bytes": 1121
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/environments/wipe_off.py": {
+    "sha256": "898be810e8d3f4bb07e52f4c51f71ee342cced7a92c7bdd26817dcb6456253ae",
+    "bytes": 1071
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/environments/worm.py": {
+    "sha256": "e22829e37a0ee082a5c645fd8d96c49bc6d4f6c587533079df786bdd0e495def",
+    "bytes": 2781
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/instructions/__init__.py": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/instructions/alu.py": {
+    "sha256": "c4f0505c190f1421f13ec1de4149700bca0f1ad19e0f2b7d3f2062f8e37472e8",
+    "bytes": 3230
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/instructions/control_flow.py": {
+    "sha256": "9ae00b24347aa673231360f15e0fd9f0ffe016704057a372c4f228562a77f0a2",
+    "bytes": 2682
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/instructions/display.py": {
+    "sha256": "17af2bfbfb7067cb3438a6898e7ce4a68737794e3fca9f50e70bd65fb1f431be",
+    "bytes": 1047
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/instructions/memory.py": {
+    "sha256": "d7052aac9c5fa001518146e6fb28623550930e1f925ff0a86c9e5fbe160d7e9a",
+    "bytes": 1120
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/instructions/misc.py": {
+    "sha256": "c2cc2476e7bbf6d0009d5a786dbec6c46b252ae6fe2e5ec6d872abe7aaf5fe9d",
+    "bytes": 4980
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/instructions/system.py": {
+    "sha256": "33be7f5501396f8558cfe563cf10ce41f9bf9fa42fc699e5967069e97dbcf66a",
+    "bytes": 1194
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/logging.py": {
+    "sha256": "6dbfcf5677adcaef8d4f5806ddda025bb42b053fd6a965ab5c3d382ff0b9a641",
+    "bytes": 22302
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/rendering.py": {
+    "sha256": "d074d5ead383f4249dddc666552338dccfd7a5fa238691303075223a2e328f5d",
+    "bytes": 8582
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/stack.py": {
+    "sha256": "533dc6283c31c5648c6943adb1eb94df22f97b1bc31aa127783ada015f1d85f4",
+    "bytes": 713
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/state.py": {
+    "sha256": "81853c534036880405a8c9f83bfb3a05b7c417942854e842d5298f4882af98e0",
+    "bytes": 1684
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/octax/wrappers.py": {
+    "sha256": "cd46727e367b182873625bf33e89f1afc0488b03c67df48b945640b208ed9a23",
+    "bytes": 2629
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/pixel_pretraining.py": {
+    "sha256": "c127c125fa0b5b536be4155fe20cf460efc50716e0bcdc7f9a3fbac4fc404a5d",
+    "bytes": 6681
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/policy_initialization.py": {
+    "sha256": "c7070a63bda01fa945c26a847fada7434a41e94fb5369f3d26a24725c3494847",
+    "bytes": 4599
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/pretrain_human_policy.py": {
+    "sha256": "b6b80dfdcb8598e44bebde12455a68e6dee151a0ca922c11b858fdb07f589332",
+    "bytes": 8832
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/requirements-macos.lock.txt": {
+    "sha256": "800cdcebc24c1f47821afe963d23e53f57de4123d4bc4a1b2a1167676fcb26c4",
+    "bytes": 1786
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/roms/Tetris [Fran Dachille, 1991].ch8": {
+    "sha256": "667cb026dee03f59f3a2fd81a2ffeab47da87731883f9601d37ba019976f94dd",
+    "bytes": 494
+  },
+  "tetris/human_bc_seed1/pretrain/source_snapshot/train.py": {
+    "sha256": "7fb070201573056d256dbfdcea7f59df602c2f4f8f7cde2b79c27be2a4b7bed8",
+    "bytes": 9784
+  },
+  "tetris/human_bc_seed1/pretrain/summary.json": {
+    "sha256": "96d0495c58964af09866f5a93460f22951aed8ac35edb3dc7a8c4684ebd451dd",
+    "bytes": 1156
+  },
+  "tetris/human_bc_seed1/pretrain/system.json": {
+    "sha256": "10a7a7102fe95856491c3e2b713123f85c840e3179224ccfbc364afec73632ff",
+    "bytes": 475
+  },
+  "tetris/human_bc_seed1/report_source_manifest.json": {
+    "sha256": "73ab655bb28a9a09f8ecfb68de5b98381244d658e7a456319d4c04add0f6bdc8",
+    "bytes": 192
+  },
+  "tetris/human_bc_seed1/report_source_snapshot/round_card.py": {
+    "sha256": "2396fdd9352ec3c5a644ff586795a84ebbe016a2b6ddd9dfd45c607fd637be03",
+    "bytes": 3290
+  },
+  "tetris/human_bc_seed1/report_source_snapshot/summarize_cloning_handoff.py": {
+    "sha256": "8d333879aac53083d63a9554cfbb7cb4dd744fdb65e4da9308fd21c7b3a43142",
+    "bytes": 8966
+  },
+  "tetris/human_bc_seed1/result_card.html": {
+    "sha256": "f2faafc6414cca1c3070364809d176f4fac0c97b1c3ee336f49a58f83fd61a2a",
+    "bytes": 104920
+  },
+  "tetris/human_bc_seed1/visualizations/policy_trajectory.npz": {
+    "sha256": "b64f340cd018ae89265b417f702c81598dc6120168b48e96081e6495d5e369fd",
+    "bytes": 2660
   },
   "tetris/learning_512k_seed1/RESULT.md": {
     "sha256": "7863f79b45ab6cbc0e297f5ac409af6c42b9d00c88198f48fa709cd9db97c7c0",

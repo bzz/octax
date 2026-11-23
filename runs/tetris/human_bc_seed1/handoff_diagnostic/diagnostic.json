@@ -1,0 +1,241 @@
+{
+  "kind": "offline_read_only_diagnostic",
+  "additional_environment_decisions": 0,
+  "optimization_updates": 0,
+  "dataset": {
+    "sha256": "7a5a60ca8632cd751a23a2553d21762254b8aa208a94f658d835f6abc3c05cec",
+    "source": "human",
+    "decisions": 2240,
+    "complete": false,
+    "return_sum": 11.0,
+    "episode_id": "episode_000_seed200000",
+    "reset_seed": 200000,
+    "full_replay_validation_required": true
+  },
+  "weights": {
+    "sha256": "7ed538c10391ea75b02ea6a2c76262e39775f335ac9b06a243e2b9474eb03edc",
+    "components": "encoder_actor",
+    "metadata": {
+      "actions": 5,
+      "architecture": "octax_cnn_v2",
+      "dataset_sha256": "7a5a60ca8632cd751a23a2553d21762254b8aa208a94f658d835f6abc3c05cec",
+      "epochs": 20,
+      "observation_shape": [
+        4,
+        32,
+        64
+      ],
+      "optimizer_updates": 360,
+      "seed": 1
+    }
+  },
+  "action_counts": [
+    47,
+    116,
+    191,
+    171,
+    1715
+  ],
+  "constant_action_cross_entropy": 0.8451794354376385,
+  "constant_argmax_accuracy": 0.765625,
+  "unique_observations": 1323,
+  "ambiguous_observations": 150,
+  "empirical_observation_conditional_ce_lower_bound": 0.12386097620146211,
+  "empirical_observation_argmax_accuracy_upper_bound": 0.9294642857142857,
+  "pretrained": {
+    "cross_entropy": 0.42013582587242126,
+    "entropy": 0.5341290235519409,
+    "argmax_accuracy": 0.8607142857142858,
+    "per_action_recall": [
+      0.0,
+      0.33620689655172414,
+      0.7015706806282722,
+      0.6900584795321637,
+      0.9545189504373178
+    ],
+    "confusion_true_rows_predicted_columns": [
+      [
+        0,
+        0,
+        4,
+        0,
+        43
+      ],
+      [
+        0,
+        39,
+        0,
+        2,
+        75
+      ],
+      [
+        0,
+        0,
+        134,
+        0,
+        57
+      ],
+      [
+        0,
+        0,
+        2,
+        118,
+        51
+      ],
+      [
+        0,
+        1,
+        52,
+        25,
+        1637
+      ]
+    ],
+    "mean_action_probabilities": [
+      0.02074580080807209,
+      0.04252054914832115,
+      0.11491691321134567,
+      0.0924864336848259,
+      0.7293305993080139
+    ]
+  },
+  "entropy_001": {
+    "cross_entropy": 1.6033486127853394,
+    "entropy": 1.6091375350952148,
+    "argmax_accuracy": 0.14151785714285714,
+    "per_action_recall": [
+      0.7872340425531915,
+      0.4224137931034483,
+      0.7905759162303665,
+      0.11695906432748537,
+      0.03498542274052478
+    ],
+    "confusion_true_rows_predicted_columns": [
+      [
+        37,
+        1,
+        9,
+        0,
+        0
+      ],
+      [
+        26,
+        49,
+        37,
+        2,
+        2
+      ],
+      [
+        33,
+        4,
+        151,
+        0,
+        3
+      ],
+      [
+        10,
+        19,
+        114,
+        20,
+        8
+      ],
+      [
+        525,
+        182,
+        911,
+        37,
+        60
+      ]
+    ],
+    "mean_action_probabilities": [
+      0.2028057724237442,
+      0.2001856565475464,
+      0.20322905480861664,
+      0.1932084560394287,
+      0.20057177543640137
+    ],
+    "encoder_actor_arrays_exact": false,
+    "checkpoint_sha256": "c9c179168e12b5c423e49fd49ec9859c278f8cbc1132409b3f77b41e617ba46b",
+    "global_step": 2048
+  },
+  "entropy_zero": {
+    "cross_entropy": 0.42013582587242126,
+    "entropy": 0.5341290235519409,
+    "argmax_accuracy": 0.8607142857142858,
+    "per_action_recall": [
+      0.0,
+      0.33620689655172414,
+      0.7015706806282722,
+      0.6900584795321637,
+      0.9545189504373178
+    ],
+    "confusion_true_rows_predicted_columns": [
+      [
+        0,
+        0,
+        4,
+        0,
+        43
+      ],
+      [
+        0,
+        39,
+        0,
+        2,
+        75
+      ],
+      [
+        0,
+        0,
+        134,
+        0,
+        57
+      ],
+      [
+        0,
+        0,
+        2,
+        118,
+        51
+      ],
+      [
+        0,
+        1,
+        52,
+        25,
+        1637
+      ]
+    ],
+    "mean_action_probabilities": [
+      0.02074580080807209,
+      0.04252054914832115,
+      0.11491691321134567,
+      0.0924864336848259,
+      0.7293305993080139
+    ],
+    "encoder_actor_arrays_exact": true,
+    "checkpoint_sha256": "46e220af23c5274435867e876f30cd0b5e591d1f9ae70daf4755122dfd3bbf8e",
+    "global_step": 2048
+  },
+  "audits": {
+    "config_differences": {
+      "run_dir": [
+        "runs/tetris/human_bc_handoff_smoke_seed1",
+        "runs/tetris/human_bc_handoff_entropy_zero_seed1"
+      ],
+      "ent_coef": [
+        0.01,
+        0.0
+      ]
+    },
+    "first_rollout_summary_exact": true,
+    "zero_entropy_zero_gradients": true,
+    "initial_evaluation_arrays_exact": true,
+    "zero_entropy_final_evaluation_arrays_exact": true,
+    "note": "Rollout summaries match; raw rollout arrays were not saved."
+  },
+  "limitations": [
+    "One human prefix: all fit metrics are in-sample, not generalization.",
+    "Empirical identical-observation bounds apply to deterministic inference on this fixed input representation and dataset.",
+    "No old observations were used in PPO updates; this separate diagnostic only reads completed artifacts."
+  ]
+}

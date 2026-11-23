@@ -1,0 +1,116 @@
+[
+  {
+    "summary": {
+      "mean_return": 0.0,
+      "scoring_fraction": 0.0,
+      "mean_length": 731.0,
+      "terminated": 2,
+      "truncated": 0,
+      "action_distribution": [
+        0.0013679890560875513,
+        0.021203830369357045,
+        0.29411764705882354,
+        0.3426812585499316,
+        0.34062927496580025
+      ],
+      "seconds": 2.0922598329780158
+    },
+    "episodes": {
+      "action_counts": [
+        [
+          1,
+          14,
+          279,
+          214,
+          265
+        ],
+        [
+          1,
+          17,
+          151,
+          287,
+          233
+        ]
+      ],
+      "final_score": [
+        0.0,
+        0.0
+      ],
+      "lengths": [
+        773,
+        689
+      ],
+      "returns": [
+        0.0,
+        0.0
+      ],
+      "terminated": [
+        true,
+        true
+      ],
+      "truncated": [
+        false,
+        false
+      ]
+    },
+    "step": 0,
+    "checkpoint_roundtrip_exact": true
+  },
+  {
+    "summary": {
+      "mean_return": 0.0,
+      "scoring_fraction": 0.0,
+      "mean_length": 731.0,
+      "terminated": 2,
+      "truncated": 0,
+      "action_distribution": [
+        0.0013679890560875513,
+        0.021203830369357045,
+        0.29411764705882354,
+        0.3426812585499316,
+        0.34062927496580025
+      ],
+      "seconds": 1.400974167016102
+    },
+    "episodes": {
+      "action_counts": [
+        [
+          1,
+          14,
+          279,
+          214,
+          265
+        ],
+        [
+          1,
+          17,
+          151,
+          287,
+          233
+        ]
+      ],
+      "final_score": [
+        0.0,
+        0.0
+      ],
+      "lengths": [
+        773,
+        689
+      ],
+      "returns": [
+        0.0,
+        0.0
+      ],
+      "terminated": [
+        true,
+        true
+      ],
+      "truncated": [
+        false,
+        false
+      ]
+    },
+    "step": 2048,
+    "checkpoint_roundtrip_exact": true
+  }
+]

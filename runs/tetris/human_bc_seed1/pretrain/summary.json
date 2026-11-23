@@ -1,0 +1,34 @@
+{
+  "seed": 1,
+  "epochs": 20,
+  "examples_seen": 44800,
+  "optimizer_updates": 360,
+  "training_seconds": 96.81758375000209,
+  "initial_training_cross_entropy": 1.5820136070251465,
+  "final_training_cross_entropy": 0.42013582587242126,
+  "constant_action_cross_entropy": 0.8451794354376385,
+  "training_fit_gate": true,
+  "full_cloning_checkpoint_roundtrip_exact": true,
+  "weights_roundtrip_exact": true,
+  "dataset_sha256": "7a5a60ca8632cd751a23a2553d21762254b8aa208a94f658d835f6abc3c05cec",
+  "dataset_collection_decisions": 2240,
+  "diagnostic_replay_transitions": 2241,
+  "evaluation_decisions": 15288,
+  "policy_weights_sha256": "7ed538c10391ea75b02ea6a2c76262e39775f335ac9b06a243e2b9474eb03edc",
+  "initial_parameter_sha256": "40aa44888c5cbbc5fd5af4de05272fa2ed082881a46972df2b984c86bc97d552",
+  "final_evaluation": {
+    "mean_return": 0.0,
+    "scoring_fraction": 0.0,
+    "mean_length": 613.875,
+    "terminated": 8,
+    "truncated": 0,
+    "action_distribution": [
+      0.0030543677458766036,
+      0.02911830584402362,
+      0.1918142944410507,
+      0.3915699450213806,
+      0.3844430869476685
+    ],
+    "seconds": 4.084978333994513
+  }
+}
