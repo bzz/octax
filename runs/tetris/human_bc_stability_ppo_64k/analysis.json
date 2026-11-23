@@ -1,0 +1,645 @@
+{
+  "conclusion": "Smaller-step PPO does not establish a replicated scoring gain above its starting policies and random play.",
+  "candidate_screen": false,
+  "seeds": {
+    "1": {
+      "scores": {
+        "stability_ppo": 3,
+        "pretrained": 7,
+        "original_rate_ppo": 0,
+        "scratch_entropy_zero": 0,
+        "scratch_entropy_001": 1,
+        "untrained": 2,
+        "random": 3,
+        "noop": 0
+      },
+      "candidate_screen": false,
+      "training": {
+        "first_reward_context": [
+          {
+            "step": 26624.0,
+            "reward_sum": 0.0,
+            "positive_reward_steps": 0.0,
+            "entropy": 0.3673364222049713,
+            "advantage_std": 0.0,
+            "value_loss": 0.0,
+            "approx_kl": 0.0
+          },
+          {
+            "step": 28672.0,
+            "reward_sum": 1.0,
+            "positive_reward_steps": 1.0,
+            "entropy": 0.3090854585170746,
+            "advantage_std": 0.09286598116159439,
+            "value_loss": 0.0023465268313884735,
+            "approx_kl": 0.0026981360279023647
+          },
+          {
+            "step": 30720.0,
+            "reward_sum": 0.0,
+            "positive_reward_steps": 0.0,
+            "entropy": 0.2582821846008301,
+            "advantage_std": 0.0034057162702083588,
+            "value_loss": 2.974304607050726e-06,
+            "approx_kl": 0.0017574932426214218
+          },
+          {
+            "step": 32768.0,
+            "reward_sum": 0.0,
+            "positive_reward_steps": 0.0,
+            "entropy": 0.25689640641212463,
+            "advantage_std": 0.003599470714107156,
+            "value_loss": 2.1547466531046666e-06,
+            "approx_kl": 0.00279459310695529
+          }
+        ],
+        "zero_advantage_and_value_loss_before_first_reward": true,
+        "steps": 65536,
+        "rollouts": 32,
+        "reward_sum": 3.0,
+        "positive_reward_events": 3,
+        "completed_episodes": 99,
+        "reward_event_rollouts": [
+          {
+            "rollout_end_step": 28672,
+            "positive_events": 1,
+            "reward_sum": 1.0
+          },
+          {
+            "rollout_end_step": 36864,
+            "positive_events": 1,
+            "reward_sum": 1.0
+          },
+          {
+            "rollout_end_step": 49152,
+            "positive_events": 1,
+            "reward_sum": 1.0
+          }
+        ],
+        "final_entropy": 0.25148865580558777,
+        "final_approx_kl": 0.0005840975209139287,
+        "max_clipped_grad_norm": 0.5,
+        "max_advantage_std": 0.09286598116159439,
+        "step": 65536,
+        "seed": 1,
+        "optimizer_updates": 2033,
+        "wall_training_and_periodic_eval_seconds": 486.6134249580209,
+        "collect_seconds": 29.12430933196447,
+        "update_seconds": 451.2583460441092,
+        "training_steps_per_second": 136.42457583880565,
+        "steady_training_steps_per_second": 136.8271920911805,
+        "parameter_change_l2": 0.6193810489855136,
+        "final_evaluation": {
+          "mean_return": 0.125,
+          "scoring_fraction": 0.125,
+          "mean_length": 678.75,
+          "terminated": 8,
+          "truncated": 0,
+          "action_distribution": [
+            0.0005524861878453039,
+            0.05414364640883978,
+            0.19263351749539595,
+            0.3383057090239411,
+            0.4143646408839779
+          ],
+          "seconds": 5.187616416980745
+        }
+      },
+      "kl": {
+        "max_final_full_batch_kl": 0.008937649428844452,
+        "max_checked_minibatch_kl": 0.02436286211013794,
+        "stop_rollout_end_steps": [
+          30720
+        ],
+        "first_reward": [
+          {
+            "step": 28672.0,
+            "reward_sum": 1.0,
+            "approx_kl": 0.0026981360279023647,
+            "final_full_batch_kl": 0.0040252357721328735,
+            "optimizer_updates": 64.0,
+            "kl_stop_triggered": 0.0
+          }
+        ]
+      },
+      "encoder_actor_parameter_change_l2": 0.26366350174883585,
+      "parent": {
+        "sha256": "8dde4760ef6ff3512af083ce6f5b3cea04e7fdb90f526e0985c8da9f4bca1d20",
+        "components": "encoder_actor",
+        "metadata": {
+          "actions": 5,
+          "architecture": "octax_cnn_v2",
+          "dataset_sha256": "7a5a60ca8632cd751a23a2553d21762254b8aa208a94f658d835f6abc3c05cec",
+          "epochs": 100,
+          "observation_shape": [
+            4,
+            32,
+            64
+          ],
+          "optimizer_updates": 1800,
+          "seed": 1
+        }
+      },
+      "handoff_audit": {
+        "initial_episode_arrays_exact": true,
+        "original_rate_config_differences": {
+          "run_dir": [
+            "runs/tetris/human_bc_100epoch_ppo_seed1",
+            "runs/tetris/human_bc_stability_ppo_seed1"
+          ],
+          "target_kl": [
+            null,
+            0.015
+          ],
+          "learning_rate": [
+            0.0005,
+            5e-06
+          ]
+        },
+        "source_frozen": true,
+        "training_decisions": 65536,
+        "counts": {
+          "optimizer_updates": 2033,
+          "gradient_evaluations": 2033,
+          "minibatches_checked": 2034,
+          "skipped_minibatches": 15,
+          "kl_stop_triggered": 1
+        },
+        "parent_weights_sha256": "8dde4760ef6ff3512af083ce6f5b3cea04e7fdb90f526e0985c8da9f4bca1d20",
+        "smoke": false,
+        "seed1_first_reward_check": {
+          "recorded_prefix_summaries_exact": true,
+          "first_reward_step": 28672,
+          "first_reward_full_batch_kl": 0.0040252357721328735,
+          "diagnostic_kl": 0.004025235306471586
+        }
+      },
+      "checkpoint_sha256": "7472a90e186421568a743c3fb90a3dafaed6cd491a64fdcadef64699ad91253a",
+      "policies": {
+        "stability_ppo": {
+          "mean_return": 0.0234375,
+          "scoring_fraction": 0.0234375,
+          "mean_length": 677.328125,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            0.0010957576876052505,
+            0.04911301298761217,
+            0.16662437426468893,
+            0.3130406699116473,
+            0.47012618514844634
+          ],
+          "seconds": 35.9625938340032
+        },
+        "pretrained": {
+          "mean_return": 0.0546875,
+          "scoring_fraction": 0.0546875,
+          "mean_length": 632.6015625,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            0.0014696256776950342,
+            0.06300865720672323,
+            0.13804601533844615,
+            0.3306657774813827,
+            0.4668099242957529
+          ],
+          "seconds": 27.51590808297624
+        },
+        "original_rate_ppo": {
+          "mean_return": 0.0,
+          "scoring_fraction": 0.0,
+          "mean_length": 829.78125,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "seconds": 19.456332291010767
+        },
+        "scratch_entropy_zero": {
+          "mean_return": 0.0,
+          "scoring_fraction": 0.0,
+          "mean_length": 1532.84375,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            0.26668671382846426,
+            0.14858004933640498,
+            0.4291808525820065,
+            0.06995270228945383,
+            0.08559968196367046
+          ],
+          "seconds": 60.73108387499815
+        },
+        "scratch_entropy_001": {
+          "mean_return": 0.0078125,
+          "scoring_fraction": 0.0078125,
+          "mean_length": 1400.6875,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            0.26401655437062155,
+            0.1639652402837892,
+            0.2324137700236491,
+            0.15394226049707732,
+            0.1856621748248628
+          ],
+          "seconds": 39.842345874989405
+        },
+        "untrained": {
+          "mean_return": 0.015625,
+          "scoring_fraction": 0.015625,
+          "mean_length": 1312.15625,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            0.1948188811355355,
+            0.1998440067636762,
+            0.20120745909643,
+            0.19394365190883325,
+            0.21018600109552502
+          ],
+          "seconds": 77.69467779199476
+        },
+        "random": {
+          "mean_return": 0.0234375,
+          "scoring_fraction": 0.0234375,
+          "mean_length": 1273.875,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            0.19958173878912766,
+            0.20087577274065352,
+            0.1990420469041311,
+            0.19992517907958002,
+            0.2005752624865077
+          ],
+          "seconds": 28.265039416990476
+        },
+        "noop": {
+          "mean_return": 0.0,
+          "scoring_fraction": 0.0,
+          "mean_length": 777.703125,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "seconds": 13.820706375001464
+        }
+      },
+      "paired_comparisons": {
+        "pretrained": {
+          "ablation_only_scoring": 3,
+          "control_only_scoring": 7,
+          "exact_p": 0.34375,
+          "mean_return_difference": -0.03125
+        },
+        "random": {
+          "ablation_only_scoring": 3,
+          "control_only_scoring": 3,
+          "exact_p": 1.0,
+          "mean_return_difference": 0.0
+        },
+        "original_rate_ppo": {
+          "ablation_only_scoring": 3,
+          "control_only_scoring": 0,
+          "exact_p": 0.25,
+          "mean_return_difference": 0.0234375
+        }
+      }
+    },
+    "2": {
+      "scores": {
+        "stability_ppo": 3,
+        "pretrained": 1,
+        "original_rate_ppo": 0,
+        "scratch_entropy_zero": 0,
+        "scratch_entropy_001": 1,
+        "untrained": 0,
+        "random": 3,
+        "noop": 0
+      },
+      "candidate_screen": false,
+      "training": {
+        "first_reward_context": [
+          {
+            "step": 4096.0,
+            "reward_sum": 0.0,
+            "positive_reward_steps": 0.0,
+            "entropy": 0.3724258542060852,
+            "advantage_std": 0.0,
+            "value_loss": 0.0,
+            "approx_kl": 0.0
+          },
+          {
+            "step": 6144.0,
+            "reward_sum": 1.0,
+            "positive_reward_steps": 1.0,
+            "entropy": 0.4111413359642029,
+            "advantage_std": 0.07965930551290512,
+            "value_loss": 0.0019402147736400366,
+            "approx_kl": 0.002009023679420352
+          },
+          {
+            "step": 8192.0,
+            "reward_sum": 0.0,
+            "positive_reward_steps": 0.0,
+            "entropy": 0.3874073326587677,
+            "advantage_std": 0.0014807324623689055,
+            "value_loss": 6.364570594996621e-07,
+            "approx_kl": 0.0010324906324967742
+          },
+          {
+            "step": 10240.0,
+            "reward_sum": 0.0,
+            "positive_reward_steps": 0.0,
+            "entropy": 0.39694949984550476,
+            "advantage_std": 0.0009045982151292264,
+            "value_loss": 2.1046125198154186e-07,
+            "approx_kl": 0.000883468659594655
+          }
+        ],
+        "zero_advantage_and_value_loss_before_first_reward": true,
+        "steps": 65536,
+        "rollouts": 32,
+        "reward_sum": 2.0,
+        "positive_reward_events": 2,
+        "completed_episodes": 102,
+        "reward_event_rollouts": [
+          {
+            "rollout_end_step": 6144,
+            "positive_events": 1,
+            "reward_sum": 1.0
+          },
+          {
+            "rollout_end_step": 34816,
+            "positive_events": 1,
+            "reward_sum": 1.0
+          }
+        ],
+        "final_entropy": 0.3583677411079407,
+        "final_approx_kl": 0.00047025326057337224,
+        "max_clipped_grad_norm": 0.49688833951950073,
+        "max_advantage_std": 0.07965930551290512,
+        "step": 65536,
+        "seed": 2,
+        "optimizer_updates": 2048,
+        "wall_training_and_periodic_eval_seconds": 845.6367726669996,
+        "collect_seconds": 36.74405533017125,
+        "update_seconds": 804.8925861300377,
+        "training_steps_per_second": 77.86733225670572,
+        "steady_training_steps_per_second": 76.94509929851684,
+        "parameter_change_l2": 0.44727192115260905,
+        "final_evaluation": {
+          "mean_return": 0.0,
+          "scoring_fraction": 0.0,
+          "mean_length": 492.5,
+          "terminated": 8,
+          "truncated": 0,
+          "action_distribution": [
+            0.0012690355329949238,
+            0.20456852791878172,
+            0.05532994923857868,
+            0.3743654822335025,
+            0.36446700507614216
+          ],
+          "seconds": 2.9193244999914896
+        }
+      },
+      "kl": {
+        "max_final_full_batch_kl": 0.003905817400664091,
+        "max_checked_minibatch_kl": 0.004817467648535967,
+        "stop_rollout_end_steps": [],
+        "first_reward": [
+          {
+            "step": 6144.0,
+            "reward_sum": 1.0,
+            "approx_kl": 0.002009023679420352,
+            "final_full_batch_kl": 0.003788003232330084,
+            "optimizer_updates": 64.0,
+            "kl_stop_triggered": 0.0
+          }
+        ]
+      },
+      "encoder_actor_parameter_change_l2": 0.22844837021085132,
+      "parent": {
+        "sha256": "7572a5d2634078cfd8b785db1a23f609d40f1607730aac9d8a0d110621893c93",
+        "components": "encoder_actor",
+        "metadata": {
+          "actions": 5,
+          "architecture": "octax_cnn_v2",
+          "dataset_sha256": "7a5a60ca8632cd751a23a2553d21762254b8aa208a94f658d835f6abc3c05cec",
+          "epochs": 100,
+          "observation_shape": [
+            4,
+            32,
+            64
+          ],
+          "optimizer_updates": 1800,
+          "seed": 2
+        }
+      },
+      "handoff_audit": {
+        "initial_episode_arrays_exact": true,
+        "original_rate_config_differences": {
+          "run_dir": [
+            "runs/tetris/human_bc_100epoch_ppo_seed2",
+            "runs/tetris/human_bc_stability_ppo_seed2"
+          ],
+          "target_kl": [
+            null,
+            0.015
+          ],
+          "learning_rate": [
+            0.0005,
+            5e-06
+          ]
+        },
+        "source_frozen": true,
+        "training_decisions": 65536,
+        "counts": {
+          "optimizer_updates": 2048,
+          "gradient_evaluations": 2048,
+          "minibatches_checked": 2048,
+          "skipped_minibatches": 0,
+          "kl_stop_triggered": 0
+        },
+        "parent_weights_sha256": "7572a5d2634078cfd8b785db1a23f609d40f1607730aac9d8a0d110621893c93",
+        "smoke": false,
+        "seed1_first_reward_check": null
+      },
+      "checkpoint_sha256": "0054e1311b5ca93a41d4b3c53465ceb33b89243b34a7837c99418b7cc765393b",
+      "policies": {
+        "stability_ppo": {
+          "mean_return": 0.0234375,
+          "scoring_fraction": 0.0234375,
+          "mean_length": 646.7734375,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            0.002971481029630256,
+            0.17658569582180778,
+            0.08439730875620569,
+            0.3328058753185887,
+            0.40323963907376764
+          ],
+          "seconds": 19.316214500024216
+        },
+        "pretrained": {
+          "mean_return": 0.0078125,
+          "scoring_fraction": 0.0078125,
+          "mean_length": 603.40625,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            0.0031591485835620694,
+            0.15350354756849138,
+            0.09885286653891967,
+            0.3491377078046507,
+            0.3953467295043762
+          ],
+          "seconds": 23.908884375006892
+        },
+        "original_rate_ppo": {
+          "mean_return": 0.0,
+          "scoring_fraction": 0.0,
+          "mean_length": 1280.078125,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            0.6615685077815074,
+            0.2301373207201709,
+            0.02546231309124199,
+            0.0477631980469942,
+            0.03506866036008544
+          ],
+          "seconds": 38.57969058299204
+        },
+        "scratch_entropy_zero": {
+          "mean_return": 0.0,
+          "scoring_fraction": 0.0,
+          "mean_length": 1474.640625,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            0.306308740477023,
+            0.2549720800618795,
+            0.15528147747862298,
+            0.1134174640007629,
+            0.17002023798171165
+          ],
+          "seconds": 61.89829929199186
+        },
+        "scratch_entropy_001": {
+          "mean_return": 0.0078125,
+          "scoring_fraction": 0.0078125,
+          "mean_length": 1309.453125,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            0.19987470914623232,
+            0.2001968856273492,
+            0.19944514050474316,
+            0.19983891175944157,
+            0.20064435296223376
+          ],
+          "seconds": 37.0142557079962
+        },
+        "untrained": {
+          "mean_return": 0.0,
+          "scoring_fraction": 0.0,
+          "mean_length": 1301.234375,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            0.1950191524874218,
+            0.20141332148560862,
+            0.20564608124497172,
+            0.20511173284981807,
+            0.19280971193217977
+          ],
+          "seconds": 88.97844733300735
+        },
+        "random": {
+          "mean_return": 0.0234375,
+          "scoring_fraction": 0.0234375,
+          "mean_length": 1273.875,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            0.19958173878912766,
+            0.20087577274065352,
+            0.1990420469041311,
+            0.19992517907958002,
+            0.2005752624865077
+          ],
+          "seconds": 24.15504266700009
+        },
+        "noop": {
+          "mean_return": 0.0,
+          "scoring_fraction": 0.0,
+          "mean_length": 777.703125,
+          "terminated": 128,
+          "truncated": 0,
+          "action_distribution": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "seconds": 12.146933292009635
+        }
+      },
+      "paired_comparisons": {
+        "pretrained": {
+          "ablation_only_scoring": 3,
+          "control_only_scoring": 1,
+          "exact_p": 0.625,
+          "mean_return_difference": 0.015625
+        },
+        "random": {
+          "ablation_only_scoring": 3,
+          "control_only_scoring": 3,
+          "exact_p": 1.0,
+          "mean_return_difference": 0.0
+        },
+        "original_rate_ppo": {
+          "ablation_only_scoring": 3,
+          "control_only_scoring": 0,
+          "exact_p": 0.25,
+          "mean_return_difference": 0.0234375
+        }
+      }
+    }
+  },
+  "total_fresh_ppo_decisions": 131072,
+  "total_ppo_optimizer_updates": 4081,
+  "separate_smoke_decisions": 2048,
+  "separate_smoke_optimizer_updates": 64,
+  "offline_updates_including_reference_fits": 4320,
+  "offline_example_presentations": 537600,
+  "original_human_decisions": 2240,
+  "shared_human_prefix": true,
+  "shared_game_bank": true,
+  "reserved_confirmation_bank_used": false,
+  "offline_fit_data_replayed_during_ppo": false,
+  "limitations": [
+    "Only two initialization seeds, sharing one incomplete human prefix and 128 exploratory game seeds.",
+    "Bundled learning-rate and stopping change; effects cannot be attributed separately.",
+    "The guard checks before an update and cannot undo overshoot; full-rollout KL is not hard bounded.",
+    "Seed-2 throughput varied substantially during high host load; timings are not an isolated CPU benchmark.",
+    "Paired tests are unadjusted exploratory diagnostics after multiple investigations.",
+    "Raw human recording stays local; published weights suffice for PPO and gameplay reproduction."
+  ]
+}

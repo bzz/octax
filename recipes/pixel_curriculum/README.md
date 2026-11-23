@@ -52,3 +52,38 @@ MPLCONFIGDIR=../../work/mpl .venv/bin/python summarize_cloning_handoff.py
 ```
 
 All fit/confusion metrics use the same training prefix; none is independent action validation. The audit reads completed files, runs no environments and performs no optimization. The next offline-fit experiment must have its own settings, output directory and evaluation, preserving this completed baseline.
+
+## Later fixed experiments
+
+The [100-epoch offline comparison](../../runs/tetris/human_bc_duration_100epoch/RESULT.md)
+scored [7,1]/128 across seeds, versus shared random 3/128. The original-rate
+[fresh 64K PPO pilot](../../runs/tetris/human_bc_100epoch_ppo_64k/RESULT.md)
+then scored [0,0]/128, with a destructive first rewarded update in each seed.
+These are completed later experiments; the first investigation above describes
+the earlier 20-epoch handoff stage.
+
+The [smaller-step experiment](../../CURRICULUM_STABILITY_EXPERIMENT.md) freezes
+learning rate .000005, target KL .015 and entropy zero. Its orchestration script
+launches a separate smoke and independent fresh PPO processes for seeds 1 and 2:
+
+```sh
+JAX_PLATFORMS=cpu .venv/bin/python run_curriculum_stability.py
+```
+
+The runner refuses existing output directories. Reproduce a single fresh stage
+in a new directory with the published 100-epoch weights and their recorded hash:
+
+```sh
+JAX_PLATFORMS=cpu .venv/bin/python train_pretrained_ppo.py \
+  --seed 1 --entropy-coef 0 --learning-rate .000005 --target-kl .015 \
+  --weights runs/tetris/human_bc_100epoch_seed1/pretrain/policy_weights.msgpack \
+  --weights-sha256 8dde4760ef6ff3512af083ce6f5b3cea04e7fdb90f526e0985c8da9f4bca1d20 \
+  --run runs/tetris/reproduced_stability_seed1
+```
+
+With stopping enabled, the 65,536-decision budget remains fixed but actual
+optimizer updates can be fewer than 2,048. The threshold is a pre-update
+minibatch stopping rule, not rollback or a hard full-rollout divergence cap.
+The PPO process still consumes weights only and performs no offline replay.
+
+Completed smaller-step results: [3,3]/128 scoring games, equal to shared random, versus starting policies [7,1]/128. Training rewards [3,2] and smaller updates do not establish useful learning. [Report and actual-policy card](../../runs/tetris/human_bc_stability_ppo_64k/RESULT.md).

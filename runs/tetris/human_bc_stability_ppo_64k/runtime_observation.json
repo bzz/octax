@@ -1,0 +1,48 @@
+{
+  "observed_at": "2026-11-23T20:32:14.274888+00:00",
+  "host_load_averages": [
+    25.62548828125,
+    25.46826171875,
+    20.07080078125
+  ],
+  "logical_cpu_count": 18,
+  "recent_rollouts": [
+    {
+      "step": "36864",
+      "collect_seconds": "1.5344500840001274",
+      "update_seconds": "13.237085750006372",
+      "steps_per_second": "138.64502804679037"
+    },
+    {
+      "step": "38912",
+      "collect_seconds": "0.8386960830248427",
+      "update_seconds": "25.308542875020066",
+      "steps_per_second": "78.32566961606005"
+    },
+    {
+      "step": "40960",
+      "collect_seconds": "1.5773567919968627",
+      "update_seconds": "44.55349329201272",
+      "steps_per_second": "44.3954532871247"
+    },
+    {
+      "step": "43008",
+      "collect_seconds": "1.515233874990372",
+      "update_seconds": "43.62269799999194",
+      "steps_per_second": "45.3720388801221"
+    },
+    {
+      "step": "45056",
+      "collect_seconds": "1.5325869580265135",
+      "update_seconds": "43.63040799999726",
+      "steps_per_second": "45.34685978871618"
+    },
+    {
+      "step": "47104",
+      "collect_seconds": "1.5358625829976518",
+      "update_seconds": "43.76997200000915",
+      "steps_per_second": "45.20389082001723"
+    }
+  ],
+  "interpretation": "Observed throughput fluctuates substantially while host load is high. Source remains frozen; these timings are not an isolated CPU benchmark. No cause of the host load is inferred."
+}

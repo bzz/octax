@@ -1,0 +1,14 @@
+{
+  "phase": "complete",
+  "pid": 38027,
+  "completed": [
+    "runs/tetris/human_bc_stability_smoke_seed1",
+    "runs/tetris/human_bc_stability_ppo_seed1",
+    "runs/tetris/human_bc_stability_ppo_seed2"
+  ],
+  "updated_at": "2026-11-23T22:25:44.391063+00:00",
+  "total_fresh_ppo_decisions": 131072,
+  "smoke_decisions": 2048,
+  "total_ppo_updates": 4081,
+  "offline_work_counted_separately": true
+}

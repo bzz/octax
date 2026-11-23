@@ -103,11 +103,16 @@ def main():
         limitations=['Only two initialization seeds, sharing one incomplete human prefix and 128 exploratory game seeds.',
             'Bundled learning-rate and stopping change; effects cannot be attributed separately.',
             'The guard checks before an update and cannot undo overshoot; full-rollout KL is not hard bounded.',
+            'Seed-2 throughput varied substantially during high host load; timings are not an isolated CPU benchmark.',
             'Paired tests are unadjusted exploratory diagnostics after multiple investigations.',
             'Raw human recording stays local; published weights suffice for PPO and gameplay reproduction.'])
     write_json(series/'analysis.json', analysis)
-    table = '\n'.join(f'| {name} | {results[1]["scores"][name]}/128 | {results[2]["scores"][name]}/128 |'
-        for name in ['stability_ppo', 'pretrained', 'original_rate_ppo', 'scratch_entropy_zero', 'scratch_entropy_001', 'untrained', 'random', 'noop'])
+    labels = {'stability_ppo': 'Smaller-step PPO', 'pretrained': 'Pretrained starting policy',
+        'original_rate_ppo': 'Previous PPO rate', 'scratch_entropy_zero': 'Scratch PPO, entropy 0',
+        'scratch_entropy_001': 'Scratch longer-credit PPO, entropy .01', 'untrained': 'Untrained network',
+        'random': 'Uniform random', 'noop': 'No-op'}
+    table = '\n'.join(f'| {label} | {results[1]["scores"][name]}/128 | {results[2]["scores"][name]}/128 |'
+        for name, label in labels.items())
     details = '\n'.join(f'| {seed} | {r["training"]["positive_reward_events"]} | {r["handoff_audit"]["counts"]["optimizer_updates"]} | '
         f'{r["handoff_audit"]["counts"]["kl_stop_triggered"]} | {r["kl"]["max_final_full_batch_kl"]:.5f} |'
         for seed, r in results.items())
@@ -154,8 +159,20 @@ Offline work remains separate: 4,320 updates and 537,600 example presentations,
 including reference fits, from only 2,240 human decisions. Diagnostic replays,
 evaluation and illustrations are not fresh training experience. Raw human
 recordings remain local; published weight artifacts suffice for PPO reproduction.
+Seed-2 throughput varied substantially during high host load. Raw timings remain
+in the metrics, with a [runtime observation](runtime_observation.json); they are
+not an isolated CPU benchmark.
 
 ## Interpretation
+
+Training reward events are {[results[s]['training']['positive_reward_events'] for s in [1, 2]]}
+across seeds, compared with [1, 1] in the previous pilot. Its final policies
+scored [0, 0]/128; the current final policies score
+{[results[s]['scores']['stability_ppo'] for s in [1, 2]]}/128. These comparisons
+distinguish continued reward discovery from held-out scoring gains. The earlier
+seed-1 first-reward diagnostic ended at exact full-batch KL 15.7814; the actual
+new update ends at {results[1]['kl']['first_reward'][0]['final_full_batch_kl']:.5f}.
+This validates control of that previously destructive update, not successful RL.
 
 The exploratory screen requires both seeds to score above their own pretrained
 policy and random; outcome: `{candidate}`. Small KL, retained preferences and

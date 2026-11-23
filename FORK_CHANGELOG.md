@@ -72,4 +72,6 @@ The offline pixel-cloning component, strict weights-only handoff and separate pr
 
 ### Curriculum update-stability diagnostics
 
-The completed offline-to-PPO pilot and first-reward counterfactuals are experiment work. They identify an unstable training profile, not an emulator defect or proof that standard Adam is incorrect. No shared PPO implementation was changed by these diagnostics. Optional KL stopping and smaller-step training remain proposed work. Upstream-fix commits stay separate. See [online results](runs/tetris/human_bc_100epoch_ppo_64k/RESULT.md).
+The completed offline-to-PPO pilot and first-reward counterfactuals are experiment work. They identify an unstable training profile, not an emulator defect or proof that standard Adam is incorrect. No shared PPO implementation was changed by those diagnostics. See [online results](runs/tetris/human_bc_100epoch_ppo_64k/RESULT.md).
+
+The subsequent optional `target_kl` implementation is an experiment-layer optimization choice. Its default-disabled path matches archived PPO exactly; enabled stopping skips subsequent shared-optimizer updates and gradient calculations, preserves epoch RNG splits and records actual accepted-update counts. Thirty relevant regressions pass, including stopping, checkpoint continuation and weights-only initialization. The [smaller-step protocol](CURRICULUM_STABILITY_EXPERIMENT.md) tests it with learning rate .000005 in independent fresh PPO processes. It is not a hard KL bound or an upstream bugfix. The five-fix upstream branch remains unchanged.

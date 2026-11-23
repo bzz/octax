@@ -1,0 +1,110 @@
+{
+  "smoke": {
+    "initial_episode_arrays_exact": true,
+    "original_rate_config_differences": {
+      "run_dir": [
+        "runs/tetris/human_bc_100epoch_ppo_seed1",
+        "runs/tetris/human_bc_stability_smoke_seed1"
+      ],
+      "total_timesteps": [
+        65536,
+        2048
+      ],
+      "eval_episodes": [
+        8,
+        2
+      ],
+      "purpose": [
+        "curriculum_ppo",
+        "handoff_smoke"
+      ],
+      "target_kl": [
+        null,
+        0.015
+      ],
+      "learning_rate": [
+        0.0005,
+        5e-06
+      ],
+      "eval_freq": [
+        65536,
+        2048
+      ]
+    },
+    "source_frozen": true,
+    "training_decisions": 2048,
+    "counts": {
+      "optimizer_updates": 64,
+      "gradient_evaluations": 64,
+      "minibatches_checked": 64,
+      "skipped_minibatches": 0,
+      "kl_stop_triggered": 0
+    },
+    "parent_weights_sha256": "8dde4760ef6ff3512af083ce6f5b3cea04e7fdb90f526e0985c8da9f4bca1d20",
+    "smoke": true,
+    "seed1_first_reward_check": null
+  },
+  "seed1": {
+    "initial_episode_arrays_exact": true,
+    "original_rate_config_differences": {
+      "run_dir": [
+        "runs/tetris/human_bc_100epoch_ppo_seed1",
+        "runs/tetris/human_bc_stability_ppo_seed1"
+      ],
+      "target_kl": [
+        null,
+        0.015
+      ],
+      "learning_rate": [
+        0.0005,
+        5e-06
+      ]
+    },
+    "source_frozen": true,
+    "training_decisions": 65536,
+    "counts": {
+      "optimizer_updates": 2033,
+      "gradient_evaluations": 2033,
+      "minibatches_checked": 2034,
+      "skipped_minibatches": 15,
+      "kl_stop_triggered": 1
+    },
+    "parent_weights_sha256": "8dde4760ef6ff3512af083ce6f5b3cea04e7fdb90f526e0985c8da9f4bca1d20",
+    "smoke": false,
+    "seed1_first_reward_check": {
+      "recorded_prefix_summaries_exact": true,
+      "first_reward_step": 28672,
+      "first_reward_full_batch_kl": 0.0040252357721328735,
+      "diagnostic_kl": 0.004025235306471586
+    }
+  },
+  "seed2": {
+    "initial_episode_arrays_exact": true,
+    "original_rate_config_differences": {
+      "run_dir": [
+        "runs/tetris/human_bc_100epoch_ppo_seed2",
+        "runs/tetris/human_bc_stability_ppo_seed2"
+      ],
+      "target_kl": [
+        null,
+        0.015
+      ],
+      "learning_rate": [
+        0.0005,
+        5e-06
+      ]
+    },
+    "source_frozen": true,
+    "training_decisions": 65536,
+    "counts": {
+      "optimizer_updates": 2048,
+      "gradient_evaluations": 2048,
+      "minibatches_checked": 2048,
+      "skipped_minibatches": 0,
+      "kl_stop_triggered": 0
+    },
+    "parent_weights_sha256": "7572a5d2634078cfd8b785db1a23f609d40f1607730aac9d8a0d110621893c93",
+    "smoke": false,
+    "seed1_first_reward_check": null
+  }
+}

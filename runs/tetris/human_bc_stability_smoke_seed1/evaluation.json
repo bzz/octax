@@ -1,0 +1,116 @@
+[
+  {
+    "summary": {
+      "mean_return": 0.0,
+      "scoring_fraction": 0.0,
+      "mean_length": 614.5,
+      "terminated": 2,
+      "truncated": 0,
+      "action_distribution": [
+        0.0,
+        0.30349877949552484,
+        0.09031733116354759,
+        0.2994304312449146,
+        0.306753458096013
+      ],
+      "seconds": 1.7883167920226697
+    },
+    "episodes": {
+      "action_counts": [
+        [
+          0,
+          340,
+          21,
+          216,
+          296
+        ],
+        [
+          0,
+          33,
+          90,
+          152,
+          81
+        ]
+      ],
+      "final_score": [
+        0.0,
+        0.0
+      ],
+      "lengths": [
+        873,
+        356
+      ],
+      "returns": [
+        0.0,
+        0.0
+      ],
+      "terminated": [
+        true,
+        true
+      ],
+      "truncated": [
+        false,
+        false
+      ]
+    },
+    "step": 0,
+    "checkpoint_roundtrip_exact": true
+  },
+  {
+    "summary": {
+      "mean_return": 0.0,
+      "scoring_fraction": 0.0,
+      "mean_length": 614.5,
+      "terminated": 2,
+      "truncated": 0,
+      "action_distribution": [
+        0.0,
+        0.30349877949552484,
+        0.09031733116354759,
+        0.2994304312449146,
+        0.306753458096013
+      ],
+      "seconds": 1.0359092080034316
+    },
+    "episodes": {
+      "action_counts": [
+        [
+          0,
+          340,
+          21,
+          216,
+          296
+        ],
+        [
+          0,
+          33,
+          90,
+          152,
+          81
+        ]
+      ],
+      "final_score": [
+        0.0,
+        0.0
+      ],
+      "lengths": [
+        873,
+        356
+      ],
+      "returns": [
+        0.0,
+        0.0
+      ],
+      "terminated": [
+        true,
+        true
+      ],
+      "truncated": [
+        false,
+        false
+      ]
+    },
+    "step": 2048,
+    "checkpoint_roundtrip_exact": true
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "sha256": "8dde4760ef6ff3512af083ce6f5b3cea04e7fdb90f526e0985c8da9f4bca1d20",
+  "components": "encoder_actor",
+  "metadata": {
+    "actions": 5,
+    "architecture": "octax_cnn_v2",
+    "dataset_sha256": "7a5a60ca8632cd751a23a2553d21762254b8aa208a94f658d835f6abc3c05cec",
+    "epochs": 100,
+    "observation_shape": [
+      4,
+      32,
+      64
+    ],
+    "optimizer_updates": 1800,
+    "seed": 1
+  }
+}
