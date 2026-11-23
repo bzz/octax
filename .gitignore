@@ -80,4 +80,5 @@ docs/_build/
 # Local experiment outputs and plot caches
 runs/
 train.log
+train_self_imitation.log
 .matplotlib/
