@@ -1,4 +1,4 @@
-# Prepared ablation; not launched. Match environment-step budget and minibatch size.
+# Longer-credit ablation. Match environment-step budget and minibatch size.
 defaults:
   - config
   - _self_

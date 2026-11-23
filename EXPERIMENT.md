@@ -50,16 +50,16 @@ Local Matplotlib replay:
 .venv/bin/python replay.py runs/tetris/ppo_seed0_v2_smoke/visualizations/policy_trajectory.npz --speed 4
 ```
 
-## Next comparison — ablation not launched
+## Longer-credit comparison
 
-The fresh corrected baseline is complete: see [the result](runs/tetris/v2_baseline_seed0/RESULT.md). For a new independent reproduction and the prepared longer-credit ablation, each at 65,536 decisions:
+The fresh corrected baseline is complete: see [the result](runs/tetris/v2_baseline_seed0/RESULT.md). The longer-credit round uses the already prepared configuration at the same 65,536-decision budget. Use a fresh directory to reproduce either arm:
 
 ```sh
 .venv/bin/python train.py run_dir=runs/tetris/v2_baseline_reproduction
-.venv/bin/python train.py --config-name credit_horizon
+.venv/bin/python train.py --config-name credit_horizon run_dir=runs/tetris/v2_credit_reproduction
 ```
 
-The ablation changes rollout length to 128, minibatch count to 16 (same minibatch size), gamma to 0.995 and lambda to 0.98. Other settings match. It is a hypothesis to test after the corrected baseline, not a demonstrated improvement.
+The ablation changes rollout length to 128, minibatch count to 16 (same minibatch size), gamma to 0.995 and lambda to 0.98. Other settings match. The comparison changes rollout length, gamma and lambda together; it cannot isolate their individual effects. See the implementation log for its outcome.
 
 For the three-seed nominal 500K pilot, only once evidence justifies it:
 
@@ -107,3 +107,11 @@ To reproduce the fresh run and final comparison:
 `compare_random_budget.py` records the original equal-budget uniform-random control; `summarize_v2_baseline.py` rebuilds the published baseline analysis from stored episode arrays and metrics. These two scripts and `run_v2_baseline.py` target the original baseline directory. The launcher deliberately refuses to overwrite it. Use the direct commands above for a new run, and do not interpret the archived process-status files as live jobs.
 
 The exact v2 source snapshot and manifest live inside the published run. Older experiments have more limited source provenance, detailed in [FORK_CHANGELOG.md](FORK_CHANGELOG.md). The dependency lock records the observed macOS environment; bitwise reproducibility across different JAX versions/backends/hardware is not asserted. New runs are ignored by Git and should be explicitly reviewed before publishing.
+
+## Investigation-round result cards
+
+Each completed investigation should include its fixed-budget run, matched controls, source provenance, a result summary with limitations, and a compact gameplay card. Preserve the original pixel observations and use the existing Matplotlib/Seaborn MinAtar-style renderer for animations. Choose an illustrative seed before observing results and label it separately from aggregate evidence.
+
+`round_card.write_round_card` exports a 440×265 policy GIF and a self-contained HTML card from the raw saved trajectory. Include links to the full result, implementation log, changed settings and code diff. Display the GIF directly in chat alongside the essential numbers and links. No website deployment or generated game imagery is needed.
+
+For this round, `run_credit_ablation.py` performs fresh training, the 128-game evaluation on seeds 50000–50127, and rendering. It refuses to overwrite an existing run. After it finishes, `summarize_credit_ablation.py` verifies matched initial evaluation and repeated controls, writes the comparison/report/card and appends the implementation log. These final evaluation seeds are reused from the baseline, so the comparison is exploratory.
