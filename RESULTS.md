@@ -79,3 +79,13 @@ A later investigation found unsigned timer underflow, a once-per-action rather t
 Completed 65,536 fresh v2 steps. Training positive rewards: 0; equal-budget random: 0. Final matched corrected-timing evaluation: PPO 1/128 scoring games, random 3/128. This evaluation does not establish a scoring advantage over random play.
 
 [Full v2 result](runs/tetris/v2_baseline_seed0/RESULT.md).
+
+## 2026-11-23 — Longer-credit 64K ablation completed
+
+Completed the fresh seed-0 65,536-step run with 128-step rollouts, gamma 0.995 and lambda 0.98. Training encountered 1 positive reward event (reward sum 1) in 42 completed games. The baseline encountered 0 events; the reused equal-budget random rollout encountered 0.
+
+On the same previously inspected 128 seeds, longer credit scored in 2/128 games, baseline in 1/128 and random in 3/128. Unadjusted exact paired scoring tests: p=1 versus baseline, p=1 versus random. No scoring improvement is established by this one-seed exploratory comparison. Training reward events show whether useful targets became available, but sparse evaluation scores and a single trained seed cannot establish robust policy improvement. The ablation encountered feedback in a run where the baseline did not. This is evidence that the corrected pipeline can update from a real game score, not proof that longer credit caused the discovery. Before the first reward, logged advantage variation and value loss were zero; changing gamma/lambda cannot propagate a score that has not been encountered. Different rollout/update scheduling also changes subsequent random draws and trajectories. Independent training seeds are needed to distinguish a repeatable benefit from a lucky discovery.
+
+Initial policy evaluation and repeated random/no-op controls matched their baseline arrays exactly. Finite-state checks and exact checkpoint roundtrip passed; final entropy 1.578472, throughput 139.5 decisions/s. This is a single-seed, bundled, exploratory comparison; it does not isolate rollout/gamma/lambda effects or establish performance across seeds. No further run was launched.
+
+Saved full evidence in `runs/tetris/v2_credit_horizon_seed0/RESULT.md`, plus a small reusable result card with actual policy gameplay and links to the settings and log. Rendering continues to use Matplotlib/Seaborn primitives from the existing MinAtar-style workflow.

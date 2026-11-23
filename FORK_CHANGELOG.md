@@ -32,10 +32,12 @@ Commits after `upstream-fixes` add the pixel-only Tetris PPO workflow and then t
 
 The experiment layer includes four-frame monochrome observations, training/evaluation/checkpoint tools, CPU dependency pins, MinAtar-style Matplotlib/Seaborn exports, source manifests, and explicit historical-timing replay. Zero-initialized value output and the 0.01 advantage standard-deviation floor are **experimental stabilization choices**, not universal PPO bug fixes. The main configuration selects global-norm clipping; the class also permits historical elementwise clipping so old checkpoints can be replayed faithfully.
 
-No features derived from board geometry, reward shaping, recurrence or transformers are used. Longer-credit settings are prepared but untested. Neither the historical v1 experiments nor the fresh 65,536-step v2 baseline demonstrate superiority to random play. v1 and v2 use different timing semantics and must not be pooled.
+No features derived from board geometry, reward shaping, recurrence or transformers are used. The longer-credit profile has now been tested at the same 65,536-step budget; [its result](runs/tetris/v2_credit_horizon_seed0/RESULT.md) records the exploratory comparison. Neither the historical v1 experiments nor the fresh 65,536-step v2 baseline demonstrate superiority to random play. v1 and v2 use different timing semantics and must not be pooled.
 
 ## Publication and provenance
 
 The commit series was organized after the experiments ran. Historical `system.json` files record the base HEAD in a field named `upstream_commit`; they do not identify the then-uncommitted working tree. The final v2 baseline includes exact source snapshots with SHA-256 hashes. Earlier runs retain hashes, configurations, checkpoints and the before-fix environment/PPO snapshots, but not every historical source file; exact reconstruction of every earlier working tree is not claimed.
 
 Current metadata records the fixed upstream base, current source commit and dirty state separately. Packaging extracted identical checkpoint functions into `octax/checkpoints.py` and updated metadata/cache paths; it did not retrain or modify saved model state. Known local checkout prefixes in published text logs and checkpoint-location metadata are normalized to repository-relative paths. Original numeric measurements, checkpoint bytes, source snapshots and their hashes are preserved. No credential files, virtual environment or local caches are included.
+
+The longer-credit investigation adds only experiment/reporting work after the original publication: a fresh matched-budget runner, paired comparison checks and a reusable compact gameplay card. The five-commit `upstream-fixes` branch remains unchanged.

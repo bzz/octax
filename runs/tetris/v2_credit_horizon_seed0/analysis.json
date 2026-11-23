@@ -1,0 +1,270 @@
+{
+  "config_differences": {
+    "gae_lambda": [
+      0.95,
+      0.98
+    ],
+    "run_dir": [
+      "runs/tetris/v2_baseline_seed0",
+      "runs/tetris/v2_credit_horizon_seed0"
+    ],
+    "num_minibatches": [
+      4,
+      16
+    ],
+    "gamma": [
+      0.99,
+      0.995
+    ],
+    "num_steps": [
+      32,
+      128
+    ]
+  },
+  "ablation_training": {
+    "first_reward_context": [
+      {
+        "step": 32768.0,
+        "reward_sum": 0.0,
+        "positive_reward_steps": 0.0,
+        "entropy": 1.6094367504119873,
+        "advantage_std": 0.0,
+        "value_loss": 0.0,
+        "approx_kl": 4.211324267089367e-08
+      },
+      {
+        "step": 34816.0,
+        "reward_sum": 1.0,
+        "positive_reward_steps": 1.0,
+        "entropy": 1.6036648750305176,
+        "advantage_std": 0.08708643913269043,
+        "value_loss": 0.0016832520486786962,
+        "approx_kl": 0.005855289287865162
+      },
+      {
+        "step": 36864.0,
+        "reward_sum": 0.0,
+        "positive_reward_steps": 0.0,
+        "entropy": 1.6025521755218506,
+        "advantage_std": 0.004508916288614273,
+        "value_loss": 8.717094715393614e-06,
+        "approx_kl": 0.0034888198133558035
+      },
+      {
+        "step": 38912.0,
+        "reward_sum": 0.0,
+        "positive_reward_steps": 0.0,
+        "entropy": 1.5915606021881104,
+        "advantage_std": 0.0031830919906497,
+        "value_loss": 3.781158511628746e-06,
+        "approx_kl": 0.005333667155355215
+      }
+    ],
+    "zero_advantage_and_value_loss_before_first_reward": true,
+    "steps": 65536,
+    "rollouts": 32,
+    "reward_sum": 1.0,
+    "positive_reward_events": 1,
+    "completed_episodes": 42,
+    "reward_event_rollouts": [
+      {
+        "rollout_end_step": 34816,
+        "positive_events": 1,
+        "reward_sum": 1.0
+      }
+    ],
+    "final_entropy": 1.5784716606140137,
+    "final_approx_kl": 0.008070585317909718,
+    "max_clipped_grad_norm": 0.1112585961818695,
+    "max_advantage_std": 0.08708643913269043,
+    "step": 65536,
+    "seed": 0,
+    "wall_training_and_periodic_eval_seconds": 478.79070933299954,
+    "collect_seconds": 30.042286875948776,
+    "update_seconds": 439.8319308789796,
+    "training_steps_per_second": 139.47562458977376,
+    "steady_training_steps_per_second": 139.65438916197252,
+    "parameter_change_l2": 17.664164658550515,
+    "final_evaluation": {
+      "mean_return": 0.0,
+      "scoring_fraction": 0.0,
+      "mean_length": 1411.125,
+      "terminated": 8,
+      "truncated": 0,
+      "action_distribution": [
+        0.21215342368677473,
+        0.18690760917707502,
+        0.20515546106829657,
+        0.17539197448844007,
+        0.2203915315794136
+      ],
+      "seconds": 7.900900833017658
+    }
+  },
+  "baseline_training": {
+    "first_reward_context": [],
+    "zero_advantage_and_value_loss_before_first_reward": true,
+    "steps": 65536,
+    "rollouts": 128,
+    "reward_sum": 0.0,
+    "positive_reward_events": 0,
+    "completed_episodes": 44,
+    "reward_event_rollouts": [],
+    "final_entropy": 1.6094378232955933,
+    "final_approx_kl": 0.0,
+    "max_clipped_grad_norm": 0.00014971975178923458,
+    "max_advantage_std": 0.0,
+    "step": 65536,
+    "seed": 0,
+    "wall_training_and_periodic_eval_seconds": 588.6407845829963,
+    "collect_seconds": 36.33638228700147,
+    "update_seconds": 538.0860302460496,
+    "training_steps_per_second": 114.09025582933569,
+    "steady_training_steps_per_second": 114.57796210701292,
+    "parameter_change_l2": 1.375912104717381,
+    "final_evaluation": {
+      "mean_return": 0.0,
+      "scoring_fraction": 0.0,
+      "mean_length": 1133.25,
+      "terminated": 8,
+      "truncated": 0,
+      "action_distribution": [
+        0.1987646150452239,
+        0.2026251930288992,
+        0.19744098830796383,
+        0.19369071255239356,
+        0.20747849106551952
+      ],
+      "seconds": 12.023354500008281
+    }
+  },
+  "reused_random_budget": {
+    "policy": "uniform_random",
+    "timer_mode": "frame",
+    "seed": 0,
+    "total_steps": 65536,
+    "positive_reward_events": 0,
+    "reward_sum": 0.0,
+    "completed_episodes": 42,
+    "positive_events": [],
+    "action_distribution": [
+      0.197662353515625,
+      0.1995697021484375,
+      0.201690673828125,
+      0.198028564453125,
+      0.2030487060546875
+    ],
+    "elapsed_seconds": 38.09400004099007,
+    "note": "Matched budget and initial reset states; no claim of identical action RNG or episode boundaries."
+  },
+  "policies": {
+    "longer_credit": {
+      "games": 128,
+      "scoring_games": 2,
+      "scoring_rate_ci95_wilson": [
+        0.004295449710144082,
+        0.055180976679817195
+      ],
+      "mean_return": 0.015625,
+      "scoring_fraction": 0.015625,
+      "mean_length": 1375.8046875,
+      "terminated": 128,
+      "truncated": 0,
+      "action_distribution": [
+        0.22368727392491894,
+        0.1921886623169395,
+        0.19960477674997018,
+        0.18227968859133575,
+        0.20223959841683561
+      ],
+      "seconds": 38.67313020900474
+    },
+    "baseline": {
+      "games": 128,
+      "scoring_games": 1,
+      "scoring_rate_ci95_wilson": [
+        0.0013804318928742412,
+        0.04292625943886061
+      ],
+      "mean_return": 0.0078125,
+      "scoring_fraction": 0.0078125,
+      "mean_length": 1308.6953125,
+      "terminated": 128,
+      "truncated": 0,
+      "action_distribution": [
+        0.19976957012291582,
+        0.20010984222120073,
+        0.19948899488397914,
+        0.19988299415567748,
+        0.2007485986162268
+      ],
+      "seconds": 72.57132054198883
+    },
+    "random": {
+      "games": 128,
+      "scoring_games": 3,
+      "scoring_rate_ci95_wilson": [
+        0.008002416396755481,
+        0.06664374505143222
+      ],
+      "mean_return": 0.0234375,
+      "scoring_fraction": 0.0234375,
+      "mean_length": 1273.875,
+      "terminated": 128,
+      "truncated": 0,
+      "action_distribution": [
+        0.19958173878912766,
+        0.20087577274065352,
+        0.1990420469041311,
+        0.19992517907958002,
+        0.2005752624865077
+      ],
+      "seconds": 27.6481340409955
+    },
+    "noop": {
+      "games": 128,
+      "scoring_games": 0,
+      "scoring_rate_ci95_wilson": [
+        0.0,
+        0.029136956273508416
+      ],
+      "mean_return": 0.0,
+      "scoring_fraction": 0.0,
+      "mean_length": 777.703125,
+      "terminated": 128,
+      "truncated": 0,
+      "action_distribution": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "seconds": 13.935036250011763
+    }
+  },
+  "paired_comparisons": {
+    "baseline": {
+      "ablation_only_scoring": 2,
+      "control_only_scoring": 1,
+      "exact_p": 1.0,
+      "mean_return_difference": 0.0078125
+    },
+    "random": {
+      "ablation_only_scoring": 2,
+      "control_only_scoring": 3,
+      "exact_p": 1.0,
+      "mean_return_difference": -0.0078125
+    }
+  },
+  "controls_reproduced_exactly": true,
+  "initial_policy_evaluation_matched": true,
+  "conclusion": "No scoring improvement is established by this one-seed exploratory comparison.",
+  "limitations": [
+    "One training seed per configuration.",
+    "Evaluation seeds 50000\u201350127 were already inspected in the baseline round.",
+    "Two paired scoring-probability tests; reported p-values are unadjusted exploratory values.",
+    "Rollout, gamma and lambda change together; their individual effects are not identified.",
+    "The random training-budget control is reused, not an independent replicate."
+  ]
+}

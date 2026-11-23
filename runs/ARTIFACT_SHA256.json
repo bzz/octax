@@ -1,7 +1,7 @@
 {
   "README.md": {
-    "sha256": "718e8c67072b63b8119e4c7487050134a01cd79b6d3fdd481eea53a2ed88c61d",
-    "bytes": 2412
+    "sha256": "53d19fda13faa66624a609ad372a1c1545e6c52207d9c4841dfce2cc7acc8020",
+    "bytes": 2611
   },
   "tetris/continued_seed0/checkpoint.msgpack": {
     "sha256": "42dfa42cf14c222155882f016a7b85caaa3d1aa6496af35adfd663043d8e45f3",
@@ -416,6 +416,178 @@
     "bytes": 4067
   },
   "tetris/v2_baseline_seed0/visualizations/random_trajectory.npz": {
+    "sha256": "7ec76d3f5bb4dc64533f37fbcf607ee6eb0381b7837f9ab455597a7ea99eb0f0",
+    "bytes": 4889
+  },
+  "tetris/v2_credit_horizon_seed0/RESULT.md": {
+    "sha256": "6f6eae264e7330ff82cc4d47309efb6b33cd5393a3a3deebaf4400639bb765df",
+    "bytes": 4209
+  },
+  "tetris/v2_credit_horizon_seed0/analysis.json": {
+    "sha256": "27bfa24c3c64dcaec3cf926670f3b128c745ff1785f79a6368e880d2b00dd65d",
+    "bytes": 7477
+  },
+  "tetris/v2_credit_horizon_seed0/checkpoint.msgpack": {
+    "sha256": "f8223952db7d28bf6769cd1f56b902a35eb4f6ed501fbedd635d797bf63f8388",
+    "bytes": 26310562
+  },
+  "tetris/v2_credit_horizon_seed0/config.yaml": {
+    "sha256": "427255bb9a47f8752c0e693aadbc55dea1282a4c5e57bfb8cc990d837a0cb80f",
+    "bytes": 499
+  },
+  "tetris/v2_credit_horizon_seed0/eval.gif": {
+    "sha256": "e9c3da9c015e1ba237726bb21ffbe94bfae58b52af6128d0b334ae04baebd844",
+    "bytes": 24578
+  },
+  "tetris/v2_credit_horizon_seed0/eval_000000000.gif": {
+    "sha256": "39a071f9d001babf71010a8a3ace4f5324a066440c9d4c49a21645c72171c0cd",
+    "bytes": 23928
+  },
+  "tetris/v2_credit_horizon_seed0/eval_000065536.gif": {
+    "sha256": "e9c3da9c015e1ba237726bb21ffbe94bfae58b52af6128d0b334ae04baebd844",
+    "bytes": 24578
+  },
+  "tetris/v2_credit_horizon_seed0/evaluation.json": {
+    "sha256": "f6bd788cfeac7390967b929b9ba2cb343b32a0e6fff95041f74133df2ba46699",
+    "bytes": 3907
+  },
+  "tetris/v2_credit_horizon_seed0/heldout/comparison.json": {
+    "sha256": "05c45fd5c1e1da22618d430f1e5a0ef81d4957b02af8acdaebadf3e166d9e0a8",
+    "bytes": 63675
+  },
+  "tetris/v2_credit_horizon_seed0/heldout/eval.gif": {
+    "sha256": "5ed7e023a78b54ac36a0459e007ab29b2b413c5dbdbd9e8a8e059e809ff63db3",
+    "bytes": 65333
+  },
+  "tetris/v2_credit_horizon_seed0/job.log": {
+    "sha256": "e8978662ba74ebceec109cc811d10b773825e103c3353526919a252b75b902c4",
+    "bytes": 7643
+  },
+  "tetris/v2_credit_horizon_seed0/metrics.csv": {
+    "sha256": "0770b4f17a06caedf9a6c943a464749f3df751b310ad0137784d88436adbf3e8",
+    "bytes": 10267
+  },
+  "tetris/v2_credit_horizon_seed0/policy_card.gif": {
+    "sha256": "2fc91f39c888be4d63051c4f49ae0fe905f8801b93760c1bb9b85634c573629d",
+    "bytes": 165674
+  },
+  "tetris/v2_credit_horizon_seed0/policy_card.png": {
+    "sha256": "9c3c56c2438f109be33bbd9eb99f4906b8358311e08348bb6006bf6dd985e4cf",
+    "bytes": 3787
+  },
+  "tetris/v2_credit_horizon_seed0/report_source_manifest.json": {
+    "sha256": "7c253978c829990ddcc365309c6b42c3b2e51d589eaa8673d30f5bb930f8a5fe",
+    "bytes": 290
+  },
+  "tetris/v2_credit_horizon_seed0/report_source_snapshot/round_card.py": {
+    "sha256": "2396fdd9352ec3c5a644ff586795a84ebbe016a2b6ddd9dfd45c607fd637be03",
+    "bytes": 3290
+  },
+  "tetris/v2_credit_horizon_seed0/report_source_snapshot/summarize_credit_ablation.py": {
+    "sha256": "514cef9c7ca15886c3237e0a330cf72460d8c7e742a4b10a856eeedb87b4d47d",
+    "bytes": 14358
+  },
+  "tetris/v2_credit_horizon_seed0/report_source_snapshot/summarize_v2_baseline.py": {
+    "sha256": "5b982afc74e19d78e11676a09bc5e75fa42f172d6a7651130e8bd5c833b6021c",
+    "bytes": 9577
+  },
+  "tetris/v2_credit_horizon_seed0/result_card.html": {
+    "sha256": "5c59f37f73d1eb48cd131cc9311a0c0b063c80f16e89ee3c5dec4c0f163fef07",
+    "bytes": 222571
+  },
+  "tetris/v2_credit_horizon_seed0/run_status.json": {
+    "sha256": "9e70a158c87dd53ecfb9a6de8f5238befc5ddc1a75c659e1c6d6a95ddcd291e4",
+    "bytes": 106
+  },
+  "tetris/v2_credit_horizon_seed0/source_manifest.json": {
+    "sha256": "9fbf4e70fae1ce76f26a82ec3f3d5f314a48f6fe024c678f6463a43219ccf204",
+    "bytes": 1224
+  },
+  "tetris/v2_credit_horizon_seed0/source_snapshot/conf/config.yaml": {
+    "sha256": "34244e3f6a1a9ed5fd7a95c7df9608d8452d6368ae753785c7a75327314e565f",
+    "bytes": 575
+  },
+  "tetris/v2_credit_horizon_seed0/source_snapshot/conf/credit_horizon.yaml": {
+    "sha256": "39db8bd05241cccac37e55e12ff2a2c996ae7ab1985c807ceda0f772ec33bb72",
+    "bytes": 218
+  },
+  "tetris/v2_credit_horizon_seed0/source_snapshot/evaluate_checkpoint.py": {
+    "sha256": "98a9657a44778100fce240550e9d4d873324e8cfa19706ba754fa1315851348b",
+    "bytes": 1334
+  },
+  "tetris/v2_credit_horizon_seed0/source_snapshot/experiment_utils.py": {
+    "sha256": "56acd748517c545f735536729044a77d2c85671a47c1cb7fa6b9ab90321daaa7",
+    "bytes": 4809
+  },
+  "tetris/v2_credit_horizon_seed0/source_snapshot/octax/agents/ppo.py": {
+    "sha256": "87dceaf2a5c0a8679939b84c306bfaa571ae5bd28e044f4c252d1f3621442364",
+    "bytes": 10291
+  },
+  "tetris/v2_credit_horizon_seed0/source_snapshot/octax/checkpoints.py": {
+    "sha256": "230af35150c1a85532b758fbb6be0514014c77863fea3e247c9faa548b3ac021",
+    "bytes": 742
+  },
+  "tetris/v2_credit_horizon_seed0/source_snapshot/octax/env.py": {
+    "sha256": "30a80cb6290c7bfba3cfe8bf816bf77740d342e0d958a1784628e9126b947a06",
+    "bytes": 12086
+  },
+  "tetris/v2_credit_horizon_seed0/source_snapshot/octax/wrappers.py": {
+    "sha256": "cd46727e367b182873625bf33e89f1afc0488b03c67df48b945640b208ed9a23",
+    "bytes": 2629
+  },
+  "tetris/v2_credit_horizon_seed0/source_snapshot/requirements-macos.lock.txt": {
+    "sha256": "800cdcebc24c1f47821afe963d23e53f57de4123d4bc4a1b2a1167676fcb26c4",
+    "bytes": 1786
+  },
+  "tetris/v2_credit_horizon_seed0/source_snapshot/roms/Tetris [Fran Dachille, 1991].ch8": {
+    "sha256": "667cb026dee03f59f3a2fd81a2ffeab47da87731883f9601d37ba019976f94dd",
+    "bytes": 494
+  },
+  "tetris/v2_credit_horizon_seed0/source_snapshot/run_credit_ablation.py": {
+    "sha256": "a0d078a1da7e477e6e0aa67287c530422e6638636b23dc344703bbc64b08f19f",
+    "bytes": 2630
+  },
+  "tetris/v2_credit_horizon_seed0/source_snapshot/train.py": {
+    "sha256": "154038c70ae5c6a9da14c2ef5dcad7e3a76bbbbbcdbcb40b0accf375f5e8c32c",
+    "bytes": 9079
+  },
+  "tetris/v2_credit_horizon_seed0/source_snapshot/visualize_run.py": {
+    "sha256": "86063a73d7e03dcc594bcb28d58a76c5a01e1af1e017cb9fce50423e2265286e",
+    "bytes": 8070
+  },
+  "tetris/v2_credit_horizon_seed0/summary.json": {
+    "sha256": "7657ceb4fee188b8299163f722ac7cf12df7129fe44b699ad486b0444999d80f",
+    "bytes": 686
+  },
+  "tetris/v2_credit_horizon_seed0/system.json": {
+    "sha256": "4ae64728ffe167d59fe98d2d5006e4b439dfbd749d8f2d96c7caf98525065e6a",
+    "bytes": 474
+  },
+  "tetris/v2_credit_horizon_seed0/visualizations/gameplay.gif": {
+    "sha256": "966c608df4d770233bd7552146d3f01786010dd5b928939f13774fce077ae197",
+    "bytes": 831269
+  },
+  "tetris/v2_credit_horizon_seed0/visualizations/gameplay.json": {
+    "sha256": "2e9ba8e09f26c442bdcb8669a70062af37c944813d0f1a8438c71039e19fed82",
+    "bytes": 175
+  },
+  "tetris/v2_credit_horizon_seed0/visualizations/gameplay.png": {
+    "sha256": "f9367c942399616d23b3d430dca6c088a6b8f93024597c0b7e0e470534bfbeb2",
+    "bytes": 10041
+  },
+  "tetris/v2_credit_horizon_seed0/visualizations/learning_curves.pdf": {
+    "sha256": "2d42ecbfe803bbe33eee1ca06e701811d0d19ebece28c3e2b3fa1cf5d5b724b8",
+    "bytes": 28366
+  },
+  "tetris/v2_credit_horizon_seed0/visualizations/learning_curves.png": {
+    "sha256": "5e0be1b5d789ce10aea96ec9f4560cc72314b8b5f575d488f61ce360d6bd29e8",
+    "bytes": 228713
+  },
+  "tetris/v2_credit_horizon_seed0/visualizations/policy_trajectory.npz": {
+    "sha256": "742ae919c2fdb27a62df8d2f7387793ca380ecc37ca21cb3a180957bde1acd7e",
+    "bytes": 4160
+  },
+  "tetris/v2_credit_horizon_seed0/visualizations/random_trajectory.npz": {
     "sha256": "7ec76d3f5bb4dc64533f37fbcf607ee6eb0381b7837f9ab455597a7ea99eb0f0",
     "bytes": 4889
   },

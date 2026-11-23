@@ -134,3 +134,21 @@ Validated the final isolated upstream-fix tree with 78 passing tests and the exp
 Published evidence includes original configurations, metrics, evaluations, four full-state checkpoints, MinAtar-style plots/gameplay, and source manifests/snapshots where available. Text-only checkout-path normalization preserves numeric measurements and model bytes. The final v2 baseline has an exact source snapshot; earlier runs' source-hash records do not reconstruct every historical uncommitted file. Artifact hashes support download integrity checks. No further training was launched during packaging.
 
 Publication recheck: the packaged evaluator reloaded the final v2 checkpoint and reproduced all per-episode arrays from its eight-game development evaluation exactly (including returns, lengths, action counts, termination and truncation). Source snapshot and artifact integrity hashes were verified.
+
+## 2026-11-23 — Longer-credit 64K ablation started
+
+The user authorized a fresh seed-0 longer-credit run at the same 65,536 environment-decision budget as the v2 baseline. The policy remains pixel-only, with the same corrected frame timing and original score reward. The prepared configuration changes rollout length 32→128, gamma 0.99→0.995 and GAE lambda 0.95→0.98; minibatches increase 4→16 to retain 128 samples per minibatch. Both arms use four epochs and 2,048 optimizer updates in total, but the ablation collects 32 larger rollouts rather than 128 smaller ones. This is a bundled credit-assignment ablation, not an isolated test of one hyperparameter.
+
+Training starts from fresh weights/optimizer/RNG, with no checkpoint transfer. Final evaluation will reuse the baseline's 128 environment seeds 50000–50127 for paired comparisons with the v2 baseline and uniform random play. These seeds have already been inspected: this round is an exploratory matched comparison, not fresh confirmatory validation. The earlier equal-budget random rollout is reused as a recorded control, not counted as a new independent sample. Exact source/ROM snapshots and hashes are recorded before launch.
+
+Each investigation round should end with a compact in-chat result card: actual policy gameplay rendered with the existing MinAtar-style Matplotlib tools, concise evidence, and links to the implementation changes and full result.
+
+## 2026-11-23 — Longer-credit 64K ablation completed
+
+Completed the fresh seed-0 65,536-step run with 128-step rollouts, gamma 0.995 and lambda 0.98. Training encountered 1 positive reward event (reward sum 1) in 42 completed games. The baseline encountered 0 events; the reused equal-budget random rollout encountered 0.
+
+On the same previously inspected 128 seeds, longer credit scored in 2/128 games, baseline in 1/128 and random in 3/128. Unadjusted exact paired scoring tests: p=1 versus baseline, p=1 versus random. No scoring improvement is established by this one-seed exploratory comparison. Training reward events show whether useful targets became available, but sparse evaluation scores and a single trained seed cannot establish robust policy improvement. The ablation encountered feedback in a run where the baseline did not. This is evidence that the corrected pipeline can update from a real game score, not proof that longer credit caused the discovery. Before the first reward, logged advantage variation and value loss were zero; changing gamma/lambda cannot propagate a score that has not been encountered. Different rollout/update scheduling also changes subsequent random draws and trajectories. Independent training seeds are needed to distinguish a repeatable benefit from a lucky discovery.
+
+Initial policy evaluation and repeated random/no-op controls matched their baseline arrays exactly. Finite-state checks and exact checkpoint roundtrip passed; final entropy 1.578472, throughput 139.5 decisions/s. This is a single-seed, bundled, exploratory comparison; it does not isolate rollout/gamma/lambda effects or establish performance across seeds. No further run was launched.
+
+Saved full evidence in `runs/tetris/v2_credit_horizon_seed0/RESULT.md`, plus a small reusable result card with actual policy gameplay and links to the settings and log. Rendering continues to use Matplotlib/Seaborn primitives from the existing MinAtar-style workflow.

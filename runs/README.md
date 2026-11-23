@@ -1,6 +1,6 @@
 # Recorded Tetris experiments
 
-All training policies observe only four monochrome pixel frames and receive the ROM score difference. Checkpoints contain model, optimizer, RNG and emulator state. The four checkpoints are about 26 MB each and are stored directly in Git. New runs remain ignored; this is an explicitly published snapshot.
+All training policies observe only four monochrome pixel frames and receive the ROM score difference. Checkpoints contain model, optimizer, RNG and emulator state. The five checkpoints are about 26 MB each and are stored directly in Git. New runs remain ignored; this is an explicitly published snapshot.
 
 | Directory | Timing / purpose | Recorded budget |
 | --- | --- | --- |
@@ -11,8 +11,9 @@ All training policies observe only four monochrome pixel frames and receive the 
 | [sanity_frame_v2](tetris/sanity_frame_v2) | Corrected-timing random/no-op controls | Eight development games per policy |
 | [v2_validation_8192](tetris/v2_validation_8192) | Fresh stability check | 8,192 steps |
 | [v2_baseline_seed0](tetris/v2_baseline_seed0/RESULT.md) | Fresh corrected-timing baseline | 65,536 steps; 128 final games per policy |
+| [v2_credit_horizon_seed0](tetris/v2_credit_horizon_seed0/RESULT.md) | Fresh longer-credit ablation, same budget | 65,536 steps; same 128 evaluation seeds |
 
-The latest PPO agent saw zero training rewards and scored in 1/128 final evaluation games, versus 3/128 for random. The equal-budget random rollout also saw zero rewards. This does not demonstrate learned scoring skill. The full [result](tetris/v2_baseline_seed0/RESULT.md) includes uncertainty and comparison limits.
+The longer-credit PPO agent saw 1 training rewards and scored in 2/128 evaluation games, versus 1/128 for the v2 baseline and 3/128 for random. The equal-budget random rollout also saw zero rewards. This does not demonstrate learned scoring skill. The full [latest result](tetris/v2_credit_horizon_seed0/RESULT.md) includes uncertainty and comparison limits.
 
 Use each run's configuration and timer semantics; do not combine v1 and v2 as one learning curve. Held-out results contain per-game return, length, actions, termination and truncation arrays. Development-evaluation curves are separate from the final comparisons. A displayed gameplay seed is illustrative only.
 
