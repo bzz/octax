@@ -126,6 +126,7 @@ def main():
         limitations=['Two training seeds; the chosen 128-game bank is reused and exploratory.',
                      'Paired scoring tests are unadjusted; repeated random/no-op controls are shared, not additional independent evidence.',
                      'Reward discovery can differ because the entropy coefficient changes policy actions; all other configuration is matched.',
+                     'A reward-free seed cannot test whether entropy erases previously learned successful behavior.',
                      'Changing observed entropy can reflect different visited pixels even when parameters remain unchanged.'])
     (SERIES/'analysis.json').write_text(json.dumps(analysis,indent=2)+'\n')
     table='\n'.join(f"| {seed} | {r['training']['reward_events']} / {r['control_training']['reward_events']} | {r['policies']['entropy_zero']['scoring_games']}/128 | {r['policies']['control']['scoring_games']}/128 | {r['policies']['untrained']['scoring_games']}/128 | 3/128 |" for seed,r in records.items())
@@ -141,7 +142,9 @@ Fresh seeds 1 and 2 each received 65,536 decisions, 32 rollouts and 2,048 optimi
 
 All final scoring uses the reused 128-game bank, seeds 50000–50127. Random is one shared control, not 256 independent games. Confidence intervals, paired unadjusted comparisons, survival/action statistics and seed-specific equal-budget random-rollout counts are in `analysis.json`. These comparisons are exploratory and cannot establish robust learning without fresh games and further independent training evidence.
 
-With zero-initialized values and entropy disabled, all recorded gradients before the first reward are zero. If a seed finds no reward, its parameters and final episode arrays must remain identical to initialization; this is checked. A moving entropy curve can reflect changing visited observations even with fixed weights. Neither zero gradients nor a more decisive policy substitutes for better original game scores.
+With zero-initialized values and entropy disabled, all recorded gradients before the first reward are zero. Both seeds encountered feedback and their parameters changed: L2 changes {records['1']['training']['parameter_change_l2']:.3f} and {records['2']['training']['parameter_change_l2']:.3f} for seeds 1 and 2. Final training entropy was {records['1']['training']['final_entropy']:.3f} and {records['2']['training']['final_entropy']:.3f}, versus log(5) ≈ 1.609 for uniform choices. The resulting stronger preferences did not improve scoring. A moving entropy curve can also reflect changing visited observations even with fixed weights; entropy alone is not learning evidence.
+
+A seed that never encounters reward provides no test of retaining successful behavior after learning from it. This short-budget ablation measures the overall effect of the coefficient under these seeds; a failed scoring screen does not by itself resolve the long-run forgetting hypothesis.
 
 ![Matched training curves](comparison_curves.png)
 
