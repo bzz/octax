@@ -1,0 +1,31 @@
+{
+  "recorded_run": "runs/tetris/v3_self_imitation_seed1",
+  "pre_replay_rewards": [
+    {
+      "episode": "episode_000001.npz",
+      "source_sha256": "4b416a2031b60b4e1cfd2703c09bfe4b7435ab689980e0357232979b33a649fd",
+      "reward_vector_step": 907,
+      "global_decisions_at_reward": 14512,
+      "episode_transitions_through_reward": 907,
+      "current_rollout_credit_transitions": 11,
+      "hypothetical_1024_credit_transitions": 907,
+      "current_gae_decay": 0.9751
+    },
+    {
+      "episode": "episode_000002.npz",
+      "source_sha256": "8118353d6a3b31b004528236fca768020ad047bd434046492f3a4347655a4395",
+      "reward_vector_step": 2038,
+      "global_decisions_at_reward": 32608,
+      "episode_transitions_through_reward": 533,
+      "current_rollout_credit_transitions": 118,
+      "hypothetical_1024_credit_transitions": 533,
+      "current_gae_decay": 0.9751
+    }
+  ],
+  "limitations": [
+    "Only recorded rewards before the first auxiliary replay update are included.",
+    "Episode termination bounds credit even within a longer rollout.",
+    "Long-rollout figures are hypothetical alignment for the recorded trajectory; changing rollout length also changes subsequent RNG draws and trajectories.",
+    "This is diagnostic use of old records, not replay or demonstration data for training."
+  ]
+}

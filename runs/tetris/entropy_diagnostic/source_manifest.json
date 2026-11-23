@@ -1,0 +1,16 @@
+{
+  "diagnose_ppo_entropy.py": "fe79cba936b7601ba87325d8608aad365fd1f9a2016268897adc2eb71c7bab7f",
+  "diagnose_credit_timing.py": "8421bf6337e4b675fa2200b23cc084bf57e5e9dc04cd2dd1378566b11d813252",
+  "round_card.py": "2396fdd9352ec3c5a644ff586795a84ebbe016a2b6ddd9dfd45c607fd637be03",
+  "evaluate_initial_policy.py": "68a2f4189bf60e99b4334ee6f7acf32542a3f379e7efd3b578c825e3e765a447",
+  "octax/agents/ppo.py": "87dceaf2a5c0a8679939b84c306bfaa571ae5bd28e044f4c252d1f3621442364",
+  "octax/wrappers.py": "cd46727e367b182873625bf33e89f1afc0488b03c67df48b945640b208ed9a23",
+  "octax/env.py": "30a80cb6290c7bfba3cfe8bf816bf77740d342e0d958a1784628e9126b947a06",
+  "octax/checkpoints.py": "230af35150c1a85532b758fbb6be0514014c77863fea3e247c9faa548b3ac021",
+  "experiment_utils.py": "56acd748517c545f735536729044a77d2c85671a47c1cb7fa6b9ab90321daaa7",
+  "conf/config.yaml": "34244e3f6a1a9ed5fd7a95c7df9608d8452d6368ae753785c7a75327314e565f",
+  "conf/credit_horizon.yaml": "39db8bd05241cccac37e55e12ff2a2c996ae7ab1985c807ceda0f772ec33bb72",
+  "conf/long_trace.yaml": "a67208b6ea7e32b3ec163d1b48e04dcc6fb86cebf13738b7a3d10c828fdd5ce9",
+  "requirements-macos.lock.txt": "800cdcebc24c1f47821afe963d23e53f57de4123d4bc4a1b2a1167676fcb26c4",
+  "make_entropy_report.py": "0c9bf0cc4e09a559a2d1c04e4598e8bdc0c3a88f7da9f2b8922c5bb919b8baf5"
+}

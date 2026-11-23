@@ -107,6 +107,98 @@
     "sha256": "160a692aa032867dac4a2ad0a1642845603cee7aee61f774a7e93f0ec9fbb698",
     "bytes": 6423
   },
+  "tetris/entropy_diagnostic/RESULT.md": {
+    "sha256": "eb71b13a766d188314279e80ba443f1f003df73373d48f45cdbd0a5f505a50c2",
+    "bytes": 3522
+  },
+  "tetris/entropy_diagnostic/gradients.json": {
+    "sha256": "4918c771c6631b15c16a7d3aaa969c40676d732575357a193ecbbc02d81317d8",
+    "bytes": 10107
+  },
+  "tetris/entropy_diagnostic/long_trace_preflight.json": {
+    "sha256": "c6e38b3fbc74a6e2cb6abe6adec4ba881913340b13c79c077a1fdda85f018454",
+    "bytes": 640
+  },
+  "tetris/entropy_diagnostic/policy_card.gif": {
+    "sha256": "e72d09eaa5b5e8ace2803550ed62d9ca0d35727f5b5e0ef831e11fda55ad3383",
+    "bytes": 156372
+  },
+  "tetris/entropy_diagnostic/policy_card.png": {
+    "sha256": "5301e6c386333f16c17603ae3be31343632b1bc7a14af4340825212b5935dcb4",
+    "bytes": 4003
+  },
+  "tetris/entropy_diagnostic/result_card.html": {
+    "sha256": "4b25549488b5345df19e3aeaf294afc72485759983d055480e59cdddd2f051bf",
+    "bytes": 210107
+  },
+  "tetris/entropy_diagnostic/reward_timing.json": {
+    "sha256": "033fd5ab175cd38186928b8ae9c886b224ae74b25b98d7b688a58c2e98eff43e",
+    "bytes": 1325
+  },
+  "tetris/entropy_diagnostic/source_manifest.json": {
+    "sha256": "8cb229861775cac9c2cb5ebe73517d2a8285f364b120e7f19e8b2d8c75280533",
+    "bytes": 1322
+  },
+  "tetris/entropy_diagnostic/source_snapshot/conf/config.yaml": {
+    "sha256": "34244e3f6a1a9ed5fd7a95c7df9608d8452d6368ae753785c7a75327314e565f",
+    "bytes": 575
+  },
+  "tetris/entropy_diagnostic/source_snapshot/conf/credit_horizon.yaml": {
+    "sha256": "39db8bd05241cccac37e55e12ff2a2c996ae7ab1985c807ceda0f772ec33bb72",
+    "bytes": 218
+  },
+  "tetris/entropy_diagnostic/source_snapshot/conf/long_trace.yaml": {
+    "sha256": "a67208b6ea7e32b3ec163d1b48e04dcc6fb86cebf13738b7a3d10c828fdd5ce9",
+    "bytes": 248
+  },
+  "tetris/entropy_diagnostic/source_snapshot/diagnose_credit_timing.py": {
+    "sha256": "8421bf6337e4b675fa2200b23cc084bf57e5e9dc04cd2dd1378566b11d813252",
+    "bytes": 2574
+  },
+  "tetris/entropy_diagnostic/source_snapshot/diagnose_ppo_entropy.py": {
+    "sha256": "fe79cba936b7601ba87325d8608aad365fd1f9a2016268897adc2eb71c7bab7f",
+    "bytes": 6863
+  },
+  "tetris/entropy_diagnostic/source_snapshot/evaluate_initial_policy.py": {
+    "sha256": "68a2f4189bf60e99b4334ee6f7acf32542a3f379e7efd3b578c825e3e765a447",
+    "bytes": 2724
+  },
+  "tetris/entropy_diagnostic/source_snapshot/experiment_utils.py": {
+    "sha256": "56acd748517c545f735536729044a77d2c85671a47c1cb7fa6b9ab90321daaa7",
+    "bytes": 4809
+  },
+  "tetris/entropy_diagnostic/source_snapshot/make_entropy_report.py": {
+    "sha256": "0c9bf0cc4e09a559a2d1c04e4598e8bdc0c3a88f7da9f2b8922c5bb919b8baf5",
+    "bytes": 6147
+  },
+  "tetris/entropy_diagnostic/source_snapshot/octax/agents/ppo.py": {
+    "sha256": "87dceaf2a5c0a8679939b84c306bfaa571ae5bd28e044f4c252d1f3621442364",
+    "bytes": 10291
+  },
+  "tetris/entropy_diagnostic/source_snapshot/octax/checkpoints.py": {
+    "sha256": "230af35150c1a85532b758fbb6be0514014c77863fea3e247c9faa548b3ac021",
+    "bytes": 742
+  },
+  "tetris/entropy_diagnostic/source_snapshot/octax/env.py": {
+    "sha256": "30a80cb6290c7bfba3cfe8bf816bf77740d342e0d958a1784628e9126b947a06",
+    "bytes": 12086
+  },
+  "tetris/entropy_diagnostic/source_snapshot/octax/wrappers.py": {
+    "sha256": "cd46727e367b182873625bf33e89f1afc0488b03c67df48b945640b208ed9a23",
+    "bytes": 2629
+  },
+  "tetris/entropy_diagnostic/source_snapshot/requirements-macos.lock.txt": {
+    "sha256": "800cdcebc24c1f47821afe963d23e53f57de4123d4bc4a1b2a1167676fcb26c4",
+    "bytes": 1786
+  },
+  "tetris/entropy_diagnostic/source_snapshot/round_card.py": {
+    "sha256": "2396fdd9352ec3c5a644ff586795a84ebbe016a2b6ddd9dfd45c607fd637be03",
+    "bytes": 3290
+  },
+  "tetris/entropy_diagnostic/visualizations/policy_trajectory.npz": {
+    "sha256": "703b069c059d49c6d326cb10e3dcc3efc6a4b1de487ef5acde67089e230c084a",
+    "bytes": 4021
+  },
   "tetris/learning_512k_seed1/RESULT.md": {
     "sha256": "7863f79b45ab6cbc0e297f5ac409af6c42b9d00c88198f48fa709cd9db97c7c0",
     "bytes": 4145

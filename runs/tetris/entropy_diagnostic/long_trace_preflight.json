@@ -1,0 +1,36 @@
+{
+  "initial_parameters_match_exactly": true,
+  "initial_parameter_sha256": "40aa44888c5cbbc5fd5af4de05272fa2ed082881a46972df2b984c86bc97d552",
+  "config_differences": {
+    "num_steps": [
+      128,
+      1024
+    ],
+    "gamma": [
+      0.995,
+      0.999
+    ],
+    "total_timesteps": [
+      65536,
+      524288
+    ],
+    "gae_lambda": [
+      0.98,
+      1.0
+    ],
+    "run_dir": [
+      "runs/tetris/v2_credit_horizon_seed1",
+      "runs/tetris/v2_long_trace_512k_seed1"
+    ],
+    "num_minibatches": [
+      16,
+      128
+    ],
+    "num_seeds": [
+      null,
+      1
+    ]
+  },
+  "batch_size": 128,
+  "total_ppo_updates": 16384
+}
